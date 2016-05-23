@@ -767,8 +767,8 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     # Write results
     print('\nOptKnock Solution\n=================')
-    print('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, val1))
-    print('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, val2))
+    print('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, round(val1,5)))
+    print('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, round(val2,5)))
     if USE_GENE:
         print('\nDeleted genes ({}): {}'.format(len(delGen), delGen))
     else:
@@ -781,8 +781,8 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     F = file(lpName+'.result.txt','w')
     F.write('OptKnock Solution\n=================\n')
-    F.write('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, val1))
-    F.write('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, val2))
+    F.write('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, round(val1,5)))
+    F.write('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, round(val2,5)))
     if USE_GENE:
         F.write('\nDeleted reactions ({}): {}'.format(len(delGen), delGen))
     else:
