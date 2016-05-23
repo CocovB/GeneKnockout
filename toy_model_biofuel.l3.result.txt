@@ -1,0 +1,13 @@
+OptKnock Solution
+=================
+
+Bilinear Outer optimum (('R09', 1)): 50.0
+Bilinear Inner optimum (R17): 50.0
+Deleted reactions (2): ['R16', 'R05']
+
+Analysis time (minutes): 0.002323
+Maximum deletions: 2
+
+Use knockout weighting (minimization): False
+
+=================
