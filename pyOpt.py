@@ -143,7 +143,7 @@ def doGeneMapping(model):
                         # remove extra space
                         subunits = [s.replace(' ','') for s in subunits]
                         # replace possible dashes
-                        # subunits = [s.replace('-','_') for s in subunits]
+                        subunits = [s.replace('-','_') for s in subunits]
                         S_list.append(subunits)
                 
                     # Dictionary for isoenzymes

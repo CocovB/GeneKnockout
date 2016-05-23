@@ -1,1731 +1,2847 @@
 \\ Original 
 
 Maximize
-maxR_BiomassAuto_objf:  + 1.0 R_BiomassAuto
+obj_objf:  + 1.0 R_biomass_core
 
 Subject To
- M_10fthf_c: - R_FMETTRS -0.00325879699999999991 R_BiomassSolubleP - R_AICART - R_FTHFD + R_MTHFC + R_FTHFLi - R_GARFT = 0.0
- M_12dgr160_c: - R_SQD2_160 - R_MGDG160 + R_PAPA160 = 0.0
- M_12dgr161_c: - R_MGDG161 - R_SQD2_161 + R_PAPA161 = 0.0
- M_12dgr180_c: - R_MGDG180 - R_SQD2_180 + R_PAPA180 = 0.0
- M_12dgr181_9_c: + R_PAPA181_9 - R_MGDG181_9 - R_SQD2_181_9 = 0.0
- M_12dgr181_c: - R_MGDG181 - R_SQD2_181 + R_PAPA181 = 0.0
- M_12dgr182_9_12_c: - R_MGDG182_9_12 - R_SQD2_182_9_12 + R_PAPA182_9_12 = 0.0
- M_12dgr183_6_9_12_c: + R_PAPA183_6_9_12 - R_MGDG183_6_9_12 - R_SQD2_183_6_9_12 = 0.0
- M_12dgr183_9_12_15_c: - R_MGDG183_9_12_15 - R_SQD2_183_9_12_15 + R_PAPA183_9_12_15 = 0.0
- M_12dgr184_6_9_12_15_c: - R_SQD2_184_6_9_12_15 + R_PAPA184_6_9_12_15 - R_MGDG184_6_9_12_15 = 0.0
- M_12ppd_S_c: + R_LCARS = 0.0
- M_13dpg_c: - R_GAPDi_nadp + R_PGK + R_GAPDi - R_DPGM = 0.0
- M_15dap_c: + R_LYSDC = 0.0
- M_1hdec9eg3p_c: - R_AGPAT161 + R_G3PAT161 = 0.0
- M_1hdecg3p_c: - R_AGPAT160 + R_G3PAT160 = 0.0
- M_1odec11eg3p_c: - R_AGPAT181 + R_G3PAT181 = 0.0
- M_1odec691215eg3p_c: + R_G3PAT183_6_9_12 - R_AGPAT184_6_9_12_15 = 0.0
- M_1odec6912eg3p_c: - R_AGPAT183_6_9_12 + R_G3PAT184_6_9_12_15 = 0.0
- M_1odec91215eg3p_c: + R_G3PAT183_9_12_15 - R_AGPAT183_9_12_15 = 0.0
- M_1odec912eg3p_c: - R_AGPAT182_9_12 + R_G3PAT182_9_12 = 0.0
- M_1odec9eg3p_c: + R_G3PAT181_9 - R_AGPAT181_9 = 0.0
- M_1odecg3p_c: - R_AGPAT180 + R_G3PAT180 = 0.0
- M_1p3h5c_c: - R_HPROb - R_HPROa - R_PHCD = 0.0
- M_1pyr5c_c: - R_P5CR - R_P5CD + R_PROD2 + R_G5SADs - R_P5CRx = 0.0
- M_23DB_c: + R_23BDD + R_23DBtpp = 0.0
- M_23DB_e: - R_EX_23DB_e - R_23DBtex = 0.0
- M_23DB_p: - R_23DBtpp + R_23DBtex = 0.0
- M_23dhdp_c: - R_DHDPRy + R_DHDPS = 0.0
- M_23dhmb_c: + R_KARA1i - R_DHAD1 = 0.0
- M_23dhmp_c: - R_DHAD2 + R_KARA2i = 0.0
- M_23dmphol_c: + R_MPBQ - R_TOCOPHS1 = 0.0
+ M_10fthf_c: + R_MTHFC + R_FTHFLi - R_TYRNFT - R_GARFTi - R_AICART + R_FTHFI = 0.0
+ M_10fthf_m: + R_MTHFCm - R_FMETTRSm + R_FTHFLmi = 0.0
+ M_12dgr_SC_c: +0.01000000000000000021 R_MIP2CS324_SC -0.01000000000000000021 R_ETHAPT_SC -0.01000000000000000021 R_DAGCPT_SC +0.01000000000000000021 R_MIP2CS326_SC +0.01000000000000000021 R_DAGPYP_SC +0.01000000000000000021 R_IPCS126_SC +0.01000000000000000021 R_IPCS324_SC +0.01000000000000000021 R_MIP2CS224_SC +0.01000000000000000021 R_TAGL_SC +0.01000000000000000021 R_IPCS124_SC +0.01000000000000000021 R_MIP2CS126_SC - R_PCDAGAT +0.01000000000000000021 R_IPCS224_SC +0.01000000000000000021 R_PI45BPP_SC +0.01000000000000000021 R_MIP2CS226_SC +0.01000000000000000021 R_IPCS326_SC +0.01000000000000000021 R_IPCS226_SC +0.01000000000000000021 R_MIP2CS124_SC -0.01000000000000000021 R_TRIGS_SC = 0.0
+ M_13BDglcn_c: -1.13480000000000003091 R_biomass_core + R_13GS - R_13BGH -1.13480000000000003091 R_biomass_wildType = 0.0
+ M_13BDglcn_e: - R_13BGHe - R_EX_13BDglcn_e_ = 0.0
+ M_13dampp_c: + R_DXHPScm = 0.0
+ M_13dpg_c: + R_PGK - R_DPGM + R_GAPD = 0.0
+ M_14glun_c: + R_GLYGS - R_GBEZ = 0.0
+ M_16BDglcn_c: -1.13480000000000003091 R_biomass_core + R_16GS -1.13480000000000003091 R_biomass_wildType = 0.0
+ M_1Dgali_c: - R_GALIGH = 0.0
+ M_1ag3p_SC_c: -0.01000000000000000021 R_AGAT_SC +0.01000000000000000021 R_ADHAPR_SC +0.01000000000000000021 R_GAT1_SC = 0.0
+ M_1agly3p_SC_c: -0.01000000000000000021 R_ADHAPR_SC +0.01000000000000000021 R_GAT2_SC = 0.0
+ M_1agpc_SC_c: + R_PCDAGAT -0.01000000000000000021 R_LPCAT_SC = 0.0
+ M_1mncam_c: + R_NNMT = 0.0
+ M_1p3h5c_c: - R_HPROb - R_HPROa = 0.0
+ M_1p3h5c_m: + R_HPROxm + R_HPROym - R_PHCDm - R_PHCHGSm = 0.0
+ M_1pyr5c_c: - R_P5CR + R_G5SADr = 0.0
+ M_1pyr5c_m: + R_PRO1xm - R_P5CDm + R_G5SADrm = 0.0
+ M_23camp_c: - R_23CAPPD = 0.0
+ M_23dhmb_m: - R_DHAD1m + R_KARA1im = 0.0
+ M_23dhmp_m: - R_DHAD2m + R_KARA2im = 0.0
  M_23dpg_c: + R_DPGM = 0.0
  M_25aics_c: - R_ADSL2r + R_PRASCS = 0.0
- M_25dhpp_c: - R_DHPPDA + R_GTPCII = 0.0
- M_26dap_LL_c: + R_SDPDS + R_MNXR33992 - R_DAPE = 0.0
- M_26dap_M_c: + R_DAPE - R_DAPDC - R_UAAGDS = 0.0
- M_2ahbut_c: + R_ACHBS - R_KARA2i = 0.0
- M_2ahhmd_c: + R_HPPK - R_FOLD3 = 0.0
- M_2ahhmp_c: - R_HPPK + R_DHNPA - R_DHPS = 0.0
- M_2cpr5p_c: - R_IGPS + R_PRAIi = 0.0
- M_2dda7p_c: - R_DHQS + R_DDPA = 0.0
- M_2dhp_c: - R_DPR + R_MOHMT = 0.0
- M_2dr5p_c: - R_DRPA + R_DRBK = 0.0
- M_2h3oppan_c: - R_TRSARr + R_GLXCL = 0.0
- M_2hyoxplac_c: + R_PPOR = 0.0
+ M_25dhpp_c: + R_GTPCII - R_DROPPRy = 0.0
+ M_25dthpp_c: - R_DRTPPD + R_DROPPRy = 0.0
+ M_2ahbut_m: + R_ACHBSm - R_KARA2im = 0.0
+ M_2ahhmd_m: + R_HPPKm - R_FOLD3m = 0.0
+ M_2ahhmp_m: + R_DHNPAm - R_HPPKm - R_DHPSm = 0.0
+ M_2amsa_c: + R_LSERDHr = 0.0
+ M_2aobut_c: - R_AOBUTDs + R_ATHRDHr - R_GLYATi = 0.0
+ M_2cpr5p_c: + R_PRAIi - R_IGPS = 0.0
+ M_2dda7p_c: - R_2DDA7Ptm - R_DHQS + R_DDPA = 0.0
+ M_2dda7p_m: + R_2DDA7Ptm + R_DDPAm = 0.0
+ M_2dglc_c: + R_2DOXG6PP = 0.0
+ M_2dhp_c: - R_2DHPtm - R_DPR + R_MOHMT = 0.0
+ M_2dhp_m: + R_2DHPtm - R_DPRm = 0.0
+ M_2doxg6p_c: - R_2DOXG6PP = 0.0
+ M_2dr1p_c: + R_PUNP4 + R_PUNP6 + R_PUNP2 + R_DURIPP + R_TMDPP = 0.0
+ M_2dr5p_c: + R_DRBK = 0.0
+ M_2hb_c: - R_2HBO + R_2HBt2 = 0.0
+ M_2hb_e: - R_2HBt2 - R_EX_2hb_e_ = 0.0
+ M_2hhxdal_c: + R_PSPHPL = 0.0
+ M_2hp6mbq_m: + R_2HP6MPMOm - R_2HPMBQMTm = 0.0
+ M_2hp6mp_m: + R_3HPH5MBDCm - R_2HP6MPMOm = 0.0
+ M_2hpmhmbq_m: + R_2HPMMBQMOm - R_2HMHMBQMTm = 0.0
+ M_2hpmmbq_m: - R_2HPMMBQMOm + R_2HPMBQMTm = 0.0
  M_2ippm_c: + R_IPPMIa - R_IPPMIb = 0.0
- M_2m6phol_c: - R_MPBQ - R_TOCOPHS2 + R_HGPHT = 0.0
- M_2mahmp_c: - R_TMPPP = 0.0
- M_2me4p_c: - R_MEPCT + R_DXPRIi = 0.0
- M_2mecdp_c: - R_MECDPDH_syn + R_MECDPS = 0.0
- M_2obut_c: - R_ACHBS + R_THRD_L = 0.0
- M_2oph_c: + R_OPHBDC = 0.0
- M_2p4c2me_c: + R_CDPMEK - R_MECDPS = 0.0
- M_2pg_c: - R_ENO - R_PGM = 0.0
- M_2pglyc_c: + R_RBCh - R_PGLYCP = 0.0
- M_2shchc_c: - R_SUCBZS + R_SHCHCS2 = 0.0
- M_34dhmald_c: - R_34DHOXPEGOX = 0.0
- M_34dhoxpeg_c: + R_34DHOXPEGOX = 0.0
- M_34hpp_c: + R_TYRTA - R_34HPPOR + R_PPND = 0.0
- M_35cgmp_c: + R_GUACYC = 0.0
- M_3c2hmp_c: - R_IPMD - R_IPPMIa = 0.0
- M_3c3hmp_c: + R_IPPMIb + R_IPPS = 0.0
- M_3c4mop_c: + R_IPMD - R_OMCDC = 0.0
+ M_2kmb_c: - R_UNK3 + R_DKMPPD2 = 0.0
+ M_2mahmp_c: - R_TMPPP + R_PMPK = 0.0
+ M_2mbac_c: - R_2MBACt + R_OHACT3 = 0.0
+ M_2mbac_e: - R_EX_2mbac_e_ + R_2MBACt = 0.0
+ M_2mbald_c: - R_2MBALDtm + R_3MOPDC - R_ALCD22yi - R_2MBALDt - R_ALCD22xi = 0.0
+ M_2mbald_e: - R_EX_2mbald_e_ + R_2MBALDt = 0.0
+ M_2mbald_m: + R_2MBALDtm - R_ALCD22xim = 0.0
+ M_2mbtoh_c: - R_2MBTOHt + R_ALCD22yi + R_ALCD22xi - R_2MBTOHtm - R_OHACT3 = 0.0
+ M_2mbtoh_e: + R_2MBTOHt - R_EX_2mbtoh_e_ = 0.0
+ M_2mbtoh_m: + R_ALCD22xim + R_2MBTOHtm = 0.0
+ M_2mcit_m: + R_MCITSm - R_ACONT3m = 0.0
+ M_2mppal_c: - R_ALCD23xi - R_2MPPALtm - R_2MPPALt + R_3MOBDC - R_ALCD23yi = 0.0
+ M_2mppal_e: + R_2MPPALt - R_EX_2mppal_e_ = 0.0
+ M_2mppal_m: + R_2MPPALtm - R_ALCD23xim = 0.0
+ M_2obut_c: + R_SHSL4r - R_2OBUTtm + R_2HBO + R_CYSTGL + R_THRD_L = 0.0
+ M_2obut_m: + R_2OBUTtm + R_THRD_Lm - R_ACHBSm - R_OBDHm = 0.0
+ M_2oxoadp_c: - R_AATA + R_2OXOADPtim = 0.0
+ M_2oxoadp_m: + R_OXAGm - R_2OXOADPtim = 0.0
+ M_2pg_c: - R_PGM - R_ENO = 0.0
+ M_2phetoh_c: + R_ALCD25xi + R_ALCD25yi + R_2PHETOHt + R_2PHETOHtm - R_OHACT5 = 0.0
+ M_2phetoh_e: - R_EX_2phetoh_e_ - R_2PHETOHt = 0.0
+ M_2phetoh_m: + R_ALCD25xim - R_2PHETOHtm = 0.0
+ M_34hpl_m: - R_T4HCINNMFM + R_34HPLFM = 0.0
+ M_34hpp_c: - R_TYRTAi - R_34HPPt2p - R_34HPPOR + R_PPND - R_34HPPt2m + R_PPND2 = 0.0
+ M_34hpp_m: - R_TYRTAim + R_34HPPt2m - R_34HPLFM = 0.0
+ M_34hpp_x: + R_34HPPt2p - R_TYRTAip = 0.0
+ M_35ccmp_c: - R_PDE5 = 0.0
+ M_35cdamp_c: - R_PDE2 = 0.0
+ M_35cgmp_c: - R_PDE4 = 0.0
+ M_35cimp_c: - R_PDE3 = 0.0
+ M_3c2hmp_c: - R_3IPM3MT - R_IPMD - R_IPPMIa = 0.0
+ M_3c3hmp_c: - R_3C3HMPtm - R_3C3HMPt + R_IPPS + R_IPPMIb = 0.0
+ M_3c3hmp_e: + R_3C3HMPt - R_EX_3c3hmp_e_ = 0.0
+ M_3c3hmp_m: + R_IPPSm + R_3C3HMPtm = 0.0
+ M_3c4mop_c: - R_OMCDC + R_IPMD - R_3C4MOPtm = 0.0
+ M_3c4mop_m: - R_OMCDCm + R_3C4MOPtm = 0.0
+ M_3dh5hpb_c: + R_3OPHB5Hm - R_3DH5HPBtm = 0.0
+ M_3dh5hpb_m: - R_3DH5HPBMTm + R_3DH5HPBtm = 0.0
  M_3dhq_c: - R_DHQTi + R_DHQS = 0.0
  M_3dhsk_c: + R_DHQTi - R_SHK3D = 0.0
- M_3haACP_c: - R_3HAD40 + R_3OAR40 = 0.0
- M_3hbcoa_R_c: - R_PHBS_syn + R_AACOAR_syn = 0.0
- M_3hcddec5eACP_c: + R_3OAR121 - R_3HAD121 = 0.0
- M_3hcmrs7eACP_c: + R_3OAR141 - R_3HAD141 = 0.0
- M_3hcpalm9eACP_c: + R_3OAR161 - R_3HAD161 = 0.0
- M_3hcvac11eACP_c: - R_3HAD181 + R_3OAR181 = 0.0
- M_3hddecACP_c: + R_3OAR120 - R_3HAD120 = 0.0
- M_3hdecACP_c: - R_3HAD100 + R_3OAR100 = 0.0
- M_3hhexACP_c: - R_3HAD60 + R_3OAR60 = 0.0
- M_3hmp_c: - R_HIBD_syn = 0.0
- M_3hmrsACP_c: + R_3OAR140 - R_U23GAAT - R_UAGAAT - R_3HAD140 = 0.0
- M_3hoctACP_c: - R_3HAD80 + R_3OAR80 = 0.0
- M_3hoctaACP_c: + R_3OAR180 - R_3HAD180 = 0.0
- M_3hpalmACP_c: + R_3OAR160 - R_3HAD160 = 0.0
- M_3ig3p_c: + R_IGPS - R_TRPS3 - R_TRPS1 = 0.0
- M_3mob_c: + R_VALTA - R_MOHMT + R_DHAD1 - R_IPPS = 0.0
- M_3mop_c: + R_DHAD2 + R_ILETA = 0.0
- M_3ocddec5eACP_c: - R_3OAR121 + R_3OAS121 = 0.0
- M_3ocmrs7eACP_c: - R_3OAR141 + R_3OAS141 = 0.0
- M_3ocpalm9eACP_c: + R_3OAS161 - R_3OAR161 = 0.0
- M_3ocvac11eACP_c: + R_3OAS181 - R_3OAR181 = 0.0
- M_3oddecACP_c: - R_3OAR120 + R_3OAS120 = 0.0
- M_3odecACP_c: + R_3OAS100 - R_3OAR100 = 0.0
- M_3ohexACP_c: + R_3OAS60 - R_3OAR60 = 0.0
- M_3omrsACP_c: - R_3OAR140 + R_3OAS140 = 0.0
- M_3ooctACP_c: + R_3OAS80 - R_3OAR80 = 0.0
- M_3ooctdACP_c: - R_3OAR180 + R_3OAS180 = 0.0
- M_3opalmACP_c: - R_3OAR160 + R_3OAS160 = 0.0
- M_3ophb_c: - R_OPHBDC = 0.0
- M_3pg_c: + R_GLYCK + R_PGM - R_PGK + R_RBCh - R_PGCD +2.00000000000000000000 R_RBPC = 0.0
- M_3php_c: + R_PGCD = 0.0
+ M_3dsphgn_c: - R_3DSPHR + R_SERPT = 0.0
+ M_3hanthrn_c: + R_HKYNH - R_3HAO = 0.0
+ M_3hdcoa_x: - R_ECOAH4p + R_HACD4p = 0.0
+ M_3hddcoa_x: - R_ECOAH5p + R_HACD5p = 0.0
+ M_3hhdcoa_x: + R_HACD7p - R_ECOAH7p = 0.0
+ M_3hodcoa_x: - R_ECOAH8p + R_HACD8p = 0.0
+ M_3hph5mb_m: + R_3DH5HPBMTm - R_3HPH5MBDCm = 0.0
+ M_3htdcoa_x: + R_HACD6p - R_ECOAH6p = 0.0
+ M_3hxccoa_x: - R_HACD10p + R_ECOAH11p = 0.0
+ M_3ig3p_c: - R_TRPS1 + R_IGPS = 0.0
+ M_3ipmmest_c: + R_3IPM3MT = 0.0
+ M_3mbald_c: + R_4MOPDC - R_ALCD24yi - R_ALCD24xi - R_3MBALDtm - R_3MBALDt = 0.0
+ M_3mbald_e: - R_EX_3mbald_e_ + R_3MBALDt = 0.0
+ M_3mbald_m: - R_ALCD24xim + R_3MBALDtm = 0.0
+ M_3mob_c: - R_IPPS - R_3MOBDC + R_VALTA - R_MOHMT - R_3MOBtm = 0.0
+ M_3mob_m: - R_IPPSm + R_DHAD1m + R_VALTAim + R_3MOBtm = 0.0
+ M_3mop_c: - R_3MOPtm - R_3MOPDC + R_ILETA + R_3MOPt = 0.0
+ M_3mop_e: - R_EX_3mop_e_ - R_3MOPt = 0.0
+ M_3mop_m: + R_ILETAm + R_3MOPtm + R_DHAD2m = 0.0
+ M_3odcoa_x: - R_ACACT4p - R_HACD4p = 0.0
+ M_3oddcoa_x: - R_HACD5p - R_ACACT5p = 0.0
+ M_3ohdcoa_x: - R_ACACT7p - R_HACD7p = 0.0
+ M_3ohodcoa_x: - R_ACACT8p - R_HACD8p = 0.0
+ M_3ohxccoa_x: + R_HACD10p - R_ACACT9p = 0.0
+ M_3ophb_5_c: - R_3OPHB_5tm - R_3OPHB5Hm = 0.0
+ M_3ophb_5_m: + R_3OPHB_5tm + R_HBZOPT6m = 0.0
+ M_3otdcoa_x: - R_HACD6p - R_ACACT6p = 0.0
+ M_3pg_c: + R_PGM - R_PGK - R_PGCD = 0.0
+ M_3php_c: - R_PSERT + R_PGCD = 0.0
  M_3psme_c: - R_CHORS + R_PSCVTi = 0.0
- M_4aabutn_c: + R_NABTNO = 0.0
- M_4abut_c: + R_GLUDC - R_ABTA + R_ABUTD + R_GUDBUTNAH = 0.0
- M_4abutn_c: - R_ABUTD = 0.0
- M_4abz_c: + R_ADCL - R_DHPS - R_FOLD3 = 0.0
+ M_44mctr_c: + R_LNS14DMx - R_C14STR + R_LNS14DM = 0.0
+ M_44mzym_c: - R_C4STMO1 + R_C14STR = 0.0
+ M_4aabutn_c: - R_AABTN + R_NABTNO = 0.0
+ M_4abut_c: + R_AABTN + R_GLUDC + R_ABUTt2r - R_4ABUTtm + R_THZPSN1_SC - R_ABTA + R_THZPSN2_SC = 0.0
+ M_4abut_e: - R_ABUTt2r - R_EX_4abut_e_ = 0.0
+ M_4abut_m: + R_4ABUTtm + R_ABUTDm = 0.0
+ M_4abutn_c: + R_DXHPScm - R_4ABUTNtm = 0.0
+ M_4abutn_m: - R_ABUTDm + R_4ABUTNtm = 0.0
+ M_4abz_c: + R_ADCL - R_4ABZtm - R_4ABZt = 0.0
+ M_4abz_e: + R_4ABZt - R_EX_4abz_e_ = 0.0
+ M_4abz_m: + R_4ABZtm - R_DHPSm - R_FOLD3m = 0.0
  M_4adcho_c: + R_ADCS - R_ADCL = 0.0
- M_4ahmmp_c: + R_AHMMPS = 0.0
- M_4c2me_c: - R_CDPMEK + R_MEPCT = 0.0
+ M_4ahmmp_c: + R_AHMMPS - R_HMPK1 + R_TMN = 0.0
+ M_4ampm_c: - R_PMPK + R_HMPK1 = 0.0
+ M_4fumacac_c: + R_MACACI - R_FUMAC = 0.0
  M_4gudbd_c: - R_AMID = 0.0
- M_4gudbutn_c: + R_GDBTALDH + R_AMID - R_GUDBUTNAH = 0.0
- M_4h2oglt_c: - R_DDPGA + R_EHGLAT = 0.0
- M_4hba_c: + R_THZPSN + R_THZSN = 0.0
- M_4hpro_LT_c: + R_HPROb + R_HPROa + R_PROAKGOX1r = 0.0
- M_4mhetz_c: + R_THZSN = 0.0
- M_4mop_c: - R_LEUTAi + R_OMCDC + R_LEUTA = 0.0
- M_4mpetz_c: + R_THZPSN - R_TMPPP = 0.0
+ M_4gudbutn_c: + R_AMID = 0.0
+ M_4h2oglt_c: - R_4H2OGLTtp - R_4H2OGLTtm + R_EHGLAT = 0.0
+ M_4h2oglt_m: + R_EHGLATm + R_4H2OGLTtm = 0.0
+ M_4h2oglt_x: + R_4H2OGLTtp + R_EHGLATp = 0.0
+ M_4hbz_c: + R_CHRPL - R_4HBZtm = 0.0
+ M_4hbz_m: + R_4HBZtm + R_4HBZFm - R_HBZOPT6m = 0.0
+ M_4hbzcoa_m: - R_4HBZFm + R_4HBZCOAFm = 0.0
+ M_4hglusa_m: - R_4HGLSDm + R_PHCHGSm = 0.0
+ M_4hpro_LT_c: - R_4HPRO_LTtm + R_HPROb + R_HPROa = 0.0
+ M_4hpro_LT_m: - R_HPROxm - R_HPROym + R_4HPRO_LTtm = 0.0
+ M_4hthr_c: + R_4HTHRS = 0.0
+ M_4mhetz_c: - R_HETZK + R_TMN = 0.0
+ M_4mlacac_c: - R_MACACI + R_HGNTOR = 0.0
+ M_4mop_c: + R_OMCDC - R_4MOPDC + R_LEUTA = 0.0
+ M_4mop_m: + R_OMCDCm + R_LEUTAm = 0.0
+ M_4mpetz_c: - R_TMPPP + R_THZPSN1_SC + R_THZPSN2_SC + R_HETZK = 0.0
+ M_4mzym_c: - R_C4STMO2 + R_C3STKR1 = 0.0
+ M_4mzym_int1_c: + R_C4STMO1 - R_C3STDH1 = 0.0
+ M_4mzym_int2_c: - R_C3STKR1 + R_C3STDH1 = 0.0
  M_4pasp_c: + R_ASPKi - R_ASADi = 0.0
- M_4ppan_c: + R_PNTK - R_PPNCL3 - R_PPNCL = 0.0
- M_4ppcys_c: + R_PPNCL3 - R_PPCDC + R_PPNCL = 0.0
- M_4r5au_c: + R_RBFSb - R_RBFSa + R_PMDPHT = 0.0
- M_5aizc_c: + R_AIRCr - R_PRASCS = 0.0
- M_5aop_c: -2.00000000000000000000 R_PPBNGS + R_G1SATi = 0.0
- M_5aprbu_c: + R_APRAUR - R_PMDPHT = 0.0
- M_5apru_c: - R_APRAUR + R_DHPPDA = 0.0
- M_5fthf_c: - R_FOMETR = 0.0
- M_5g2oxpt_c: - R_MNXR7081 + R_ARGDH = 0.0
- M_5mdr1p_c: + R_MTAP - R_MTRI = 0.0
- M_5mdru1p_c: - R_DM_5mdru1p + R_MTRI = 0.0
- M_5mta_c: + R_SPMS - R_MTAP = 0.0
- M_5mthf_c: + R_MTHFR2 -0.00325879699999999991 R_BiomassSolubleP - R_METS = 0.0
- M_6pgc_c: - R_GND + R_PGL = 0.0
- M_6pgl_c: - R_PGL + R_G6PDH2 + R_G6PBDH = 0.0
- M_6pthp_c: + R_PTHPS = 0.0
- M_8aonn_c: + R_AOXSr = 0.0
- M_ACP_c: + R_AGPAT183_6_9_12 + R_U23GAAT + R_3OAS100 + R_AGPAT182_9_12 - R_MCOATA + R_3OAS60 + R_G3PAT183_6_9_12 + R_AGPAT184_6_9_12_15 + R_3OAS181 + R_3OAS180 + R_AGPAT181 + R_AGPAT180 + R_AGPAT161 + R_AGPAT160 + R_G3PAT161 + R_G3PAT160 + R_3OAS80 + R_3OAS161 - R_ACOATA_syn + R_G3PAT182_9_12 + R_G3PAT181_9 + R_G3PAT183_9_12_15 + R_3OAS121 + R_3OAS120 + R_G3PAT184_6_9_12_15 + R_AGPAT183_9_12_15 + R_AGPAT181_9 + R_UAGAAT + R_KAS14 + R_G3PAT181 + R_3OAS160 + R_3OAS141 + R_3OAS140 + R_G3PAT180 = 0.0
- M_C04051_c: + R_ADPT2 = 0.0
- M_PHB_c: + R_PHBS_syn - R_DM_PHB = 0.0
- M_aacoa_c: - R_AACOAR_syn + R_BKTIO_syn = 0.0
- M_acACP_c: + R_ACOATA_syn - R_KAS14 = 0.0
- M_ac_c: + R_UHGADA + R_ALDD2xr + R_ACt2rpp - R_ACKr + R_CYSS + R_METACH + R_R05219 - R_ACS = 0.0
- M_ac_e: - R_EX_ac_e - R_ACtex = 0.0
- M_ac_p: - R_ACt2rpp + R_ACtex = 0.0
- M_acald_c: - R_ALDD2xr + R_ALCD2y + R_DRPA = 0.0
- M_accoa_c: + R_PDH - R_HSERTA - R_ACCOACr -2.00000000000000000000 R_BKTIO_syn - R_PTAr + R_PDHbr - R_ACGS -0.00407714959999999974 R_BiomassSolubleP - R_ACOATA_syn - R_KAS15 - R_IPPS - R_CS + R_POR_syn - R_SERATi - R_G1PACT + R_ACS = 0.0
- M_acg5p_c: + R_AGPR + R_ACGK = 0.0
- M_acg5sa_c: + R_ACOTA - R_AGPR = 0.0
- M_acgam1p_c: - R_UAGDP + R_G1PACT = 0.0
- M_acglu_c: + R_ORNTACr + R_ACGS - R_ACGK = 0.0
- M_achms_c: + R_HSERTA - R_METACH = 0.0
- M_acmana_c: + R_UAG2EMA = 0.0
- M_acon_C_c: + R_ACONT1 - R_ACONT2 = 0.0
- M_acorn_c: - R_ACOTA - R_ORNTACr = 0.0
- M_acser_c: - R_CYSS + R_SERATi = 0.0
- M_actACP_c: - R_3OAR40 + R_KAS14 + R_KAS15 = 0.0
- M_actn_R_c: - R_23BDD + R_ACLDC = 0.0
- M_actp_c: + R_PTAr + R_ACKr = 0.0
- M_adcobdam_c: - R_ADCYRS + R_CYRDAAT = 0.0
- M_adcobhex_c: + R_ADCYRS - R_ADCPS2 - R_ADCPS1 = 0.0
- M_ade_c: + R_AMPN + R_PUNP1 + R_MTAP - R_ADPT = 0.0
- M_adhlam_c: + R_PDHa - R_PDHbr = 0.0
- M_adn_c: + R_NTD7 + R_AHCi - R_PUNP1 = 0.0
- M_adocbi_c: + R_ADCPS1 = 0.0
- M_adocbip_c: - R_ACBIPGT + R_ADCPS2 = 0.0
- M_adocbl_c: -0.00325879699999999991 R_BiomassSolubleP + R_ADOCBLS = 0.0
- M_adp_c: + R_CTPS2 + R_CTPS1 + R_TMK + R_PRUK + R_GLYCK + R_PFK_2 + R_FE2abcpp + R_COBALT2abcpp + R_PPK2r -3.00000000000000000000 R_ATPS4rpp + R_SULabcpp + R_GGPS + R_SUCRabcpp_syn + R_ZN2abcpp + R_PRFGS + R_GLUK_syn + R_NDPK10 + R_BCT1_syn + R_UMPK + R_CBMK +2.00000000000000000000 R_CBPS + R_HISabcpp + R_PTRCabcpp + R_DPCOAK + R_PNTK + R_THFGLUS + R_HSK + R_NDPK9 + R_NDPK8 + R_NDPK7 + R_NDPK6 + R_NDPK5 + R_NDPK4 + R_NDPK3 + R_NDPK2 + R_NDPK1 + R_PFK + R_ACCOACr + R_COBALT2abcpp_syn + R_PROabcpp + R_TMPKr + R_ASPKi + R_PIuabcpp + R_GLUCYS + R_PGK + R_CU2abcpp_syn + R_SHKK +16.88006917999999956237 R_BiomassMixo +4.32000000000000028422 R_BiomassProtein + R_HEX7 + R_UAMAS + R_GLCGLYCabcpp_syn + R_CDPMEK + R_UAMAGS + R_TMDK1 - R_RNDR1 + R_CU2abcu_syn - R_PYK + R_GLYabcpp +4.00000000000000000000 R_ADCYRS + R_GTHS + R_ADSK + R_DTMPK + R_NTP1 + R_NI2abcpp_syn + R_SERabcpp + R_GLCS1 + R_CYTK1 + R_ALAabcpp + R_GALK + R_GK1 + R_RBK + R_THRPS + R_UREAabcpp + R_HEX1 + R_DHFS + R_LEUabcpp + R_RBFK + R_GLNTRAT + R_URIDK2r + R_UAAGDS + R_ACKr + R_ZNabcpp + R_ARGabcpp + R_MG2tpp + R_UGLDDS2 + R_COCHL + R_MOBDabcpp +3.35999999999999987566 R_BiomassDNA + R_NADK +2.41000000000000014211 R_BiomassRNA + R_FTHFLi -3.00000000000000000000 R_ATPSu + R_UGMDDS + R_DRBK +2.00000000000000000000 R_ADK1 +2.00000000000000000000 R_CYPHYS + R_ADCPS2 + R_ADCPS1 +17.70006718000000134339 R_BiomassHetero + R_LYSabcpp + R_PFK_3 + R_ACGK + R_CA2abcpp + R_GLYK +2.00000000000000000000 R_R05224 + R_NO3abcpp + R_PRAGS + R_SPMDabcpp + R_ADK_syn + R_GLNabcpp + R_PRASCS + R_ALAALAr + R_GLNS +0.82999999999999996003 R_BiomassPept + R_DBTSr + R_SUCOAS + R_MPML +31.84006918000000041502 R_BiomassAuto + R_FE3abc + R_GLU5K + R_PRAIS = 0.0
- M_adpglc_c: - R_GGPS + R_GLGC - R_GLCS1 = 0.0
- M_adprib_c: + R_NADN - R_ADPRDP = 0.0
- M_agdpcbi_c: + R_ACBIPGT - R_ADOCBLS = 0.0
- M_agm_c: + R_ARGDC - R_AGMT = 0.0
- M_ahcys_c: + R_MPBQ +2.00000000000000000000 R_PC6YM + R_DMTPHT + R_DNAMT_syn + R_PC11M - R_AHCi + R_PC20M +2.00000000000000000000 R_UPP3MT + R_PC17M + R_TOCOPHOM1 + R_TOCOPHOM2 + R_R05219 + R_MPOMT = 0.0
- M_ahdt_c: - R_PTHPS - R_DNTPPA + R_GTPCI = 0.0
- M_aicar_c: + R_ADSL2r - R_AICART + R_IG3PS - R_ADPT2 = 0.0
- M_air_c: - R_AHMMPS - R_AIRCr + R_PRAIS = 0.0
- M_akg_c: - R_ACOTA + R_GLUDy + R_ICDHy - R_ASPTA - R_TYRTA - R_ABTA - R_VALTA - R_OXGDC2 - R_PHETA1 + R_LEUTAi - R_EHGLAT + R_MNXR33992 + R_AKGtpp - R_ORNTA - R_PROAKGOX1r - R_SDPTA - R_LEUTA - R_GLMS_syn - R_OXGDC - R_GLUSx + R_HSTPT - R_ILETA - R_CYSTA = 0.0
- M_akg_e: - R_AKGtex - R_EX_akg_e = 0.0
- M_akg_p: + R_AKGtex - R_AKGtpp = 0.0
- M_ala_B_c: - R_PANTS + R_ASP1DC + R_BAMPPALDOX = 0.0
- M_ala_D_c: + R_ALAR -2.00000000000000000000 R_ALAALAr = 0.0
- M_ala_L_c: - R_ALATRS - R_ALAR - R_AOXSr + R_THZPSN - R_SPT_syn2 -0.08494419329999999824 R_BiomassProtein - R_UAMAS + R_ALAabcpp + R_ALAD_syn = 0.0
- M_ala_L_e: - R_EX_ala_L_e - R_ALAtex = 0.0
- M_ala_L_p: + R_ALAtex - R_ALAabcpp = 0.0
- M_alaala_c: - R_UGLDDS2 - R_UGMDDS + R_ALAALAr = 0.0
- M_alac_S_c: - R_KARA1i + R_ACLS - R_ACLDC = 0.0
- M_alatrna_c: + R_ALATRS = 0.0
- M_amet_c: - R_MPBQ -2.00000000000000000000 R_PC6YM - R_DMTPHT - R_DNAMT_syn - R_ADMDC - R_PC11M - R_BTS4 - R_PC20M + R_METAT -0.00325879699999999991 R_BiomassSolubleP -2.00000000000000000000 R_UPP3MT - R_PC17M - R_TOCOPHOM1 - R_TOCOPHOM2 - R_R05219 - R_MPOMT -2.00000000000000000000 R_CPPPGO2 = 0.0
- M_ametam_c: - R_SPMS + R_ADMDC = 0.0
- M_amp_c: + R_PANTS + R_ALATRS + R_HPPK + R_SERTRS + R_ASNTRS - R_NTD7 + R_PHETRS + R_GLUTRS + R_THRTRS + R_PROTRS + R_ARGTRS + R_ADSL1r + R_TYRTRS + R_GMPS + R_THZPSN + R_ASPTRS + R_BPNT + R_PRPPS + R_SUCBZL + R_TRPTRS + R_NADS2 + R_ADPRDP - R_AMPN + R_PPNCL3 + R_PPS + R_GMPS2 + R_ILETRS + R_LEUTRS + R_GLYTRS + R_VALTRS - R_ADK1 + R_ASNS1 + R_CYSTRS + R_ADPT + R_LYSTRS + R_ACS + R_METTRS + R_ARGSS + R_HISTRS = 0.0
- M_anth_c: + R_ANS - R_ANPRT + R_ANS2 = 0.0
- M_appl_c: - R_ADCPS1 = 0.0
- M_applp_c: + R_THRPD - R_ADCPS2 = 0.0
- M_aps_c: - R_ADSK + R_SADT = 0.0
- M_arg_L_c: + R_CYPHYC - R_ARGTRS - R_ARGDC - R_ARGDH -0.05042304709999999995 R_BiomassProtein + R_ARGSL - R_ARGN + R_ARGabcpp - R_ARGD - R_CYPHYS = 0.0
- M_arg_L_e: - R_ARGtex - R_EX_arg_L_e = 0.0
- M_arg_L_p: + R_ARGtex - R_ARGabcpp = 0.0
- M_argsuc_c: - R_ARGSL + R_ARGSS = 0.0
- M_argtrna_c: + R_ARGTRS = 0.0
- M_asn_L_c: - R_ASNN - R_ASNTRS -0.04056017299999999798 R_BiomassProtein + R_ASNS1 = 0.0
- M_asntrna_c: + R_ASNTRS = 0.0
- M_asp_L_c: + R_ASNN + R_CYPHYC - R_ASP1DC - R_ASPCT - R_ASPTA - R_ASPTRS - R_ASPO1 - R_ASPO6 - R_ASPKi -0.05032304879999999897 R_BiomassProtein - R_ADSS - R_CYPHYS - R_ASNS1 - R_PRASCS - R_ARGSS = 0.0
- M_aspsa_c: + R_ASADi + R_HSDx - R_DHDPS = 0.0
- M_asptrna_c: + R_ASPTRS = 0.0
- M_atocophe_c: -0.02404633150000000039 R_BiomassPigment + R_TOCOPHOM1 = 0.0
- M_atp_c: - R_CTPS2 - R_CTPS1 - R_TMK - R_PANTS - R_ALATRS - R_PRUK - R_GLYCK - R_PFK_2 - R_FE2abcpp - R_HPPK - R_FMNAT - R_SERTRS - R_NNATr - R_COBALT2abcpp - R_PPK2r +3.00000000000000000000 R_ATPS4rpp - R_ASNTRS - R_SULabcpp - R_SUCRabcpp_syn - R_ZN2abcpp - R_PRFGS - R_GLUK_syn - R_PHETRS - R_NDPK10 - R_BCT1_syn - R_UMPK - R_CBMK -2.00000000000000000000 R_CBPS - R_GLUTRS - R_HISabcpp - R_PTRCabcpp - R_THRTRS - R_DPCOAK - R_PNTK - R_PROTRS - R_THFGLUS - R_HSK - R_ARGTRS - R_NDPK9 - R_NDPK8 - R_NDPK7 - R_NDPK6 - R_NDPK5 - R_NDPK4 - R_NDPK3 - R_NDPK2 - R_NDPK1 - R_PFK - R_ACCOACr - R_NMNAT - R_COBALT2abcpp_syn - R_TYRTRS - R_GMPS - R_THZPSN - R_ASPTRS - R_PROabcpp - R_TMPKr - R_GLGC - R_ASPKi - R_PIuabcpp - R_GLUCYS - R_PGK - R_PRPPS - R_CU2abcpp_syn - R_SHKK -16.88006917999999956237 R_BiomassMixo -4.32000000000000028422 R_BiomassProtein - R_SUCBZL - R_TRPTRS - R_NADS2 - R_HEX7 - R_UAMAS - R_GLCGLYCabcpp_syn - R_CDPMEK - R_UAMAGS - R_TMDK1 - R_PPNCL3 - R_METAT - R_CU2abcu_syn + R_PYK - R_ATPPRT - R_GLYabcpp - R_PPS -4.00000000000000000000 R_ADCYRS - R_GTHS - R_ADSK - R_DTMPK - R_NTP1 - R_NI2abcpp_syn - R_SERabcpp - R_CYTK1 - R_GMPS2 - R_ALAabcpp - R_GALK - R_ILETRS - R_LEUTRS - R_GK1 - R_GLYTRS - R_RBK - R_THRPS - R_UREAabcpp - R_HEX1 - R_DHFS - R_LEUabcpp - R_VALTRS - R_PTPAT - R_RBFK - R_GLNTRAT - R_URIDK2r - R_UAAGDS - R_ACKr - R_ZNabcpp - R_CYRDAAT - R_ARGabcpp - R_MG2tpp - R_UGLDDS2 - R_COCHL - R_MOBDabcpp -3.35999999999999987566 R_BiomassDNA - R_NADK -2.66686201289999980091 R_BiomassRNA - R_FTHFLi +3.00000000000000000000 R_ATPSu - R_UGMDDS - R_DRBK - R_ADK1 -2.00000000000000000000 R_CYPHYS - R_ADCPS2 - R_ADCPS1 -17.70006917999999984659 R_BiomassHetero - R_ASNS1 - R_LYSabcpp - R_PFK_3 - R_ACGK - R_CYSTRS - R_CA2abcpp - R_GLYK - R_ADNCYC -2.00000000000000000000 R_R05224 - R_NO3abcpp - R_LYSTRS - R_PRAGS - R_SADT - R_SPMDabcpp - R_ADK_syn - R_GLNabcpp - R_PRASCS - R_ACS - R_ALAALAr - R_METTRS - R_GLNS -0.82999999999999996003 R_BiomassPept - R_ARGSS - R_DBTSr - R_SUCOAS - R_MPML -31.84006918000000041502 R_BiomassAuto - R_FE3abc - R_HISTRS - R_GLU5K - R_PRAIS = 0.0
- M_bamppald_c: - R_BAMPPALDOX = 0.0
- M_bcarote_c: - R_BCAROKE -0.31260961710000001457 R_BiomassPigment - R_BCAROHX + R_GCATENEC = 0.0
- M_bcryptox_c: - R_BCAROHX2 + R_BCAROHX = 0.0
- M_bglycogen_c: - R_GLCP2 + R_GLBRAN2 = 0.0
- M_bilirub_c: + R_BILIRED = 0.0
- M_biliverd_c: - R_BILIRED + R_HOXG = 0.0
- M_biomass_dna_c: -0.10082699999999999996 R_BiomassMixo + R_BiomassDNA -0.10082699999999999996 R_BiomassHetero -0.10082699999999999996 R_BiomassAuto = 0.0
- M_biomass_glycogen_c: + R_BiomassGlycogen -0.21030999999999999694 R_BiomassAuto = 0.0
- M_biomass_ion_c: -0.23274190000000000156 R_BiomassMixo + R_BiomassIon -0.23274190000000000156 R_BiomassHetero -0.23274190000000000156 R_BiomassAuto = 0.0
- M_biomass_lipid_c: + R_BiomassLipid -0.15719526000000000332 R_BiomassMixo -0.15719526000000000332 R_BiomassHetero -0.15719526000000000332 R_BiomassAuto = 0.0
- M_biomass_lps_c: -0.02522800000000000042 R_BiomassMixo -0.02522800000000000042 R_BiomassHetero + R_BiomassLPS -0.02522800000000000042 R_BiomassAuto = 0.0
- M_biomass_pept_p: -0.02522800000000000042 R_BiomassMixo -0.02522800000000000042 R_BiomassHetero + R_BiomassPept -0.02522800000000000042 R_BiomassAuto = 0.0
- M_biomass_pigment_c: -0.01094720000000000068 R_BiomassMixo + R_BiomassPigment -0.01094720000000000068 R_BiomassHetero -0.01094720000000000068 R_BiomassAuto = 0.0
- M_biomass_protein_c: -4.60007900000000002905 R_BiomassMixo + R_BiomassProtein -4.60007900000000002905 R_BiomassHetero -4.60007900000000002905 R_BiomassAuto = 0.0
- M_biomass_rna_c: -0.53023799999999998711 R_BiomassMixo + R_BiomassRNA -0.53023799999999998711 R_BiomassHetero -0.53023799999999998711 R_BiomassAuto = 0.0
- M_biomass_solublep_c: -0.06843016000000000376 R_BiomassMixo + R_BiomassSolubleP -0.06843016000000000376 R_BiomassHetero -0.06843016000000000376 R_BiomassAuto = 0.0
- M_btn_c: + R_BTS4 = 0.0
- M_btocophe_c: -0.00132252999999999993 R_BiomassPigment + R_TOCOPHOM2 = 0.0
- M_but2eACP_c: + R_3HAD40 - R_EAR40y = 0.0
- M_butACP_c: - R_3OAS60 + R_EAR40y = 0.0
- M_ca2_c: - R_CA2t3pp -0.01938628150000000147 R_BiomassIon + R_CA2abcpp = 0.0
- M_ca2_e: - R_CA2tex - R_EX_ca2_e = 0.0
- M_ca2_p: + R_CA2t3pp + R_CA2tex - R_CA2abcpp = 0.0
- M_camp_c: + R_ADNCYC = 0.0
- M_cbasp_c: + R_ASPCT + R_DHORTS = 0.0
- M_cbp_c: + R_CBMK + R_CBPS - R_ASPCT - R_OCBT = 0.0
- M_cddec5eACP_c: + R_EAR121y - R_3OAS141 = 0.0
- M_cdec3eACP_c: - R_3OAS121 + R_T2DECAI = 0.0
- M_cdp_c: - R_NDPK3 - R_PYK4 - R_RNDR3 + R_CYTK1 + R_PPNCL = 0.0
- M_cdpdhdec9eg_c: - R_PGSA161 + R_DASYN161 = 0.0
- M_cdpdhdecg_c: - R_PGSA160 + R_DASYN160 = 0.0
- M_cdpdodec11eg_c: - R_PGSA181 + R_DASYN181 = 0.0
- M_cdpdodec691215eg_c: + R_DASYN184_6_9_12_15 - R_PGSA184_6_9_12_15 = 0.0
- M_cdpdodec6912eg_c: - R_PGSA183_6_9_12 + R_DASYN183_6_9_12 = 0.0
- M_cdpdodec91215eg_c: - R_PGSA183_9_12_15 + R_DASYN183_9_12_15 = 0.0
- M_cdpdodec912eg_c: - R_PGSA182_9_12 + R_DASYN182_9_12 = 0.0
- M_cdpdodec9eg_c: - R_PGSA181_9 + R_DASYN181_9 = 0.0
- M_cdpdodecg_c: - R_PGSA180 + R_DASYN180 = 0.0
- M_cdpglc_c: + R_MNXR33817 = 0.0
- M_cgly_c: + R_GTHRDH_syn - R_AMPTASECG = 0.0
- M_chlld_c: - R_CHPHYS + R_POR = 0.0
- M_cholphya_c: + R_CHPHYS -0.30967339550000000381 R_BiomassSolubleP = 0.0
- M_chor_c: - R_ADCS - R_ANS - R_ICHORS + R_CHORS -0.00325879699999999991 R_BiomassSolubleP - R_ANS2 - R_CHORM = 0.0
- M_cit_c: - R_ACONT1 + R_CITtpp + R_CS = 0.0
- M_cit_e: - R_EX_cit_e - R_CITtex = 0.0
- M_cit_p: - R_CITtpp + R_CITtex = 0.0
- M_citr_L_c: + R_OCBT + R_ARGD - R_ARGSS = 0.0
- M_cmp_c: + R_PGSA160 + R_PGSA161 + R_PGSA183_9_12_15 + R_PGSA184_6_9_12_15 + R_PGSA181_9 + R_PGSA183_6_9_12 + R_PGSA182_9_12 + R_NTPP4 - R_CYTK1 - R_NTD4 + R_MECDPS + R_PGSA180 + R_PGSA181 = 0.0
- M_co1dam_c: +2.00000000000000000000 R_CYRDAR - R_CYRDAAT = 0.0
- M_co2_c: + R_GLYCL + R_PC6YM + R_PDH + R_GLUDC + R_3OAS100 + R_ASP1DC - R_CBMK + R_ACHBS + R_LYSDC + R_ADMDC + R_ICDHy + R_3OAS60 + R_AOXSr + R_GND + R_THZPSN + R_MNXR7081 + R_PDHa + R_OXGDC2 + R_IGPS + R_ARGDC + R_PPOR + R_3OAS181 + R_3OAS180 + R_DHNAPHT + R_THZSN + R_34HPPOR - R_HCO3E + R_3OAS80 - R_PPC + R_PPCDC + R_FDH6pp + R_ACLS + R_DAPDC + R_3OAS161 +2.00000000000000000000 R_CYNTAH + R_DXPS - R_AIRCr + R_THRPD - R_CO2tpp + R_PROAKGOX1r + R_3OAS121 + R_3OAS120 + R_PDX5PS + R_HGPHT + R_OMPDC + R_OMCDC + R_OPHBDC + R_ME1 + R_OXGDC +4.00000000000000000000 R_UPPDC2 +4.00000000000000000000 R_UPPDC1 + R_PPNDH + R_KAS14 + R_KAS15 - R_GLYCL_2 + R_GLXCL +2.00000000000000000000 R_CPPPGO + R_NNDPR + R_POR_syn + R_UREA + R_PPND + R_OXADC - R_RBPC - R_DBTSr + R_3OAS160 + R_3OAS141 + R_3OAS140 + R_ACLDC +2.00000000000000000000 R_CPPPGO2 = 0.0
- M_co2_e: - R_EX_co2_e - R_CO2tex = 0.0
- M_co2_p: - R_NDH1_3u + R_CO2tpp + R_CO2tex - R_NDH1_4pp = 0.0
- M_co2dam_c: -2.00000000000000000000 R_CYRDAR + R_COCHL = 0.0
- M_co_c: + R_HOXG + R_Cotpp = 0.0
- M_co_e: - R_COt - R_EX_co_e = 0.0
- M_co_p: + R_COt - R_Cotpp = 0.0
- M_coa_c: + R_PHBS_syn - R_PDH + R_DPCOAK + R_MCOATA + R_HSERTA + R_AOXSr + R_BKTIO_syn + R_PTAr + R_THDPS - R_SUCBZL - R_PDHbr + R_NPHS + R_ACGS -0.00244775110000000021 R_BiomassSolubleP + R_ACOATA_syn + R_KAS15 + R_IPPS + R_CS - R_POR_syn + R_SERATi + R_G1PACT - R_ACS - R_SUCOAS = 0.0
- M_cobalt2_c: - R_COBALT2abcpp + R_COBALT2abcpp_syn -0.01301570540000000081 R_BiomassIon - R_COCHL = 0.0
- M_cobalt2_e: - R_COBALT2tex - R_EX_cobalt2_e = 0.0
- M_cobalt2_p: + R_COBALT2abcpp - R_COBALT2abcpp_syn + R_COBALT2tex = 0.0
- M_cpppg1_c: + R_UPPDC2 = 0.0
- M_cpppg3_c: + R_UPPDC1 - R_CPPPGO - R_CPPPGO2 = 0.0
- M_csn_c: - R_CSND + R_CYTDH = 0.0
- M_ctp_c: + R_CTPS2 + R_CTPS1 - R_DASYN184_6_9_12_15 + R_NDPK3 - R_MNXR33817 + R_PYK4 - R_DASYN183_9_12_15 - R_DCTPD2 - R_DASYN181_9 - R_NTPP4 - R_DASYN182_9_12 - R_DASYN161 - R_DASYN160 - R_PPNCL - R_MEPCT -0.23404584359999999754 R_BiomassRNA - R_DASYN183_6_9_12 - R_DASYN181 - R_DASYN180 = 0.0
- M_cu2_c: + R_CU2abcpp_syn - R_CU2abcu_syn -0.01292418770000000085 R_BiomassIon = 0.0
- M_cu2_e: - R_EX_cu2_e - R_CU2tex = 0.0
- M_cu2_p: + R_CU2tex - R_CU2abcpp_syn = 0.0
- M_cu2_u: + R_CU2abcu_syn = 0.0
- M_cyanphy_c: - R_CYPHYC + R_CYPHYS - R_DM_cyanphy = 0.0
- M_cynt_c: - R_CYNTAH + R_CYNTt2pp = 0.0
- M_cynt_e: - R_EX_cynt_e - R_CYNTtex = 0.0
- M_cynt_p: + R_CYNTtex - R_CYNTt2pp = 0.0
- M_cys_L_c: - R_THZPSN - R_GLUCYS -0.00996374189999999979 R_BiomassProtein - R_THZSN - R_PPNCL3 - R_PPNCL + R_AMPTASECG + R_CYSS - R_CYSTRS - R_CYSTA = 0.0
- M_cyst_L_c: - R_CYSTL = 0.0
- M_cystrna_c: + R_CYSTRS = 0.0
- M_cytd_c: + R_NTD4 - R_CYTDH = 0.0
- M_dad_5_c: + R_BTS4 +2.00000000000000000000 R_CPPPGO2 = 0.0
- M_dadp_c: - R_NDPK8 + R_RNDR1 + R_ADK_syn = 0.0
- M_damp_c: - R_ADK_syn = 0.0
- M_dann_c: - R_DBTSr = 0.0
- M_datp_c: + R_NDPK8 -0.26095192760000002208 R_BiomassDNA = 0.0
+ M_4ppan_c: + R_PNTK - R_PPNCL2 = 0.0
+ M_4ppcys_c: + R_PPNCL2 - R_PPCDC = 0.0
+ M_4r5au_c: - R_RBFSa + R_PMDPHT + R_RBFSb = 0.0
+ M_5aizc_c: - R_PRASCS + R_AIRCr = 0.0
+ M_5aop_c: + R_5AOPt2 - R_5AOPtm -2.00000000000000000000 R_PPBNGS = 0.0
+ M_5aop_e: - R_EX_5aop_e_ - R_5AOPt2 = 0.0
+ M_5aop_m: + R_ALASm + R_5AOPtm = 0.0
+ M_5aprbu_c: - R_PMDPHT + R_DRTPPD = 0.0
+ M_5dpmev_c: + R_PMEVK - R_DPMVD = 0.0
+ M_5fthf_b: + R_EX_5fthf_e_ = 0.0
+ M_5fthf_c: + R_5FTHFt - R_FTHFCL - R_FTHFI = 0.0
+ M_5fthf_e: - R_EX_5fthf_e_ - R_5FTHFt = 0.0
+ M_5fthf_m: + R_THFATm - R_FTHFCLm = 0.0
+ M_5mdr1p_c: - R_MTRI + R_MTAP = 0.0
+ M_5mdru1p_c: - R_MDRPD + R_MTRI = 0.0
+ M_5mta_c: + R_SPRMS - R_MTAP + R_SPMS = 0.0
+ M_5mthf_c: + R_MTHFR3 - R_METS = 0.0
+ M_5pmev_c: + R_MEVK1 + R_MEVK2 + R_MEVK4 - R_PMEVK + R_MEVK3 = 0.0
+ M_6dg_c: - R_DGGH = 0.0
+ M_6pgc_c: + R_PGL - R_GND = 0.0
+ M_6pgl_c: - R_PGL - R_6PGLter + R_G6PDH2 = 0.0
+ M_6pgl_r: + R_G6PDH2er + R_6PGLter = 0.0
+ M_8aonn_c: - R_AMAOTr + R_8AONNt2 = 0.0
+ M_8aonn_e: - R_8AONNt2 - R_EX_8aonn_e_ = 0.0
+ M_ACP_c: + R_FA120ACPH + R_FA161ACPH - R_MCOATA + R_FA141ACPH + R_FA180ACPH + R_FA160ACPH + R_FA140ACPH + R_FA181ACPH - R_ACOATA + R_FA182ACPH = 0.0
+ M_ACP_m: +3.00000000000000000000 R_FAS80ACPm_L + R_FAS140ACPm + R_FAS161ACPm + R_FAS182ACPm + R_FAS180ACPm + R_FAS141ACPm + R_FAS120ACPm + R_FAS181ACPm - R_MCOATAm + R_FAS160ACPm + R_FAS100ACPm - R_ACOATAm = 0.0
+ M_Dara14lac_c: - R_ARAB14LO + R_ARAB1D2 = 0.0
+ M_L2aadp6sa_c: + R_AASAD2 + R_AASAD1 - R_SACCD1 = 0.0
+ M_L2aadp_c: + R_AATA - R_AASAD2 - R_AASAD1 = 0.0
+ M_Lcystin_c: + R_LCYSTintv = 0.0
+ M_Lcystin_v: - R_LCYSTintv = 0.0
+ M_Lfmkynr_c: - R_FKYNH + R_TRPO2 = 0.0
+ M_Lkynr_c: + R_FKYNH - R_KYN - R_KYN3OX = 0.0
+ M_N1aspmd_c: + R_POLYAO2 - R_POLYAO + R_SPMDAT1 = 0.0
+ M_N1sprm_c: + R_DIAT - R_POLYAO2 = 0.0
+ M_NPmehis_c: + R_ARMT = 0.0
+ M_Nbfortyr_c: + R_NFTYROX - R_NFORTYRt = 0.0
+ M_Nbfortyr_e: - R_EX_Nbfortyr_e_ + R_NFORTYRt = 0.0
+ M_Nfortyr_c: -2.00000000000000000000 R_NFTYROX + R_TYRNFT = 0.0
+ M_Sfglutth_c: + R_FALDH - R_SFGTH = 0.0
+ M_Ssq23epx_c: + R_SQ23EPXter - R_LNSTLS = 0.0
+ M_Ssq23epx_r: - R_SQ23EPXter + R_SQLEr + R_SQLErx = 0.0
+ M_T4hcinnm_m: + R_T4HCINNMFM - R_COUCOAFm = 0.0
+ M_aacald_c: + R_TAUDO = 0.0
+ M_aacoa_c: + R_HMGCOAS + R_ACACT1 = 0.0
+ M_aacoa_m: + R_ACACT1m + R_HMGCOASm = 0.0
+ M_aact_c: - R_AACTOOR + R_AOBUTDs = 0.0
+ M_abt_c: + R_ARABR + R_ABTt = 0.0
+ M_abt_e: - R_EX_abt_e_ - R_ABTt = 0.0
+ M_acACP_c: + R_ACOATA = 0.0
+ M_acACP_m: - R_FAS80ACPm_L + R_ACOATAm = 0.0
+ M_ac_c: + R_AABTN + R_AHSERL + R_ALDD2y + R_THZPSN1_SC - R_ACtp + R_METB1 + R_THZPSN2_SC + R_ACHLE2 + R_ACHLE3 + R_ACHLE1 + R_AHSERL2 + R_CHTNDA + R_ACt2r - R_ACS + R_ACtr - R_ACtm = 0.0
+ M_ac_e: - R_EX_ac_e_ - R_ACt2r - R_ACtr = 0.0
+ M_ac_m: + R_ALDD2xm + R_ALDD2ym - R_ACSm + R_ACOAHim + R_ACtm = 0.0
+ M_ac_x: - R_ACSp + R_ACtp = 0.0
+ M_acac_c: + R_FUMAC = 0.0
+ M_acald_c: + R_PYRDC + R_ACALDtm -2.00000000000000000000 R_ACALDCD - R_ALCD2ir + R_ALCD2if + R_ACALDt - R_ALDD2y + R_THRA2i - R_PYRDC2 + R_ALCD2x + R_THRAi = 0.0
+ M_acald_e: - R_EX_acald_e_ - R_ACALDt = 0.0
+ M_acald_m: - R_ALDD2xm - R_ACALDtm - R_ALDD2ym - R_ALCD2irm = 0.0
+ M_accoa_c: - R_FAS80COA_L - R_FAS80_L - R_ACCOACr - R_HSERTA - R_DIAT - R_IPPS - R_ACCOAtn + R_HMGCOAS - R_PEPAT - R_OHACT2 - R_ACOATA - R_MALS - R_CSNATr + R_GLYATi - R_ACGAM6PS + R_ACS -2.00000000000000000000 R_ACACT1 - R_SERATi - R_OHACT1 - R_OHACT3 - R_OHACT4 - R_OHACT5 - R_SPMDAT1 = 0.0
+ M_accoa_m: + R_PDHm - R_IPPSm - R_ACCOACrm - R_HCITSm - R_CSm + R_ACSm -2.00000000000000000000 R_ACACT1m - R_ACGSm + R_4HBZCOAFm - R_ACOAHim + R_CSNATm + R_HMGCOASm - R_ACOATAm = 0.0
+ M_accoa_n: - R_HCITSn + R_ACCOAtn = 0.0
+ M_accoa_x: - R_CSp + R_ACACT7p +4.00000000000000000000 R_FAO80p +8.00000000000000000000 R_FAO161p_odd +7.00000000000000000000 R_FAO141p_even + R_ACACT6p +8.00000000000000000000 R_FAO161p_even +3.00000000000000000000 R_FAO240p + R_ACSp +9.00000000000000000000 R_FAO182p_oddodd + R_ACACT4p +9.00000000000000000000 R_FAO181p_even +9.00000000000000000000 R_FAO181p_odd +9.00000000000000000000 R_FAO182p_evenodd - R_MALSp + R_ACACT8p + R_ACACT9p - R_CSNATp + R_ACACT5p +9.00000000000000000000 R_FAO182p_eveneven +7.00000000000000000000 R_FAO141p_odd = 0.0
+ M_aces_c: - R_ACESt - R_ACHLE3 + R_OHACT1 = 0.0
+ M_aces_e: + R_ACESt - R_EX_aces_e_ = 0.0
+ M_acg5p_m: - R_AGPRim + R_ACGKm = 0.0
+ M_acg5sa_m: + R_AGPRim - R_ACOTAim = 0.0
+ M_acgam1p_c: - R_UDPACGLP + R_ACGAMPM = 0.0
+ M_acgam6p_c: - R_ACGAMPM + R_ACGAM6PS = 0.0
+ M_acglu_m: + R_ACGSm + R_ORNTACim - R_ACGKm = 0.0
+ M_achms_c: - R_AHSERL + R_HSERTA - R_THZPSN1_SC - R_METB1 - R_THZPSN2_SC - R_AHSERL2 = 0.0
+ M_acon5m_c: + R_ACON3MT = 0.0
+ M_acon_T_c: - R_ACON3MT = 0.0
+ M_acorn_m: - R_ORNTACim + R_ACOTAim = 0.0
+ M_acrn_c: + R_CSNATr + R_CRNCARtp - R_CRNCARtm + R_ACRNtp - R_ACRNtm = 0.0
+ M_acrn_m: - R_CSNATm + R_CRNCARtm + R_ACRNtm = 0.0
+ M_acrn_x: + R_CSNATp - R_CRNCARtp - R_ACRNtp = 0.0
+ M_acser_c: + R_SERATi = 0.0
+ M_actn_R_c: + R_ACALDCD + R_BTDD_RR + R_PYRDC2 = 0.0
+ M_acybut_c: - R_NTRLASE3 = 0.0
+ M_ade_c: + R_PUNP1 + R_PUNP2 + R_ADNUC + R_MTAP - R_ADD + R_AMPN - R_ADEtm + R_ADEt2 - R_ADPT = 0.0
+ M_ade_e: - R_EX_ade_e_ - R_ADEt2 = 0.0
+ M_ade_m: + R_PUNP1m + R_ADEtm = 0.0
+ M_adn_c: - R_PUNP1 - R_ADNUC - R_ADNK1 - R_ADA + R_NTD7 + R_AHCi + R_ADNt2 = 0.0
+ M_adn_e: - R_EX_adn_e_ - R_ADNt2 = 0.0
+ M_adn_m: - R_PUNP1m = 0.0
+ M_adp_c: + R_CTPS2 + R_CTPS1 +59.27600000000000335376 R_biomass_core + R_DGK1 + R_ATPS + R_ATPM + R_DHAK + R_GLU5K + R_MEVK1 + R_DPCOAK + R_UMPK + R_HSK - R_ATPtm_H + R_ACCOACr + R_PMEVK + R_PYDXK + R_GSNK - R_ATPATF2 - R_ATPATF1 + R_GLUCYS + R_PGK + R_PMI1346PS - R_SLFAT + R_SHKK + R_ATPtp_H - R_NDP1 - R_RNDR1 + R_HEX4 + R_PAK_SC + R_PFK26 + R_DHFS + R_URIDK2r + R_PFK + R_PFK_3 + R_GTHS + R_PMPK + R_CYTK1 + R_URIK1 + R_FTHFLi +2.00000000000000000000 R_CBPS + R_DRBK + R_PYDAMK + R_PFK_2 + R_ETHAK + R_ADNK1 + R_PRAGSr + R_DADK + R_RBFK + R_PRAIS + R_PYDXNK + R_INSK + R_GLYK + R_DPMVD + R_FRUK + R_PNTK + R_NDPK9 + R_NDPK8 + R_NDPK7 + R_NDPK6 + R_NDPK5 + R_NDPK4 + R_NDPK3 + R_NDPK2 + R_NDPK1 + R_GLUK + R_THFGLUS + R_NADK + R_UREASE +59.27600000000000335376 R_biomass_wildType + R_HETZK + R_TMDPPK + R_PC + R_FTHFCL + R_DURIK1 + R_ASPKi + R_HEX1 + R_HEX7 + R_TMDK1 + R_PI3P5K_SC - R_PYK + R_ADSK + R_DTMPK + R_CYTK2 + R_GK1 + R_GLYCRT + R_GALK + R_PRASCS +2.00000000000000000000 R_AP4AHr + R_XYLK + R_GLNS + R_DBTSr + R_PI4P5K_SC + R_RBK + R_PI3P4K_SC +2.00000000000000000000 R_ADK1 + R_ADK3 + R_ADK4 + R_HMPK1 + R_FTHFI + R_PIN3K_SC + R_PRFGS + R_PMI12346PS + R_CHOLK + R_TMPKr + R_PPCK + R_PIN4K_SC + R_RNMK + R_SLCBK2 + R_SLCBK1 = 0.0
+ M_adp_g: - R_ATPS3g = 0.0
+ M_adp_m: + R_SUCOASm + R_ATPtm_H + R_RBFKm + R_FTHFCLm + R_ACCOACrm + R_NADKm + R_ADK4m + R_FTHFLmi + R_ACGKm - R_ATPS3m + R_ADK3m + R_DPCOAKm + R_ITCOALm +2.00000000000000000000 R_ADK1m = 0.0
+ M_adp_n: + R_MI13456PKn + R_MI1345PKn + R_MI145P6Kn + R_URIDK2rn - R_RNDR1n + R_PIN4Kn_SC + R_UMPKn + R_MI1456PKn + R_MI145PKn = 0.0
+ M_adp_v: + R_TCHOLAabcv - R_ATPS3v + R_GTHRDabcv = 0.0
+ M_adp_x: + R_FA181COAabcp + R_FA182COAabcp - R_ATPtp_H + R_FA140COAabcp + R_FA160COAabcp + R_FA141COAabcp + R_FA180COAabcp + R_FA161COAabcp = 0.0
+ M_adprib_c: + R_NADN = 0.0
+ M_adprib_m: + R_NADNm = 0.0
+ M_ahcys_c: + R_CHLSTI + R_ACON3MT + R_ARMT + R_PMETM_SC + R_HCYSMT + R_PETOHM_SC + R_3IPM3MT + R_SAM24MT - R_AHCYStm + R_NNMT - R_AHCi +2.00000000000000000000 R_UPP3MT + R_MFAPS_SC + R_DIPS = 0.0
+ M_ahcys_m: + R_3DH5HPBMTm + R_AHCYStm + R_2HPMBQMTm + R_2HMHMBQMTm = 0.0
+ M_ahdt_c: - R_DNTPPA + R_GTPCI - R_AKP1 = 0.0
+ M_aicar_c: + R_ADSL2r + R_IG3PS - R_AICART = 0.0
+ M_air_c: + R_PRAIS - R_AHMMPS - R_AIRCr = 0.0
+ M_akg_c: - R_TRPTA + R_HSTPT + R_ICDHy + R_AATA + R_TYRTAi - R_GLUSx - R_TAUDO - R_AKGMAL + R_UNK3 + R_OHPBAT - R_ORNTA - R_LEUTA + R_SACCD2 - R_ASPTA + R_OXO2Ctm - R_AKGt2n + R_AKGt2r - R_ABTA - R_VALTA - R_PHETA1 - R_ILETA - R_GLUDyi + R_PSERT - R_EHGLAT + R_GLUDxi - R_AKGtm - R_AKGtp - R_ALATA_L = 0.0
+ M_akg_e: + R_AKGMAL - R_EX_akg_e_ - R_AKGt2r = 0.0
+ M_akg_m: - R_ILETAm - R_ALATA_Lm - R_HCITSm + R_TYRTAim - R_EHGLATm - R_VALTAim - R_ASPTAm - R_OXO2Ctm - R_LEUTAm - R_AKGDam + R_ACOTAim + R_AKGtm + R_ICDHym + R_ICDHxm = 0.0
+ M_akg_n: - R_HCITSn + R_AKGt2n = 0.0
+ M_akg_x: + R_TYRTAip - R_EHGLATp - R_ASPTAp + R_AKGtp + R_ICDHyp = 0.0
+ M_ala_B_c: + R_ALDD22x - R_PANTS = 0.0
+ M_ala_L_c: + R_NTRLASE2 + R_ALAt2r + R_ALAtmi + R_HKYNH + R_KYN - R_GTMLT - R_AGTi - R_ALATRS - R_ALATA_L = 0.0
+ M_ala_L_e: - R_EX_ala_L_e_ - R_ALAt2r = 0.0
+ M_ala_L_m: - R_ALATA_Lm - R_ALAtmi = 0.0
+ M_alac_S_m: - R_KARA1im + R_ACLSm = 0.0
+ M_alatrna_c: -0.45879999999999998561 R_biomass_core -0.45879999999999998561 R_biomass_wildType + R_ALATRS = 0.0
+ M_allphn_c: - R_ALPHNH + R_UREASE = 0.0
+ M_alltn_c: + R_ALLTNti - R_ALLTNr = 0.0
+ M_alltn_e: - R_EX_alltn_e_ - R_ALLTNti = 0.0
+ M_alltt_c: - R_ALLTAHr + R_ALLTTti + R_ALLTNr = 0.0
+ M_alltt_e: - R_EX_alltt_e_ - R_ALLTTti = 0.0
+ M_alpam_m: + R_GCC2am - R_GCC2bim = 0.0
+ M_alpro_m: + R_GCCam - R_GCCbim = 0.0
+ M_amet_c: - R_AMETtm - R_CHLSTI - R_AMAOTr + R_AMETt2 - R_ACON3MT - R_ARMT + R_METAT - R_PMETM_SC - R_HCYSMT - R_PETOHM_SC - R_3IPM3MT - R_SAM24MT - R_NNMT -2.00000000000000000000 R_UPP3MT - R_MFAPS_SC - R_ADMDC - R_DIPS = 0.0
+ M_amet_e: - R_AMETt2 - R_EX_amet_e_ = 0.0
+ M_amet_m: - R_3DH5HPBMTm + R_AMETtm - R_2HPMBQMTm - R_2HMHMBQMTm = 0.0
+ M_ametam_c: - R_SPRMS - R_SPMS + R_ADMDC = 0.0
+ M_amob_c: + R_AMAOTr = 0.0
+ M_amp2p_c: + R_23CAPPD = 0.0
+ M_amp_c: + R_SERTRS -0.04599999999999999922 R_biomass_core + R_FACOAL141 + R_ASPTRS + R_ATPH1 + R_NDP1 + R_NADS1 + R_AMPtn + R_ARGSSr + R_LYSTRS + R_ATP2tp_H + R_TMDPK + R_FACOAL140 + R_ARGTRS + R_LEUTRS + R_FACOAL161 + R_FACOAL160 + R_FACOAL182 + R_FACOAL181 + R_GLYTRS + R_ASNS1 + R_ADNK1 + R_TYRTRS + R_AASAD2 + R_AASAD1 + R_PHETRS + R_PRPPS + R_PANTS + R_TRPTRS - R_NTD7 + R_PDE1 + R_GLUTRS + R_THRTRS + R_PROTRS - R_AMPN + R_ADSL1r + R_BPNT -0.04599999999999999922 R_biomass_wildType + R_GMPS2 + R_ALATRS + R_ASNTRS + R_ILETRS + R_VALTRS - R_ADK1 - R_ADK3 - R_ADK4 + R_GLNTRS + R_ACS - R_AMPDA + R_CYSTRS + R_ADPT + R_METTRS + R_HISTRS + R_FACOAL180 = 0.0
+ M_amp_m: + R_ASPTRSm + R_LEUTRSm + R_ACSm + R_HISTRSm + R_GLUTRSm + R_METTRSm + R_ASNTRSm + R_HPPKm + R_LYSTRSm - R_ADK4m + R_TRPTRSm + R_ILETRSm + R_VALTRSm + R_PHETRSm + R_ARGTRSm + R_TYRTRSm - R_ADK3m + R_THRTRSm + R_COUCOAFm - R_ADK1m = 0.0
+ M_amp_n: - R_AMPtn + R_NADS1n = 0.0
+ M_amp_x: + R_FACOAL120p + R_FACOAL240p + R_FACOAL80p + R_FACOAL161p + R_FACOAL140p + R_FACOAL260p - R_ATP2tp_H + R_ACSp + R_FACOAL141p + R_FACOAL160p + R_NADDPp + R_FACOAL100p = 0.0
+ M_anth_c: + R_ANS - R_ANPRT + R_KYN = 0.0
+ M_ap4a_c: + R_ATPATF1 - R_AP4AHr = 0.0
+ M_ap4g_c: + R_ATPATF2 = 0.0
+ M_apep_c: + R_PEPAT = 0.0
+ M_aproa_c: - R_ALDD22x + R_POLYAO2 + R_POLYAO3 + R_POLYAO = 0.0
+ M_aprop_c: - R_NTRLASE2 = 0.0
+ M_aprut_c: + R_POLYAO - R_APRTO2 = 0.0
+ M_aps_c: + R_SLFAT - R_ADSK + R_SADT = 0.0
+ M_arab_D_c: + R_ARAB_Dt - R_ARAB1D2 = 0.0
+ M_arab_D_e: - R_EX_arab_D_e_ - R_ARAB_Dt = 0.0
+ M_arab_L_c: - R_ARABR + R_ARAB_Lt = 0.0
+ M_arab_L_e: - R_ARAB_Lt - R_EX_arab_L_e_ = 0.0
+ M_arg_L_c: - R_ARGN - R_ARGTRS - R_ARGt6 + R_ARGSL - R_ARGt2m + R_ARGt2r = 0.0
+ M_arg_L_e: - R_EX_arg_L_e_ - R_ARGt2r = 0.0
+ M_arg_L_m: + R_ARGt2m - R_ARGTRSm = 0.0
+ M_arg_L_v: + R_ARGt6 = 0.0
+ M_argsuc_c: + R_ARGSSr - R_ARGSL = 0.0
+ M_argtrna_c: -0.16070000000000000950 R_biomass_core + R_ARGTRS -0.16070000000000000950 R_biomass_wildType = 0.0
+ M_argtrna_m: + R_ARGTRSm = 0.0
+ M_asn_L_c: - R_ASNt2m + R_ASNt2r + R_ASNS1 - R_ASNN - R_ASNTRS - R_ASNt6 + R_ASNt7 = 0.0
+ M_asn_L_e: - R_ASNt2r - R_ASNNe - R_EX_asn_L_e_ = 0.0
+ M_asn_L_m: + R_ASNt2m - R_ASNTRSm = 0.0
+ M_asn_L_v: + R_ASNt6 - R_ASNt7 = 0.0
+ M_asntrna_c: -0.10169999999999999873 R_biomass_core -0.10169999999999999873 R_biomass_wildType + R_ASNTRS = 0.0
+ M_asntrna_m: + R_ASNTRSm = 0.0
+ M_asp_L_c: + R_ASPt7 - R_ASPTRS - R_ASPOcm + R_ASPt2r - R_ASPt2n - R_ASPt2m - R_ARGSSr + R_ASPGLU2m - R_ASNS1 + R_ASNN - R_ASPCT - R_ASPGLUtp - R_ASPTA - R_ASPKi - R_ADSS - R_PRASCS + R_ASPt5n = 0.0
+ M_asp_L_e: - R_ASPt2r + R_ASNNe - R_EX_asp_L_e_ = 0.0
+ M_asp_L_m: - R_ASPTRSm + R_ASPt2m - R_ASPGLU2m - R_ASPTAm = 0.0
+ M_asp_L_n: + R_ASPt2n - R_ASPt5n = 0.0
+ M_asp_L_v: - R_ASPt7 = 0.0
+ M_asp_L_x: - R_ASPTAp + R_ASPGLUtp = 0.0
+ M_aspsa_c: - R_HSDxi - R_HSDyi + R_ASADi = 0.0
+ M_asptrna_c: -0.29749999999999998668 R_biomass_core + R_ASPTRS -0.29749999999999998668 R_biomass_wildType = 0.0
+ M_asptrna_m: + R_ASPTRSm = 0.0
+ M_athr_L_c: - R_ATHRDHr - R_THRA2i = 0.0
+ M_atp_c: - R_CTPS2 - R_CTPS1 - R_FMNAT - R_SERTRS -59.27600000000000335376 R_biomass_core - R_DGK1 - R_FACOAL141 - R_ATPS - R_ATPM - R_DHAK - R_GLU5K - R_MEVK1 - R_DPCOAK - R_UMPK - R_HSK + R_ATPtm_H - R_NMNAT - R_ACCOACr - R_RNTR1 - R_PMEVK - R_PYDXK - R_GSNK - R_ASPTRS - R_ATPATF1 - R_GLUCYS - R_PGK - R_ATPH1 - R_PMI1346PS - R_SHKK - R_ATPtp_H - R_NADS1 - R_ARGSSr - R_METAT - R_ATPPRT - R_HEX4 - R_LYSTRS - R_ATP2tp_H - R_TMDPK - R_FACOAL140 - R_ARGTRS - R_PAK_SC - R_LEUTRS - R_PFK26 - R_DHFS - R_FACOAL161 - R_FACOAL160 - R_URIDK2r - R_FACOAL182 - R_FACOAL181 - R_PFK - R_PFK_3 - R_GTHS - R_GLYTRS - R_PMPK - R_CYTK1 - R_URIK1 - R_FTHFLi -2.00000000000000000000 R_CBPS - R_DRBK - R_PYDAMK - R_ASNS1 - R_PFK_2 - R_ETHAK - R_ADNK1 - R_ADNCYC - R_TYRTRS - R_PRAGSr - R_DADK - R_AASAD2 - R_AASAD1 - R_RBFK - R_PTPATi - R_PHETRS - R_PRAIS - R_PRPPS - R_PYDXNK - R_PANTS - R_INSK - R_TRPTRS - R_GLUTRS - R_GLYK - R_THRTRS - R_DPMVD - R_FRUK - R_PNTK - R_PROTRS - R_NDPK9 - R_NDPK8 - R_NDPK7 - R_NDPK6 - R_NDPK5 - R_NDPK4 - R_NDPK3 - R_NDPK2 - R_NDPK1 - R_GLUK - R_THFGLUS - R_NADK - R_UREASE -59.27600000000000335376 R_biomass_wildType - R_HETZK - R_TMDPPK - R_PC - R_FTHFCL - R_GMPS2 - R_DURIK1 - R_ASPKi - R_HEX1 - R_HEX7 - R_TMDK1 - R_PI3P5K_SC + R_PYK - R_ALATRS - R_ADSK - R_ASNTRS - R_BACCL - R_DTMPK - R_CYTK2 - R_GK1 - R_GLYCRT - R_ILETRS - R_GALK - R_PRASCS - R_XYLK - R_VALTRS - R_GLNS - R_DBTSr - R_PI4P5K_SC - R_RBK - R_PI3P4K_SC - R_SADT - R_ADK1 - R_GLNTRS - R_NNAT - R_ACS - R_HMPK1 - R_FTHFI - R_CYSTRS - R_PIN3K_SC - R_PRFGS - R_METTRS - R_PMI12346PS - R_CHOLK - R_TMPKr - R_PPCK - R_HISTRS - R_PIN4K_SC - R_FACOAL180 - R_RNMK - R_SLCBK2 - R_SLCBK1 = 0.0
+ M_atp_g: + R_ATPS3g = 0.0
+ M_atp_m: - R_NNATm - R_SUCOASm - R_ASPTRSm - R_ATPtm_H - R_RBFKm - R_FTHFCLm - R_ACCOACrm - R_PTPATim - R_LEUTRSm - R_ACSm - R_NADKm - R_HISTRSm - R_GLUTRSm - R_METTRSm - R_ASNTRSm - R_HPPKm - R_LYSTRSm - R_TRPTRSm - R_ILETRSm - R_FTHFLmi - R_VALTRSm - R_ACGKm + R_ATPS3m - R_PHETRSm - R_ARGTRSm - R_FMNATm - R_TYRTRSm - R_THRTRSm - R_NMNATm - R_DPCOAKm - R_COUCOAFm - R_ITCOALm - R_ADK1m = 0.0
+ M_atp_n: - R_MI13456PKn - R_MI1345PKn - R_MI145P6Kn - R_URIDK2rn - R_NADS1n - R_PIN4Kn_SC - R_UMPKn - R_MI1456PKn - R_MI145PKn = 0.0
+ M_atp_v: - R_TCHOLAabcv + R_ATPS3v - R_GTHRDabcv = 0.0
+ M_atp_x: - R_FACOAL120p - R_FACOAL240p - R_FACOAL80p - R_FACOAL161p - R_FA181COAabcp - R_FA182COAabcp - R_FACOAL140p + R_ATPtp_H - R_FACOAL260p + R_ATP2tp_H - R_ACSp - R_FACOAL141p - R_FA140COAabcp - R_FA160COAabcp - R_FA141COAabcp - R_FACOAL160p - R_FA180COAabcp - R_FA161COAabcp - R_FACOAL100p = 0.0
+ M_b124tc_m: - R_HACNHm + R_MCITDm = 0.0
+ M_btamp_c: + R_BACCL = 0.0
+ M_btd_RR_c: - R_BTDt_RR - R_BTDD_RR = 0.0
+ M_btd_RR_e: + R_BTDt_RR - R_EX_btd_RR_e_ = 0.0
+ M_btn_c: + R_BTNt2i - R_BACCL + R_BTSr = 0.0
+ M_btn_e: - R_BTNt2i - R_EX_btn_e_ = 0.0
+ M_camp_c: + R_ADNCYC - R_PDE1 = 0.0
+ M_caphis_c: - R_DIPS = 0.0
+ M_cbasp_c: + R_CBASPtn + R_ASPCT + R_DHORTS = 0.0
+ M_cbasp_n: - R_CBASPtn = 0.0
+ M_cbp_c: - R_OCBTi + R_CBPS - R_ASPCT - R_CBPtn = 0.0
+ M_cbp_n: + R_CBPtn = 0.0
+ M_cdp_c: + R_MEVK2 + R_DOLK - R_CDPtn - R_RNDR3 + R_CYTK1 - R_NDPK3 = 0.0
+ M_cdp_n: + R_CDPtn - R_RNDR3n = 0.0
+ M_cdpchol_c: - R_DAGCPT_SC + R_CHLPCTD = 0.0
+ M_cdpdag_SC_c: -0.01000000000000000021 R_PINOS_SC -0.01000000000000000021 R_PSERS_SC +0.01000000000000000021 R_DASYN_SC = 0.0
+ M_cdpdag_SC_m: +0.01000000000000000021 R_DASYNm_SC -0.01000000000000000021 R_CDPDGPm_SC -0.01000000000000000021 R_CLPNSm_SC -0.01000000000000000021 R_PSERSm_SC = 0.0
+ M_cdpea_c: - R_ETHAPT_SC + R_PETHCT = 0.0
+ M_cer1_24_c: + R_CERS124 + R_MIP2C124PLC_SC - R_CERS2_24 - R_IPCS124_SC + R_IPC124PLC_SC + R_MIPC124PLC_SC - R_CER1_24ter - R_CERH124 = 0.0
+ M_cer1_24_r: + R_CERS124er + R_CER1_24ter - R_CERASE124er = 0.0
+ M_cer1_26_c: - R_CER1_26ter + R_CERS126 - R_IPCS126_SC - R_CERS2_26 + R_MIP2C126PLC_SC + R_MIPC126PLC_SC - R_CERH126 + R_IPC126PLC_SC = 0.0
+ M_cer1_26_r: + R_CER1_26ter - R_CERASE126er + R_CERS126er = 0.0
+ M_cer2_24_c: - R_CER2_24ter - R_IPCS224_SC + R_CERS224 + R_MIP2C224PLC_SC + R_MIPC224PLC_SC + R_CERH124 + R_IPC224PLC_SC - R_CERS324 = 0.0
+ M_cer2_24_r: + R_CER2_24ter - R_CERASE224er + R_CERS224er = 0.0
+ M_cer2_26_c: + R_IPC226PLC_SC - R_CER2_26ter + R_MIP2C226PLC_SC + R_MIPC226PLC_SC + R_CERS226 - R_CERS326 + R_CERH126 - R_IPCS226_SC = 0.0
+ M_cer2_26_r: + R_CER2_26ter + R_CERS226er - R_CERASE226er = 0.0
+ M_cer2__24_c: + R_CERS2_24 = 0.0
+ M_cer2__26_c: + R_CERS2_26 = 0.0
+ M_cer3_24_c: + R_IPC324PLC_SC - R_IPCS324_SC + R_MIP2C324PLC_SC + R_MIPC324PLC_SC + R_CERS324 = 0.0
+ M_cer3_26_c: + R_MIP2C326PLC_SC + R_IPC326PLC_SC + R_MIPC326PLC_SC + R_CERS326 - R_IPCS326_SC = 0.0
+ M_cgly_c: + R_GTMLT = 0.0
+ M_ch4s_c: - R_AHSERL = 0.0
+ M_chitin_birthScar_c: + R_CHTNSbs = 0.0
+ M_chitin_c: + R_CHTNS - R_CHTNDA = 0.0
+ M_chitin_ring_c: + R_CHTNSrg - R_CHTNS = 0.0
+ M_chitin_septum_c: - R_CHTNS + R_CHTNSsp = 0.0
+ M_chitos_c: + R_CHTNDA = 0.0
+ M_chol_c: + R_GPDDA1 + R_CHLt2 + R_PLD_SC - R_CHOLK = 0.0
+ M_chol_e: - R_CHLt2 - R_EX_chol_e_ = 0.0
+ M_cholp_c: - R_CHLPCTD + R_CHOLK = 0.0
+ M_chor_c: - R_ADCS - R_CHRPL - R_ANS - R_CHORM + R_CHORS = 0.0
+ M_cit_c: - R_CITtcp - R_CITtcm - R_CITtbm - R_ACONT + R_CITtap - R_CITtam + R_AKGtm + R_CITt2r = 0.0
+ M_cit_e: - R_CITt2r - R_EX_cit_e_ = 0.0
+ M_cit_m: + R_CITtcm + R_CITtbm + R_CSm + R_CITtam - R_ACONTm - R_AKGtm = 0.0
+ M_cit_x: + R_CSp + R_CITtcp - R_CITtap = 0.0
+ M_citr_L_c: + R_OCBTi - R_ARGSSr = 0.0
+ M_clpn_SC_m: +0.01000000000000000021 R_CLPNSm_SC = 0.0
+ M_cmaphis_c: + R_DIPS = 0.0
+ M_cmp_c: -0.04469999999999999668 R_biomass_core + R_ETHAPT_SC + R_PINOS_SC + R_DAGCPT_SC + R_PSERS_SC - R_CYTK1 + R_CTPtm - R_NTD4 + R_PDE5 + R_CYTDK2 -0.04469999999999999668 R_biomass_wildType + R_PPNCL2 - R_CMPN = 0.0
+ M_cmp_m: + R_CDPDGPm_SC + R_CLPNSm_SC - R_CTPtm + R_PSERSm_SC = 0.0
+ M_cmusa_c: - R_QUILSYN + R_3HAO = 0.0
+ M_co2_c: +3.00000000000000000000 R_FAS80COA_L + R_GLUDC +3.00000000000000000000 R_FAS80_L + R_PYRDC + R_ORNDC + R_ICDHy + R_OMCDC + R_FDH + R_FAS100 + R_TAUDO + R_4MOPDC +3.00000000000000000000 R_FAS240_L + R_AOBUTDs + R_34HPPOR + R_FAS180 + R_FAS181 + R_FAS160 - R_CO2tg + R_OMPDC + R_PPYRDC + R_FAS180COA +4.00000000000000000000 R_UPPDC1 + R_NNDPR + R_PPND + R_3MOPDC + R_THZPSN1_SC - R_CO2tm - R_CO2tv - R_CO2tp + R_FAS260 + R_FAS140 + R_FAS141 + R_SERPT + R_DPMVD + R_3MOBDC + R_FAS120COA + R_FAS140COA + R_GND +2.00000000000000000000 R_ALPHNH + R_CO2t + R_THZPSN2_SC + R_IGPS + R_FDNG + R_INDPYRD + R_C3STDH2 + R_C3STDH1 + R_PPND2 + R_FAS161 + R_PPNDH +2.00000000000000000000 R_CPPPGO - R_HCO3E + R_PYRDC2 + R_PPCDC + R_UGLYCHr - R_AIRCr - R_DBTSr + R_FAS100COA + R_FAS120 + R_FAS160COA + R_ADMDC + R_CO2tn + R_PPCK = 0.0
+ M_co2_e: - R_CO2t - R_EX_co2_e_ = 0.0
+ M_co2_g: + R_CO2tg + R_PSERDg_SC = 0.0
+ M_co2_m: + R_ALASm + R_GCC2am + R_GCCam + R_ME2m + R_NNDPRm +3.00000000000000000000 R_FAS80ACPm_L + R_PDHm + R_3HPH5MBDCm - R_HCO3Em + R_FAS140ACPm + R_FAS161ACPm + R_OMCDCm + R_ACHBSm + R_FAS182ACPm + R_PSERDm_SC + R_OBDHm + R_GLYCLm + R_CO2tm + R_OXAGm + R_FAS180ACPm + R_FAS141ACPm + R_FAS120ACPm + R_FAS181ACPm + R_ME1m + R_AKGDam + R_FAS160ACPm + R_ICDHym + R_FAS100ACPm + R_ACLSm + R_ICDHxm = 0.0
+ M_co2_n: - R_HCO3En - R_CO2tn = 0.0
+ M_co2_v: + R_CO2tv + R_PSERDv_SC = 0.0
+ M_co2_x: + R_CO2tp + R_ICDHyp = 0.0
+ M_coa_c: +3.00000000000000000000 R_FAS80COA_L + R_ZYMSTAT_SC - R_FACOAL141 +4.00000000000000000000 R_FAS80_L + R_DPCOAK + R_FAS100 + R_CERS126 + R_CERS124 +3.00000000000000000000 R_FAS240_L - R_FACOAL140 + R_FAS180 + R_FAS181 + R_FAS160 - R_FACOAL161 - R_FACOAL160 - R_FACOAL182 - R_FACOAL181 + R_AGAT_SC + R_HSERTA + R_FAS180COA + R_DIAT + R_IPPS + R_FECOSTAT_SC + R_CERS224 + R_CERS226 + R_ERGSTAT_SC + R_MCOATA + R_LANOSTAT_SC - R_COAtim + R_FAS260 + R_FAS140 + R_FAS141 + R_SERPT + R_FAS120COA + R_FAS140COA - R_HMGCOAS - R_HMGCOAR + R_GAT2_SC + R_PEPAT + R_OHACT2 + R_ACOATA + R_FAS161 + R_MALS + R_CSNATr - R_COAtn - R_GLYATi + R_FAS100COA + R_FAS120 + R_GAT1_SC + R_ACGAM6PS + R_FAS160COA + R_TRIGS_SC + R_GLPT - R_ACS + R_ACACT1 + R_EPISTAT_SC + R_LPCAT_SC + R_SERATi + R_OHACT1 + R_OHACT3 + R_OHACT4 + R_OHACT5 + R_SPMDAT1 - R_FACOAL180 = 0.0
+ M_coa_m: + R_ALASm + R_MCITSm - R_SUCOASm - R_PDHm + R_IPPSm + R_HCITSm + R_CSm - R_ACSm + R_ACACT1m + R_ACGSm + R_4HBZFm - R_OBDHm - R_4HBZCOAFm + R_COAtim + R_ACOAHim - R_CSNATm + R_MCOATAm - R_HMGCOASm - R_AKGDbm + R_DPCOAKm - R_COUCOAFm - R_ITCOALm - R_ACPSm + R_ACOATAm = 0.0
+ M_coa_n: + R_HCITSn + R_COAtn = 0.0
+ M_coa_r: + R_CERS124er - R_CERASE224er + R_CERS226er - R_CERASE126er + R_CERS224er + R_CERS126er - R_CERASE124er - R_CERASE226er = 0.0
+ M_coa_x: - R_FACOAL120p + R_CSp + R_PTE11x - R_ACACT7p - R_FACOAL240p -3.00000000000000000000 R_FAO80p - R_FACOAL80p - R_FACOAL161p -7.00000000000000000000 R_FAO161p_odd - R_FACOAL140p -6.00000000000000000000 R_FAO141p_even - R_FACOAL260p + R_PTE2x - R_ACACT6p + R_PTE10x -7.00000000000000000000 R_FAO161p_even -3.00000000000000000000 R_FAO240p - R_ACSp -8.00000000000000000000 R_FAO182p_oddodd - R_FACOAL141p + R_PTE8x - R_ACACT4p -8.00000000000000000000 R_FAO181p_even -8.00000000000000000000 R_FAO181p_odd -8.00000000000000000000 R_FAO182p_evenodd + R_PTE12x - R_COAHLp + R_MALSp - R_ACACT8p - R_ACACT9p + R_CSNATp + R_PTE7x - R_ACACT5p - R_FACOAL160p + R_PTE9x -8.00000000000000000000 R_FAO182p_eveneven -6.00000000000000000000 R_FAO141p_odd - R_FACOAL100p = 0.0
+ M_coucoa_m: - R_4HBZCOAFm + R_COUCOAFm = 0.0
+ M_cpppg3_c: + R_UPPDC1 - R_CPPPGO = 0.0
+ M_crn_c: + R_CRNtim + R_CRNt - R_CSNATr - R_CRNCARtp + R_CRNCARtm - R_CRNtp = 0.0
+ M_crn_e: - R_EX_crn_e_ - R_CRNt = 0.0
+ M_crn_m: - R_CRNtim + R_CSNATm - R_CRNCARtm = 0.0
+ M_crn_x: - R_CSNATp + R_CRNCARtp + R_CRNtp = 0.0
+ M_csn_c: + R_CSNt2 + R_CMPN - R_CSND = 0.0
+ M_csn_e: - R_CSNt2 - R_EX_csn_e_ = 0.0
+ M_ctp_c: + R_CTPS2 + R_CTPS1 - R_MEVK2 - R_DOLK - R_RNTR3 - R_CTPtm + R_NDPK3 - R_CHLPCTD - R_PPNCL2 - R_DASYN_SC - R_PETHCT = 0.0
+ M_ctp_m: - R_DASYNm_SC + R_CTPtm = 0.0
+ M_cys_L_c: - R_GLUCYS + R_CYSTGL + R_CYSt2r - R_THZPSN1_SC - R_METB1 - R_THZPSN2_SC - R_PPNCL2 - R_CYSTRS - R_SHSL1 = 0.0
+ M_cys_L_e: - R_EX_cys_L_e_ - R_CYSt2r = 0.0
+ M_cyst_L_c: - R_CYSTGL - R_CYSTL - R_CYSTtp + R_METB1 + R_CYSTS + R_SHSL1 = 0.0
+ M_cyst_L_x: - R_CYSTLp + R_CYSTtp = 0.0
+ M_cystrna_c: -0.00659999999999999996 R_biomass_core -0.00659999999999999996 R_biomass_wildType + R_CYSTRS = 0.0
+ M_cytd_c: + R_NTD4 - R_CYTDK2 + R_CYTDt2 - R_CYTD = 0.0
+ M_cytd_e: - R_CYTDt2 - R_EX_cytd_e_ = 0.0
+ M_dad_2_c: - R_PUNP2 + R_DADNt2 - R_DADA + R_NTD6 = 0.0
+ M_dad_2_e: - R_DADNt2 - R_EX_dad_2_e_ = 0.0
+ M_dadp_c: + R_RNDR1 + R_GK2 - R_DADPtn + R_DADK - R_NDPK8 = 0.0
+ M_dadp_n: + R_DADPtn + R_RNDR1n = 0.0
+ M_dagpy_SC_c: -0.01000000000000000021 R_LPP_SC +0.01000000000000000021 R_PAK_SC = 0.0
+ M_damp_c: -0.00359999999999999990 R_biomass_core - R_DADK - R_NTD6 + R_PDE2 -0.00359999999999999990 R_biomass_wildType = 0.0
+ M_dann_c: + R_AMAOTr + R_DANNt2 - R_DBTSr = 0.0
+ M_dann_e: - R_DANNt2 - R_EX_dann_e_ = 0.0
+ M_datp_c: + R_RNTR1 - R_GK2 + R_NDPK8 = 0.0
  M_db4p_c: + R_DB4PS - R_RBFSa = 0.0
- M_dcaACP_c: + R_EAR100y - R_3OAS120 = 0.0
+ M_dc2coa_x: + R_ECOAH4p + R_ACOAO4p = 0.0
+ M_dcaACP_m: - R_FAS120ACPm + R_FAS100ACPm = 0.0
+ M_dca_c: + R_FAS100 +0.02000000000000000042 R_TAGL_SC - R_FA100tp +0.02000000000000000042 R_PLBPC_SC - R_FAS120 = 0.0
+ M_dca_e: - R_EX_dca_e_ +0.02000000000000000042 R_PLBPC_SCe +0.02000000000000000042 R_PLBP1I_SCe = 0.0
+ M_dca_x: + R_PTE10x + R_FA100tp - R_FACOAL100p = 0.0
+ M_dcacoa_c: -0.02000000000000000042 R_AGAT_SC - R_FAS120COA -0.02000000000000000042 R_GAT2_SC + R_FAS100COA -0.02000000000000000042 R_GAT1_SC -0.02000000000000000042 R_TRIGS_SC -0.02000000000000000042 R_LPCAT_SC = 0.0
+ M_dcacoa_x: - R_PTE10x - R_ACOAO4p + R_ACACT5p + R_FACOAL100p = 0.0
  M_dcamp_c: - R_ADSL1r + R_ADSS = 0.0
- M_dcdp_c: - R_NDPK7 + R_RNDR3 = 0.0
- M_dctp_c: + R_NDPK7 - R_DCTPD -0.23824967520000001064 R_BiomassDNA = 0.0
- M_ddcaACP_c: + R_EAR120y - R_3OAS140 = 0.0
- M_decdp_c: + R_DPPS - R_UDPDPS = 0.0
- M_dgdg160_c: -0.13211000000000000520 R_BiomassLipid + R_DGDG160 = 0.0
- M_dgdg161_c: -0.00975700000000000005 R_BiomassLipid + R_DGDG161 = 0.0
- M_dgdg180_c: -0.00225999999999999986 R_BiomassLipid + R_DGDG180 = 0.0
- M_dgdg181_9_c: -0.00295299999999999990 R_BiomassLipid + R_DGDG181_9 = 0.0
- M_dgdg181_c: -0.00295299999999999990 R_BiomassLipid + R_DGDG181 = 0.0
- M_dgdg182_9_12_c: -0.03372700000000000004 R_BiomassLipid + R_DGDG182_9_12 = 0.0
- M_dgdg183_6_9_12_c: -0.07336099999999999566 R_BiomassLipid + R_DGDG183_6_9_12 = 0.0
- M_dgdg183_9_12_15_c: -0.00096299999999999999 R_BiomassLipid + R_DGDG183_9_12_15 = 0.0
- M_dgdg184_6_9_12_15_c: -0.00398000000000000003 R_BiomassLipid + R_DGDG184_6_9_12_15 = 0.0
- M_dgdp_c: - R_NDPK5 + R_RNDR2 = 0.0
- M_dgsn_c: + R_NTPTP1 = 0.0
- M_dgtp_c: + R_NDPK5 - R_NTPTP1 -0.23894393369999999965 R_BiomassDNA = 0.0
- M_dha_c: + R_GLYCDx = 0.0
- M_dhap_c: + R_FBA3 + R_FBA2 + R_G3PD - R_TPI + R_G3PD2 - R_MGSA - R_QULNS + R_FBA = 0.0
- M_dhf_c: + R_TMDS + R_DHFS - R_DHFR = 0.0
- M_dhlam_c: - R_PDHcr + R_PDHbr = 0.0
- M_dhna_c: - R_DHNAPHT + R_NPHS = 0.0
- M_dhnpt_c: - R_DHNPA + R_DNMPPA = 0.0
- M_dhor_S_c: - R_DHORTS - R_DHORD = 0.0
+ M_dcdp_c: + R_RNDR3 - R_NDPK7 - R_DCDPtn + R_CYTK2 = 0.0
+ M_dcdp_n: + R_DCDPtn + R_RNDR3n = 0.0
+ M_dcmp_c: -0.00239999999999999979 R_biomass_core - R_NTD3 -0.00239999999999999979 R_biomass_wildType - R_CYTK2 - R_DCMPDA = 0.0
+ M_dctp_c: + R_RNTR3 + R_NDPK7 - R_DCTPD = 0.0
+ M_dcyt_c: + R_NTD3 + R_DCYTt2 - R_DCYTD = 0.0
+ M_dcyt_e: - R_EX_dcyt_e_ - R_DCYTt2 = 0.0
+ M_dd2coa_x: + R_ECOAH5p + R_ACOAO5p = 0.0
+ M_ddcaACP_c: - R_FA120ACPH + R_FA120ACPtm = 0.0
+ M_ddcaACP_m: - R_FA120ACPtm - R_FAS140ACPm - R_FAS141ACPm + R_FAS120ACPm = 0.0
+ M_ddca_c: + R_FA120ACPH +0.05999999999999999778 R_TAGL_SC - R_FAS140 - R_FAS141 - R_FA120tp +0.05999999999999999778 R_PLBPC_SC + R_FAS120 = 0.0
+ M_ddca_e: - R_EX_ddca_e_ +0.05999999999999999778 R_PLBPC_SCe +0.05999999999999999778 R_PLBP1I_SCe = 0.0
+ M_ddca_x: - R_FACOAL120p + R_PTE11x + R_FA120tp = 0.0
+ M_ddcacoa_c: -0.05999999999999999778 R_AGAT_SC + R_FAS120COA - R_FAS140COA -0.05999999999999999778 R_GAT2_SC -0.05999999999999999778 R_GAT1_SC -0.05999999999999999778 R_TRIGS_SC -0.05999999999999999778 R_LPCAT_SC = 0.0
+ M_ddcacoa_x: + R_FACOAL120p - R_PTE11x + R_ACACT6p - R_ACOAO5p = 0.0
+ M_dgdp_c: + R_DGK1 - R_NDP4 + R_RNDR2 + R_NTP4 - R_NDPK5 - R_DGDPtn = 0.0
+ M_dgdp_n: + R_DGDPtn + R_RNDR2n = 0.0
+ M_dgmp_c: -0.00239999999999999979 R_biomass_core - R_DGK1 + R_NDP4 - R_NTD8 -0.00239999999999999979 R_biomass_wildType = 0.0
+ M_dgsn_c: + R_DGSNt2 - R_PUNP4 + R_NTD8 = 0.0
+ M_dgsn_e: - R_DGSNt2 - R_EX_dgsn_e_ = 0.0
+ M_dgtp_c: + R_RNTR2 - R_NTP4 + R_NDPK5 = 0.0
+ M_dha_c: - R_DHAK + R_GLYCDy = 0.0
+ M_dhap_c: + R_DHAK + R_FBA2 - R_TPI - R_G3PD1ir + R_DHAPtm + R_FBA3 + R_FBA - R_GAT2_SC - R_MGSA - R_QULNS = 0.0
+ M_dhap_m: - R_G3PD1irm - R_DHAPtm + R_G3PDm = 0.0
+ M_dhf_c: + R_DHFS - R_DHFRi + R_TMDS - R_DHFtm = 0.0
+ M_dhf_m: - R_DHFRim + R_DHFtm = 0.0
+ M_dhlam_m: - R_PDHcm - R_GCC2cm + R_GCC2bim + R_AKGDbm = 0.0
+ M_dhlpro_m: + R_GCCbim - R_GCCcm = 0.0
+ M_dhnpt_c: + R_DNMPPA + R_AKP1 - R_DHNPTtm = 0.0
+ M_dhnpt_m: - R_DHNPAm + R_DHNPTtm = 0.0
+ M_dhor_S_c: - R_DHORDfum - R_DHORDi - R_DHORTS - R_DHORD4i = 0.0
  M_dhpmp_c: + R_DNTPPA - R_DNMPPA = 0.0
- M_dhpt_c: + R_DHPS + R_FOLD3 - R_DHFS = 0.0
- M_didp_c: - R_NDPK10 = 0.0
- M_ditp_c: + R_NDPK10 = 0.0
- M_dmlz_c: -2.00000000000000000000 R_RBFSb + R_RBFSa = 0.0
- M_dmpp_c: + R_IPDDI + R_DMPPS_syn - R_DMATT = 0.0
- M_dmtphllqne_c: - R_DMTPHT + R_DHNAPHT = 0.0
- M_dna5mtc_c: + R_DNAMT_syn - R_DM_dna5mtc = 0.0
- M_dna_c: - R_Sink_dna - R_DNAMT_syn = 0.0
- M_dnad_c: + R_NNATr - R_NADS2 = 0.0
- M_dpcoa_c: - R_DPCOAK + R_PTPAT = 0.0
- M_dpterol_c: + R_SQLC2 = 0.0
- M_dptne_c: + R_SQLC = 0.0
+ M_dhpt_c: - R_DHFS - R_DHPTtm = 0.0
+ M_dhpt_m: + R_DHPSm + R_DHPTtm + R_FOLD3m = 0.0
+ M_din_c: - R_PUNP6 + R_DADA + R_DINSt2 = 0.0
+ M_din_e: - R_EX_din_e_ - R_DINSt2 = 0.0
+ M_dkmpp_c: + R_MDRPD - R_DKMPPD2 = 0.0
+ M_dmlz_c: + R_RBFSa -2.00000000000000000000 R_RBFSb = 0.0
+ M_dmpp_c: - R_DMATT + R_IPDDI = 0.0
+ M_dnad_c: - R_NADS1 + R_NNAT = 0.0
+ M_dnad_m: + R_NNATm = 0.0
+ M_dnad_n: - R_NADS1n = 0.0
+ M_dolichol_c: - R_DOLK = 0.0
+ M_dolmanp_r: - R_DOLPMMer + R_DOLPMTcer = 0.0
+ M_dolp_c: + R_DOLK - R_DOLPt2er - R_DOLPMTcer = 0.0
+ M_dolp_r: + R_DOLPt2er + R_DOLPMMer = 0.0
+ M_dpcoa_c: - R_DPCOAK + R_PTPATi = 0.0
+ M_dpcoa_m: + R_PTPATim - R_DPCOAKm = 0.0
  M_drib_c: - R_DRBK = 0.0
- M_dscl_c: - R_PC20M + R_UPP3MT = 0.0
- M_dtbt_c: - R_BTS4 + R_DBTSr = 0.0
- M_dtdp4d6dg_c: - R_TDPDRE + R_TDPGDH = 0.0
- M_dtdp4d6dm_c: - R_TDPDRR + R_TDPDRE = 0.0
+ M_dscl_c: + R_UPP3MT - R_SHCHD = 0.0
+ M_dtbt_c: + R_DBTSr - R_BTSr = 0.0
  M_dtdp_c: - R_NDPK4 + R_DTMPK = 0.0
- M_dtdpgal_c: + R_MNXR6118 = 0.0
- M_dtdpglu_c: - R_MNXR6118 - R_TDPGDH + R_G1PTT = 0.0
- M_dtdprmn_c: + R_TDPDRR = 0.0
- M_dtmp_c: + R_TMDS + R_TMDK1 - R_DTMPK = 0.0
- M_dtocophe_c: + R_TOCOPHS2 -0.02043992979999999932 R_BiomassPigment - R_TOCOPHOM2 = 0.0
- M_dttp_c: + R_NDPK4 -0.26185446359999997590 R_BiomassDNA - R_G1PTT = 0.0
- M_dudp_c: - R_NDPK6 + R_URIDK2r + R_RNDR4 = 0.0
- M_dump_c: - R_TMDS - R_URIDK2r = 0.0
- M_dutp_c: + R_NDPK6 + R_DCTPD = 0.0
- M_dvpchlld_c: + R_MPOMOR + R_MPOMOR2 - R_DVOCHR = 0.0
- M_dxyl5p_c: - R_THZPSN + R_DXPS - R_PDX5PS - R_DXPRIi = 0.0
- M_dxyl_c: - R_THZSN = 0.0
- M_e4hglu_c: + R_PHCD - R_EHGLAT = 0.0
- M_e4p_c: + R_FBA3 + R_TALA - R_DDPA - R_TKT2 = 0.0
- M_echin_c: + R_BCAROKE -0.23003142360000000677 R_BiomassPigment = 0.0
+ M_dtmp_c: -0.00359999999999999990 R_biomass_core - R_NTD5 + R_TMDS -0.00359999999999999990 R_biomass_wildType + R_TMDK1 - R_DTMPK = 0.0
+ M_dttp_c: + R_NDPK4 + R_DTTPt = 0.0
+ M_dttp_e: - R_EX_dttp_e_ - R_DTTPt = 0.0
+ M_dudp_c: + R_RNDR4 + R_URIDK2r - R_NDPK6 = 0.0
+ M_dudp_n: + R_URIDK2rn + R_RNDR4n = 0.0
+ M_dump_c: - R_URIDK2r - R_NTD1 - R_TMDS + R_DUTPDP + R_DURIK1 - R_DUMPtn + R_DCMPDA = 0.0
+ M_dump_n: - R_URIDK2rn + R_DUMPtn = 0.0
+ M_duri_c: + R_NTD1 + R_DURIt2 - R_DURIPP - R_DURIK1 + R_DCYTD = 0.0
+ M_duri_e: - R_EX_duri_e_ - R_DURIt2 = 0.0
+ M_dutp_c: + R_NDPK6 - R_DUTPDP + R_RNTR4 + R_DCTPD = 0.0
+ M_e4hglu_c: - R_EHGLAT - R_E4HGLUtp - R_E4HGLUtm = 0.0
+ M_e4hglu_m: + R_PHCDm - R_EHGLATm + R_E4HGLUtm + R_4HGLSDm = 0.0
+ M_e4hglu_x: - R_EHGLATp + R_E4HGLUtp = 0.0
+ M_e4p_c: - R_TKT2 + R_FBA3 - R_E4Ptm + R_TALA - R_DDPA = 0.0
+ M_e4p_m: - R_DDPAm + R_E4Ptm = 0.0
  M_eig3p_c: - R_IGPDH + R_IG3PS = 0.0
- M_etoh_c: + R_ETOHtpp - R_ALCD2y = 0.0
- M_etoh_e: - R_ETOHtex - R_EX_etoh_e = 0.0
- M_etoh_p: - R_ETOHtpp + R_ETOHtex = 0.0
- M_f1p_c: - R_FBA2 = 0.0
- M_f6p_c: - R_GF6PTA - R_PFK + R_PGI - R_SPS + R_MAN6PI + R_TALA + R_HEX7 + R_PGI2 + R_FBP + R_TKT2 = 0.0
- M_fad_c: + R_FMNAT - R_G3PD - R_ARGDH + R_SUCD2pp -0.00326318099999999998 R_BiomassSolubleP + R_SUCD2u + R_SUCD4 - R_SUCD1 - R_PROD2 = 0.0
- M_fadh2_c: + R_G3PD + R_ARGDH - R_SUCD2pp - R_SUCD2u - R_SUCD4 + R_SUCD1 + R_PROD2 = 0.0
- M_fdp_c: + R_PFK - R_FBP - R_FBA = 0.0
- M_fdxo_2_2_c: -2.00000000000000000000 R_PSI_2 +2.00000000000000000000 R_DES_6B +6.00000000000000000000 R_SULR_syn +2.00000000000000000000 R_FNOR -2.00000000000000000000 R_DHNAPHT +6.00000000000000000000 R_NOR_syn - R_THZSN +2.00000000000000000000 R_NAR_syn +2.00000000000000000000 R_FQR + R_UGLDDS2 +2.00000000000000000000 R_DES_9 -2.00000000000000000000 R_PSI +2.00000000000000000000 R_DES_6 +2.00000000000000000000 R_FTR +2.00000000000000000000 R_DES_12 +2.00000000000000000000 R_DES_15 +2.00000000000000000000 R_GLMS_syn -2.00000000000000000000 R_POR_syn + R_R05224 = 0.0
- M_fdxr_2_2_c: +2.00000000000000000000 R_PSI_2 -2.00000000000000000000 R_DES_6B -6.00000000000000000000 R_SULR_syn -2.00000000000000000000 R_FNOR +2.00000000000000000000 R_DHNAPHT -6.00000000000000000000 R_NOR_syn + R_THZSN -2.00000000000000000000 R_NAR_syn -2.00000000000000000000 R_FQR - R_UGLDDS2 -2.00000000000000000000 R_DES_9 +2.00000000000000000000 R_PSI -2.00000000000000000000 R_DES_6 -2.00000000000000000000 R_FTR -2.00000000000000000000 R_DES_12 -2.00000000000000000000 R_DES_15 -2.00000000000000000000 R_GLMS_syn +2.00000000000000000000 R_POR_syn - R_R05224 = 0.0
- M_fe2_c: - R_FCLT + R_FE2abcpp + R_HOXG -0.02928565940000000048 R_BiomassIon = 0.0
- M_fe2_e: - R_FE2tex - R_EX_fe2_e = 0.0
- M_fe2_p: - R_FE2abcpp + R_FE2tex = 0.0
- M_fe3_c: -0.02928565940000000048 R_BiomassIon + R_FE3abc = 0.0
- M_fe3_e: - R_EX_fe3_e - R_FE3tex = 0.0
- M_fe3_p: + R_FE3tex - R_FE3abc = 0.0
- M_fgam_c: - R_PRFGS + R_MNXR15637 + R_GARFT = 0.0
- M_ficytc6_p: -2.00000000000000000000 R_CBFC2pp -2.00000000000000000000 R_FDH6pp +2.00000000000000000000 R_CYO1bpp_syn = 0.0
- M_ficytc6_u: +2.00000000000000000000 R_PSI_2 -2.00000000000000000000 R_CBFC2 +2.00000000000000000000 R_CYO1b_syn = 0.0
- M_fmettrna_c: + R_FMETTRS = 0.0
- M_fmn_c: - R_ACP1_FMN - R_FMNAT + R_RBFK = 0.0
- M_focytc6_p: +2.00000000000000000000 R_CBFC2pp +2.00000000000000000000 R_FDH6pp -2.00000000000000000000 R_CYO1bpp_syn = 0.0
- M_focytc6_u: -2.00000000000000000000 R_PSI_2 +2.00000000000000000000 R_CBFC2 -2.00000000000000000000 R_CYO1b_syn = 0.0
- M_for_c: + R_DB4PS - R_FDH6pp + R_FTHFD - R_FTHFLi + R_OXADC + R_GTPCII + R_GTPCI = 0.0
- M_fpram_c: + R_PRFGS - R_PRAIS = 0.0
- M_fprica_c: + R_IMPC + R_AICART = 0.0
- M_frdp_c: -2.00000000000000000000 R_SQLS + R_GRTT - R_DPPS - R_FRTT - R_HEMEOS = 0.0
- M_fru_c: - R_HEX7 + R_FRUt3 = 0.0
- M_fru_e: - R_FRUtex - R_EX_fru_e = 0.0
- M_fru_p: + R_FRUtex - R_FRUt3 = 0.0
- M_fum_c: + R_ADSL2r + R_ADSL1r + R_ARGSL - R_FUM + R_SUCD1 + R_FUMtpp = 0.0
- M_fum_e: - R_FUMtex - R_EX_fum_e = 0.0
- M_fum_p: - R_FUMtpp + R_FUMtex = 0.0
- M_g1p_c: + R_UGLT + R_GLCP - R_MNXR33817 + R_GLCP2 - R_GLGC - R_GALU - R_PGMT - R_G1PTT = 0.0
- M_g3p_c: + R_GAPDi_nadp + R_TPI + R_TRPS3 + R_TRPS1 - R_TALA - R_GAPDi - R_DXPS + R_DRPA + R_TKT1 + R_TKT2 + R_FBA = 0.0
- M_g6p_B_c: + R_GLUK_syn - R_PGI2 - R_G6PBDH = 0.0
- M_g6p_c: - R_PGI + R_HEX1 + R_PGMT - R_MI1PS - R_G6PDH2 = 0.0
- M_gal1p_c: - R_UGLT + R_GALK = 0.0
- M_gal_c: - R_GALK = 0.0
- M_gam1p_c: - R_PGAMT - R_G1PACT = 0.0
- M_gam6p_c: + R_GF6PTA + R_PGAMT = 0.0
- M_gar_c: - R_MNXR15637 + R_PRAGS - R_GARFT = 0.0
- M_gcald_c: + R_DHNPA + R_AHMMPS - R_GCALDD = 0.0
- M_gcarote_c: -0.14745322999999999070 R_BiomassPigment + R_LYCOPC - R_GCATENEC = 0.0
- M_gdbtal_c: - R_GDBTALDH + R_MNXR7081 = 0.0
- M_gdp_c: - R_NDPK1 - R_RNDR2 + R_ADSS + R_GK1 - R_MAN1PT2 - R_PYK3 = 0.0
- M_gdpddman_c: - R_GFUCS + R_GMAND = 0.0
- M_gdpfuc_c: + R_GFUCS = 0.0
- M_gdpmann_c: + R_MAN1PT2 + R_MAN1PT - R_GMAND = 0.0
- M_ggdp_c: + R_FRTT -2.00000000000000000000 R_PHYTES - R_GGDPR = 0.0
- M_glc_B_c: - R_GLUK_syn = 0.0
- M_glc_D_c: +2.00000000000000000000 R_MALT + R_GLCt2pp - R_HEX1 = 0.0
- M_glc_D_e: - R_EX_glc_e - R_GLCtex = 0.0
- M_glc_D_p: - R_GLCt2pp + R_GLCtex = 0.0
- M_glcglyc_c: + R_GGPP + R_GLCGLYCabcpp_syn = 0.0
- M_glcglyc_e: - R_GLCGLYCtex - R_EX_glcglyc_e = 0.0
- M_glcglyc_p: - R_GLCGLYCabcpp_syn + R_GLCGLYCtex = 0.0
- M_glcglycp_c: + R_GGPS - R_GGPP = 0.0
- M_gln_L_c: - R_CTPS2 - R_ADCS - R_PRFGS - R_CBPS - R_ANS - R_GF6PTA - R_GLUN -0.05565556590000000220 R_BiomassProtein - R_NADS2 -4.00000000000000000000 R_ADCYRS - R_GMPS2 - R_GLNTRAT - R_GLMS_syn - R_ASNS1 - R_GLUSx - R_IG3PS -2.00000000000000000000 R_R05224 + R_GLNabcpp - R_GLUPRT + R_GLNS = 0.0
- M_gln_L_e: - R_EX_gln_L_e - R_GLNtex = 0.0
- M_gln_L_p: - R_GLNabcpp + R_GLNtex = 0.0
- M_glntrna_c: + R_GLNTRAT = 0.0
- M_glu1sa_c: + R_GLUTRR - R_G1SATi = 0.0
- M_glu5p_c: - R_G5SD + R_GLU5K = 0.0
- M_glu5sa_c: - R_PUTA3 + R_G5SD + R_ORNTA - R_G5SADs = 0.0
- M_glu_D_c: - R_GLUR - R_UAMAGS = 0.0
- M_glu_L_c: + R_CTPS2 + R_ADCS + R_GLUt4pp + R_PRFGS + R_ACOTA - R_GLUDC + R_PUTA3 - R_GLUDy + R_CBPS - R_GLUTRS + R_ANS + R_GF6PTA - R_THFGLUS - R_ORNTACr + R_ASPTA + R_TYRTA + R_GLUR + R_GLUN + R_ABTA + R_VALTA + R_PHETA1 - R_LEUTAi - R_GLUCYS -0.06058808990000000283 R_BiomassProtein + R_EHGLAT + R_NADS2 - R_MNXR33992 - R_ACGS +4.00000000000000000000 R_ADCYRS + R_GMPS2 + R_P5CD + R_GTHRDH_syn - R_DHFS + R_ORNTA + R_GLNTRAT + R_GLUttrappp + R_SDPTA + R_LEUTA +2.00000000000000000000 R_GLMS_syn + R_ASNS1 +2.00000000000000000000 R_GLUSx + R_IG3PS +2.00000000000000000000 R_R05224 - R_HSTPT + R_GLUPRT - R_GLNS + R_ILETA + R_CYSTA - R_GLU5K = 0.0
- M_glu_L_e: - R_GLUtex - R_EX_glu_L_e = 0.0
- M_glu_L_p: - R_GLUt4pp + R_GLUtex - R_GLUttrappp = 0.0
+ M_epist_c: + R_C8STI + R_EPISTt +0.01000000000000000021 R_EPISTESTH_SC - R_C5STDS -0.01000000000000000021 R_EPISTAT_SC = 0.0
+ M_epist_e: +0.01000000000000000021 R_EPISTESTH_SCe - R_EPISTt - R_EX_epist_e_ = 0.0
+ M_epistest_SC_c: -0.01000000000000000021 R_EPISTESTH_SC +0.01000000000000000021 R_EPISTAT_SC = 0.0
+ M_epistest_SC_e: -0.01000000000000000021 R_EPISTESTH_SCe - R_EX_epistest_SC_e_ = 0.0
+ M_epm_c: - R_EPMGH = 0.0
+ M_ergst3glc_c: + R_ERGSTGLCT = 0.0
+ M_ergst_c: + R_ERGSTt - R_ERGSTGLCT -0.01000000000000000021 R_ERGSTAT_SC + R_ERGSTter - R_STEROLS1 +0.01000000000000000021 R_ERGSTESTH_SC = 0.0
+ M_ergst_e: - R_ERGSTt - R_EX_ergst_e_ +0.01000000000000000021 R_ERGSTESTH_SCe = 0.0
+ M_ergst_r: + R_C24STRer - R_ERGSTter = 0.0
+ M_ergstest_SC_c: +0.01000000000000000021 R_ERGSTAT_SC -0.01000000000000000021 R_ERGSTESTH_SC = 0.0
+ M_ergstest_SC_e: -0.01000000000000000021 R_ERGSTESTH_SCe - R_EX_ergstest_SC_e_ = 0.0
+ M_ergtetrol_c: + R_CHLSTI + R_C22STDS + R_C22STDSx - R_ERGTETROLter - R_STEROLS2 = 0.0
+ M_ergtetrol_r: + R_ERGTETROLter - R_C24STRer = 0.0
+ M_ergtrol_c: - R_C22STDS - R_C22STDSx + R_C5STDS = 0.0
+ M_ertascb_D_c: + R_ARAB14LO = 0.0
+ M_etha_c: - R_ETHAK + R_ETHAt = 0.0
+ M_etha_e: - R_ETHAt - R_EX_etha_e_ = 0.0
+ M_ethamp_c: + R_PSPHPL + R_SPHPL + R_ETHAK - R_PETHCT = 0.0
+ M_etoh_c: + R_ETOHt + R_ALCD2ir - R_ALCD2if + R_ACHLE3 - R_ETOHtm - R_ALCD2x - R_OHACT1 = 0.0
+ M_etoh_e: - R_ETOHt - R_EX_etoh_e_ = 0.0
+ M_etoh_m: + R_ALCD2irm + R_ETOHtm = 0.0
+ M_f1p_c: - R_FBA2 - R_FRUK = 0.0
+ M_f26bp_c: + R_PFK26 - R_FBP26 = 0.0
+ M_f6p_c: - R_GF6PTA + R_MAN6PI - R_PFK26 + R_G6PI3 - R_PFK + R_TKT2 + R_FBP26 + R_FBP + R_G6PDA + R_TALA + R_HEX7 + R_PGI = 0.0
+ M_fad_c: + R_FMNAT - R_FADFMNtm = 0.0
+ M_fad_m: + R_FRDcm - R_ASPOcm + R_FRDm + R_FADFMNtm - R_SUCD1m + R_SUCD3_u6m - R_G3PDm + R_FMNATm = 0.0
+ M_fadh2_m: - R_FRDcm + R_ASPOcm - R_FRDm + R_SUCD1m - R_SUCD3_u6m + R_G3PDm = 0.0
+ M_fald_c: - R_FALDH = 0.0
+ M_fdp_c: + R_PFK - R_FBP - R_FBA + R_FRUK = 0.0
+ M_fe2_c: + R_FE2t + R_FEtm - R_FE2utm - R_SHCHF = 0.0
+ M_fe2_e: - R_FE2t - R_EX_fe2_e_ = 0.0
+ M_fe2_m: - R_FCLTm - R_FEtm + R_FE2utm = 0.0
+ M_fecost_c: +0.01000000000000000021 R_FECOSTESTH_SC + R_FECOSTt -0.01000000000000000021 R_FECOSTAT_SC - R_C8STI + R_SAM24MT = 0.0
+ M_fecost_e: - R_FECOSTt +0.01000000000000000021 R_FECOSTESTH_SCe - R_EX_fecost_e_ = 0.0
+ M_fecostest_SC_c: -0.01000000000000000021 R_FECOSTESTH_SC +0.01000000000000000021 R_FECOSTAT_SC = 0.0
+ M_fecostest_SC_e: -0.01000000000000000021 R_FECOSTESTH_SCe - R_EX_fecostest_SC_e_ = 0.0
+ M_fgam_c: + R_GARFTi + R_GLYCRT - R_PRFGS = 0.0
+ M_ficytc_m: -2.00000000000000000000 R_CYOR_u6m -2.00000000000000000000 R_D_LACDm +4.00000000000000000000 R_CYOOm -2.00000000000000000000 R_D_LACDcm +2.00000000000000000000 R_CCP2m -2.00000000000000000000 R_L_LACD2cm = 0.0
+ M_fmettrna_m: + R_FMETTRSm = 0.0
+ M_fmn_c: - R_FMNAT - R_FMNRx + R_RBFK + R_FADFMNtm - R_FMNRx2 = 0.0
+ M_fmn_e: - R_ACP1e - R_EX_fmn_e_ = 0.0
+ M_fmn_m: + R_RBFKm - R_FADFMNtm - R_FMNATm = 0.0
+ M_fmnh2_c: + R_FMNRx + R_FMNRx2 = 0.0
+ M_focytc_m: +2.00000000000000000000 R_CYOR_u6m +2.00000000000000000000 R_D_LACDm -4.00000000000000000000 R_CYOOm +2.00000000000000000000 R_D_LACDcm -2.00000000000000000000 R_CCP2m +2.00000000000000000000 R_L_LACD2cm = 0.0
+ M_fola_b: + R_EX_fola_e_ = 0.0
+ M_fola_c: + R_FOLAt + R_THFOXR = 0.0
+ M_fola_e: - R_FOLAt - R_EX_fola_e_ = 0.0
+ M_for_c: - R_FDH + R_DB4PS + R_GTPCI + R_FKYNH - R_FTHFLi + R_SFGTH + R_GTPCII + R_DKMPPD2 + R_FORt - R_FDNG + R_FORtm + R_LNS14DMx - R_GLYCRT + R_LNS14DM = 0.0
+ M_for_e: - R_EX_for_e_ - R_FORt = 0.0
+ M_for_m: - R_FORtm - R_FTHFLmi = 0.0
+ M_fpram_c: - R_PRAIS + R_PRFGS = 0.0
+ M_fprica_c: + R_AICART + R_IMPC = 0.0
+ M_frdp_c: - R_FRDPtm -2.00000000000000000000 R_SQLS + R_GRTT - R_FRTT = 0.0
+ M_frdp_m: + R_FRDPtm - R_HEMEOSm = 0.0
+ M_fru_c: + R_FRUt2 + R_SBTD_D2 - R_HEX7 = 0.0
+ M_fru_e: - R_EX_fru_e_ + R_SUCRe - R_FRUt2 = 0.0
+ M_fum_c: + R_ADSL2r + R_SUCFUMtm - R_FRDcm - R_DHORDfum + R_ARGSL + R_FUMt2r - R_FUM + R_ADSL1r + R_FUMAC = 0.0
+ M_fum_e: - R_FUMt2r - R_EX_fum_e_ = 0.0
+ M_fum_m: - R_SUCFUMtm - R_FUMm - R_FRDm + R_SUCD1m + R_SUCD2_u6m = 0.0
+ M_g1p_c: + R_UGLT - R_PGMT + R_GLCP - R_GALU = 0.0
+ M_g3p_c: + R_TPI + R_TRPS1 + R_TKT1 + R_TKT2 + R_FBA - R_TALA - R_GAPD = 0.0
+ M_g3pc_c: - R_GPDDA1 + R_G3PCt +0.50000000000000000000 R_PLBPC_SC = 0.0
+ M_g3pc_e: +0.50000000000000000000 R_PLBPC_SCe - R_G3PCt - R_EX_g3pc_e_ = 0.0
+ M_g3pi_c: + R_G3PIt = 0.0
+ M_g3pi_e: - R_EX_g3pi_e_ - R_G3PIt +0.50000000000000000000 R_PLBP1I_SCe = 0.0
+ M_g6p_B_c: + R_G6PI - R_G6PI3 + R_GLUK = 0.0
+ M_g6p_c: + R_PGMT - R_G6Pter - R_G6PI + R_HEX1 - R_G6PDH2 - R_TRE6PS - R_PGI - R_MI1PS = 0.0
+ M_g6p_r: - R_G6PDH2er + R_G6Pter = 0.0
+ M_gal1p_c: - R_UGLT - R_GALT + R_GALK = 0.0
+ M_gal_c: + R_MELTGH + R_GALt2 + R_GGLGH + R_GALIGH + R_EPMGH + R_GALS3 + R_DGGH - R_GALK + R_RAFGH = 0.0
+ M_gal_e: - R_GALt2 - R_EX_gal_e_ = 0.0
+ M_galur_e: - R_EX_galur_e_ + R_EPGALURSe = 0.0
+ M_gam1p_c: - R_PGAMT = 0.0
+ M_gam6p_c: + R_GF6PTA + R_PGAMT - R_G6PDA + R_GAM6Pt - R_ACGAM6PS = 0.0
+ M_gam6p_e: - R_EX_gam6p_e_ - R_GAM6Pt = 0.0
+ M_gar_c: + R_PRAGSr - R_GARFTi - R_GLYCRT = 0.0
+ M_gcald_c: + R_GCALDt - R_GCALDtm + R_AHMMPS = 0.0
+ M_gcald_e: - R_GCALDt - R_EX_gcald_e_ = 0.0
+ M_gcald_m: + R_DHNPAm + R_GCALDtm = 0.0
+ M_gdp_c: + R_GTPt2m - R_ATPATF3 - R_GDPtn + R_MIPCS226_SC - R_NDP3 - R_RNDR2 + R_NTP3 + R_MEVK3 + R_GK2 + R_MIPCS124_SC + R_URIK2 + R_MIPCS324_SC - R_NDPK1 + R_CYTDK2 + R_GDPt3g + R_MIPCS224_SC + R_ADSS + R_GK1 + R_MIPCS326_SC + R_ADK3 + R_MIPCS126_SC + R_DOLPMTcer = 0.0
+ M_gdp_g: + R_G12MT2g + R_G16MTg + R_G12MT1g + R_G13MTg - R_GDPt3g - R_NDP3g = 0.0
+ M_gdp_m: - R_GTPt2m + R_ADK3m = 0.0
+ M_gdp_n: + R_GDPtn - R_RNDR2n = 0.0
+ M_gdpmann_c: - R_MIPCS226_SC - R_MIPCS124_SC + R_MAN1PT - R_MIPCS324_SC - R_MIPCS224_SC - R_MIPCS326_SC - R_GDPMANNtg - R_MIPCS126_SC - R_DOLPMTcer = 0.0
+ M_gdpmann_g: - R_G12MT2g - R_G16MTg - R_G12MT1g - R_G13MTg + R_GDPMANNtg = 0.0
+ M_ggdp_c: - R_GGTT + R_FRTT = 0.0
+ M_ggl_c: - R_GGLGH = 0.0
+ M_glc_D_c: + R_13BGH +2.00000000000000000000 R_TREH + R_GALS3 + R_DGGH - R_GLUK +2.00000000000000000000 R_MALT - R_HEX1 + R_GLCt1 - R_GLCtv - R_SBTR + R_GLCGSD = 0.0
+ M_glc_D_e: - R_EX_glc_e_ + R_SUCRe + R_13BGHe - R_GLCt1 = 0.0
+ M_glc_D_v: +2.00000000000000000000 R_TREHv + R_GLCtv + R_GLCGSDv = 0.0
+ M_gln_L_c: - R_CTPS2 - R_ADCS - R_ANS - R_GF6PTA - R_GLUSx - R_GLNt2n + R_GLNt2r - R_CBPS - R_ASNS1 - R_IG3PS - R_GLUPRT - R_GLUN - R_GMPS2 + R_GLNS - R_GLNTRS + R_GLNt7 - R_GLNt6 - R_PRFGS = 0.0
+ M_gln_L_e: - R_GLNt2r - R_EX_gln_L_e_ = 0.0
+ M_gln_L_n: + R_GLNt2n = 0.0
+ M_gln_L_v: - R_GLNt7 + R_GLNt6 = 0.0
+ M_glntrna_c: -0.10539999999999999369 R_biomass_core -0.10539999999999999369 R_biomass_wildType + R_GLNTRS = 0.0
+ M_glp_c: - R_GLPT = 0.0
+ M_glu5p_c: - R_G5SD + R_GLU5K - R_G5SD2 = 0.0
+ M_glu5sa_c: + R_G5SD + R_ORNTA + R_G5SD2 - R_G5SADr = 0.0
+ M_glu5sa_m: - R_PYR5CDm - R_G5SADrm = 0.0
+ M_glu_L_c: + R_CTPS2 + R_TRPTA + R_ADCS - R_GLUDC - R_GLUt2n + R_ANS - R_HSTPT - R_GLU5K + R_GF6PTA - R_AATA - R_GLUt5m - R_TYRTAi +2.00000000000000000000 R_GLUSx - R_GLUCYS + R_NTRLASE3 - R_UNK3 + R_GLUt7 - R_ASPGLU2m - R_OHPBAT - R_DHFS + R_ORNTA + R_LEUTA + R_GLUt2r + R_CBPS + R_ASNS1 + R_IG3PS + R_GLUPRT - R_GLUt7m - R_SACCD1 - R_GLUTRS + R_ASPGLUtp + R_ASPTA + R_GLUN - R_THFGLUS + R_ABTA + R_VALTA + R_PHETA1 + R_ILETA + R_GLUDyi + R_GMPS2 - R_PSERT + R_EHGLAT - R_GLUDxi - R_GLNS + R_ALATA_L + R_PRFGS = 0.0
+ M_glu_L_e: - R_GLUt2r - R_EX_glu_L_e_ = 0.0
+ M_glu_L_m: + R_GLUt5m + R_PYR5CDm + R_ILETAm + R_ALATA_Lm - R_TYRTAim + R_ASPGLU2m - R_ACGSm + R_EHGLATm + R_VALTAim + R_P5CDm - R_ORNTACim - R_GLUTRSm + R_GLUt7m + R_ASPTAm + R_LEUTAm - R_ACOTAim = 0.0
+ M_glu_L_n: + R_GLUt2n = 0.0
+ M_glu_L_v: - R_GLUt7 = 0.0
+ M_glu_L_x: - R_TYRTAip + R_EHGLATp + R_ASPTAp - R_ASPGLUtp = 0.0
+ M_gluala_c: + R_GTMLT = 0.0
  M_glucys_c: + R_GLUCYS - R_GTHS = 0.0
- M_glutrna_c: + R_GLUTRS - R_GLUTRR = 0.0
- M_glutrna_gln_c: - R_GLNTRAT = 0.0
- M_glx_c: + R_DDPGA + R_GLYCTO1 - R_SPT_syn - R_SPT_syn2 + R_GLYCTO_syn - R_GLXO3r -2.00000000000000000000 R_GLXCL = 0.0
- M_gly_c: - R_GLYCL + R_SPT_syn + R_SPT_syn2 -0.07387264440000000654 R_BiomassProtein + R_GLYabcpp - R_GTHS - R_GLYTRS + R_AMPTASECG + R_GHMT2r + R_GLYCL_2 - R_PRAGS = 0.0
- M_gly_e: - R_GLYtex - R_EX_gly_e = 0.0
- M_gly_p: + R_GLYtex - R_GLYabcpp = 0.0
- M_glyald_c: + R_FBA2 - R_GLYALDDr - R_ALCD19 = 0.0
- M_glyc3p_c: - R_PGSA160 - R_PGSA161 - R_GGPS - R_PGSA183_9_12_15 - R_PGSA184_6_9_12_15 - R_PGSA181_9 - R_G3PD - R_G3PAT183_6_9_12 - R_PGSA183_6_9_12 - R_PGSA182_9_12 - R_G3PAT161 - R_G3PAT160 - R_G3PD2 - R_G3PAT182_9_12 - R_G3PAT181_9 - R_G3PAT183_9_12_15 - R_G3PAT184_6_9_12_15 + R_GLYK - R_PGSA180 - R_PGSA181 - R_G3PAT181 - R_G3PAT180 = 0.0
- M_glyc_R_c: - R_GLYCK + R_HPYRR2_syn + R_TRSARr + R_GLYALDDr = 0.0
- M_glyc_c: - R_GLYCDx + R_ALCD19 - R_GLYK = 0.0
- M_glyclt_c: - R_GLYCTO1 - R_GLYCTO_syn + R_PGLYCP + R_GCALDD = 0.0
- M_glycogen_c: - R_GLCP - R_Sink_glycogen + R_GLCS1 - R_GLBRAN2 - R_BiomassGlycogen = 0.0
- M_glytrna_c: + R_GLYTRS = 0.0
- M_gmp_c: + R_GMPS + R_ADOCBLS + R_GMPS2 - R_GK1 + R_NTPP2 = 0.0
- M_grdp_c: - R_GRTT + R_DMATT = 0.0
- M_gthox_c: + R_GTHP = 0.0
- M_gthrd_c: - R_LALDO - R_LGTHL + R_GLYOX -0.00325879699999999991 R_BiomassSolubleP + R_GTHS - R_GTHRDH_syn -2.00000000000000000000 R_GTHP = 0.0
- M_gtocophe_c: + R_TOCOPHS1 -0.00132252999999999993 R_BiomassPigment - R_TOCOPHOM1 = 0.0
- M_gtp_c: + R_NDPK1 - R_ACBIPGT - R_GUACYC - R_ADSS + R_PYK3 -0.25005752129999997413 R_BiomassRNA - R_NTPP2 - R_MAN1PT - R_GTPCII - R_GTPCI = 0.0
- M_h2_c: + R_H2tpp + R_H2ASE_syn = 0.0
- M_h2_e: - R_H2tex - R_EX_h2_e = 0.0
- M_h2_p: - R_H2tpp + R_H2tex = 0.0
- M_h2mb4p_c: + R_MECDPDH_syn - R_IPDPS_syn - R_DMPPS_syn = 0.0
- M_h2o2_c: + R_PYDXNO -2.00000000000000000000 R_CAT +2.00000000000000000000 R_PYDXO + R_GLYCTO1 + R_ASPO1 + R_ASPO6 + R_DHORD + R_PYAM5PO - R_GTHP + R_PDX5PO + R_GLXO3r = 0.0
- M_h2o_c: - R_CTPS2 - R_HEMEAS - R_ASNN - R_SSALyr - R_PGPP184_6_9_12_15 - R_UHGADA + R_DHQTi - R_DNTPPA - R_SQD2_182_9_12 - R_ACP1_FMN - R_FE2abcpp +2.00000000000000000000 R_CAT + R_3HAD40 - R_COBALT2abcpp +3.00000000000000000000 R_ATPS4rpp +2.00000000000000000000 R_DES_6B + R_MEHLER - R_SULabcpp +2.00000000000000000000 R_MPOMOR - R_SUCRabcpp_syn - R_PGPP183_9_12_15 - R_ZN2abcpp + R_MECDPDH_syn - R_PRFGS + R_3HAD100 - R_NTD7 - R_PUTA3 - R_GLUDy +3.00000000000000000000 R_SULR_syn - R_PRAMPC - R_PGPP181 - R_BCT1_syn -2.00000000000000000000 R_CYPHYC + R_3HAD60 + R_DHAD2 - R_CBPS - R_GDBTALDH - R_HISabcpp - R_PTRCabcpp - R_USHD - R_AMID - R_PAPA181_9 - R_PAPA183_6_9_12 - R_ALDD2xr - R_SPP - R_NTPTP1 + R_ENO - R_SQD2_184_6_9_12_15 - R_COBALT2abcpp_syn -2.00000000000000000000 R_PYDXO - R_GLUN + R_DHPS - R_PGPP181_9 + R_THZPSN - R_SQD2_160 - R_PROabcpp - R_AHCi + R_SUCBZS - R_SQLC2 - R_THDPS - R_NADN - R_ASPO1 + R_BCAROHX2 - R_PAPA184_6_9_12_15 - R_BPNT - R_PIuabcpp + R_IGPS - R_ARGDH - R_PGL + R_TRPS2 + R_TRPS1 - R_SDPDS + R_BCAROKE - R_PAPA182_9_12 - R_CU2abcpp_syn +3.00000000000000000000 R_HOXG -2.00000000000000000000 R_PHCD +2.00000000000000000000 R_ZCAROTDH2 -12.27996717999999987114 R_BiomassMixo -4.32000000000000028422 R_BiomassProtein - R_NADS2 - R_AGMT +2.00000000000000000000 R_NOR_syn - R_HEMEOS - R_SBP - R_ADPRDP - R_MALT - R_IMPC - R_DHORTS - R_GGPP - R_AMPN - R_DCTPD2 - R_GLCGLYCabcpp_syn - R_IMPD + R_THZSN - R_ALDD20x - R_MNXR33992 - R_METAT - R_NTPP8 - R_NTPP9 - R_NTPP4 + R_ACONT1 + R_RNDR2 + R_RNDR3 + R_RNDR1 - R_CU2abcu_syn + R_3HAD160 + R_SQD1 - R_GLYOX - R_DCTPD - R_HCO3E +2.00000000000000000000 R_RBFSa + R_3HAD80 - R_GLYabcpp - R_PPS - R_FUM - R_ARGN -4.00000000000000000000 R_ADCYRS - R_PPC +2.00000000000000000000 R_ZCAROTDH1 - R_PPA - R_HISTD - R_SQD2_180 - R_NTP1 - R_NI2abcpp_syn - R_MOHMT - R_DNMPPA - R_SERabcpp - R_NABTNO +2.00000000000000000000 R_PPBNGS - R_HMBS + R_BCAROHX + R_IPDPS_syn - R_GMPS2 - R_THRS - R_ALAabcpp + R_NAR_syn - R_PYAM5PO - R_NDH1_3u -2.00000000000000000000 R_P5CD + R_IGPDH - R_SQD2_181_9 - R_PMDPHT + R_FOMETR - R_FBP - R_GTHRDH_syn - R_UREAabcpp - R_MNXR15637 - R_AMID3 - R_AMID2 + R_TDPGDH - R_LEUabcpp - R_FTHFD - R_NTD4 + R_3HAD121 - R_AMPTASECG - R_GLNTRAT - R_PGLYCP - R_CSND - R_ZNabcpp - R_ARGabcpp - R_MG2tpp - R_DDPA +2.00000000000000000000 R_QULNS + R_DMPPS_syn +2.00000000000000000000 R_PDX5PS - R_MPOMC2 + R_MPOMC1 +3.00000000000000000000 R_PPPGO - R_UDCPDP - R_GCALDD - R_SQD2_183_9_12_15 - R_MTHFC +2.00000000000000000000 R_GTHP - R_SQD2_161 +2.00000000000000000000 R_DES_9 - R_COCHL +2.00000000000000000000 R_DES_6 - R_MOBDabcpp -3.35999999999999987566 R_BiomassDNA +2.00000000000000000000 R_DES_12 +2.00000000000000000000 R_DES_15 - R_ARGD + R_G5SADs + R_3HAD181 - R_BAMPPALDOX + R_IPPMIa - R_IPPMIb + R_GHMT2r + R_DHAD1 -2.41000000000000014211 R_BiomassRNA + R_UPP3S - R_ABUTD +3.00000000000000000000 R_ATPSu - R_DHPPDA - R_ACONT2 + R_3HAD180 - R_MI1PP + R_RNDR4 - R_NTPP2 - R_PGPP182_9_12 + R_ANS2 - R_SQD2_181 - R_GLXO3r + R_PPNDH + R_ALAD_syn +2.00000000000000000000 R_MPOMMM - R_IPPS - R_GLYALDDr -13.09996718000000015536 R_BiomassHetero - R_ASNS1 - R_PAPA181 - R_PAPA180 + R_3HAD161 - R_IMACTD - R_PGPP160 - R_PGPP161 - R_LYSabcpp - R_CYTDH +2.00000000000000000000 R_CPPPGO - R_CS - R_R05219 - R_PAPA161 - R_PAPA160 - R_NDH1_4pp - R_CA2abcpp - R_PGPP180 - R_HISTP - R_R05224 - R_GUDBUTNAH - R_NO3abcpp - R_UREA + R_3HAD120 - R_RBPC + R_3HAD141 + R_3HAD140 - R_SPMDabcpp + R_H2Otpp - R_GLNabcpp - R_PGPP183_6_9_12 - R_UAG2EMA + R_GMAND - R_PAPA183_9_12_15 - R_GLUPRT -0.82999999999999996003 R_BiomassPept +2.00000000000000000000 R_DHDPS -3.00000000000000000000 R_GTPCII - R_MPML -27.23996718000000072379 R_BiomassAuto - R_FE3abc - R_CYSTL + R_H2Otu_syn - R_GTPCI - R_SQD2_183_6_9_12 - R_PRATPP = 0.0
- M_h2o_e: - R_EX_h2o_e - R_H2Otex = 0.0
- M_h2o_p: + R_CYTBDpp + R_CYO1b2pp_syn + R_CYO1bpp_syn + R_H2Otex - R_H2Otpp = 0.0
- M_h2o_u: + R_CYTBDu + R_CYO1b2_syn + R_CYO1b_syn - R_PSII - R_H2Otu_syn = 0.0
- M_h2s_c: + R_SULR_syn - R_CYSS - R_METACH = 0.0
- M_h_c: + R_MPBQ +2.00000000000000000000 R_CTPS2 +2.00000000000000000000 R_CTPS1 + R_TMK + R_PPTGS_Syn -2.00000000000000000000 R_HPROb -2.00000000000000000000 R_HPROa +4.00000000000000000000 R_HEMEAS + R_IPMD - R_3OAR140 - R_3OAR141 +2.00000000000000000000 R_SSALyr + R_PANTS + R_PRUK + R_GLYCK + R_ADCL + R_SPMS + R_DNTPPA + R_MGDG182_9_12 + R_SQD2_182_9_12 + R_PFK_2 +2.00000000000000000000 R_FCLT + R_FE2abcpp + R_HPPK - R_BILIRED - R_FMNAT - R_NNATr + R_COBALT2abcpp - R_EAR100y +11.00000000000000000000 R_ATPS4rpp -2.00000000000000000000 R_DES_6B - R_EAR141y + R_PGSA160 + R_PGSA161 - R_MEHLER + R_SULabcpp - R_MPOMOR + R_GGPS +2.00000000000000000000 R_PC6YM + R_PGSA183_9_12_15 + R_PDHcr + R_SUCRabcpp_syn + R_U23GAAT + R_ZN2abcpp - R_EAR160y + R_DMTPHT + R_PRFGS - R_DASYN184_6_9_12_15 +2.00000000000000000000 R_PAPSR - R_GLUDC +2.00000000000000000000 R_PUTA3 + R_LALDO - R_3OAS100 + R_GLUDy + R_GLUK_syn -8.00000000000000000000 R_SULR_syn + R_DNAMT_syn + R_NAt3pp - R_FNOR + R_MNt2pp + R_BCT1_syn - R_GFUCS + R_SPMDt2pp - R_3OAR180 - R_ASP1DC +2.00000000000000000000 R_CBMK +2.00000000000000000000 R_CBPS - R_ACHBS -4.00000000000000000000 R_NDH1_1u -4.00000000000000000000 R_NDH1_1p + R_FMETTRS + R_PGSA184_6_9_12_15 - R_GLUTRR + R_GDBTALDH + R_ASPCT - R_G5SD + R_PGSA181_9 + R_ANS + R_HISabcpp -2.00000000000000000000 R_CBFC2pp + R_PTRCabcpp + R_MGDG181 +2.00000000000000000000 R_USHD + R_DPCOAK + R_PTRCt2pp - R_LYSDC + R_PHYTFDH2 + R_PNTK + R_PHYTFDH1 +2.00000000000000000000 R_ALDD2xr - R_DHDPRy - R_GAPDi_nadp - R_ADMDC + R_THFGLUS + R_HSK - R_SQLS - R_3OAR40 - R_AACOAR_syn + R_NH4tpp - R_3OAS60 - R_AOXSr - R_MNXR33817 + R_SQD2_184_6_9_12_15 + R_PFK - R_KARA1i + R_ACCOACr - R_NMNAT - R_LCARS + R_PC11M + R_COBALT2abcpp_syn + R_MGDG181_9 - R_NMNS + R_BTS4 + R_UAGPT3 - R_R05217 + R_MGDG183_6_9_12 - R_ACBIPGT -4.00000000000000000000 R_CYO1b2_syn +2.00000000000000000000 R_GMPS + R_THZPSN + R_SQD2_160 + R_PROabcpp - R_PYK5 - R_PYK4 - R_PYK2 - R_EAR60y - R_GLGC - R_DPR + R_NADN + R_ASPO6 - R_BCAROHX2 + R_CA2t3pp - R_H2ASE_syn - R_PDHa - R_OXGDC2 + R_PIuabcpp - R_IGPS + R_ACt2rpp + R_MDH + R_PGSA183_6_9_12 - R_ARGDC + R_GLUCYS + R_PGL + R_Ktpp - R_PC6AR + R_PGSA182_9_12 + R_MGDG183_9_12_15 + R_PRPPS - R_23BDD - R_3OAS181 - R_3OAS180 + R_CU2abcpp_syn -5.00000000000000000000 R_HOXG + R_PHCD + R_DHNAPHT + R_AGPR - R_ZCAROTDH2 + R_SHKK - R_KARA2i - R_TRDR + R_MGDG160 + R_MGDG161 + R_SPS - R_DASYN183_9_12_15 - R_3OAR160 +16.88006917999999956237 R_BiomassMixo +4.32000000000000028422 R_BiomassProtein + R_MPOMMM2 + R_LDH_D - R_APRAUR + R_NADS2 -8.00000000000000000000 R_NOR_syn + R_DB4PS +2.00000000000000000000 R_ADPRDP + R_MGDG180 + R_DHORTS - R_EAR161y + R_HEX7 - R_DCTPD2 + R_UAMAS - R_ASADi - R_CHPHYS - R_EAR120y + R_GLCGLYCabcpp_syn + R_CDPMEK + R_UAMAGS + R_IMPD - R_DASYN181_9 - R_HPYRR2_syn + R_THZSN + R_PC20M - R_TRSARr -2.00000000000000000000 R_MTHFR2 +2.00000000000000000000 R_ALDD20x - R_NADH5 -2.00000000000000000000 R_AHMMPS - R_3OAR120 - R_3OAR121 + R_TMDK1 + R_PPNCL3 - R_MNXR33992 + R_NTPP8 + R_NTPP9 + R_NTPP4 + R_CU2abcu_syn - R_PYK + R_SUCCtpp - R_SQD1 + R_GLYOX - R_DCTPD + R_HCO3E + R_ACGS - R_3OAS80 + R_GLYabcpp +2.00000000000000000000 R_PPS + R_CYRDAR + R_CITtpp +4.00000000000000000000 R_ADCYRS + R_PPC - R_ZCAROTDH1 + R_PPA - R_PPCDC + R_GTHS + R_GAPDi - R_DASYN182_9_12 + R_FDH6pp + R_ADSK +2.00000000000000000000 R_ADSS +3.00000000000000000000 R_HISTD +2.00000000000000000000 R_RBCh + R_GLCt2pp + R_SQD2_180 + R_PYRtpp + R_NTP1 - R_SHK3D + R_NI2abcpp_syn + R_GLYCTO_syn - R_ACLS + R_SERabcpp -4.00000000000000000000 R_NDH1_2u - R_NDH2_pp + R_GLCS1 + R_AKGtpp +2.00000000000000000000 R_NABTNO - R_EAR180y + R_OCBT - R_DAPDC + R_PPBNGS - R_3OAS161 - R_EAR181y + R_ADOCBLS - R_BCAROHX + R_UPP3MT - R_IPDPS_syn +2.00000000000000000000 R_GMPS2 + R_ALAabcpp -2.00000000000000000000 R_NAR_syn -2.00000000000000000000 R_P5CR + R_G3PD2 -3.00000000000000000000 R_CYNTAH -3.00000000000000000000 R_NDH1_3u - R_3OAR161 + R_P5CD - R_DXPS - R_GALU - R_TDPDRR + R_GALK - R_POR - R_UAGDP + R_SQD2_181_9 + R_AIRCr + R_RBK - R_FOMETR -2.00000000000000000000 R_FQR + R_MPOMOR2 + R_THRPS + R_UREAabcpp - R_DASYN161 - R_DASYN160 +2.00000000000000000000 R_MNXR15637 - R_THRPD + R_PPNCL + R_HEX1 + R_MALtpp + R_DHFS - R_DHFR + R_ALCD2y + R_LEUabcpp + R_FTHFD - R_EAR121y + R_METS - R_PTPAT - R_MAN1PT2 - R_3OAR60 + R_RBFK + R_GLNTRAT + R_LPADSS + R_PROD2 + R_UAAGDS - R_3OAS121 - R_3OAS120 - R_CSND + R_ZNabcpp + R_GLUttrappp - R_PYK3 - R_CYRDAAT + R_ARGabcpp + R_MG2tpp + R_FUMtpp - R_TMPPP - R_DMPPS_syn +3.00000000000000000000 R_PC17M + R_PDX5PS -4.00000000000000000000 R_CYO1b2pp_syn + R_MPOMC2 - R_MPOMC1 - R_HGPHT + R_TOCOPHOM1 - R_OMPDC + R_UDCPDP +2.00000000000000000000 R_GCALDD + R_SQD2_183_9_12_15 + R_MTHFC + R_PGCD + R_SQD2_161 -2.00000000000000000000 R_DES_9 +2.00000000000000000000 R_COCHL - R_OMCDC -2.00000000000000000000 R_DES_6 - R_EAR140y -2.00000000000000000000 R_FTR + R_MOBDabcpp +3.35999999999999987566 R_BiomassDNA - R_OPHBDC -2.00000000000000000000 R_DES_12 -2.00000000000000000000 R_DES_15 - R_MEPCT + R_GLYCDx + R_G5SADs + R_CYSS +2.00000000000000000000 R_BAMPPALDOX - R_G1PTT + R_NADK -4.00000000000000000000 R_CYO1bpp_syn -2.00000000000000000000 R_GLMS_syn - R_OXGDC +2.41000000000000014211 R_BiomassRNA + R_TOCOPHOM2 -4.00000000000000000000 R_UPPDC2 -4.00000000000000000000 R_UPPDC1 +2.00000000000000000000 R_ABUTD -2.00000000000000000000 R_CBFC2 - R_DVOCHR +11.00000000000000000000 R_ATPSu - R_DHPPDA -3.00000000000000000000 R_GGDPR - R_3OAR80 + R_UGMDDS + R_DRBK + R_NTPP2 + R_ANS2 + R_SQD2_181 + R_METACH + R_GLXO3r - R_3OAR181 - R_PPNDH +2.00000000000000000000 R_CYPHYS - R_KAS14 - R_KAS15 -2.00000000000000000000 R_CBFCpp + R_ADCPS2 + R_ADCPS1 - R_ALAD_syn - R_MPOMMM + R_IPPS +2.00000000000000000000 R_GLYALDDr +17.70006718000000134339 R_BiomassHetero + R_ASNS1 - R_ALCD19 +2.00000000000000000000 R_IMACTD - R_GLXCL + R_LYSabcpp + R_FRUt3 + R_PFK_3 -2.00000000000000000000 R_CPPPGO + R_CS - R_EAR40y + R_R05219 -2.00000000000000000000 R_NNDPR -3.00000000000000000000 R_NDH1_4pp - R_GLUSx + R_CA2abcpp + R_POR_syn + R_GLYK + R_IG3PS + R_R05224 + R_HIBD_syn - R_MAN1PT + R_NO3abcpp + R_MGDG184_6_9_12_15 -2.00000000000000000000 R_P5CRx + R_PRAGS - R_SADT -4.00000000000000000000 R_CYO1b_syn -2.00000000000000000000 R_UREA + R_PHYTEDH2 + R_PHYTEDH1 - R_3OAR100 - R_34DHOXPEGOX - R_OXADC - R_DASYN183_6_9_12 + R_HSDx +2.00000000000000000000 R_RBPC - R_NDH2_syn + R_DPGM + R_SPMDabcpp + R_GLNabcpp + R_PRASCS + R_UAG2EMA + R_G1PACT + R_G6PDH2 + R_ALAALAr + R_PGSA180 + R_PGSA181 + R_GLNS +0.82999999999999996003 R_BiomassPept + R_CYNTt2pp + R_ARGSS + R_DHDPS +3.00000000000000000000 R_DBTSr +2.00000000000000000000 R_GTPCII -2.00000000000000000000 R_PSII +3.00000000000000000000 R_MPML - R_DASYN181 - R_DASYN180 - R_3OAS160 - R_PC8XM -4.00000000000000000000 R_NDH1_2p +31.84006918000000041502 R_BiomassAuto + R_FE3abc - R_UAPGR + R_GTPCI - R_EAR80y + R_G6PBDH + R_SQD2_183_6_9_12 - R_3OAS141 - R_3OAS140 - R_ACLDC - R_DXPRIi + R_GARFT -2.00000000000000000000 R_CBFCu + R_PRATPP +2.00000000000000000000 R_PRAIS = 0.0
- M_h_e: - R_Htex - R_EX_h_e = 0.0
- M_h_p: -14.00000000000000000000 R_ATPS4rpp + R_Htex - R_NAt3pp - R_MNt2pp - R_SPMDt2pp +3.00000000000000000000 R_NDH1_1p +4.00000000000000000000 R_CBFC2pp - R_PTRCt2pp - R_NH4tpp - R_CA2t3pp - R_ACt2rpp - R_Ktpp - R_SUCCtpp - R_CITtpp - R_GLCt2pp - R_PYRtpp - R_AKGtpp - R_MALtpp - R_GLUttrappp - R_FUMtpp +2.00000000000000000000 R_CYO1b2pp_syn +2.00000000000000000000 R_CYO1bpp_syn +4.00000000000000000000 R_CBFCpp - R_FRUt3 +3.00000000000000000000 R_NDH1_4pp - R_CYNTt2pp +3.00000000000000000000 R_NDH1_2p = 0.0
- M_h_u: +3.00000000000000000000 R_NDH1_1u +2.00000000000000000000 R_CYO1b2_syn +3.00000000000000000000 R_NDH1_2u +3.00000000000000000000 R_NDH1_3u +4.00000000000000000000 R_CBFC2 -14.00000000000000000000 R_ATPSu +2.00000000000000000000 R_CYO1b_syn +2.00000000000000000000 R_PSII +4.00000000000000000000 R_CBFCu = 0.0
- M_hco3_c: + R_BCT1_syn - R_CBPS + R_H2CO3_NAt_syn - R_ACCOACr + R_HCO3E - R_CYNTAH + R_NDH1_3u + R_NDH1_4pp = 0.0
- M_hco3_e: - R_EX_hco3_e - R_HCO3tex = 0.0
- M_hco3_p: - R_BCT1_syn - R_H2CO3_NAt_syn + R_HCO3tex = 0.0
- M_hcys_L_c: + R_AHCi - R_METS + R_METACH + R_CYSTL = 0.0
- M_hdeACP_c: - R_3OAS181 - R_AGPAT161 + R_EAR161y - R_G3PAT161 = 0.0
- M_hemeA_c: + R_HEMEAS -0.00325879699999999991 R_BiomassSolubleP = 0.0
- M_hemeO_c: - R_HEMEAS + R_HEMEOS -0.00325879699999999991 R_BiomassSolubleP = 0.0
- M_hexACP_c: + R_EAR60y - R_3OAS80 = 0.0
- M_hgbam_c: - R_COCHL + R_R05224 = 0.0
- M_hgbyr_c: - R_R05224 + R_PC8XM = 0.0
- M_hgentis_c: + R_34HPPOR - R_HGPHT = 0.0
- M_his_L_c: + R_HISabcpp -0.01861902810000000061 R_BiomassProtein + R_HISTD - R_HISTRS = 0.0
- M_his_L_e: - R_EX_his_L_e - R_HIStex = 0.0
- M_his_L_p: - R_HISabcpp + R_HIStex = 0.0
- M_hisp_c: - R_HISTP + R_HSTPT = 0.0
- M_histd_c: - R_HISTD + R_HISTP = 0.0
- M_histrna_c: + R_HISTRS = 0.0
+ M_glutrna_c: -0.30180000000000001270 R_biomass_core + R_GLUTRS -0.30180000000000001270 R_biomass_wildType = 0.0
+ M_glutrna_m: + R_GLUTRSm = 0.0
+ M_glx_c: + R_ICL - R_GLXtp - R_MALS - R_AGTi - R_GLXt + R_UGLYCHr = 0.0
+ M_glx_e: + R_GLXt - R_EX_glx_e_ = 0.0
+ M_glx_x: + R_GLXtp - R_MALSp = 0.0
+ M_gly_c: - R_GTHS - R_GLYTRS + R_GHMT2r - R_PRAGSr - R_THZPSN1_SC + R_THRA2i - R_THZPSN2_SC + R_AGTi + R_GLYATi + R_GLYt2r - R_GLYt2m + R_THRAi = 0.0
+ M_gly_e: - R_EX_gly_e_ - R_GLYt2r = 0.0
+ M_gly_m: - R_ALASm - R_GCC2am - R_GCCam - R_GLYCLm + R_GHMT2rm + R_GLYt2m = 0.0
+ M_glyald_c: - R_ALCD19y + R_FBA2 = 0.0
+ M_glyc3p_c: - R_G3PT + R_G3PD1ir + R_GPDDA1 + R_GLYK - R_GLYC3Ptm - R_GAT1_SC = 0.0
+ M_glyc3p_m: + R_G3PD1irm - R_CDPDGPm_SC + R_GLYC3Ptm - R_G3PDm = 0.0
+ M_glyc_c: - R_GLYCt + R_ALCD19y + R_G3PT + R_GGLGH - R_GLYCDy + R_GLYCt2 - R_GLYK = 0.0
+ M_glyc_e: + R_GLYCt - R_GLYCt2 - R_EX_glyc_e_ = 0.0
+ M_glycogen_c: -0.51849999999999996092 R_biomass_core - R_GLCP + R_GBEZ - R_GLCNtv -0.51849999999999996092 R_biomass_wildType + R_GLCS2 - R_GLCGSD = 0.0
+ M_glycogen_v: + R_GLCNtv - R_GLCGSDv = 0.0
+ M_glytrna_c: -0.29039999999999999147 R_biomass_core + R_GLYTRS -0.29039999999999999147 R_biomass_wildType = 0.0
+ M_gmp_c: -0.04599999999999999922 R_biomass_core + R_GUAPRT + R_GSNK + R_NDP3 - R_GK2 - R_NTD9 + R_PDE4 -0.04599999999999999922 R_biomass_wildType + R_GMPS2 - R_GK1 + R_GDPMANNtg + R_GTPH1 = 0.0
+ M_gmp_g: + R_NDP3g - R_GDPMANNtg = 0.0
+ M_gp4g_c: + R_ATPATF3 = 0.0
+ M_grdp_c: + R_DMATT - R_GRTT = 0.0
+ M_gsn_c: + R_GSNt2 - R_GSNK - R_PUNP3 + R_NTD9 - R_GSNt2m - R_GNNUC = 0.0
+ M_gsn_e: - R_GSNt2 - R_EX_gsn_e_ = 0.0
+ M_gsn_m: - R_PUNP3m + R_GSNt2m = 0.0
+ M_gthox_c: + R_GTHOXti + R_GTHP - R_GTHO = 0.0
+ M_gthox_e: - R_GTHOXti - R_EX_gthox_e_ = 0.0
+ M_gthox_m: + R_GTHPm - R_GTHOm = 0.0
+ M_gthrd_c: - R_LGTHL - R_FALDH + R_GTHS -2.00000000000000000000 R_GTHP +2.00000000000000000000 R_GTHO + R_SFGTH - R_GTMLT + R_GTHRDt2 + R_GLYOX - R_GTHRDabcv = 0.0
+ M_gthrd_e: - R_EX_gthrd_e_ - R_GTHRDt2 = 0.0
+ M_gthrd_m: + R_GLYOXm -2.00000000000000000000 R_GTHPm +2.00000000000000000000 R_GTHOm = 0.0
+ M_gthrd_v: + R_GTHRDabcv = 0.0
+ M_gtp_c: - R_GTPt2m - R_RNTR2 - R_ATPATF2 - R_ATPATF3 - R_GTPCI - R_NTP3 - R_MEVK3 - R_URIK2 - R_MAN1PT + R_NDPK1 - R_GTPCII - R_CYTDK2 - R_ADSS - R_ADK3 - R_GTPH1 = 0.0
+ M_gtp_m: + R_GTPt2m - R_ADK3m = 0.0
+ M_gua_c: - R_GUAPRT - R_GUAD + R_PUNP4 + R_PUNP3 + R_GUAt2r - R_GUAtm + R_GNNUC = 0.0
+ M_gua_e: - R_GUAt2r - R_EX_gua_e_ = 0.0
+ M_gua_m: + R_PUNP3m + R_GUAtm = 0.0
+ M_h2o2_c: + R_AACTOOR - R_GTHP + R_POLYAO2 - R_H2O2tn + R_DHORDi + R_ARAB14LO -2.00000000000000000000 R_CAT + R_PYDXNO - R_THIORDXi +2.00000000000000000000 R_PYDXO + R_POLYAO3 + R_PYAM5PO + R_POLYAO + R_APRTO2 + R_PDX5PO = 0.0
+ M_h2o2_m: - R_CCP2m - R_GTHPm - R_THIORDXm = 0.0
+ M_h2o2_n: + R_H2O2tn - R_THIORDXni = 0.0
+ M_h2o2_x: + R_ACOAO9p +3.00000000000000000000 R_FAO80p +6.00000000000000000000 R_FAO161p_odd +6.00000000000000000000 R_FAO141p_even +7.00000000000000000000 R_FAO161p_even +3.00000000000000000000 R_FAO240p +6.00000000000000000000 R_FAO182p_oddodd -2.00000000000000000000 R_CATp +8.00000000000000000000 R_FAO181p_even +7.00000000000000000000 R_FAO181p_odd + R_ACOAO4p +7.00000000000000000000 R_FAO182p_evenodd + R_ACOAO5p - R_THIORDXp + R_ACOAO6p + R_ACOAO7p + R_ACOAO8p +8.00000000000000000000 R_FAO182p_eveneven +5.00000000000000000000 R_FAO141p_odd = 0.0
+ M_h2o_c: - R_LPP_SC - R_CTPS2 - R_IPC226PLC_SC - R_MELTGH + R_DHQTi - R_DNTPPA +4.00000000000000000000 R_C4STMO2 +3.00000000000000000000 R_FAS80COA_L -59.27600000000000335376 R_biomass_core - R_ALDD22x - R_ATPS - R_ATPM - R_AABTN +2.00000000000000000000 R_FAS80_L - R_GUAD - R_AACTOOR +2.00000000000000000000 R_DESAT18 +2.00000000000000000000 R_DESAT16 +2.00000000000000000000 R_DESAT14 - R_FA120ACPH - R_G3PT - R_AMID - R_GGLGH - R_NDP7 - R_FA161ACPH +2.00000000000000000000 R_CHLSTI + R_RNTR2 + R_RNTR3 + R_RNTR1 + R_H2Ot + R_FAS100 - R_PMI12346PH - R_GALIGH - R_PGL -2.00000000000000000000 R_ATPH1 - R_PMI1346PH + R_TRPS1 - R_MIP2C326PLC_SC - R_ARGN - R_NDP4 - R_NDP1 - R_NDP3 - R_EPMGH - R_AMID2 - R_IMPD -2.00000000000000000000 R_NTRLASE2 -2.00000000000000000000 R_NTRLASE3 - R_FECOSTESTH_SC - R_SHSL4r - R_MIP2C124PLC_SC +3.00000000000000000000 R_FAS240_L - R_ALDD20y - R_METAT + R_RNDR4 + R_RNDR2 + R_RNDR3 + R_RNDR1 - R_DAGPYP_SC +2.00000000000000000000 R_RBFSa - R_GTPCI - R_IPC324PLC_SC - R_PRATPP - R_NTP4 - R_NTP3 - R_DNMPPA + R_MDRPD + R_FAS180 +3.00000000000000000000 R_FAS181 - R_HMBS - R_THRS + R_FAS160 -3.00000000000000000000 R_AKP1 + R_IGPDH - R_PMDPHT - R_FKYNH - R_NTD8 - R_ALDD19x - R_NTD11 - R_AMID3 - R_ADNUC - R_NTD9 +4.00000000000000000000 R_C4STMO1 + R_CERS2_24 + R_CERS2_26 - R_PDE4 - R_TAGL_SC - R_MTHFC +2.00000000000000000000 R_GTHP - R_PRAMPC - R_GPDDA1 - R_MIP2C126PLC_SC + R_GHMT2r + R_FAS180COA - R_MIP2C226PLC_SC +2.00000000000000000000 R_C22STDS + R_QUILSYN - R_CYSTGL - R_CBPS - R_NABTNO - R_POLYAO2 - R_NNAMr - R_IPPS - R_ASNS1 - R_MIPC226PLC_SC - R_PI45BP5P_SC - R_13BGH - R_DADA - R_GLUPRT +2.00000000000000000000 R_C22STDSx - R_THMP - R_CYSTL - R_ADA - R_ADD - R_FUM - R_LANOSTESTH_SC - R_IPC326PLC_SC - R_SFGTH - R_FA141ACPH - R_TREH - R_ALDD2y - R_MIP2C224PLC_SC - R_ASNN - R_HKYNH - R_FBP26 - R_MIPC126PLC_SC - R_PI35BP5P_SC - R_FA180ACPH +2.00000000000000000000 R_CAT - R_IPC124PLC_SC - R_MIPC124PLC_SC - R_SACCD2 + R_SACCD1 - R_H2Oter - R_FA160ACPH - R_FBP +3.00000000000000000000 R_THZPSN1_SC - R_NTD1 - R_MIP2C324PLC_SC - R_NTD3 - R_NTD2 - R_NTD5 - R_NTD4 - R_NTD7 - R_NTD6 - R_PI45BPP_SC - R_PDE1 - R_PDE2 - R_PDE3 - R_PDE5 - R_FA140ACPH + R_G5SADr + R_FAS260 + R_FAS140 +3.00000000000000000000 R_FAS141 - R_PALOXR - R_ALLTAHr - R_GLYGS - R_23CAPPD - R_EPISTESTH_SC - R_KYN - R_MIPC224PLC_SC - R_FA181ACPH + R_FAS120COA - R_DUTPDP - R_GALS3 + R_FAS140COA -3.00000000000000000000 R_GTPCII + R_HMGCOAS - R_G6PDA + R_ENO - R_MIPC326PLC_SC - R_AMPN - R_2DOXG6PP - R_DGGH - R_GLUN -3.00000000000000000000 R_DKMPPD2 - R_ALPHNH + R_GBEZ - R_LCADi - R_AHCi - R_NTD10 + R_CERS326 - R_NADN - R_SSALy +3.00000000000000000000 R_THZPSN2_SC - R_BPNT -59.27600000000000335376 R_biomass_wildType + R_IGPS + R_GLUDyi - R_DRTPPD - R_GMPS2 + R_CERH126 + R_CERH124 - R_H2Otv - R_H2Otp - R_H2Otm - R_ACHLE2 - R_ACHLE3 - R_ACHLE1 + R_KYN3OX + R_H2Otn +3.00000000000000000000 R_FAS161 - R_MALS - R_MALT +2.00000000000000000000 R_THIORDXi - R_DHORTS + R_PPNDH + R_RNTR4 +2.00000000000000000000 R_CPPPGO - R_GLYOX - R_DCTPD - R_HCO3E +4.00000000000000000000 R_LNS14DMx -2.00000000000000000000 R_PYDXO - R_4HTHRS -3.00000000000000000000 R_SULR - R_PPA - R_TRE6PP - R_MOHMT - R_UGLYCHr - R_CHTNDA +2.00000000000000000000 R_PPBNGS + R_CYSTS - R_CMPN - R_GLUDxi - R_POLYAO3 - R_PYAM5PO - R_FA182ACPH - R_AP4AHr - R_PLD_SC - R_RAFGH + R_FAS100COA - R_DDPA +2.00000000000000000000 R_QULNS - R_GNNUC - R_PLBPC_SC + R_FAS120 - R_MIPC324PLC_SC - R_CYTD -2.00000000000000000000 R_UTPH1 - R_IPC224PLC_SC - R_FUMAC - R_IPC126PLC_SC + R_IPPMIa - R_IPPMIb + R_FAS160COA + R_UPP3S +2.00000000000000000000 R_C5STDS - R_POLYAO - R_MI1PP - R_GLCGSD + R_CERS324 - R_ZYMSTESTH_SC - R_HYPOE - R_DXHPScm +2.00000000000000000000 R_DESAT18_2 - R_AMPDA - R_FTHFI - R_TMN - R_APRTO2 + R_PSPHS - R_HISTP - R_HISTD - R_DCMPDA +4.00000000000000000000 R_LNS14DM - R_NADPPPS -2.00000000000000000000 R_GTPH1 + R_YUMPS - R_PRFGS - R_ALLTNr - R_PSP_L - R_ERGSTESTH_SC - R_CSND -2.00000000000000000000 R_NTRLASE - R_IMPC - R_DCYTD = 0.0
+ M_h2o_e: - R_H2Ot - R_EPISTESTH_SCe - R_EX_h2o_e_ -2.00000000000000000000 R_THMDPe - R_PLBPC_SCe - R_ACP1e - R_SUCRe - R_ZYMSTESTH_SCe - R_ASNNe - R_FECOSTESTH_SCe - R_PLBP1I_SCe - R_13BGHe - R_THMPe - R_LANOSTESTH_SCe - R_ERGSTESTH_SCe - R_EPGALURSe = 0.0
+ M_h2o_g: - R_NDP3g + R_ATPS3g = 0.0
+ M_h2o_m: - R_MCITSm - R_ALDD2xm - R_MTHFCm +3.00000000000000000000 R_FAS80ACPm_L - R_THFATm - R_IPPSm - R_HCO3Em - R_PYR5CDm + R_DHAD1m - R_ALDD2ym + R_FAS140ACPm - R_GLYOXm - R_HCITSm - R_DDPAm - R_PPAm + R_2HP6MPMOm +2.00000000000000000000 R_CYOOm - R_HEMEOSm - R_CSm - R_FUMm +3.00000000000000000000 R_FAS161ACPm +2.00000000000000000000 R_CCP2m -2.00000000000000000000 R_PHCDm - R_4HBZFm -2.00000000000000000000 R_P5CDm +6.00000000000000000000 R_PPPGOm - R_NADPPPSm + R_G5SADrm +5.00000000000000000000 R_FAS182ACPm - R_4HBZCOAFm + R_DHPSm + R_GHMT2rm - R_ABUTDm + R_T4HCINNMFM - R_ACOAHim - R_NNAMrm + R_HEMEOMOm - R_ALDD20xm + R_FAS180ACPm +3.00000000000000000000 R_FAS141ACPm +2.00000000000000000000 R_GTHPm + R_FAS120ACPm - R_ALDD20ym +3.00000000000000000000 R_FAS181ACPm + R_H2Otm +2.00000000000000000000 R_THIORDXm - R_HACNHm - R_NADNm + R_DHAD2m + R_ATPS3m + R_HMGCOASm + R_FAS160ACPm + R_FAS100ACPm - R_PGPPAm_SC - R_4HGLSDm + R_MCITDm - R_PHCHGSm - R_ACPSm = 0.0
+ M_h2o_n: - R_HCO3En - R_HCITSn + R_RNDR1n + R_RNDR4n - R_H2Otn +2.00000000000000000000 R_THIORDXni + R_RNDR2n + R_RNDR3n = 0.0
+ M_h2o_r: - R_SBPP2er + R_H2Oter + R_SQLEr + R_SQLErx - R_SBPP1er = 0.0
+ M_h2o_v: - R_TCHOLAabcv - R_TREHv + R_H2Otv + R_ATPS3v - R_GTHRDabcv - R_GLCGSDv = 0.0
+ M_h2o_x: - R_CSp - R_PTE11x -3.00000000000000000000 R_FAO80p - R_FA181COAabcp - R_FA182COAabcp -7.00000000000000000000 R_FAO161p_odd -6.00000000000000000000 R_FAO141p_even - R_CYSTLp - R_PTE2x - R_PTE10x -7.00000000000000000000 R_FAO161p_even -3.00000000000000000000 R_FAO240p -8.00000000000000000000 R_FAO182p_oddodd +2.00000000000000000000 R_CATp + R_ECOAH5p - R_PTE8x -8.00000000000000000000 R_FAO181p_even + R_ECOAH4p -8.00000000000000000000 R_FAO181p_odd -8.00000000000000000000 R_FAO182p_evenodd - R_PTE12x - R_FA140COAabcp - R_COAHLp - R_MALSp - R_FA160COAabcp + R_ECOAH7p - R_FA141COAabcp + R_H2Otp + R_ECOAH6p +2.00000000000000000000 R_THIORDXp - R_PTE7x - R_ECOAH11p + R_ECOAH8p - R_PTE9x - R_FA180COAabcp - R_NADDPp -8.00000000000000000000 R_FAO182p_eveneven -6.00000000000000000000 R_FAO141p_odd - R_FA161COAabcp = 0.0
+ M_h2s_c: - R_SULR - R_AHSERL2 = 0.0
+ M_hLkynr_c: - R_HKYNH + R_KYN3OX = 0.0
+ M_h_c: - R_ARABR + R_LPP_SC +2.00000000000000000000 R_CTPS2 +2.00000000000000000000 R_CTPS1 + R_IPC226PLC_SC + R_PROt2r + R_ADCL - R_TRPt2m - R_ALCD19y + R_URIt2 + R_DNTPPA -3.00000000000000000000 R_C4STMO2 + R_TRPt2r - R_FMNAT -9.00000000000000000000 R_FAS80COA_L + R_MMETt2 +58.70000999999999891088 R_biomass_core +2.00000000000000000000 R_ALDD22x + R_ATPM + R_GSNt2 + R_DHAK - R_GLUDC -8.00000000000000000000 R_FAS80_L - R_GUAD + R_GALt2 + R_MANt2 - R_NAPRT -2.00000000000000000000 R_UTPtm - R_UDPACGLP - R_DESAT18 - R_DESAT16 - R_DESAT14 + R_FA120ACPH - R_GLUt2n - R_PYRDC + R_HXANt2r + R_ETHAPT_SC - R_G5SD + R_ANS + R_PINOS_SC + R_SPRMS + R_MEVK1 + R_MEVK2 + R_MEVK4 + R_DPCOAK - R_ORNDC + R_DOLK + R_PHEt2m + R_HSK + R_PHEt2r - R_ATPtm_H - R_NMNAT + R_NDP7 + R_FA161ACPH - R_SQLS - R_ALCD23xi + R_CHLSTI + R_ASPt7 - R_THRt2m - R_GTPt2m + R_ACCOACr + R_AMETt2 + R_PYDXK + R_GSNK + R_INSTt2 + R_DGSNt2 + R_16GS + R_DAGCPT_SC - R_NFTYROX + R_OCBTi - R_ATPATF2 - R_ATPATF3 - R_ATPATF1 + R_ILEt6 + R_ILEt7 - R_DPR - R_OMCDC + R_CHTNSrg -3.00000000000000000000 R_FAS100 + R_PMI12346PH - R_GLUSx + R_MIPCS226_SC + R_GLUCYS + R_PGL +2.00000000000000000000 R_ATPH1 + R_PMI1346PH + R_CERS126 + R_CERS124 - R_SLFAT + R_TAUDO - R_3DSPHR + R_MIP2C326PLC_SC + R_DB4PS + R_SHKK + R_AHSERL - R_34HPPt2p + R_THRt2r + R_THMDt2 + R_CSNt2 + R_NDP4 + R_ATPtp_H + R_NDP1 + R_NDP3 + R_ASPOcm - R_NMNt2p - R_NMNt2m +1.50000000000000000000 R_CYOR_u6m + R_ASPt2r + R_NADS1 - R_ASPt2n - R_ASPt2m + R_IMPD + R_FECOSTESTH_SC + R_SHSL4r - R_4MOPDC + R_MIP2C124PLC_SC + R_ARMT - R_OAAt2m -9.00000000000000000000 R_FAS240_L - R_AOBUTDs + R_PSERS_SC +2.00000000000000000000 R_ALDD20y -2.00000000000000000000 R_MTHFR3 - R_C3STKR1 + R_ARGSSr - R_L_LACtm + R_PMETM_SC - R_PIt2m - R_PIt2v + R_RIBFLVt2 - R_PIt2p + R_PIt2r + R_ABUTt2r - R_ALCD2ir + R_GTPCI + R_ALCD2if + R_HEX4 + R_ATP2tp_H + R_IPC324PLC_SC + R_TMDPK + R_PRATPP + R_NTP4 - R_SHK3D + R_NTP3 + R_HCYSMT - R_ASNt2m + R_ALAt2r + R_ASNt2r + R_2HBO + R_GLUt7 - R_SPRMt2i + R_DANNt2 -3.00000000000000000000 R_FAS180 -4.00000000000000000000 R_FAS181 + R_MEVK3 + R_URAt2 +6.00000000000000000000 R_CYOOm -3.00000000000000000000 R_FAS160 -2.00000000000000000000 R_P5CR +2.00000000000000000000 R_AKP1 + R_FALDH - R_GALU - R_GALT + R_HGNTOR - R_GLNt2n + R_PFK26 + R_ATHRDHr + R_GLNt2r + R_8AONNt2 + R_FKYNH +2.00000000000000000000 R_ALDD19x - R_ALCD24yi + R_DHFS + R_MELIBt2 + R_BTNt2i + R_MIPCS124_SC + R_PFK + R_NAt3_1 -3.00000000000000000000 R_C4STMO1 + R_DADNt2 - R_CERS2_24 - R_CERS2_26 - R_TMPPP - R_C3STKR2 - R_NADH2_u6cm + R_PDE4 - R_OMPDC + R_TAGL_SC + R_PFK_3 +2.00000000000000000000 R_UREA2t2 + R_MTHFC + R_GTHS - R_G3PD1ir - R_GTHO - R_PPYRDC + R_GPDDA1 + R_PETOHM_SC + R_GLYCDy + R_ERGSTGLCT + R_MIP2C126PLC_SC + R_HISt2r -3.00000000000000000000 R_FAS180COA + R_MIP2C226PLC_SC + R_URIK2 + R_URIK1 - R_C22STDS -4.00000000000000000000 R_UPPDC1 + R_QUILSYN + R_GLUt2r + R_DIAT - R_VALt2m + R_VALt2r +2.00000000000000000000 R_CBPS + R_DRBK + R_PYDAMK + R_HISt6 +2.00000000000000000000 R_NABTNO + R_MDH + R_DPGM + R_XTSNt2 + R_IPPS + R_ASNS1 + R_MIPC226PLC_SC + R_PFK_2 + R_FRUt2 - R_PIt2n -2.00000000000000000000 R_NNDPR + R_13GS + R_ETHAK + R_IG3PS + R_ADNK1 - R_FMNRx + R_PEPDt3 - R_MAN1PT + R_LCYSTintv + R_PRAGSr - R_ADHAPR_SC + R_MIPCS324_SC + R_ARGt6 + R_GLYCt2 - R_HSDxi - R_DADA + R_CHLt2 + R_PNP + R_2HBt2 - R_C22STDSx - R_AASAD2 - R_AASAD1 + R_RBFK + R_CERS224 + R_CERS226 + R_D_LACt2 + R_THYMt3r + R_THMt2 - R_PTPATi + R_Kt2r + R_PNTOt2 - R_ADA + R_FUMt2r - R_ADD - R_D_LACtm + R_LANOSTESTH_SC + R_IPC326PLC_SC - R_ALCD24xi - R_DHFRi + R_SFGTH + R_SBTD_L + R_FA141ACPH - R_LALDO3 +2.00000000000000000000 R_PRAIS - R_3MOPDC +2.00000000000000000000 R_ALDD2y + R_PRPPS -2.00000000000000000000 R_HPROb -2.00000000000000000000 R_HPROa + R_MIP2C224PLC_SC + R_IPMD + R_PYDXNK + R_PANTS + R_MIPC126PLC_SC + R_SPMS - R_SERt2m + R_FA180ACPH + R_SERt2r + R_INSK - R_34HPPt2m -2.00000000000000000000 R_CTPtm + R_SAM24MT + R_IPC124PLC_SC + R_MIPC124PLC_SC + R_SBTD_D2 + R_SACCD2 - R_SACCD1 - R_G5SD2 + R_CYSt2r + R_FA160ACPH +2.00000000000000000000 R_PAPSR - R_THZPSN1_SC - R_ALCD25xi + R_MIP2C324PLC_SC + R_PI45BPP_SC + R_PDE1 + R_PDE2 + R_PDE3 - R_PYRt2p + R_PDE5 - R_PYRt2m + R_FA140ACPH + R_G5SADr -3.00000000000000000000 R_FAS260 + R_DURIt2 - R_HSDyi -3.00000000000000000000 R_FAS140 -4.00000000000000000000 R_FAS141 + R_PALOXR - R_SERPT + R_GLYGS + R_ASPCT + R_GLYK + R_GUAt2r - R_23CAPPD + R_EPISTESTH_SC + R_MALt2r + R_FRUK + R_PNTK + R_METB1 + R_KYN + R_MIPC224PLC_SC + R_3HAO - R_3MOBDC + R_FA181ACPH -3.00000000000000000000 R_FAS120COA + R_DUTPDP + R_5AOPt2 + R_BTDD_RR -3.00000000000000000000 R_FAS140COA +2.00000000000000000000 R_GTPCII - R_HMGCOAS +2.00000000000000000000 R_HMGCOAR + R_TYRt7 + R_TYRt6 + R_MIPC326PLC_SC + R_CHTNSbs - R_DOLPt2er - R_AKGt2n + R_AKGt2r + R_GLUK +6.00000000000000000000 R_DKMPPD2 - R_ALCD22yi -3.00000000000000000000 R_ALPHNH + R_CYTDK2 + R_THFGLUS + R_INSt2 + R_PEPAT + R_ILEt2r + R_SUCRt2 +2.00000000000000000000 R_LCADi + R_TYRNFT - R_CERS326 + R_NADN + R_ORNt2r + R_NADK +2.00000000000000000000 R_SSALy - R_THZPSN2_SC + R_UREASE - R_PTRCt3i +58.70000999999999891088 R_biomass_wildType - R_CHLPCTD - R_IGPS + R_HETZK - R_FDNG - R_ALCD25yi + R_PC - R_GLUDyi - R_ALCD23yi - R_DRTPPD +2.00000000000000000000 R_GMPS2 - R_CERH126 - R_CERH124 - R_INDPYRD - R_TRDR + R_DURIK1 + R_UPP3MT + R_ACHLE2 + R_ACHLE3 + R_PPNCL2 + R_ACHLE1 - R_KYN3OX - R_GSNt2m + R_ADNt2 + R_C3STDH2 + R_C3STDH1 - R_SPMDt3i -4.00000000000000000000 R_FAS161 + R_MALS + R_DHORTS + R_HEX1 + R_HEX7 - R_PPNDH - R_ASADi + R_CYTDt2 - R_GDPt3g -2.00000000000000000000 R_AHMMPS + R_TMDK1 + R_G6PDH2 + R_GAPD + R_GARFTi + R_PI3P5K_SC - R_PYK -2.00000000000000000000 R_CPPPGO + R_GLYOX - R_DCTPD + R_HCO3E -2.00000000000000000000 R_LNS14DMx + R_CHTNSsp - R_PYRDC2 +5.00000000000000000000 R_SULR + R_PPA - R_PPCDC + R_AHSERL2 + R_ADSK + R_MIPCS224_SC +2.00000000000000000000 R_ADSS - R_ORNt3m - R_BACCL + R_TRE6PS + R_LYSt2r + R_LYSt6 + R_DCYTt2 - R_LYSt2m -2.00000000000000000000 R_UGLYCHr + R_GLCS2 + R_MFAPS_SC - R_ARGt2m + R_CHTNDA -3.00000000000000000000 R_ATPS3v + R_PPBNGS - R_TREt2v - R_FMNRx2 -3.00000000000000000000 R_ATPS3g - R_SBTR -3.00000000000000000000 R_ATPS3m + R_GLUDxi + R_NMNTP + R_ARGt2r + R_FA182ACPH - R_XYLR + R_GALK - R_ALCD22xi + R_PRASCS +2.00000000000000000000 R_AP4AHr + R_AIRCr + R_PLD_SC + R_XYLK + R_GLYt2r - R_GLYt2m + R_METt2m + R_METt2r + R_LEUt2r + R_MIPCS326_SC + R_ALCD2x + R_METS + R_GLNS +3.00000000000000000000 R_DBTSr -3.00000000000000000000 R_FAS100COA + R_LSERDHr + R_MALTt2 + R_PLBPC_SC - R_C14STR -3.00000000000000000000 R_FAS120 + R_MIPC324PLC_SC - R_CYTD + R_PGCD +2.00000000000000000000 R_UTPH1 + R_XYLTD_D + R_IPC224PLC_SC + R_PI4P5K_SC + R_PYRt2 + R_HISt2m + R_L_LACt2r + R_ACt2r + R_ADEt2 + R_FUMAC + R_IPC126PLC_SC + R_RBK + R_SUCCt2r + R_ACGAM6PS -3.00000000000000000000 R_FAS160COA + R_PI3P4K_SC + R_DINSt2 + R_ASNt6 + R_ASNt7 + R_LEUt6 + R_LEUt7 + R_CITt2r - R_C5STDS - R_ADMDC + R_ARAB1D2 - R_SADT - R_CERS324 + R_ZYMSTESTH_SC - R_NNAT + R_SHCHD +3.00000000000000000000 R_SHCHF + R_HMPK1 - R_DESAT18_2 - R_DASYN_SC +2.00000000000000000000 R_BTSr - R_AMPDA + R_FTHFI + R_TMN - R_DROPPRy - R_PSPHS + R_GLNt7 + R_GLNt6 +3.00000000000000000000 R_HISTD - R_ALCD26xi - R_PETHCT + R_PIN3K_SC + R_RIBt2 - R_DCMPDA - R_TYRt2p + R_TYRt2r -2.00000000000000000000 R_LNS14DM - R_TYRt2m +2.00000000000000000000 R_GTPH1 +2.00000000000000000000 R_THFOXR - R_HCYSt2p + R_PRFGS + R_ALLTNr + R_MIPCS126_SC + R_SHSL1 + R_TREt2 + R_CHOLK + R_SPMDAT1 + R_ERGSTESTH_SC + R_PIN4K_SC - R_CSND + R_RNMK + R_DIPS - R_DCYTD + R_SLCBK2 + R_SLCBK1 = 0.0
+ M_h_e: - R_PROt2r - R_URIt2 - R_TRPt2r - R_MMETt2 + R_ATPS - R_GSNt2 - R_GALt2 - R_MANt2 - R_HXANt2r - R_PHEt2r - R_AMETt2 - R_INSTt2 - R_DGSNt2 + R_EPISTESTH_SCe - R_THRt2r - R_THMDt2 - R_CSNt2 - R_ASPt2r - R_RIBFLVt2 - R_PIt2r - R_ABUTt2r + R_THMDPe - R_ALAt2r - R_ASNt2r + R_SPRMt2i + R_PLBPC_SCe - R_DANNt2 - R_URAt2 - R_GLNt2r - R_8AONNt2 - R_MELIBt2 - R_BTNt2i - R_NAt3_1 - R_DADNt2 -2.00000000000000000000 R_UREA2t2 - R_HISt2r - R_GLUt2r - R_VALt2r + R_ZYMSTESTH_SCe - R_XTSNt2 - R_FRUt2 - R_PEPDt3 - R_GLYCt2 - R_CHLt2 + R_FECOSTESTH_SCe - R_2HBt2 - R_D_LACt2 - R_THYMt3r + R_PLBP1I_SCe - R_THMt2 - R_Kt2r - R_PNTOt2 - R_FUMt2r - R_SERt2r + R_LANOSTESTH_SCe - R_CYSt2r - R_DURIt2 - R_GUAt2r - R_MALt2r - R_5AOPt2 - R_AKGt2r - R_INSt2 - R_ILEt2r - R_SUCRt2 + R_ERGSTESTH_SCe - R_ORNt2r + R_PTRCt3i - R_ADNt2 + R_SPMDt3i - R_CYTDt2 - R_LYSt2r - R_DCYTt2 - R_NMNTP - R_ARGt2r - R_GLYt2r - R_METt2r - R_LEUt2r - R_EX_h_e_ - R_MALTt2 - R_PYRt2 - R_L_LACt2r - R_ACt2r - R_ADEt2 - R_SUCCt2r - R_DINSt2 - R_CITt2r - R_RIBt2 - R_TYRt2r - R_TREt2 = 0.0
+ M_h_g: + R_G12MT2g + R_G16MTg + R_G12MT1g + R_G13MTg + R_GDPt3g + R_NDP3g - R_PSERDg_SC +2.00000000000000000000 R_ATPS3g = 0.0
+ M_h_m: + R_TRPt2m - R_ALASm - R_NNATm + R_MCITSm +2.00000000000000000000 R_UTPtm + R_3DH5HPBMTm - R_G3PD1irm - R_GCC2am +2.00000000000000000000 R_ALDD2xm +2.00000000000000000000 R_HPROxm - R_PHEt2m - R_GCCam + R_ATPtm_H + R_MTHFCm + R_THRt2m + R_GTPt2m -2.00000000000000000000 R_NNDPRm + R_RBFKm -9.00000000000000000000 R_FAS80ACPm_L + R_THFATm +2.00000000000000000000 R_FCLTm + R_IPPSm + R_HCO3Em - R_DASYNm_SC +2.00000000000000000000 R_PYR5CDm + R_NMNt2m -1.50000000000000000000 R_CYOR_u6m +2.00000000000000000000 R_HPROym +2.00000000000000000000 R_ALDD2ym + R_PDHcm + R_ASPt2m + R_OAAt2m + R_L_LACtm + R_PIt2m -3.00000000000000000000 R_FAS140ACPm + R_GLYOXm + R_ACCOACrm + R_HCITSm - R_ALCD24xim + R_ASNt2m + R_PPAm - R_DHFRim - R_PTPATim +2.00000000000000000000 R_PRO1xm -6.00000000000000000000 R_CYOOm + R_CSm - R_AGPRim + R_NADKm + R_HICITDm + R_DHNPAm -4.00000000000000000000 R_FAS161ACPm + R_GCC2cm + R_CDPDGPm_SC + R_CLPNSm_SC + R_ACGSm - R_ALCD26xim + R_PHCDm + R_4HBZFm + R_VALt2m - R_DPRm + R_P5CDm - R_OMCDCm - R_ACHBSm + R_G5SADrm -5.00000000000000000000 R_FAS182ACPm - R_PSERDm_SC + R_D_LACtm + R_HPPKm + R_4HBZCOAFm - R_NAPRTm - R_ALCD2irm + R_SERt2m + R_34HPPt2m +2.00000000000000000000 R_CTPtm - R_KARA1im - R_TRDRm +2.00000000000000000000 R_ABUTDm - R_OXAGm + R_PYRt2m + R_ACOAHim - R_ALCD23xim + R_FMETTRSm +2.00000000000000000000 R_ALDD20xm -3.00000000000000000000 R_FAS180ACPm -4.00000000000000000000 R_FAS141ACPm -3.00000000000000000000 R_FAS120ACPm - R_ALCD22xim +2.00000000000000000000 R_ALDD20ym + R_2HPMBQMTm -4.00000000000000000000 R_FAS181ACPm + R_GSNt2m + R_NADNm - R_AKGDam - R_ALCD25xim + R_ORNt3m + R_2HMHMBQMTm + R_LYSt2m + R_ARGt2m +2.00000000000000000000 R_ATPS3m - R_GTHOm - R_HMGCOASm + R_GLYt2m - R_METt2m + R_GCCcm - R_FMNATm -3.00000000000000000000 R_FAS160ACPm -3.00000000000000000000 R_FAS100ACPm - R_ACLSm + R_MDHm - R_HISt2m + R_PSERSm_SC - R_NMNATm + R_DPCOAKm +2.00000000000000000000 R_4HGLSDm + R_TYRt2m - R_34HPLFM - R_PHCHGSm +2.00000000000000000000 R_ACPSm - R_NADH2_u6m - R_KARA2im = 0.0
+ M_h_n: + R_MI13456PKn + R_GLUt2n + R_MI1345PKn + R_HCO3En + R_ASPt2n + R_HCITSn + R_GLNt2n + R_MI145P6Kn + R_PIt2n + R_NADS1n + R_AKGt2n + R_PIN4Kn_SC + R_MI1456PKn + R_MI145PKn = 0.0
+ M_h_r: + R_G6PDH2er + R_CERS124er - R_CERASE224er + R_CERS226er - R_CERASE126er + R_DOLPt2er - R_C24STRer + R_CERS224er + R_CERS126er - R_SQLEr + R_DOLPMMer - R_CERASE124er - R_SQLErx - R_CERASE226er = 0.0
+ M_h_v: - R_ASPt7 - R_ILEt6 - R_ILEt7 + R_PIt2v - R_GLUt7 + R_TCHOLAabcv - R_HISt6 - R_LCYSTintv - R_ARGt6 - R_TYRt7 - R_TYRt6 - R_LYSt6 +2.00000000000000000000 R_ATPS3v + R_TREt2v - R_PSERDv_SC + R_GTHRDabcv - R_ASNt6 - R_ASNt7 - R_LEUt6 - R_LEUt7 - R_GLNt7 - R_GLNt6 = 0.0
+ M_h_x: + R_CSp + R_PTE11x +3.00000000000000000000 R_FAO80p - R_HACD7p + R_FA181COAabcp + R_FA182COAabcp +7.00000000000000000000 R_FAO161p_odd +5.00000000000000000000 R_FAO141p_even + R_34HPPt2p - R_ATPtp_H + R_NMNt2p - R_HACD6p + R_PTE2x + R_PTE10x + R_PIt2p - R_ATP2tp_H +6.00000000000000000000 R_FAO161p_even +3.00000000000000000000 R_FAO240p +8.00000000000000000000 R_FAO182p_oddodd - R_HACD5p + R_PTE8x +7.00000000000000000000 R_FAO181p_even +8.00000000000000000000 R_FAO181p_odd - R_HACD4p +7.00000000000000000000 R_FAO182p_evenodd + R_PTE12x + R_FA140COAabcp +2.00000000000000000000 R_COAHLp + R_MALSp + R_PYRt2p + R_FA160COAabcp + R_FA141COAabcp + R_HACD10p + R_PTE7x + R_MDHp + R_PTE9x + R_FA180COAabcp +2.00000000000000000000 R_NADDPp - R_HACD8p +6.00000000000000000000 R_FAO182p_eveneven +6.00000000000000000000 R_FAO141p_odd + R_FA161COAabcp + R_TYRt2p + R_HCYSt2p = 0.0
+ M_hcit_m: + R_HCITSm - R_MCITDm = 0.0
+ M_hcit_n: + R_HCITSn = 0.0
+ M_hco3_c: - R_ACCOACr - R_CBPS - R_UREASE - R_PC + R_HCO3E - R_HCO3tn = 0.0
+ M_hco3_m: + R_HCO3Em - R_ACCOACrm = 0.0
+ M_hco3_n: + R_HCO3En + R_HCO3tn = 0.0
+ M_hcys_L_c: - R_HCYSMT - R_MHPGLUT + R_CYSTL + R_AHCi + R_AHSERL2 - R_CYSTS - R_METS - R_HCYSt2p = 0.0
+ M_hcys_L_x: + R_CYSTLp + R_HCYSt2p = 0.0
+ M_hdca_c: +0.02000000000000000042 R_FECOSTESTH_SC - R_FAS180 - R_FAS181 + R_FAS160 - R_FACOAL160 +0.27000000000000001776 R_TAGL_SC +0.02000000000000000042 R_LANOSTESTH_SC + R_FA160ACPH + R_PALOXR +0.02000000000000000042 R_EPISTESTH_SC - R_FA160tp +0.27000000000000001776 R_PLBPC_SC + R_HDCAt +0.02000000000000000042 R_ZYMSTESTH_SC +0.02000000000000000042 R_ERGSTESTH_SC = 0.0
+ M_hdca_e: +0.02000000000000000042 R_EPISTESTH_SCe +0.27000000000000001776 R_PLBPC_SCe - R_EX_hdca_e_ +0.02000000000000000042 R_ZYMSTESTH_SCe +0.02000000000000000042 R_FECOSTESTH_SCe +0.27000000000000001776 R_PLBP1I_SCe +0.02000000000000000042 R_LANOSTESTH_SCe +0.02000000000000000042 R_ERGSTESTH_SCe - R_HDCAt = 0.0
+ M_hdca_x: + R_PTE2x + R_FA160tp - R_FACOAL160p = 0.0
+ M_hdcea_c: + R_FA161ACPH +0.65500000000000002665 R_FECOSTESTH_SC - R_FACOAL161 +0.17000000000000001221 R_TAGL_SC +0.65500000000000002665 R_LANOSTESTH_SC +0.65500000000000002665 R_EPISTESTH_SC + R_HDCEAt + R_FAS161 +0.17000000000000001221 R_PLBPC_SC - R_FA161tp +0.65500000000000002665 R_ZYMSTESTH_SC +0.65500000000000002665 R_ERGSTESTH_SC = 0.0
+ M_hdcea_e: +0.65500000000000002665 R_EPISTESTH_SCe +0.17000000000000001221 R_PLBPC_SCe +0.65500000000000002665 R_ZYMSTESTH_SCe +0.65500000000000002665 R_FECOSTESTH_SCe +0.17000000000000001221 R_PLBP1I_SCe +0.65500000000000002665 R_LANOSTESTH_SCe +0.65500000000000002665 R_ERGSTESTH_SCe - R_HDCEAt - R_EX_hdcea_e_ = 0.0
+ M_hdcea_x: - R_FACOAL161p + R_FA161tp = 0.0
+ M_hdcoa_c: -0.65500000000000002665 R_ZYMSTAT_SC + R_DESAT16 + R_FACOAL161 -0.17000000000000001221 R_AGAT_SC -0.65500000000000002665 R_FECOSTAT_SC -0.65500000000000002665 R_ERGSTAT_SC -0.65500000000000002665 R_LANOSTAT_SC -0.17000000000000001221 R_GAT2_SC -0.17000000000000001221 R_GAT1_SC -0.17000000000000001221 R_TRIGS_SC -0.65500000000000002665 R_EPISTAT_SC -0.17000000000000001221 R_LPCAT_SC - R_FA161COAabcp = 0.0
+ M_hdcoa_x: + R_FACOAL161p - R_FAO161p_odd - R_FAO161p_even + R_FA161COAabcp = 0.0
+ M_hdd2coa_x: + R_ECOAH7p + R_ACOAO7p = 0.0
+ M_hdeACP_c: - R_FA161ACPH + R_FA161ACPtm = 0.0
+ M_hdeACP_m: + R_FAS161ACPm - R_FA161ACPtm = 0.0
+ M_hemeA_m: + R_HEMEOMOm = 0.0
+ M_hemeO_m: + R_HEMEOSm - R_HEMEOMOm = 0.0
+ M_hexc_c: +0.01000000000000000021 R_FECOSTESTH_SC +0.01000000000000000021 R_LANOSTESTH_SC + R_FAS260 +0.01000000000000000021 R_EPISTESTH_SC - R_FA260tp +0.01000000000000000021 R_ZYMSTESTH_SC +0.01000000000000000021 R_ERGSTESTH_SC = 0.0
+ M_hexc_e: +0.01000000000000000021 R_EPISTESTH_SCe +0.01000000000000000021 R_ZYMSTESTH_SCe +0.01000000000000000021 R_FECOSTESTH_SCe +0.01000000000000000021 R_LANOSTESTH_SCe - R_EX_hexc_e_ +0.01000000000000000021 R_ERGSTESTH_SCe = 0.0
+ M_hexc_x: - R_FACOAL260p + R_FA260tp = 0.0
+ M_hexccoa_c: -0.01000000000000000021 R_ZYMSTAT_SC - R_CERS126 - R_HEXCCOAtx -0.01000000000000000021 R_FECOSTAT_SC - R_CERS226 -0.01000000000000000021 R_ERGSTAT_SC -0.01000000000000000021 R_LANOSTAT_SC -0.01000000000000000021 R_EPISTAT_SC = 0.0
+ M_hexccoa_r: - R_CERS226er + R_CERASE126er - R_CERS126er + R_CERASE226er = 0.0
+ M_hexccoa_x: - R_ACOAO9p + R_FACOAL260p + R_HEXCCOAtx = 0.0
+ M_hexdp_c: - R_HEXDPtm = 0.0
+ M_hexdp_m: + R_HEXDPtm - R_HBZOPT6m + R_PPTTm = 0.0
+ M_hgentis_c: + R_34HPPOR - R_HGNTOR = 0.0
+ M_hicit_m: - R_HICITDm + R_HACNHm = 0.0
+ M_his_L_c: - R_ARMT + R_HISt2r - R_HISt6 + R_HISt2m + R_HISTD - R_HISTRS = 0.0
+ M_his_L_e: - R_HISt2r - R_EX_his_L_e_ = 0.0
+ M_his_L_m: - R_HISTRSm - R_HISt2m = 0.0
+ M_his_L_v: + R_HISt6 = 0.0
+ M_hisp_c: + R_HSTPT - R_HISTP = 0.0
+ M_histd_c: + R_HISTP - R_HISTD = 0.0
+ M_histrna_c: -0.06629999999999999782 R_biomass_core -0.06629999999999999782 R_biomass_wildType + R_HISTRS = 0.0
+ M_histrna_m: + R_HISTRSm = 0.0
  M_hmbil_c: + R_HMBS - R_UPP3S = 0.0
- M_hmppp9_c: - R_MPOMMM2 + R_MPOMC2 + R_MPOMC1 - R_MPOMMM = 0.0
- M_hom_L_c: - R_HSK - R_HSERTA - R_HSDx = 0.0
- M_hpyr_c: + R_SPT_syn - R_HPYRR2_syn = 0.0
+ M_hmgcoa_c: - R_HMGCOAS + R_HMGCOAR - R_HMGCOAtm = 0.0
+ M_hmgcoa_m: + R_HMGCOAtm - R_HMGCOASm = 0.0
+ M_hom_L_c: - R_HSK - R_HSERTA + R_HSDxi + R_HSDyi = 0.0
+ M_hpglu_c: + R_MHPGLUT = 0.0
+ M_hxan_c: + R_HXANt2r + R_PUNP5 + R_PUNP6 + R_ADD - R_HXPRT = 0.0
+ M_hxan_e: - R_HXANt2r - R_EX_hxan_e_ = 0.0
+ M_hxc2coa_x: + R_ACOAO9p - R_ECOAH11p = 0.0
+ M_hxdcal_c: + R_SPHPL - R_PALOXR = 0.0
  M_iad_c: - R_AMID3 = 0.0
- M_iasp_c: + R_ASPO6 - R_QULNS = 0.0
- M_ichor_c: + R_ICHORS - R_SHCHCS2 = 0.0
- M_icit_c: - R_ICDHy + R_ACONT2 = 0.0
- M_id3acald_c: - R_ALDD20x = 0.0
- M_idp_c: - R_NDPK9 - R_PYK5 = 0.0
- M_ile_L_c: -0.06280109540000000656 R_BiomassProtein - R_ILETRS - R_ILETA = 0.0
- M_iletrna_c: + R_ILETRS = 0.0
- M_im4ac_c: + R_IMACTD = 0.0
- M_im4act_c: - R_IMACTD = 0.0
- M_imacp_c: + R_IGPDH - R_HSTPT = 0.0
- M_imp_c: - R_IMPC - R_IMPD + R_NTPP9 - R_ADSS = 0.0
- M_ind3ac_c: + R_ALDD20x + R_AMID3 = 0.0
- M_indole_c: + R_TRPS3 - R_TRPS2 = 0.0
- M_inost_c: + R_MI1PP = 0.0
- M_ipdp_c: - R_GRTT - R_IPDDI -7.00000000000000000000 R_DPPS - R_FRTT + R_IPDPS_syn - R_UDPDPS - R_DMATT = 0.0
- M_itp_c: + R_NDPK9 + R_PYK5 - R_NTPP9 = 0.0
- M_k_c: + R_Ktpp -0.72698555779999995963 R_BiomassIon = 0.0
- M_k_e: - R_EX_k_e - R_Kex = 0.0
- M_k_p: - R_Ktpp + R_Kex = 0.0
- M_lac_D_c: - R_LDH_D + R_GLYOX = 0.0
- M_lald_D_c: - R_LALDO = 0.0
- M_lald_L_c: - R_LCARS = 0.0
- M_leu_L_c: + R_LEUTAi -0.11413064859999999534 R_BiomassProtein - R_LEUTRS + R_LEUabcpp - R_LEUTA = 0.0
- M_leu_L_e: - R_EX_leu_L_e - R_LEUtex = 0.0
- M_leu_L_p: + R_LEUtex - R_LEUabcpp = 0.0
- M_leutrna_c: + R_LEUTRS = 0.0
- M_lgt_S_c: + R_LALDO + R_LGTHL - R_GLYOX = 0.0
- M_lipidAds_c: + R_LPADSS - R_BiomassLPS = 0.0
- M_lipidX_c: + R_USHD - R_LPADSS = 0.0
- M_lpam_c: + R_PDHcr - R_PDHa = 0.0
- M_lycop_c: + R_ZCAROTDH2 - R_LYCOPC = 0.0
- M_lys_L_c: - R_LYSDC -0.04186884619999999696 R_BiomassProtein + R_DAPDC + R_LYSabcpp - R_LYSTRS = 0.0
- M_lys_L_e: - R_EX_lys_L_e - R_LYStex = 0.0
- M_lys_L_p: + R_LYStex - R_LYSabcpp = 0.0
- M_lystrna_c: + R_LYSTRS = 0.0
- M_malACP_c: - R_3OAS100 + R_MCOATA - R_3OAS60 - R_3OAS181 - R_3OAS180 - R_3OAS80 - R_3OAS161 - R_3OAS121 - R_3OAS120 - R_KAS14 - R_KAS15 - R_3OAS160 - R_3OAS141 - R_3OAS140 = 0.0
- M_mal_L_c: - R_MDH + R_FUM + R_MALtpp - R_ME1 = 0.0
- M_mal_L_e: - R_MALtex - R_EX_mal_L_e = 0.0
- M_mal_L_p: + R_MALtex - R_MALtpp = 0.0
- M_malcoa_c: - R_MCOATA + R_ACCOACr -0.00045691839999999998 R_BiomassSolubleP = 0.0
- M_malt_c: - R_MALT = 0.0
- M_man1p_c: - R_MAN1PT2 - R_PMANM - R_MAN1PT = 0.0
- M_man6p_c: - R_MAN6PI + R_PMANM = 0.0
- M_mercppyr_c: + R_CYSTA = 0.0
- M_met_L_c: + R_BTS4 -0.01962553250000000082 R_BiomassProtein - R_METAT + R_METS - R_METTRS +2.00000000000000000000 R_CPPPGO2 = 0.0
- M_methf_c: + R_FOMETR - R_MNXR15637 + R_MTHFD - R_MTHFC + R_MTHFD2i = 0.0
- M_mettrna_c: - R_FMETTRS + R_METTRS = 0.0
- M_mg2_c: -0.03253947830000000069 R_BiomassIon + R_MG2tpp - R_MPML = 0.0
- M_mg2_e: - R_EX_mg2_e - R_MG2tex = 0.0
- M_mg2_p: - R_MG2tpp + R_MG2tex = 0.0
- M_mgdg160_c: -0.19293799999999999839 R_BiomassLipid + R_MGDG160 - R_DGDG160 = 0.0
- M_mgdg161_c: -0.01123000000000000040 R_BiomassLipid + R_MGDG161 - R_DGDG161 = 0.0
- M_mgdg180_c: -0.00049700000000000005 R_BiomassLipid + R_MGDG180 - R_DGDG180 = 0.0
- M_mgdg181_9_c: -0.00460200000000000019 R_BiomassLipid - R_DGDG181_9 + R_MGDG181_9 = 0.0
- M_mgdg181_c: -0.00460200000000000019 R_BiomassLipid + R_MGDG181 - R_DGDG181 = 0.0
- M_mgdg182_9_12_c: + R_MGDG182_9_12 -0.06143400000000000249 R_BiomassLipid - R_DGDG182_9_12 = 0.0
- M_mgdg183_6_9_12_c: -0.09158700000000000174 R_BiomassLipid - R_DGDG183_6_9_12 + R_MGDG183_6_9_12 = 0.0
- M_mgdg183_9_12_15_c: -0.00046000000000000001 R_BiomassLipid + R_MGDG183_9_12_15 - R_DGDG183_9_12_15 = 0.0
- M_mgdg184_6_9_12_15_c: -0.00276100000000000000 R_BiomassLipid + R_MGDG184_6_9_12_15 - R_DGDG184_6_9_12_15 = 0.0
- M_mi1p_D_c: + R_MI1PS - R_MI1PP = 0.0
- M_mlthf_c: + R_GLYCL - R_TMDS - R_MTHFR2 -0.00326318099999999998 R_BiomassSolubleP - R_MOHMT - R_MTHFD + R_GHMT2r - R_MTHFD2i - R_GLYCL_2 = 0.0
- M_mmtsa_c: + R_HIBD_syn = 0.0
- M_mn2_c: + R_MNt2pp -0.01301441639999999927 R_BiomassIon = 0.0
- M_mn2_e: - R_EX_mn2_e - R_MNtex = 0.0
- M_mn2_p: - R_MNt2pp + R_MNtex = 0.0
- M_mobd_c: -0.01301570540000000081 R_BiomassIon + R_MOBDabcpp = 0.0
- M_mobd_e: - R_MOBDtex - R_EX_mobd_e = 0.0
- M_mobd_p: + R_MOBDtex - R_MOBDabcpp = 0.0
- M_mppp9_c: + R_MPML - R_MPOMT = 0.0
- M_mppp9om_c: - R_MPOMC2 - R_MPOMC1 + R_MPOMT = 0.0
- M_mthgxl_c: - R_LGTHL + R_MGSA = 0.0
- M_myrsACP_c: + R_EAR140y - R_3OAS160 = 0.0
- M_n4abutn_c: - R_NABTNO = 0.0
- M_na1_c: + R_GLUt4pp - R_NAt3pp + R_H2CO3_NAt_syn -0.01627124300000000121 R_BiomassIon = 0.0
- M_na1_e: - R_EX_na1_e - R_NAtex = 0.0
- M_na1_p: - R_GLUt4pp + R_NAt3pp - R_H2CO3_NAt_syn + R_NAtex = 0.0
- M_nad_c: + R_HPROa - R_IPMD - R_GLYCL - R_PDHcr - R_PDH - R_PUTA3 - R_LALDO - R_GDBTALDH - R_PHYTFDH1 - R_ALDD2xr + R_NMNAT + R_LCARS - R_NADN - R_MDH - R_PHCD - R_NADTRHD - R_LDH_D + R_NADS2 - R_IMPD + R_HPYRR2_syn + R_TRSARr + R_MTHFR2 - R_ALDD20x + R_NADH5 -0.02610983230000000002 R_BiomassSolubleP + R_CYRDAR - R_GAPDi -2.00000000000000000000 R_HISTD - R_GLYCTO_syn + R_NDH1_2u + R_NDH2_pp - R_NABTNO - R_G3PD2 - R_P5CD - R_PDX5PS - R_GCALDD - R_PGCD - R_GLYCDx - R_BAMPPALDOX - R_NADK - R_ABUTD - R_MTHFD2i + R_ALAD_syn - R_GLYALDDr + R_GLYCL_2 + R_ALCD19 - R_IMACTD + R_GLUSx - R_HIBD_syn + R_P5CRx - R_PHYTEDH1 - R_PPND + R_34DHOXPEGOX - R_HSDx + R_NDH2_syn + R_NDH1_2p = 0.0
- M_nadh_c: - R_HPROa + R_IPMD + R_GLYCL + R_PDHcr + R_PDH + R_PUTA3 + R_LALDO + R_GDBTALDH + R_PHYTFDH1 + R_ALDD2xr - R_LCARS + R_MDH + R_PHCD + R_NADTRHD + R_LDH_D + R_IMPD - R_HPYRR2_syn - R_TRSARr - R_MTHFR2 + R_ALDD20x - R_NADH5 -0.00065273849999999999 R_BiomassSolubleP - R_CYRDAR + R_GAPDi +2.00000000000000000000 R_HISTD + R_GLYCTO_syn - R_NDH1_2u - R_NDH2_pp + R_NABTNO + R_G3PD2 + R_P5CD + R_PDX5PS + R_GCALDD + R_PGCD + R_GLYCDx + R_BAMPPALDOX + R_ABUTD + R_MTHFD2i - R_ALAD_syn + R_GLYALDDr - R_GLYCL_2 - R_ALCD19 + R_IMACTD - R_GLUSx + R_HIBD_syn - R_P5CRx + R_PHYTEDH1 + R_PPND - R_34DHOXPEGOX + R_HSDx - R_NDH2_syn - R_NDH1_2p = 0.0
- M_nadp_c: + R_HPROb + R_3OAR140 + R_3OAR141 - R_SSALyr + R_BILIRED + R_EAR100y + R_EAR141y + R_MEHLER + R_MPOMOR + R_EAR160y + R_MECDPDH_syn - R_GLUDy - R_FNOR + R_GFUCS + R_3OAR180 + R_NDH1_1u + R_NDH1_1p + R_GLUTRR + R_G5SD - R_PHYTFDH2 + R_DHDPRy + R_GAPDi_nadp - R_ICDHy + R_SQLS + R_3OAR40 + R_AACOAR_syn + R_KARA1i - R_GND + R_EAR60y + R_DPR + R_BCAROHX2 + R_H2ASE_syn + R_PC6AR + R_23BDD +3.00000000000000000000 R_HOXG - R_AGPR + R_ZCAROTDH2 + R_KARA2i + R_TRDR + R_NADTRHD + R_3OAR160 - R_MPOMMM2 + R_APRAUR + R_EAR161y + R_ASADi + R_EAR120y + R_3OAR120 + R_3OAR121 -0.00163188279999999992 R_BiomassSolubleP + R_ZCAROTDH1 + R_SHK3D + R_EAR180y + R_EAR181y + R_BCAROHX + R_IPDPS_syn + R_P5CR + R_NDH1_3u + R_3OAR161 + R_TDPDRR + R_POR - R_MPOMOR2 + R_DHFR - R_ALCD2y + R_EAR121y + R_3OAR60 + R_DMPPS_syn - R_MPOMC2 + R_MPOMC1 - R_MTHFD + R_EAR140y - R_ME1 + R_NADK + R_DVOCHR +3.00000000000000000000 R_GGDPR + R_3OAR80 + R_3OAR181 + R_MPOMMM + R_EAR40y + R_NDH1_4pp - R_PHYTEDH2 + R_3OAR100 - R_G6PDH2 + R_UAPGR + R_EAR80y - R_G6PBDH + R_DXPRIi = 0.0
- M_nadph_c: - R_HPROb - R_3OAR140 - R_3OAR141 + R_SSALyr - R_BILIRED - R_EAR100y - R_EAR141y - R_MEHLER - R_MPOMOR - R_EAR160y - R_MECDPDH_syn + R_GLUDy + R_FNOR - R_GFUCS - R_3OAR180 - R_NDH1_1u - R_NDH1_1p - R_GLUTRR - R_G5SD + R_PHYTFDH2 - R_DHDPRy - R_GAPDi_nadp + R_ICDHy - R_SQLS - R_3OAR40 - R_AACOAR_syn - R_KARA1i + R_GND - R_EAR60y - R_DPR - R_BCAROHX2 - R_H2ASE_syn - R_PC6AR - R_23BDD -3.00000000000000000000 R_HOXG + R_AGPR - R_ZCAROTDH2 - R_KARA2i - R_TRDR - R_NADTRHD - R_3OAR160 + R_MPOMMM2 - R_APRAUR - R_EAR161y - R_ASADi - R_EAR120y - R_3OAR120 - R_3OAR121 -0.00489550220000000043 R_BiomassSolubleP - R_ZCAROTDH1 - R_SHK3D - R_EAR180y - R_EAR181y - R_BCAROHX - R_IPDPS_syn - R_P5CR - R_NDH1_3u - R_3OAR161 - R_TDPDRR - R_POR + R_MPOMOR2 - R_DHFR + R_ALCD2y - R_EAR121y - R_3OAR60 - R_DMPPS_syn + R_MPOMC2 - R_MPOMC1 + R_MTHFD - R_EAR140y + R_ME1 - R_DVOCHR -3.00000000000000000000 R_GGDPR - R_3OAR80 - R_3OAR181 - R_MPOMMM - R_EAR40y - R_NDH1_4pp + R_PHYTEDH2 - R_3OAR100 + R_G6PDH2 - R_UAPGR - R_EAR80y + R_G6PBDH - R_DXPRIi = 0.0
- M_ncam_c: - R_NMNS + R_NADN = 0.0
- M_neuspn_c: - R_ZCAROTDH2 + R_ZCAROTDH1 = 0.0
- M_nh4_c: - R_CTPS1 + R_ASNN + R_GLYCL + R_GLUDy - R_CBMK + R_AMID + R_NH4tpp - R_PYDXO + R_GLUN - R_GMPS + R_ASPO1 + R_ARGDH + R_NOR_syn + R_DCTPD2 + R_THZSN + R_DCTPD +4.00000000000000000000 R_HMBS + R_CYNTAH + R_PYAM5PO -0.04880943229999999688 R_BiomassIon + R_AMID3 + R_AMID2 + R_CSND + R_THRD_L + R_ARGD + R_DHPPDA - R_ANS2 - R_ALAD_syn - R_GLYCL_2 + R_SER_AL +2.00000000000000000000 R_UREA - R_GLNS + R_CYSTL = 0.0
- M_nh4_e: - R_EX_nh4_e - R_NH4tex = 0.0
- M_nh4_p: - R_NH4tpp + R_NH4tex = 0.0
- M_ni2_c: + R_NI2abcpp_syn = 0.0
- M_ni2_e: - R_Ni2tex - R_EX_ni2_e = 0.0
- M_ni2_p: + R_Ni2tex - R_NI2abcpp_syn = 0.0
- M_nicrnt_c: - R_NNATr + R_NNDPR = 0.0
- M_nmn_c: - R_NMNAT + R_NMNS = 0.0
- M_no2_c: - R_NOR_syn + R_NAR_syn = 0.0
- M_no3_c: - R_NAR_syn + R_NO3abcpp = 0.0
- M_no3_e: - R_EX_no3_e - R_NO3tex = 0.0
- M_no3_p: + R_NO3tex - R_NO3abcpp = 0.0
- M_o2_c: - R_PYDXNO + R_CAT - R_DES_6B -0.50000000000000000000 R_MEHLER - R_MPOMOR -0.50000000000000000000 R_PYDXO - R_GLYCTO1 -0.50000000000000000000 R_R05217 - R_ASPO1 - R_ASPO6 - R_BCAROHX2 - R_PPOR - R_BCAROKE -3.00000000000000000000 R_HOXG - R_ZCAROTDH2 - R_34HPPOR - R_ZCAROTDH1 - R_RBCh - R_DHORD - R_BCAROHX - R_PYAM5PO + R_O2tc - R_PROAKGOX1r - R_MPOMC1 -1.50000000000000000000 R_PPPGO - R_DES_9 - R_DES_6 - R_PDX5PO - R_DES_12 - R_DES_15 - R_GLXO3r - R_MPOMMM - R_CPPPGO + R_O2tu = 0.0
- M_o2_e: - R_O2tex - R_EX_o2_e = 0.0
- M_o2_p: -0.50000000000000000000 R_CYTBDpp + R_O2tex - R_O2tc -0.50000000000000000000 R_CYO1b2pp_syn -0.50000000000000000000 R_CYO1bpp_syn = 0.0
- M_o2_u: -0.50000000000000000000 R_CYTBDu -0.50000000000000000000 R_CYO1b2_syn -0.50000000000000000000 R_CYO1b_syn - R_O2tu +0.50000000000000000000 R_PSII = 0.0
- M_oaa_c: + R_ASPTA + R_ASPO1 + R_MDH + R_PPC - R_CS = 0.0
- M_ocACP_c: - R_3OAS100 + R_EAR80y = 0.0
- M_ocdcaACP_c: - R_AGPAT180 + R_EAR180y - R_DES_9 - R_G3PAT180 = 0.0
- M_octeACP_c: - R_AGPAT181 + R_EAR181y - R_G3PAT181 = 0.0
- M_octe_6_9_12_15_ACP_c: - R_G3PAT183_6_9_12 - R_AGPAT184_6_9_12_15 + R_DES_6 = 0.0
- M_octe_6_9_12_ACP_c: - R_AGPAT183_6_9_12 + R_DES_6B - R_G3PAT184_6_9_12_15 = 0.0
- M_octe_9_12_15_ACP_c: - R_G3PAT183_9_12_15 - R_AGPAT183_9_12_15 - R_DES_6 + R_DES_15 = 0.0
- M_octe_9_12_ACP_c: - R_DES_6B - R_AGPAT182_9_12 - R_G3PAT182_9_12 + R_DES_12 - R_DES_15 = 0.0
- M_octe_9_ACP_c: - R_G3PAT181_9 + R_DES_9 - R_DES_12 - R_AGPAT181_9 = 0.0
- M_omppp9_c: - R_MPOMOR + R_MPOMMM2 - R_MPOMOR2 + R_MPOMMM = 0.0
- M_orn_c: + R_ORNTACr + R_ARGN - R_OCBT - R_ORNTA = 0.0
+ M_iamac_c: + R_OHACT2 - R_ACHLE1 - R_IAMACt = 0.0
+ M_iamac_e: - R_EX_iamac_e_ + R_IAMACt = 0.0
+ M_iamoh_c: - R_IAMOHt - R_IAMOHtm + R_ALCD24yi + R_ALCD24xi - R_OHACT2 + R_ACHLE1 = 0.0
+ M_iamoh_e: + R_IAMOHt - R_EX_iamoh_e_ = 0.0
+ M_iamoh_m: + R_ALCD24xim + R_IAMOHtm = 0.0
+ M_iasp_c: + R_ASPOcm - R_QULNS = 0.0
+ M_ibutac_c: - R_IBUTACt - R_ACHLE2 + R_OHACT4 = 0.0
+ M_ibutac_e: - R_EX_ibutac_e_ + R_IBUTACt = 0.0
+ M_ibutoh_c: + R_ALCD23xi - R_IBUTOHt - R_IBUTOHtm + R_ALCD23yi + R_ACHLE2 - R_OHACT4 = 0.0
+ M_ibutoh_e: - R_EX_ibutoh_e_ + R_IBUTOHt = 0.0
+ M_ibutoh_m: + R_IBUTOHtm + R_ALCD23xim = 0.0
+ M_icit_c: + R_CITtcp + R_CITtcm - R_ICDHy - R_ICL + R_ACONT = 0.0
+ M_icit_m: - R_CITtcm + R_ACONTm - R_ICDHym - R_ICDHxm = 0.0
+ M_icit_x: - R_CITtcp - R_ICDHyp = 0.0
+ M_id3acald_c: - R_ALDD20y - R_ID3ACALDt + R_INDPYRD - R_ALCD26xi - R_ID3ACALDtm = 0.0
+ M_id3acald_e: + R_ID3ACALDt - R_EX_id3acald_e_ = 0.0
+ M_id3acald_m: - R_ALCD26xim - R_ALDD20xm - R_ALDD20ym + R_ID3ACALDtm = 0.0
+ M_idp_c: - R_NDPK9 + R_ADK4 = 0.0
+ M_idp_m: + R_ADK4m = 0.0
+ M_ile_L_c: - R_ILEt6 + R_ILEt7 + R_ILEt2r - R_ILETA - R_ILETRS + R_ILEtmi = 0.0
+ M_ile_L_e: - R_EX_ile_L_e_ - R_ILEt2r = 0.0
+ M_ile_L_m: - R_ILETAm - R_ILETRSm - R_ILEtmi = 0.0
+ M_ile_L_v: + R_ILEt6 - R_ILEt7 = 0.0
+ M_iletrna_c: -0.19270000000000001017 R_biomass_core -0.19270000000000001017 R_biomass_wildType + R_ILETRS = 0.0
+ M_iletrna_m: + R_ILETRSm = 0.0
+ M_imacp_c: - R_HSTPT + R_IGPDH = 0.0
+ M_imp_c: - R_IMPD - R_NTD11 + R_INSK + R_PDE3 - R_ADSS + R_HXPRT + R_AMPDA - R_IMPC = 0.0
+ M_ind3ac_c: + R_ALDD20y - R_IND3ACtm + R_AMID3 + R_NTRLASE = 0.0
+ M_ind3ac_m: + R_IND3ACtm + R_ALDD20xm + R_ALDD20ym = 0.0
+ M_ind3acnl_c: - R_NTRLASE = 0.0
+ M_ind3eth_c: - R_IND3ETHt - R_IND3ETHtm + R_ALCD26xi = 0.0
+ M_ind3eth_e: - R_EX_ind3eth_e_ + R_IND3ETHt = 0.0
+ M_ind3eth_m: + R_IND3ETHtm + R_ALCD26xim = 0.0
+ M_indpyr_c: + R_TRPTA - R_INDPYRD = 0.0
+ M_inost_c: - R_PINOS_SC + R_INSTt2 + R_GALIGH + R_MI1PP = 0.0
+ M_inost_e: - R_INSTt2 - R_EX_inost_e_ = 0.0
+ M_ins_c: - R_PUNP5 + R_NTD11 + R_ADA - R_INSK + R_INSt2 = 0.0
+ M_ins_e: - R_INSt2 - R_EX_ins_e_ = 0.0
+ M_ipc124_SC_c: -0.01000000000000000021 R_MIPCS124_SC +0.01000000000000000021 R_IPCS124_SC -0.01000000000000000021 R_IPC124PLC_SC = 0.0
+ M_ipc126_SC_c: +0.01000000000000000021 R_IPCS126_SC -0.01000000000000000021 R_IPC126PLC_SC -0.01000000000000000021 R_MIPCS126_SC = 0.0
+ M_ipc224_SC_c: +0.01000000000000000021 R_IPCS224_SC -0.01000000000000000021 R_MIPCS224_SC -0.01000000000000000021 R_IPC224PLC_SC = 0.0
+ M_ipc226_SC_c: -0.01000000000000000021 R_IPC226PLC_SC -0.01000000000000000021 R_MIPCS226_SC +0.01000000000000000021 R_IPCS226_SC = 0.0
+ M_ipc324_SC_c: -0.01000000000000000021 R_IPC324PLC_SC +0.01000000000000000021 R_IPCS324_SC -0.01000000000000000021 R_MIPCS324_SC = 0.0
+ M_ipc326_SC_c: -0.01000000000000000021 R_IPC326PLC_SC +0.01000000000000000021 R_IPCS326_SC -0.01000000000000000021 R_MIPCS326_SC = 0.0
+ M_ipdp_c: - R_IPDPtm - R_DMATT + R_DPMVD - R_GRTT - R_GGTT - R_FRTT - R_IPDDI = 0.0
+ M_ipdp_m: + R_IPDPtm - R_PPTTm = 0.0
+ M_itaccoa_m: + R_ITCOALm = 0.0
+ M_itacon_m: - R_ITCOALm = 0.0
+ M_itp_c: + R_NDPK9 - R_ADK4 = 0.0
+ M_itp_m: - R_ADK4m = 0.0
+ M_k_c: + R_Kt2r = 0.0
+ M_k_e: - R_Kt2r - R_EX_k_e_ = 0.0
+ M_lac_D_c: - R_D_LACDcm + R_D_LACt2 - R_D_LACtm + R_GLYOX - R_D_LACt2m = 0.0
+ M_lac_D_e: - R_D_LACt2 - R_EX_lac_D_e_ = 0.0
+ M_lac_D_m: + R_GLYOXm - R_D_LACDm + R_D_LACtm + R_D_LACt2m = 0.0
+ M_lac_L_c: - R_L_LACtm - R_L_LACD2cm + R_LCADi + R_L_LACt2r = 0.0
+ M_lac_L_e: - R_EX_lac_L_e_ - R_L_LACt2r = 0.0
+ M_lac_L_m: + R_L_LACtm = 0.0
+ M_lald_L_c: + R_LALDO3 - R_LCADi = 0.0
+ M_lanost_c: + R_LANOSTt +0.01000000000000000021 R_LANOSTESTH_SC -0.01000000000000000021 R_LANOSTAT_SC - R_LNS14DMx - R_LNS14DM + R_LNSTLS = 0.0
+ M_lanost_e: - R_LANOSTt +0.01000000000000000021 R_LANOSTESTH_SCe - R_EX_lanost_e_ = 0.0
+ M_lanostest_SC_c: -0.01000000000000000021 R_LANOSTESTH_SC +0.01000000000000000021 R_LANOSTAT_SC = 0.0
+ M_lanostest_SC_e: -0.01000000000000000021 R_LANOSTESTH_SCe - R_EX_lanostest_SC_e_ = 0.0
+ M_leu_L_c: - R_LEUTRS - R_LEUTA + R_LEUt2r - R_LEUt6 + R_LEUt7 = 0.0
+ M_leu_L_e: - R_EX_leu_L_e_ - R_LEUt2r = 0.0
+ M_leu_L_m: - R_LEUTRSm - R_LEUTAm = 0.0
+ M_leu_L_v: + R_LEUt6 - R_LEUt7 = 0.0
+ M_leutrna_c: -0.29639999999999999680 R_biomass_core + R_LEUTRS -0.29639999999999999680 R_biomass_wildType = 0.0
+ M_leutrna_m: + R_LEUTRSm = 0.0
+ M_lgt_S_c: + R_LGTHL - R_GLYOX = 0.0
+ M_lgt_S_m: - R_GLYOXm = 0.0
+ M_lpam_m: - R_GCC2am + R_PDHcm + R_GCC2cm - R_AKGDam = 0.0
+ M_lpro_m: - R_GCCam + R_GCCcm = 0.0
+ M_lys_L_c: - R_LYSTRS + R_SACCD2 + R_LYSt2r - R_LYSt6 - R_LYSt2m = 0.0
+ M_lys_L_e: - R_EX_lys_L_e_ - R_LYSt2r = 0.0
+ M_lys_L_m: - R_LYSTRSm + R_LYSt2m = 0.0
+ M_lys_L_v: + R_LYSt6 = 0.0
+ M_lystrna_c: -0.28620000000000000995 R_biomass_core + R_LYSTRS -0.28620000000000000995 R_biomass_wildType = 0.0
+ M_lystrna_m: + R_LYSTRSm = 0.0
+ M_m1macchitppdol_g: - R_G16MTg + R_G13MTg = 0.0
+ M_m2macchitppdol_g: + R_G16MTg - R_G12MT1g = 0.0
+ M_m3macchitppdol_g: - R_G12MT2g + R_G12MT1g = 0.0
+ M_m4macchitppdol_g: + R_G12MT2g = 0.0
+ M_macchitppdol_g: - R_G13MTg = 0.0
+ M_malACP_c: + R_MCOATA = 0.0
+ M_malACP_m: -3.00000000000000000000 R_FAS80ACPm_L - R_FAS140ACPm - R_FAS161ACPm - R_FAS182ACPm - R_FAS180ACPm - R_FAS141ACPm - R_FAS120ACPm - R_FAS181ACPm + R_MCOATAm - R_FAS160ACPm - R_FAS100ACPm = 0.0
+ M_mal_L_c: + R_AKGMAL + R_MALOAAtp - R_CITtap + R_CITtam - R_MDH - R_MALtm + R_FUM + R_MALt2r + R_MALS = 0.0
+ M_mal_L_e: - R_AKGMAL - R_EX_mal_L_e_ - R_MALt2r = 0.0
+ M_mal_L_m: - R_ME2m - R_CITtam + R_FUMm + R_MALtm - R_ME1m - R_MDHm = 0.0
+ M_mal_L_x: - R_MALOAAtp + R_CITtap + R_MALSp - R_MDHp = 0.0
+ M_malcoa_c: -3.00000000000000000000 R_FAS80COA_L -3.00000000000000000000 R_FAS80_L + R_ACCOACr - R_FAS100 -3.00000000000000000000 R_FAS240_L - R_FAS180 - R_FAS181 - R_FAS160 - R_FAS180COA - R_MCOATA - R_FAS260 - R_FAS140 - R_FAS141 - R_FAS120COA - R_FAS140COA - R_FAS161 - R_FAS100COA - R_FAS120 - R_FAS160COA = 0.0
+ M_malcoa_m: + R_ACCOACrm - R_MCOATAm = 0.0
+ M_malt_c: - R_MALT + R_MALTt2 = 0.0
+ M_malt_e: - R_EX_malt_e_ - R_MALTt2 = 0.0
+ M_man1p_c: - R_PMANM - R_MAN1PT = 0.0
+ M_man2mi1p_D_c: + R_MIP2C326PLC_SC + R_MIP2C124PLC_SC + R_MIP2C126PLC_SC + R_MIP2C226PLC_SC + R_MIP2C224PLC_SC + R_MIP2C324PLC_SC = 0.0
+ M_man6p_c: - R_MAN6PI + R_HEX4 + R_PMANM = 0.0
+ M_man_c: + R_MANt2 + R_EPMGH - R_HEX4 = 0.0
+ M_man_e: - R_MANt2 - R_EX_man_e_ = 0.0
+ M_manmi1p_D_c: + R_MIPC226PLC_SC + R_MIPC126PLC_SC + R_MIPC124PLC_SC + R_MIPC224PLC_SC + R_MIPC326PLC_SC + R_MIPC324PLC_SC = 0.0
+ M_mannan_c: -0.80789999999999995151 R_biomass_core - R_MANNANter -0.80789999999999995151 R_biomass_wildType = 0.0
+ M_mannan_r: + R_MANNANter + R_DOLPMMer = 0.0
+ M_melib_c: + R_MELIBt2 - R_GALS3 = 0.0
+ M_melib_e: - R_MELIBt2 - R_EX_melib_e_ = 0.0
+ M_melt_c: - R_MELTGH = 0.0
+ M_met_L_c: + R_AHSERL + R_UNK3 - R_METAT + R_HCYSMT + R_MHPGLUT + R_METt2m + R_METt2r + R_METS - R_METTRS = 0.0
+ M_met_L_e: - R_EX_met_L_e_ - R_METt2r = 0.0
+ M_met_L_m: - R_METTRSm - R_METt2m = 0.0
+ M_methf_c: + R_MTHFD - R_MTHFC + R_MTHFD2i + R_FTHFCL = 0.0
+ M_methf_m: - R_MTHFCm - R_THFATm + R_FTHFCLm + R_MTHFDm = 0.0
+ M_mettrna_c: -0.05070000000000000201 R_biomass_core -0.05070000000000000201 R_biomass_wildType + R_METTRS = 0.0
+ M_mettrna_m: + R_METTRSm - R_FMETTRSm = 0.0
+ M_mev_R_b: + R_EX_mev_R_e_ = 0.0
+ M_mev_R_c: - R_MEVK1 - R_MEVK2 - R_MEVK4 - R_MEVK3 + R_MEVRt - R_HMGCOAR = 0.0
+ M_mev_R_e: - R_EX_mev_R_e_ - R_MEVRt = 0.0
+ M_mhpglu_c: - R_MHPGLUT = 0.0
+ M_mi13456p_c: + R_PMI1346PH - R_PMI1346PS = 0.0
+ M_mi13456p_n: - R_MI13456PKn + R_MI1345PKn + R_MI1456PKn = 0.0
+ M_mi1345p_n: - R_MI1345PKn + R_MI145PKn = 0.0
+ M_mi1456p_n: + R_MI145P6Kn - R_MI1456PKn = 0.0
+ M_mi145p_c: - R_MI145Ptn + R_PI45BPP_SC = 0.0
+ M_mi145p_n: - R_MI145P6Kn + R_MI145Ptn - R_MI145PKn = 0.0
+ M_mi1p_D_c: + R_IPC226PLC_SC + R_IPC324PLC_SC + R_IPC326PLC_SC + R_IPC124PLC_SC + R_IPC224PLC_SC + R_IPC126PLC_SC + R_MI1PS - R_MI1PP = 0.0
+ M_micit_m: - R_MCITL2m + R_ACONT3m = 0.0
+ M_minohp_c: + R_PMI12346PH - R_MINOHPtn - R_PMI12346PS = 0.0
+ M_minohp_n: + R_MI13456PKn + R_MINOHPtn = 0.0
+ M_mip2c124_SC_c: -0.01000000000000000021 R_MIP2C124PLC_SC +0.01000000000000000021 R_MIP2CS124_SC = 0.0
+ M_mip2c126_SC_c: -0.01000000000000000021 R_MIP2C126PLC_SC +0.01000000000000000021 R_MIP2CS126_SC = 0.0
+ M_mip2c224_SC_c: +0.01000000000000000021 R_MIP2CS224_SC -0.01000000000000000021 R_MIP2C224PLC_SC = 0.0
+ M_mip2c226_SC_c: -0.01000000000000000021 R_MIP2C226PLC_SC +0.01000000000000000021 R_MIP2CS226_SC = 0.0
+ M_mip2c324_SC_c: +0.01000000000000000021 R_MIP2CS324_SC -0.01000000000000000021 R_MIP2C324PLC_SC = 0.0
+ M_mip2c326_SC_c: -0.01000000000000000021 R_MIP2C326PLC_SC +0.01000000000000000021 R_MIP2CS326_SC = 0.0
+ M_mipc124_SC_c: +0.01000000000000000021 R_MIPCS124_SC -0.01000000000000000021 R_MIPC124PLC_SC -0.01000000000000000021 R_MIP2CS124_SC = 0.0
+ M_mipc126_SC_c: -0.01000000000000000021 R_MIP2CS126_SC -0.01000000000000000021 R_MIPC126PLC_SC +0.01000000000000000021 R_MIPCS126_SC = 0.0
+ M_mipc224_SC_c: -0.01000000000000000021 R_MIP2CS224_SC -0.01000000000000000021 R_MIPC224PLC_SC +0.01000000000000000021 R_MIPCS224_SC = 0.0
+ M_mipc226_SC_c: +0.01000000000000000021 R_MIPCS226_SC -0.01000000000000000021 R_MIPC226PLC_SC -0.01000000000000000021 R_MIP2CS226_SC = 0.0
+ M_mipc324_SC_c: -0.01000000000000000021 R_MIP2CS324_SC +0.01000000000000000021 R_MIPCS324_SC -0.01000000000000000021 R_MIPC324PLC_SC = 0.0
+ M_mipc326_SC_c: -0.01000000000000000021 R_MIP2CS326_SC -0.01000000000000000021 R_MIPC326PLC_SC +0.01000000000000000021 R_MIPCS326_SC = 0.0
+ M_mlthf_c: - R_MTHFR3 - R_MTHFD + R_GHMT2r - R_MTHFD2i - R_TMDS - R_MOHMT = 0.0
+ M_mlthf_m: - R_MTHFDm + R_GLYCLm + R_GHMT2rm + R_GCCbim + R_GCC2bim = 0.0
+ M_mmet_c: + R_MMETt2 = 0.0
+ M_mmet_e: - R_MMETt2 - R_EX_mmet_e_ = 0.0
+ M_mthgxl_c: + R_AACTOOR - R_LGTHL - R_LALDO3 + R_MGSA = 0.0
+ M_myrsACP_c: - R_FA140ACPH + R_FA140ACPtm = 0.0
+ M_myrsACP_m: + R_FAS140ACPm - R_FAS161ACPm - R_FAS160ACPm - R_FA140ACPtm = 0.0
+ M_n4abutn_c: - R_NABTNO + R_APRTO2 = 0.0
+ M_na1_c: - R_NAt3_1 = 0.0
+ M_na1_e: + R_NAt3_1 - R_EX_na1_e_ = 0.0
+ M_nac_c: - R_NAPRT + R_NNAMr + R_NACt = 0.0
+ M_nac_e: - R_EX_nac_e_ - R_NACt = 0.0
+ M_nac_m: - R_NAPRTm + R_NNAMrm = 0.0
+ M_nad_c: - R_ALDD22x + R_NMNAT + R_ALCD23xi - R_FDH + R_GLUSx + R_NADS1 - R_IMPD + R_ALCD2ir - R_ALCD2if - R_2HBO - R_FALDH - R_ALDD19x + R_NADH2_u6cm + R_G3PD1ir - R_MTHFD2i - R_NABTNO - R_MDH + R_NADtn + R_FMNRx - R_PPND + R_HSDxi + R_C22STDSx + R_AASAD2 + R_ALCD24xi - R_SBTD_L + R_HPROa - R_IPMD - R_SBTD_D2 - R_SACCD2 + R_G5SD2 + R_ALCD25xi - R_PALOXR - R_BTDD_RR - R_LCADi - R_NADN - R_NADK - R_C3STDH2 - R_C3STDH1 - R_GAPD +3.00000000000000000000 R_LNS14DMx - R_GLUDxi + R_ALCD22xi - R_ALCD2x - R_PGCD - R_XYLTD_D -2.00000000000000000000 R_HISTD + R_ALCD26xi + R_NADPPPS -2.00000000000000000000 R_THFOXR = 0.0
+ M_nad_m: + R_G3PD1irm - R_ALDD2xm - R_HPROxm - R_PDHm - R_PDHcm + R_ALCD24xim - R_PRO1xm - R_NADKm - R_HICITDm - R_GCC2cm + R_ALCD26xim - R_PHCDm - R_P5CDm + R_NADPPPSm - R_OBDHm - R_GLYCLm - R_4HBZCOAFm + R_ALCD2irm - R_ABUTDm + R_HEMEOMOm + R_ALCD23xim - R_ALDD20xm + R_ALCD22xim - R_ME1m - R_NADNm + R_ALCD25xim - R_GCCcm - R_MDHm + R_NMNATm - R_4HGLSDm - R_ICDHxm + R_34HPLFM + R_NADH2_u6m = 0.0
+ M_nad_n: - R_NADtn + R_NADS1n = 0.0
+ M_nad_r: + R_SQLErx = 0.0
+ M_nad_x: -3.00000000000000000000 R_FAO80p + R_HACD7p -7.00000000000000000000 R_FAO161p_odd -6.00000000000000000000 R_FAO141p_even + R_HACD6p -7.00000000000000000000 R_FAO161p_even -3.00000000000000000000 R_FAO240p -8.00000000000000000000 R_FAO182p_oddodd + R_HACD5p -8.00000000000000000000 R_FAO181p_even -8.00000000000000000000 R_FAO181p_odd + R_HACD4p -8.00000000000000000000 R_FAO182p_evenodd - R_HACD10p - R_MDHp - R_NADDPp + R_HACD8p -8.00000000000000000000 R_FAO182p_eveneven -6.00000000000000000000 R_FAO141p_odd = 0.0
+ M_nadh_c: + R_ALDD22x - R_ALCD23xi + R_FDH - R_GLUSx + R_IMPD - R_ALCD2ir + R_ALCD2if + R_2HBO + R_FALDH + R_ALDD19x - R_NADH2_u6cm - R_G3PD1ir + R_MTHFD2i + R_NABTNO + R_MDH - R_FMNRx + R_PPND - R_HSDxi - R_C22STDSx - R_AASAD2 - R_ALCD24xi + R_SBTD_L - R_HPROa + R_IPMD + R_SBTD_D2 + R_SACCD2 - R_G5SD2 - R_ALCD25xi + R_PALOXR + R_BTDD_RR + R_LCADi + R_C3STDH2 + R_C3STDH1 + R_GAPD -3.00000000000000000000 R_LNS14DMx + R_GLUDxi - R_ALCD22xi + R_ALCD2x + R_PGCD + R_XYLTD_D +2.00000000000000000000 R_HISTD - R_ALCD26xi +2.00000000000000000000 R_THFOXR = 0.0
+ M_nadh_m: - R_G3PD1irm + R_ALDD2xm + R_HPROxm + R_PDHm + R_PDHcm - R_ALCD24xim + R_PRO1xm + R_HICITDm + R_GCC2cm - R_ALCD26xim + R_PHCDm + R_P5CDm + R_OBDHm + R_GLYCLm + R_4HBZCOAFm - R_ALCD2irm + R_ABUTDm - R_HEMEOMOm - R_ALCD23xim + R_ALDD20xm - R_ALCD22xim + R_ME1m - R_ALCD25xim + R_GCCcm + R_MDHm + R_4HGLSDm + R_ICDHxm - R_34HPLFM - R_NADH2_u6m = 0.0
+ M_nadh_r: - R_SQLErx = 0.0
+ M_nadh_x: +3.00000000000000000000 R_FAO80p - R_HACD7p +7.00000000000000000000 R_FAO161p_odd +6.00000000000000000000 R_FAO141p_even - R_HACD6p +7.00000000000000000000 R_FAO161p_even +3.00000000000000000000 R_FAO240p +8.00000000000000000000 R_FAO182p_oddodd - R_HACD5p +8.00000000000000000000 R_FAO181p_even +8.00000000000000000000 R_FAO181p_odd - R_HACD4p +8.00000000000000000000 R_FAO182p_evenodd + R_HACD10p + R_MDHp - R_HACD8p +8.00000000000000000000 R_FAO182p_eveneven +6.00000000000000000000 R_FAO141p_odd = 0.0
+ M_nadp_c: + R_ARABR + R_ALCD19y +3.00000000000000000000 R_C4STMO2 +6.00000000000000000000 R_FAS80COA_L +6.00000000000000000000 R_FAS80_L + R_DESAT18 + R_DESAT16 + R_DESAT14 + R_G5SD - R_ICDHy + R_SQLS + R_NFTYROX + R_DPR +2.00000000000000000000 R_FAS100 + R_3DSPHR +6.00000000000000000000 R_FAS240_L - R_ALDD20y + R_MTHFR3 + R_C3STKR1 + R_SHK3D +2.00000000000000000000 R_FAS180 +3.00000000000000000000 R_FAS181 +2.00000000000000000000 R_FAS160 + R_P5CR - R_ATHRDHr + R_ALCD24yi - R_NADPt +3.00000000000000000000 R_C4STMO1 + R_CERS2_24 + R_CERS2_26 + R_C3STKR2 - R_MTHFD + R_GTHO - R_GLYCDy +2.00000000000000000000 R_FAS180COA + R_C22STDS + R_ADHAPR_SC + R_AASAD1 + R_DHFRi + R_LALDO3 - R_ALDD2y + R_HPROb + R_SACCD1 +2.00000000000000000000 R_FAS260 + R_HSDyi +2.00000000000000000000 R_FAS140 +3.00000000000000000000 R_FAS141 +2.00000000000000000000 R_FAS120COA +2.00000000000000000000 R_FAS140COA -2.00000000000000000000 R_HMGCOAR - R_GND + R_ALCD22yi + R_CERS326 + R_NADK - R_SSALy + R_ALCD25yi + R_GLUDyi + R_ALCD23yi + R_CERH126 + R_CERH124 + R_TRDR + R_KYN3OX - R_PPND2 +3.00000000000000000000 R_FAS161 + R_ASADi - R_G6PDH2 -3.00000000000000000000 R_SULR + R_FMNRx2 + R_SBTR + R_XYLR +2.00000000000000000000 R_FAS100COA - R_LSERDHr + R_C14STR +2.00000000000000000000 R_FAS120 +2.00000000000000000000 R_FAS160COA + R_C5STDS - R_ARAB1D2 + R_CERS324 - R_SHCHD + R_DESAT18_2 + R_DROPPRy + R_PSPHS +3.00000000000000000000 R_LNS14DM - R_NADPPPS = 0.0
+ M_nadp_e: - R_EX_nadp_e_ + R_NADPt = 0.0
+ M_nadp_m: - R_ME2m +6.00000000000000000000 R_FAS80ACPm_L - R_PYR5CDm - R_HPROym - R_ALDD2ym +2.00000000000000000000 R_FAS140ACPm + R_DHFRim - R_MTHFDm + R_AGPRim + R_NADKm +3.00000000000000000000 R_FAS161ACPm + R_DPRm - R_NADPPPSm +4.00000000000000000000 R_FAS182ACPm + R_KARA1im + R_TRDRm +2.00000000000000000000 R_FAS180ACPm +3.00000000000000000000 R_FAS141ACPm +2.00000000000000000000 R_FAS120ACPm - R_ALDD20ym +3.00000000000000000000 R_FAS181ACPm + R_GTHOm +2.00000000000000000000 R_FAS160ACPm - R_ICDHym +2.00000000000000000000 R_FAS100ACPm + R_KARA2im = 0.0
+ M_nadp_r: - R_G6PDH2er + R_C24STRer + R_SQLEr = 0.0
+ M_nadp_x: + R_FAO141p_even + R_FAO161p_even + R_FAO181p_even + R_FAO182p_evenodd - R_ICDHyp +2.00000000000000000000 R_FAO182p_eveneven = 0.0
+ M_nadph_c: - R_ARABR - R_ALCD19y -3.00000000000000000000 R_C4STMO2 -6.00000000000000000000 R_FAS80COA_L -6.00000000000000000000 R_FAS80_L - R_DESAT18 - R_DESAT16 - R_DESAT14 - R_G5SD + R_ICDHy - R_SQLS - R_NFTYROX - R_DPR -2.00000000000000000000 R_FAS100 - R_3DSPHR -6.00000000000000000000 R_FAS240_L + R_ALDD20y - R_MTHFR3 - R_C3STKR1 - R_SHK3D -2.00000000000000000000 R_FAS180 -3.00000000000000000000 R_FAS181 -2.00000000000000000000 R_FAS160 - R_P5CR + R_ATHRDHr - R_ALCD24yi -3.00000000000000000000 R_C4STMO1 - R_CERS2_24 - R_CERS2_26 - R_C3STKR2 + R_MTHFD - R_GTHO + R_GLYCDy -2.00000000000000000000 R_FAS180COA - R_C22STDS - R_ADHAPR_SC - R_AASAD1 - R_DHFRi - R_LALDO3 + R_ALDD2y - R_HPROb - R_SACCD1 -2.00000000000000000000 R_FAS260 - R_HSDyi -2.00000000000000000000 R_FAS140 -3.00000000000000000000 R_FAS141 -2.00000000000000000000 R_FAS120COA -2.00000000000000000000 R_FAS140COA +2.00000000000000000000 R_HMGCOAR + R_GND - R_ALCD22yi - R_CERS326 + R_SSALy - R_ALCD25yi - R_GLUDyi - R_ALCD23yi - R_CERH126 - R_CERH124 - R_TRDR - R_KYN3OX + R_PPND2 -3.00000000000000000000 R_FAS161 - R_ASADi + R_G6PDH2 +3.00000000000000000000 R_SULR - R_FMNRx2 - R_SBTR - R_XYLR -2.00000000000000000000 R_FAS100COA + R_LSERDHr - R_C14STR -2.00000000000000000000 R_FAS120 -2.00000000000000000000 R_FAS160COA - R_C5STDS + R_ARAB1D2 - R_CERS324 + R_SHCHD - R_DESAT18_2 - R_DROPPRy - R_PSPHS -3.00000000000000000000 R_LNS14DM = 0.0
+ M_nadph_m: + R_ME2m -6.00000000000000000000 R_FAS80ACPm_L + R_PYR5CDm + R_HPROym + R_ALDD2ym -2.00000000000000000000 R_FAS140ACPm - R_DHFRim + R_MTHFDm - R_AGPRim -3.00000000000000000000 R_FAS161ACPm - R_DPRm -4.00000000000000000000 R_FAS182ACPm - R_KARA1im - R_TRDRm -2.00000000000000000000 R_FAS180ACPm -3.00000000000000000000 R_FAS141ACPm -2.00000000000000000000 R_FAS120ACPm + R_ALDD20ym -3.00000000000000000000 R_FAS181ACPm - R_GTHOm -2.00000000000000000000 R_FAS160ACPm + R_ICDHym -2.00000000000000000000 R_FAS100ACPm - R_KARA2im = 0.0
+ M_nadph_r: + R_G6PDH2er - R_C24STRer - R_SQLEr = 0.0
+ M_nadph_x: - R_FAO141p_even - R_FAO161p_even - R_FAO181p_even - R_FAO182p_evenodd + R_ICDHyp -2.00000000000000000000 R_FAO182p_eveneven = 0.0
+ M_ncam_c: - R_NNAMr + R_PNP - R_NNMT + R_NADN = 0.0
+ M_ncam_m: - R_NNAMrm + R_NADNm = 0.0
+ M_nh4_c: - R_CTPS1 + R_GUAD + R_AACTOOR + R_AMID + R_AMID2 - R_NADS1 + R_NTRLASE2 + R_NTRLASE3 + R_SHSL4r +4.00000000000000000000 R_HMBS + R_AMID3 + R_NH4t + R_CYSTGL + R_NNAMr + R_DADA - R_NH4ti - R_NH4tn + R_CYSTL + R_ADA + R_ADD + R_ASNN + R_SERD_L + R_THZPSN1_SC + R_G6PDA + R_GLUN +2.00000000000000000000 R_ALPHNH + R_THZPSN2_SC - R_GLUDyi + R_DRTPPD + R_DCTPD - R_PYDXO +2.00000000000000000000 R_UGLYCHr + R_GLUDxi + R_PYAM5PO - R_NH4tp - R_GLNS - R_NH4tm + R_CYTD + R_THRD_L + R_AMPDA + R_APRTO2 + R_DCMPDA + R_CSND + R_NTRLASE + R_DCYTD = 0.0
+ M_nh4_e: - R_NH4t - R_EX_nh4_e_ + R_ASNNe + R_NH4ti = 0.0
+ M_nh4_m: + R_THRD_Lm + R_GLYCLm + R_NNAMrm + R_GCCbim + R_GCC2bim + R_NH4tm = 0.0
+ M_nh4_n: - R_NADS1n + R_NH4tn = 0.0
+ M_nh4_x: + R_CYSTLp + R_NH4tp = 0.0
+ M_nicrnt_c: + R_NAPRT + R_NNDPR - R_NNAT = 0.0
+ M_nicrnt_m: - R_NNATm + R_NNDPRm + R_NAPRTm = 0.0
+ M_nmn_c: - R_NMNAT - R_NMNt2p - R_NMNt2m + R_NMNTP + R_RNMK = 0.0
+ M_nmn_e: - R_EX_nmn_e_ - R_NMNTP = 0.0
+ M_nmn_m: + R_NMNt2m - R_NMNATm = 0.0
+ M_nmn_x: + R_NMNt2p + R_NADDPp = 0.0
+ M_o2_c: -3.00000000000000000000 R_C4STMO2 - R_AACTOOR - R_DESAT18 - R_DESAT16 - R_DESAT14 - R_CHLSTI - R_TAUDO - R_34HPPOR - R_FAS181 - R_HGNTOR -3.00000000000000000000 R_C4STMO1 - R_CERS2_24 - R_CERS2_26 - R_C22STDS - R_POLYAO2 - R_DHORDi - R_C22STDSx - R_ARAB14LO + R_CAT - R_FAS141 + R_O2t - R_3HAO - R_PYDXNO - R_CERS326 - R_CERH126 - R_CERH124 - R_KYN3OX - R_FAS161 - R_O2ter - R_CPPPGO -3.00000000000000000000 R_LNS14DMx - R_O2tm -0.50000000000000000000 R_PYDXO - R_POLYAO3 - R_PYAM5PO -0.50000000000000000000 R_3OPHB5Hm - R_C5STDS - R_POLYAO - R_CERS324 - R_DESAT18_2 - R_APRTO2 - R_PSPHS - R_TRPO2 -3.00000000000000000000 R_LNS14DM - R_PDX5PO = 0.0
+ M_o2_e: - R_EX_o2_e_ - R_O2t = 0.0
+ M_o2_m: -0.50000000000000000000 R_2HPMMBQMOm - R_2HP6MPMOm - R_CYOOm - R_FAS161ACPm -3.00000000000000000000 R_PPPGOm -2.00000000000000000000 R_FAS182ACPm - R_HEMEOMOm - R_FAS141ACPm - R_FAS181ACPm + R_O2tm = 0.0
+ M_o2_r: + R_O2ter - R_SQLEr - R_SQLErx = 0.0
+ M_o2_x: - R_ACOAO9p -3.00000000000000000000 R_FAO80p -6.00000000000000000000 R_FAO161p_odd -6.00000000000000000000 R_FAO141p_even -7.00000000000000000000 R_FAO161p_even -3.00000000000000000000 R_FAO240p -6.00000000000000000000 R_FAO182p_oddodd + R_CATp -8.00000000000000000000 R_FAO181p_even -7.00000000000000000000 R_FAO181p_odd - R_ACOAO4p -7.00000000000000000000 R_FAO182p_evenodd - R_ACOAO5p - R_ACOAO6p - R_ACOAO7p - R_ACOAO8p -8.00000000000000000000 R_FAO182p_eveneven -5.00000000000000000000 R_FAO141p_odd = 0.0
+ M_oaa_c: - R_MALOAAtp - R_OAAt2m + R_MDH - R_OAAt + R_ASPTA + R_PC - R_PPCK = 0.0
+ M_oaa_e: + R_OAAt - R_EX_oaa_e_ = 0.0
+ M_oaa_m: - R_MCITSm + R_OAAt2m - R_CSm + R_ASPTAm + R_MDHm = 0.0
+ M_oaa_x: - R_CSp + R_MALOAAtp + R_ASPTAp + R_MDHp = 0.0
+ M_ocACP_m: + R_FAS80ACPm_L - R_FAS100ACPm = 0.0
+ M_occoa_c: + R_FAS80COA_L - R_FAS100COA = 0.0
+ M_occoa_x: - R_FAO80p + R_FACOAL80p + R_ACACT4p - R_PTE9x = 0.0
+ M_ocdcaACP_c: + R_FA180ACPtm - R_FA180ACPH = 0.0
+ M_ocdcaACP_m: - R_FA180ACPtm + R_FAS180ACPm = 0.0
+ M_ocdca_c: + R_OCDCAt +0.02999999999999999889 R_FECOSTESTH_SC - R_FAS240_L + R_FAS180 +0.05000000000000000278 R_TAGL_SC +0.02999999999999999889 R_LANOSTESTH_SC + R_FA180ACPH +0.02999999999999999889 R_EPISTESTH_SC +0.05000000000000000278 R_PLBPC_SC +0.02999999999999999889 R_ZYMSTESTH_SC +0.02999999999999999889 R_ERGSTESTH_SC - R_FACOAL180 = 0.0
+ M_ocdca_e: - R_OCDCAt - R_EX_ocdca_e_ +0.02999999999999999889 R_EPISTESTH_SCe +0.05000000000000000278 R_PLBPC_SCe +0.02999999999999999889 R_ZYMSTESTH_SCe +0.02999999999999999889 R_FECOSTESTH_SCe +0.05000000000000000278 R_PLBP1I_SCe +0.02999999999999999889 R_LANOSTESTH_SCe +0.02999999999999999889 R_ERGSTESTH_SCe = 0.0
+ M_ocdca_x: + R_PTE8x = 0.0
+ M_ocdcea_c: +0.27000000000000001776 R_FECOSTESTH_SC + R_OCDCEAt + R_FAS181 - R_FACOAL181 +0.23999999999999999112 R_TAGL_SC +0.27000000000000001776 R_LANOSTESTH_SC +0.27000000000000001776 R_EPISTESTH_SC + R_FA181ACPH +0.23999999999999999112 R_PLBPC_SC +0.27000000000000001776 R_ZYMSTESTH_SC +0.27000000000000001776 R_ERGSTESTH_SC = 0.0
+ M_ocdcea_e: +0.27000000000000001776 R_EPISTESTH_SCe - R_OCDCEAt +0.23999999999999999112 R_PLBPC_SCe +0.27000000000000001776 R_ZYMSTESTH_SCe +0.27000000000000001776 R_FECOSTESTH_SCe +0.23999999999999999112 R_PLBP1I_SCe - R_EX_ocdcea_e_ +0.27000000000000001776 R_LANOSTESTH_SCe +0.27000000000000001776 R_ERGSTESTH_SCe = 0.0
+ M_ocdcyaACP_c: + R_FA182ACPtm - R_FA182ACPH = 0.0
+ M_ocdcyaACP_m: - R_FA182ACPtm + R_FAS182ACPm = 0.0
+ M_ocdcya_c: + R_OCDCYAt - R_FACOAL182 +0.08999999999999999667 R_TAGL_SC + R_FA182ACPH +0.08999999999999999667 R_PLBPC_SC = 0.0
+ M_ocdcya_e: - R_EX_ocdcya_e_ - R_OCDCYAt +0.08999999999999999667 R_PLBPC_SCe +0.08999999999999999667 R_PLBP1I_SCe = 0.0
+ M_ocdycacoa_c: - R_FA182COAabcp + R_FACOAL182 -0.08999999999999999667 R_AGAT_SC -0.08999999999999999667 R_GAT2_SC -0.08999999999999999667 R_GAT1_SC -0.08999999999999999667 R_TRIGS_SC + R_DESAT18_2 -0.08999999999999999667 R_LPCAT_SC = 0.0
+ M_ocdycacoa_x: + R_FA182COAabcp - R_FAO182p_oddodd - R_FAO182p_evenodd - R_FAO182p_eveneven = 0.0
+ M_octa_c: + R_FAS80_L - R_FA80tp - R_FAS100 = 0.0
+ M_octa_x: + R_FA80tp - R_FACOAL80p + R_PTE9x = 0.0
+ M_octeACP_c: + R_FA181ACPtm - R_FA181ACPH = 0.0
+ M_octeACP_m: - R_FA181ACPtm + R_FAS181ACPm = 0.0
+ M_od2coa_x: + R_ECOAH8p + R_ACOAO8p = 0.0
+ M_odecoa_c: -0.27000000000000001776 R_ZYMSTAT_SC + R_DESAT18 - R_FA181COAabcp + R_FACOAL181 -0.23999999999999999112 R_AGAT_SC -0.27000000000000001776 R_FECOSTAT_SC -0.27000000000000001776 R_ERGSTAT_SC -0.27000000000000001776 R_LANOSTAT_SC -0.23999999999999999112 R_GAT2_SC -0.23999999999999999112 R_GAT1_SC -0.23999999999999999112 R_TRIGS_SC - R_DESAT18_2 -0.27000000000000001776 R_EPISTAT_SC -0.23999999999999999112 R_LPCAT_SC = 0.0
+ M_odecoa_x: + R_FA181COAabcp - R_FAO181p_even - R_FAO181p_odd = 0.0
+ M_oh1_c: + R_GLUt5m + R_PIt5m = 0.0
+ M_oh1_m: - R_GLUt5m - R_PIt5m = 0.0
+ M_ohpb_c: - R_OHPBAT = 0.0
+ M_orn_c: - R_ORNDC - R_OCBTi + R_ARGN - R_ORNTA + R_ORNt2r + R_ORNt3m = 0.0
+ M_orn_e: - R_ORNt2r - R_EX_orn_e_ = 0.0
+ M_orn_m: + R_ORNTACim - R_ORNt3m = 0.0
  M_orot5p_c: - R_OMPDC - R_ORPT = 0.0
- M_orot_c: + R_DHORD + R_ORPT = 0.0
- M_oxa_c: + R_GLXO3r - R_OXADC = 0.0
- M_pa160_c: + R_AGPAT160 - R_DASYN160 - R_PAPA160 = 0.0
- M_pa161_c: + R_AGPAT161 - R_DASYN161 - R_PAPA161 = 0.0
- M_pa180_c: + R_AGPAT180 - R_PAPA180 - R_DASYN180 = 0.0
- M_pa181_9_c: - R_PAPA181_9 - R_DASYN181_9 + R_AGPAT181_9 = 0.0
- M_pa181_c: + R_AGPAT181 - R_PAPA181 - R_DASYN181 = 0.0
- M_pa182_9_12_c: + R_AGPAT182_9_12 - R_PAPA182_9_12 - R_DASYN182_9_12 = 0.0
- M_pa183_6_9_12_c: + R_AGPAT183_6_9_12 - R_PAPA183_6_9_12 - R_DASYN183_6_9_12 = 0.0
- M_pa183_9_12_15_c: - R_DASYN183_9_12_15 + R_AGPAT183_9_12_15 - R_PAPA183_9_12_15 = 0.0
- M_pa184_6_9_12_15_c: - R_DASYN184_6_9_12_15 - R_PAPA184_6_9_12_15 + R_AGPAT184_6_9_12_15 = 0.0
- M_pac_c: + R_AMID2 = 0.0
+ M_orot_c: + R_DHORDfum + R_ORPT + R_DHORDi + R_DHORD4i = 0.0
+ M_oxag_c: - R_OXO2Ctm = 0.0
+ M_oxag_m: + R_HICITDm - R_OXAGm + R_OXO2Ctm = 0.0
+ M_pa_SC_c: +0.01000000000000000021 R_LPP_SC -0.00000600000000000000 R_biomass_core - R_PAtm_SC -0.01000000000000000021 R_DAGPYP_SC -0.01000000000000000021 R_PAK_SC +0.01000000000000000021 R_AGAT_SC -0.00000600000000000000 R_biomass_wildType +0.01000000000000000021 R_PLD_SC -0.01000000000000000021 R_DASYN_SC = 0.0
+ M_pa_SC_m: -0.01000000000000000021 R_DASYNm_SC + R_PAtm_SC = 0.0
+ M_pac_c: + R_AMID2 + R_ALDD19x = 0.0
+ M_pacald_c: - R_ALDD19x - R_PACALDtm + R_PPYRDC - R_ALCD25xi - R_ALCD25yi - R_PACALDt = 0.0
+ M_pacald_e: - R_EX_pacald_e_ + R_PACALDt = 0.0
+ M_pacald_m: + R_PACALDtm - R_ALCD25xim = 0.0
  M_pad_c: - R_AMID2 = 0.0
- M_palmACP_c: + R_EAR160y - R_3OAS180 - R_AGPAT160 - R_G3PAT160 = 0.0
- M_pan4p_c: + R_PPCDC - R_PTPAT = 0.0
- M_pant_R_c: - R_PANTS + R_DPR = 0.0
- M_pap_c: + R_PAPSR - R_BPNT = 0.0
+ M_palmACP_c: + R_FA160ACPtm - R_FA160ACPH = 0.0
+ M_palmACP_m: - R_FA160ACPtm - R_FAS182ACPm - R_FAS180ACPm - R_FAS181ACPm + R_FAS160ACPm = 0.0
+ M_pan4p_c: - R_PTPATi + R_PPCDC - R_PAN4Ptm = 0.0
+ M_pan4p_m: - R_PTPATim + R_PAN4Ptm + R_ACPSm = 0.0
+ M_pan4p_x: + R_COAHLp = 0.0
+ M_pant_R_c: + R_DPR - R_PANTtm - R_PANTS = 0.0
+ M_pant_R_m: + R_DPRm + R_PANTtm = 0.0
+ M_pap_c: - R_PAPtm + R_PAPt + R_PAPSR - R_BPNT = 0.0
+ M_pap_e: - R_PAPt - R_EX_pap_e_ = 0.0
+ M_pap_m: + R_PAPtm + R_ACPSm = 0.0
+ M_pap_x: + R_COAHLp = 0.0
  M_paps_c: - R_PAPSR + R_ADSK = 0.0
- M_pchlld_c: - R_POR + R_DVOCHR = 0.0
- M_pcox_p: +2.00000000000000000000 R_CYO1b2pp_syn -2.00000000000000000000 R_CBFCpp = 0.0
- M_pcox_u: +2.00000000000000000000 R_CYO1b2_syn +2.00000000000000000000 R_PSI -2.00000000000000000000 R_CBFCu = 0.0
- M_pcrd_p: -2.00000000000000000000 R_CYO1b2pp_syn +2.00000000000000000000 R_CBFCpp = 0.0
- M_pcrd_u: -2.00000000000000000000 R_CYO1b2_syn -2.00000000000000000000 R_PSI +2.00000000000000000000 R_CBFCu = 0.0
- M_pdx5p_c: + R_PDX5PS - R_PDX5PO = 0.0
- M_pep_c: - R_UAGCVT + R_ENO - R_PYK5 - R_PYK4 - R_PYK2 - R_PYK + R_PPS - R_PPC - R_PYK3 - R_DDPA - R_PSCVTi = 0.0
- M_peptido_syn_c: + R_PPTGS_Syn - R_PPTGF_Syn = 0.0
- M_peptido_syn_p: + R_PPTGF_Syn - R_BiomassPept = 0.0
- M_pg160_c: -0.05086999999999999855 R_BiomassLipid + R_PGPP160 = 0.0
- M_pg161_c: -0.00086700000000000004 R_BiomassLipid + R_PGPP161 = 0.0
- M_pg180_c: -0.00174400000000000011 R_BiomassLipid + R_PGPP180 = 0.0
- M_pg181_9_c: -0.00324600000000000019 R_BiomassLipid + R_PGPP181_9 = 0.0
- M_pg181_c: -0.00324600000000000019 R_BiomassLipid + R_PGPP181 = 0.0
- M_pg182_9_12_c: -0.03296700000000000325 R_BiomassLipid + R_PGPP182_9_12 = 0.0
- M_pg183_6_9_12_c: -0.00000600000000000000 R_BiomassLipid + R_PGPP183_6_9_12 = 0.0
- M_pg183_9_12_15_c: -0.00823600000000000027 R_BiomassLipid + R_PGPP183_9_12_15 = 0.0
- M_pg184_6_9_12_15_c: + R_PGPP184_6_9_12_15 -0.00000600000000000000 R_BiomassLipid = 0.0
- M_pgp160_c: + R_PGSA160 - R_PGPP160 = 0.0
- M_pgp161_c: + R_PGSA161 - R_PGPP161 = 0.0
- M_pgp180_c: - R_PGPP180 + R_PGSA180 = 0.0
- M_pgp181_9_c: + R_PGSA181_9 - R_PGPP181_9 = 0.0
- M_pgp181_c: - R_PGPP181 + R_PGSA181 = 0.0
- M_pgp182_9_12_c: + R_PGSA182_9_12 - R_PGPP182_9_12 = 0.0
- M_pgp183_6_9_12_c: + R_PGSA183_6_9_12 - R_PGPP183_6_9_12 = 0.0
- M_pgp183_9_12_15_c: + R_PGSA183_9_12_15 - R_PGPP183_9_12_15 = 0.0
- M_pgp184_6_9_12_15_c: - R_PGPP184_6_9_12_15 + R_PGSA184_6_9_12_15 = 0.0
- M_phbg_c: - R_PHBS_syn - R_Sink_phbg = 0.0
- M_phdp_c: - R_DHNAPHT - R_CHPHYS - R_HGPHT + R_GGDPR = 0.0
- M_phe_L_c: - R_PHETRS - R_PHETA1 -0.04015800600000000303 R_BiomassProtein = 0.0
- M_pheme_c: + R_FCLT - R_HOXG - R_HEMEOS -0.00326361939999999986 R_BiomassSolubleP = 0.0
- M_phetrna_c: + R_PHETRS = 0.0
- M_phllqne_c: + R_DMTPHT -0.02403033980000000153 R_BiomassSolubleP = 0.0
+ M_pc_SC_c: +0.01000000000000000021 R_DAGCPT_SC +0.01000000000000000021 R_PMETM_SC - R_PCDAGAT -0.01000000000000000021 R_PLD_SC -0.00500000000000000010 R_PLBPC_SC - R_PHLPDS1 +0.01000000000000000021 R_LPCAT_SC = 0.0
+ M_pc_SC_e: -0.00500000000000000010 R_PLBPC_SCe - R_EX_pc_SC_e_ = 0.0
+ M_pdx5p_c: + R_PYDXNK - R_PDX5PO = 0.0
+ M_pe_SC_c: -0.00004500000000000000 R_biomass_core +0.01000000000000000021 R_ETHAPT_SC - R_PEtv_SC - R_PHLPDS4 -0.01000000000000000021 R_PETOHM_SC -0.00004500000000000000 R_biomass_wildType - R_PEtg_SC - R_PEtm_SC = 0.0
+ M_pe_SC_g: + R_PEtg_SC +0.01000000000000000021 R_PSERDg_SC = 0.0
+ M_pe_SC_m: +0.01000000000000000021 R_PSERDm_SC + R_PEtm_SC = 0.0
+ M_pe_SC_v: + R_PEtv_SC +0.01000000000000000021 R_PSERDv_SC = 0.0
+ M_pectin_e: - R_EX_pectin_e_ - R_EPGALURSe = 0.0
+ M_pendp_c: - R_PENDPtm + R_GGTT = 0.0
+ M_pendp_m: + R_PENDPtm - R_PPTTm = 0.0
+ M_pep_c: + R_CITtbm + R_ENO - R_PYK - R_DDPA - R_PSCVTi + R_PPCK = 0.0
+ M_pep_m: - R_CITtbm - R_DDPAm = 0.0
+ M_pepd_c: + R_PEPDt3 - R_PEPAT = 0.0
+ M_pepd_e: - R_EX_pepd_e_ - R_PEPDt3 = 0.0
+ M_pg_SC_m: -0.01000000000000000021 R_CLPNSm_SC +0.01000000000000000021 R_PGPPAm_SC = 0.0
+ M_pgp_SC_m: +0.01000000000000000021 R_CDPDGPm_SC -0.01000000000000000021 R_PGPPAm_SC = 0.0
+ M_phe_L_c: + R_PHEt2m + R_PHEt2r - R_PHETRS - R_PHETA1 = 0.0
+ M_phe_L_e: - R_PHEt2r - R_EX_phe_L_e_ = 0.0
+ M_phe_L_m: - R_PHEt2m - R_PHETRSm = 0.0
+ M_pheac_c: - R_PHEACt + R_OHACT5 = 0.0
+ M_pheac_e: - R_EX_pheac_e_ + R_PHEACt = 0.0
+ M_pheme_m: + R_FCLTm - R_HEMEOSm = 0.0
+ M_phetrna_c: -0.13389999999999999125 R_biomass_core + R_PHETRS -0.13389999999999999125 R_biomass_wildType = 0.0
+ M_phetrna_m: + R_PHETRSm = 0.0
  M_phom_c: + R_HSK - R_THRS = 0.0
- M_photon_c: -2.00000000000000000000 R_PSI_2 + R_PHOtpp -2.00000000000000000000 R_PSI -2.00000000000000000000 R_PSII = 0.0
- M_photon_e: - R_PHOtex - R_EX_photon_e = 0.0
- M_photon_p: + R_PHOtex - R_PHOtpp = 0.0
- M_phpyr_c: + R_PHETA1 - R_PPOR + R_PPNDH = 0.0
- M_phthr_c: - R_PDX5PS = 0.0
- M_phytoe_c: + R_PHYTES2 - R_PHYTEDH2 - R_PHYTEDH1 = 0.0
- M_phytof_c: - R_PHYTFDH2 - R_PHYTFDH1 + R_PHYTEDH2 + R_PHYTEDH1 = 0.0
- M_pi_c: + R_CTPS2 + R_CTPS1 + R_PGPP184_6_9_12_15 + R_ACP1_FMN + R_FE2abcpp + R_COBALT2abcpp -3.00000000000000000000 R_ATPS4rpp + R_SULabcpp + R_SUCRabcpp_syn + R_PGPP183_9_12_15 + R_ZN2abcpp + R_PRFGS + R_NTD7 + R_PGPP181 + R_BCT1_syn + R_CBPS + R_ASPCT + R_G5SD + R_HISabcpp + R_PTRCabcpp - R_GLCP + R_PAPA181_9 + R_UAGCVT + R_PAPA183_6_9_12 + R_GAPDi_nadp + R_THFGLUS + R_SPP + R_ACCOACr + R_COBALT2abcpp_syn - R_GLCP2 + R_PGPP181_9 - R_PTAr + R_PROabcpp + R_PAPA184_6_9_12_15 + R_BPNT +2.00000000000000000000 R_PIuabcpp + R_GLUCYS + R_PAPA182_9_12 + R_CU2abcpp_syn - R_AGPR +16.87248018000000016059 R_BiomassMixo +4.32000000000000028422 R_BiomassProtein + R_SBP + R_GGPP + R_UAMAS + R_ASADi - R_PUNP1 + R_GLCGLYCabcpp_syn + R_UAMAGS + R_AHMMPS + R_METAT + R_CU2abcu_syn + R_CHORS + R_RBFSa + R_GLYabcpp + R_PPS +4.00000000000000000000 R_ADCYRS + R_PPC +2.00000000000000000000 R_PPA + R_GTHS - R_GAPDi + R_ADSS + R_NTP1 + R_NI2abcpp_syn + R_DNMPPA + R_SERabcpp + R_DHQS + R_OCBT + R_THRS + R_ALAabcpp + R_MGSA + R_PMDPHT -0.01627124300000000121 R_BiomassIon + R_FBP + R_UREAabcpp + R_PPNCL + R_DHFS + R_LEUabcpp + R_NTD4 + R_MAN1PT2 + R_GLNTRAT + R_PGLYCP + R_UAAGDS + R_ZNabcpp + R_ARGabcpp + R_MG2tpp + R_DDPA + R_QULNS + R_PDX5PS + R_PSCVTi + R_UDCPDP + R_UGLDDS2 + R_COCHL + R_MOBDabcpp +3.35999999999999987566 R_BiomassDNA +2.41000000000000014211 R_BiomassRNA + R_FTHFLi -3.00000000000000000000 R_ATPSu + R_MI1PP + R_UGMDDS + R_PGPP182_9_12 - R_MTAP +2.00000000000000000000 R_CYPHYS + R_ADCPS2 + R_ADCPS1 +17.69248018000000044481 R_BiomassHetero + R_PAPA181 + R_PAPA180 + R_PGPP160 + R_PGPP161 + R_LYSabcpp + R_PAPA161 + R_PAPA160 + R_CA2abcpp + R_PGPP180 + R_HISTP + R_NO3abcpp + R_PRAGS + R_SPMDabcpp + R_GLNabcpp + R_PGPP183_6_9_12 + R_PRASCS + R_PAPA183_9_12_15 + R_ALAALAr + R_GLNS +0.82999999999999996003 R_BiomassPept + R_DBTSr + R_SUCOAS + R_MPML +31.83248018000000101324 R_BiomassAuto + R_FE3abc + R_PRAIS = 0.0
- M_pi_e: - R_EX_pi_e - R_PItex = 0.0
- M_pi_p: - R_PIuabcpp + R_PItex = 0.0
- M_pmcoa_c: - R_AOXSr = 0.0
- M_pnto_R_c: + R_PANTS - R_PNTK = 0.0
- M_ppbng_c: + R_PPBNGS -4.00000000000000000000 R_HMBS = 0.0
- M_pphn_c: - R_PPNDH + R_CHORM - R_PPND = 0.0
- M_ppi_c: + R_PANTS + R_ALATRS + R_DNTPPA + R_PHYTES2 + R_FMNAT + R_SERTRS + R_NNATr - R_PPK2r + R_ASNTRS + R_DASYN184_6_9_12_15 + R_PHETRS + R_GLUTRS + R_THRTRS + R_PROTRS + R_ARGTRS +2.00000000000000000000 R_SQLS + R_GRTT + R_MNXR33817 + R_NMNAT + R_NMNS + R_TYRTRS + R_ACBIPGT + R_GMPS + R_THZPSN + R_ASPTRS + R_GLGC + R_FOLD3 +7.00000000000000000000 R_DPPS + R_DHNAPHT + R_GUACYC + R_DASYN183_9_12_15 + R_SUCBZL + R_TRPTRS + R_FRTT + R_NADS2 + R_HEMEOS + R_PHYTES + R_UPPRT + R_CHPHYS + R_DASYN181_9 + R_PPNCL3 + R_METAT + R_NTPP8 + R_NTPP9 + R_NTPP4 + R_ATPPRT - R_PPA + R_DASYN182_9_12 + R_GMPS2 + R_GALU + R_ILETRS + R_UAGDP + R_LEUTRS + R_GLYTRS + R_DASYN161 + R_DASYN160 + R_VALTRS + R_PTPAT + R_TMPPP + R_ANPRT + R_HGPHT + R_BiomassDNA + R_UDPDPS + R_MEPCT + R_G1PTT + R_BiomassRNA + R_NTPP2 - R_ORPT + R_ASNS1 + R_NNDPR + R_CYSTRS + R_ADPT + R_DMATT + R_ADNCYC + R_R05224 + R_MAN1PT - R_ADPT2 + R_LYSTRS + R_SADT + R_DASYN183_6_9_12 + R_ACS + R_GLUPRT + R_METTRS + R_ARGSS + R_GTPCII + R_DASYN181 + R_DASYN180 + R_HISTRS + R_PRATPP = 0.0
- M_ppp9_c: - R_FCLT + R_PPPGO - R_MPML = 0.0
- M_pppg9_c: - R_PPPGO + R_CPPPGO + R_CPPPGO2 = 0.0
- M_pppi_c: + R_PTHPS + R_PPK2r + R_NTPTP1 + R_CYRDAAT = 0.0
- M_pq_p: - R_NDH1_1p + R_CBFC2pp + R_CYTBDpp - R_SUCD2pp - R_NDH2_pp + R_CBFCpp - R_NDH1_4pp - R_NDH1_2p = 0.0
- M_pq_u: + R_CYTBDu - R_NDH1_1u - R_SUCD2u - R_NDH1_2u - R_NDH1_3u - R_FQR + R_CBFC2 - R_NDH2_syn - R_PSII + R_CBFCu = 0.0
- M_pqh2_p: + R_NDH1_1p - R_CBFC2pp - R_CYTBDpp + R_SUCD2pp + R_NDH2_pp - R_CBFCpp + R_NDH1_4pp + R_NDH1_2p = 0.0
- M_pqh2_u: - R_CYTBDu + R_NDH1_1u + R_SUCD2u + R_NDH1_2u + R_NDH1_3u + R_FQR - R_CBFC2 + R_NDH2_syn + R_PSII - R_CBFCu = 0.0
- M_pram_c: - R_PRAGS + R_GLUPRT = 0.0
+ M_phospholipid_c: -0.00006000000000000000 R_biomass_core + R_PHLPDS4 -0.00006000000000000000 R_biomass_wildType + R_PHLPDS3 + R_PHLPDS2 + R_PHLPDS1 = 0.0
+ M_phpyr_c: - R_PPYRDC + R_PHETA1 + R_PPNDH = 0.0
+ M_phthr_c: + R_OHPBAT - R_4HTHRS = 0.0
+ M_pi_c: + R_LPP_SC + R_CTPS2 + R_CTPS1 +59.30499999999999971578 R_biomass_core + R_ATPS + R_ATPM + R_G5SD - R_GLCP + R_G3PT + R_NDP7 + R_ACCOACr + R_OCBTi + R_ATPATF2 + R_ATPATF3 + R_ATPATF1 + R_PMI12346PH + R_GLUCYS +2.00000000000000000000 R_ATPH1 + R_PMI1346PH + R_SLFAT + R_NDP4 + R_NDP1 + R_NDP3 - R_PUNP5 - R_PUNP4 - R_PUNP7 - R_PUNP6 - R_PUNP1 - R_PUNP3 - R_PUNP2 + R_METAT + R_DAGPYP_SC - R_PIt2m + R_CHORS - R_PIt2v - R_PIt2p + R_PIt2r + R_RBFSa + R_NTP4 + R_NTP3 + R_DNMPPA + R_THRS +3.00000000000000000000 R_AKP1 + R_PMDPHT + R_NTD8 + R_SUCCtm + R_NTD11 + R_DHFS + R_NTD9 + R_GTHS + R_FTHFLi + R_CBPS + R_PI45BP5P_SC - R_PIt2n + R_MALtm + R_PRAGSr - R_MTAP - R_PNP + R_THMP + R_PRAIS + R_FBP26 - R_PIt5m + R_PI35BP5P_SC + R_G5SD2 + R_FBP + R_NTD1 + R_NTD3 + R_NTD2 + R_NTD5 + R_NTD4 + R_NTD7 + R_NTD6 + R_ASPCT - R_PYNP2r + R_DPMVD + R_2DOXG6PP + R_DKMPPD2 + R_THFGLUS + R_NTD10 + R_UREASE + R_BPNT +59.30499999999999971578 R_biomass_wildType + R_PC + R_FTHFCL - R_DURIPP - R_TMDPP + R_ASADi + R_AHMMPS - R_GAPD + R_4HTHRS +2.00000000000000000000 R_PPA + R_ADSS + R_TRE6PP + R_DHQS + R_MGSA + R_GLYCRT + R_PRASCS + R_GLNS + R_DBTSr + R_DDPA + R_QULNS + R_PSCVTi +2.00000000000000000000 R_UTPH1 + R_MI1PP + R_HYPOE + R_FTHFI + R_HISTP + R_NADPPPS +2.00000000000000000000 R_GTPH1 + R_PRFGS + R_PSP_L = 0.0
+ M_pi_e: - R_PIt2r +2.00000000000000000000 R_THMDPe + R_ACP1e - R_EX_pi_e_ + R_THMPe = 0.0
+ M_pi_g: + R_NDP3g - R_ATPS3g = 0.0
+ M_pi_m: + R_SUCOASm + R_FTHFCLm + R_PIt2m - R_PUNP3m + R_ACCOACrm + R_DDPAm +2.00000000000000000000 R_PPAm - R_SUCCtm + R_AGPRim + R_NADPPPSm - R_MALtm + R_PIt5m - R_PUNP1m + R_FTHFLmi - R_ATPS3m + R_PGPPAm_SC + R_ITCOALm = 0.0
+ M_pi_n: + R_PIt2n = 0.0
+ M_pi_r: + R_SBPP2er + R_SBPP1er = 0.0
+ M_pi_v: + R_PIt2v + R_TCHOLAabcv - R_ATPS3v + R_GTHRDabcv = 0.0
+ M_pi_x: + R_FA181COAabcp + R_FA182COAabcp + R_PIt2p + R_FA140COAabcp + R_FA160COAabcp + R_FA141COAabcp + R_FA180COAabcp + R_FA161COAabcp = 0.0
+ M_pmtcoa_c: -0.02000000000000000042 R_ZYMSTAT_SC - R_DESAT16 + R_FACOAL160 -0.27000000000000001776 R_AGAT_SC - R_FAS180COA -0.02000000000000000042 R_FECOSTAT_SC -0.02000000000000000042 R_ERGSTAT_SC -0.02000000000000000042 R_LANOSTAT_SC - R_SERPT - R_FA160COAabcp -0.27000000000000001776 R_GAT2_SC -0.27000000000000001776 R_GAT1_SC + R_FAS160COA -0.27000000000000001776 R_TRIGS_SC -0.02000000000000000042 R_EPISTAT_SC -0.27000000000000001776 R_LPCAT_SC = 0.0
+ M_pmtcoa_x: - R_PTE2x + R_FA160COAabcp + R_ACACT8p + R_FACOAL160p - R_ACOAO7p = 0.0
+ M_pnto_R_c: + R_PNTOt2 + R_PANTS - R_PNTK = 0.0
+ M_pnto_R_e: - R_EX_pnto_R_e_ - R_PNTOt2 = 0.0
+ M_ppbng_c: -4.00000000000000000000 R_HMBS + R_PPBNGS = 0.0
+ M_ppcoa_m: - R_MCITSm + R_OBDHm = 0.0
+ M_pphn_c: + R_CHORM - R_PPND - R_PPND2 - R_PPNDH = 0.0
+ M_ppi_c: + R_DNTPPA + R_FMNAT + R_SERTRS + R_FACOAL141 + R_GUAPRT + R_NAPRT + R_UDPACGLP + R_NMNAT +2.00000000000000000000 R_SQLS + R_ASPTRS + R_NADS1 + R_ARGSSr + R_METAT + R_UPPRT + R_ATPPRT + R_LYSTRS + R_PRATPP + R_FACOAL140 + R_ARGTRS + R_GALU + R_GALT + R_LEUTRS + R_FACOAL161 + R_FACOAL160 + R_FACOAL182 + R_FACOAL181 + R_TMPPP + R_ANPRT + R_GLYTRS - R_ORPT + R_ASNS1 + R_NNDPR + R_DMATT + R_ADNCYC + R_TYRTRS + R_MAN1PT + R_GLUPRT + R_AASAD2 + R_AASAD1 + R_PTPATi + R_PHETRS + R_PANTS + R_TRPTRS + R_GLUTRS + R_THRTRS + R_PROTRS + R_GRTT + R_DUTPDP + R_GGTT + R_GTPCII + R_CHLPCTD + R_GMPS2 + R_PPNCL2 + R_FRTT - R_PPA + R_ALATRS + R_ASNTRS + R_BACCL + R_PPItp + R_ILETRS + R_VALTRS + R_XPPT + R_HXPRT + R_SADT + R_GLNTRS + R_NNAT + R_ACS + R_DASYN_SC + R_CYSTRS + R_ADPT + R_PETHCT + R_METTRS + R_HISTRS + R_FACOAL180 = 0.0
+ M_ppi_m: + R_NNATm + R_ASPTRSm + R_NNDPRm + R_DASYNm_SC - R_PPAm + R_PTPATim + R_LEUTRSm + R_HEMEOSm + R_ACSm + R_HISTRSm + R_GLUTRSm + R_METTRSm + R_ASNTRSm + R_NAPRTm + R_HBZOPT6m + R_LYSTRSm + R_TRPTRSm + R_ILETRSm + R_PPTTm + R_VALTRSm + R_PHETRSm + R_ARGTRSm + R_FMNATm + R_TYRTRSm + R_THRTRSm + R_FOLD3m + R_NMNATm + R_COUCOAFm = 0.0
+ M_ppi_n: + R_NADS1n = 0.0
+ M_ppi_x: + R_FACOAL120p + R_FACOAL240p + R_FACOAL80p + R_FACOAL161p + R_FACOAL140p + R_FACOAL260p + R_ACSp + R_FACOAL141p - R_PPItp + R_FACOAL160p + R_FACOAL100p = 0.0
+ M_ppmi12346p_c: - R_PMI12346PH + R_PMI12346PS = 0.0
+ M_ppmi1346p_c: - R_PMI1346PH + R_PMI1346PS = 0.0
+ M_ppp9_m: - R_FCLTm +2.00000000000000000000 R_PPPGOm = 0.0
+ M_pppg9_c: + R_CPPPGO - R_PPPG9tm = 0.0
+ M_pppg9_m: -2.00000000000000000000 R_PPPGOm + R_PPPG9tm = 0.0
+ M_pram_c: - R_PRAGSr + R_GLUPRT = 0.0
  M_pran_c: + R_ANPRT - R_PRAIi = 0.0
- M_prbamp_c: - R_PRAMPC + R_PRATPP = 0.0
+ M_prbamp_c: + R_PRATPP - R_PRAMPC = 0.0
  M_prbatp_c: + R_ATPPRT - R_PRATPP = 0.0
- M_pre3a_c: - R_R05217 + R_PC20M = 0.0
- M_pre3b_c: + R_R05217 - R_PC17M = 0.0
- M_pre4_c: - R_PC11M + R_PC17M = 0.0
- M_pre5_c: + R_PC11M - R_R05219 = 0.0
- M_pre6a_c: - R_PC6AR + R_R05219 = 0.0
- M_pre6b_c: - R_PC6YM + R_PC6AR = 0.0
- M_pre8_c: + R_PC6YM - R_PC8XM = 0.0
- M_precyanphy_c: + R_CYPHYC - R_Sink_precyanphy - R_CYPHYS = 0.0
- M_prephytedp_c: - R_PHYTES2 + R_PHYTES = 0.0
  M_prfp_c: + R_PRAMPC - R_PRMICIi = 0.0
- M_prlp_c: + R_PRMICIi - R_IG3PS = 0.0
- M_pro_L_c: - R_PROTRS + R_PROabcpp -0.05132737939999999777 R_BiomassProtein + R_P5CR - R_PROD2 - R_PROAKGOX1r + R_P5CRx = 0.0
- M_pro_L_e: - R_PROtex - R_EX_pro_L_e = 0.0
- M_pro_L_p: - R_PROabcpp + R_PROtex = 0.0
- M_protrna_c: + R_PROTRS = 0.0
- M_prpp_c: - R_NMNS + R_PRPPS - R_UPPRT - R_ATPPRT - R_ANPRT + R_ORPT - R_NNDPR - R_ADPT + R_ADPT2 - R_GLUPRT = 0.0
- M_ptrc_c: - R_SPMS + R_PTRCabcpp + R_PTRCt2pp + R_AGMT -0.48618913060000001902 R_BiomassSolubleP = 0.0
- M_ptrc_e: - R_PTRCtex - R_EX_ptrc_e = 0.0
- M_ptrc_p: - R_PTRCabcpp - R_PTRCt2pp + R_PTRCtex = 0.0
- M_pyam5p_c: - R_PYAM5PO = 0.0
- M_pydam_c: + R_PYDXO = 0.0
- M_pydx5p_c: + R_PYAM5PO + R_PDX5PO = 0.0
- M_pydx_c: + R_PYDXNO - R_PYDXO = 0.0
- M_pydxn_c: - R_PYDXNO = 0.0
- M_pyr_c: + R_ADCL - R_PDH - R_ACHBS + R_ANS + R_DDPGA + R_PYK5 + R_PYK4 + R_PYK2 - R_PDHa + R_SPT_syn2 + R_LDH_D + R_THZSN + R_PYK - R_PPS + R_PYRtpp -2.00000000000000000000 R_ACLS - R_DXPS + R_PYK3 + R_ME1 + R_SHCHCS2 + R_ANS2 - R_ALAD_syn - R_POR_syn + R_SER_AL - R_DHDPS + R_CYSTL = 0.0
- M_pyr_e: - R_PYRtex - R_EX_pyr_e = 0.0
- M_pyr_p: + R_PYRtex - R_PYRtpp = 0.0
- M_q8_c: - R_NADH5 - R_SUCD4 = 0.0
- M_q8h2_c: + R_NADH5 + R_SUCD4 = 0.0
- M_quln_c: + R_QULNS - R_NNDPR = 0.0
- M_r1p_c: + R_PUNP1 - R_PPM = 0.0
- M_r5p_c: - R_PRPPS + R_ADPRDP + R_AMPN + R_PPM + R_RBK - R_TKT1 - R_RPI = 0.0
- M_rb15bp_c: + R_PRUK - R_RBCh - R_RBPC = 0.0
- M_rdmbzi_c: - R_ADOCBLS - R_Sink_rdmbzi = 0.0
- M_rib_D_c: - R_RBK + R_CYTDH = 0.0
- M_ribflv_c: + R_ACP1_FMN -0.00326361939999999986 R_BiomassSolubleP + R_RBFSb - R_RBFK = 0.0
- M_ru5p_D_c: - R_PRUK + R_GND - R_DB4PS + R_RPI - R_RPE = 0.0
- M_s17bp_c: - R_FBA3 - R_SBP + R_PFK_3 = 0.0
- M_s7p_c: + R_SBP - R_TALA + R_TKT1 - R_PFK_3 = 0.0
- M_s_c: - R_BTS4 = 0.0
- M_sbzcoa_c: + R_SUCBZL - R_NPHS = 0.0
- M_ser_L_c: - R_SERTRS - R_TRPS2 - R_TRPS1 - R_SPT_syn -0.05807074179999999891 R_BiomassProtein + R_SERabcpp - R_GHMT2r - R_SER_AL - R_SERATi = 0.0
- M_ser_L_e: - R_EX_ser_L_e - R_SERtex = 0.0
- M_ser_L_p: - R_SERabcpp + R_SERtex = 0.0
- M_sertrna_c: + R_SERTRS = 0.0
+ M_prlp_c: - R_IG3PS + R_PRMICIi = 0.0
+ M_pro_L_c: + R_PROt2r - R_PROtm + R_P5CR - R_PROTRS = 0.0
+ M_pro_L_e: - R_PROt2r - R_EX_pro_L_e_ = 0.0
+ M_pro_L_m: + R_PROtm - R_PRO1xm = 0.0
+ M_protrna_c: -0.16470000000000001306 R_biomass_core + R_PROTRS -0.16470000000000001306 R_biomass_wildType = 0.0
+ M_prpp_c: - R_GUAPRT - R_NAPRT - R_UPPRT - R_ATPPRT - R_ANPRT + R_ORPT - R_NNDPR - R_GLUPRT + R_PRPPS - R_XPPT - R_HXPRT - R_ADPT - R_PRPPtm = 0.0
+ M_prpp_m: - R_NNDPRm - R_NAPRTm + R_PRPPtm = 0.0
+ M_ps_SC_c: -0.00001700000000000000 R_biomass_core +0.01000000000000000021 R_PSERS_SC - R_PStm_SC - R_PStv_SC - R_PStg_SC -0.00001700000000000000 R_biomass_wildType = 0.0
+ M_ps_SC_g: + R_PStg_SC -0.01000000000000000021 R_PSERDg_SC = 0.0
+ M_ps_SC_m: + R_PStm_SC -0.01000000000000000021 R_PSERDm_SC +0.01000000000000000021 R_PSERSm_SC = 0.0
+ M_ps_SC_v: + R_PStv_SC -0.01000000000000000021 R_PSERDv_SC = 0.0
+ M_psd5p_c: + R_YUMPS = 0.0
+ M_pser_L_c: + R_PSERT - R_PSP_L = 0.0
+ M_psph1p_c: - R_PSPHPL - R_PSPH1Pter + R_SLCBK2 = 0.0
+ M_psph1p_r: - R_SBPP2er + R_PSPH1Pter = 0.0
+ M_psphings_c: - R_CERS224 - R_CERS226 + R_PSPHS - R_SLCBK2 = 0.0
+ M_psphings_r: + R_SBPP2er + R_CERASE224er - R_CERS226er - R_CERS224er + R_CERASE226er = 0.0
+ M_ptd134bp_SC_c: +0.01000000000000000021 R_PI3P4K_SC = 0.0
+ M_ptd135bp_SC_c: -0.01000000000000000021 R_PI35BP5P_SC +0.01000000000000000021 R_PI3P5K_SC = 0.0
+ M_ptd145bp_SC_c: -0.01000000000000000021 R_PI45BP5P_SC -0.01000000000000000021 R_PI45BPP_SC +0.01000000000000000021 R_PI4P5K_SC = 0.0
+ M_ptd1ino_SC_c: -0.00005300000000000000 R_biomass_core -0.01000000000000000021 R_MIP2CS324_SC +0.01000000000000000021 R_PINOS_SC - R_PTD1INOtn_SC -0.01000000000000000021 R_MIP2CS326_SC -0.01000000000000000021 R_IPCS126_SC -0.01000000000000000021 R_IPCS324_SC -0.01000000000000000021 R_MIP2CS224_SC -0.01000000000000000021 R_IPCS124_SC -0.01000000000000000021 R_MIP2CS126_SC -0.01000000000000000021 R_IPCS224_SC -0.00005300000000000000 R_biomass_wildType -0.01000000000000000021 R_MIP2CS226_SC -0.01000000000000000021 R_IPCS326_SC -0.01000000000000000021 R_IPCS226_SC -0.01000000000000000021 R_MIP2CS124_SC -0.01000000000000000021 R_PIN3K_SC -0.01000000000000000021 R_PIN4K_SC = 0.0
+ M_ptd1ino_SC_e: - R_EX_ptd1ino_SC_e_ -0.00500000000000000010 R_PLBP1I_SCe = 0.0
+ M_ptd1ino_SC_n: + R_PTD1INOtn_SC -0.01000000000000000021 R_PIN4Kn_SC = 0.0
+ M_ptd2meeta_SC_c: -0.01000000000000000021 R_PMETM_SC +0.01000000000000000021 R_MFAPS_SC - R_PHLPDS3 = 0.0
+ M_ptd3ino_SC_c: +0.01000000000000000021 R_PI35BP5P_SC -0.01000000000000000021 R_PI3P5K_SC -0.01000000000000000021 R_PI3P4K_SC +0.01000000000000000021 R_PIN3K_SC = 0.0
+ M_ptd4ino_SC_c: - R_PTD4INOtn_SC +0.01000000000000000021 R_PI45BP5P_SC -0.01000000000000000021 R_PI4P5K_SC +0.01000000000000000021 R_PIN4K_SC = 0.0
+ M_ptd4ino_SC_n: + R_PTD4INOtn_SC +0.01000000000000000021 R_PIN4Kn_SC = 0.0
+ M_ptdmeeta_SC_c: +0.01000000000000000021 R_PETOHM_SC -0.01000000000000000021 R_MFAPS_SC - R_PHLPDS2 = 0.0
+ M_ptrc_c: + R_ORNDC - R_SPMS + R_PTRCt3i - R_PTRCtex2 = 0.0
+ M_ptrc_e: - R_EX_ptrc_e_ - R_PTRCt3i + R_PTRCtex2 = 0.0
+ M_pyam5p_c: + R_PYDAMK - R_PYAM5PO - R_HYPOE = 0.0
+ M_pydam_c: - R_PYDAMK + R_PYDXO + R_HYPOE = 0.0
+ M_pydx5p_c: + R_PYDXK + R_PYAM5PO + R_PDX5PO = 0.0
+ M_pydx_c: - R_PYDXK + R_PYDXNO - R_PYDXO = 0.0
+ M_pydxn_c: - R_PYDXNK - R_PYDXNO = 0.0
+ M_pyr_c: + R_ADCL + R_CHRPL - R_PYRDC + R_ANS + R_D_LACDcm + R_CYSTL + R_SERD_L + R_THZPSN1_SC - R_PYRt2p - R_PYRt2m + R_L_LACD2cm + R_THZPSN2_SC - R_PC + R_PYK + R_AGTi - R_PYRDC2 + R_D_LACt2m + R_PYRt2 - R_PYRt + R_ALATA_L = 0.0
+ M_pyr_e: - R_EX_pyr_e_ - R_PYRt2 + R_PYRt = 0.0
+ M_pyr_m: + R_ME2m - R_PDHm + R_ALATA_Lm + R_D_LACDm + R_MCITL2m - R_ACHBSm + R_PYRt2m + R_ME1m - R_D_LACt2m -2.00000000000000000000 R_ACLSm = 0.0
+ M_pyr_x: + R_CYSTLp + R_PYRt2p = 0.0
+ M_q6_m: + R_CYOR_u6m - R_NADH2_u6cm - R_FDNG - R_SUCD3_u6m + R_2HMHMBQMTm - R_DHORD4i - R_DXHPScm - R_NADH2_u6m - R_SUCD2_u6m = 0.0
+ M_q6h2_m: - R_CYOR_u6m + R_NADH2_u6cm + R_FDNG + R_SUCD3_u6m + R_DHORD4i + R_DXHPScm + R_NADH2_u6m + R_SUCD2_u6m = 0.0
+ M_quln_c: + R_QUILSYN - R_NNDPR - R_QULNtm + R_QULNS = 0.0
+ M_quln_m: - R_NNDPRm + R_QULNtm = 0.0
+ M_r1p_c: + R_PUNP5 + R_PUNP7 + R_PUNP1 + R_PUNP3 + R_PNP - R_PPM + R_PYNP2r = 0.0
+ M_r1p_m: + R_PUNP3m + R_PUNP1m = 0.0
+ M_r5p_c: - R_TKT1 - R_RPI + R_PPM - R_PRPPS + R_AMPN - R_THZPSN2_SC + R_CMPN + R_RBK - R_YUMPS = 0.0
+ M_raffin_c: - R_RAFGH = 0.0
+ M_rib_D_c: + R_ADNUC + R_GNNUC - R_RBK + R_RIBt2 = 0.0
+ M_rib_D_e: - R_EX_rib_D_e_ - R_RIBt2 = 0.0
+ M_ribflv_c: -0.00098999999999999999 R_biomass_core - R_RIBFLVtm + R_RIBFLVt2 + R_RBFSb - R_RBFK -0.00098999999999999999 R_biomass_wildType = 0.0
+ M_ribflv_e: - R_RIBFLVt2 + R_ACP1e - R_EX_ribflv_e_ = 0.0
+ M_ribflv_m: - R_RBFKm + R_RIBFLVtm = 0.0
+ M_rnam_c: - R_PNP - R_RNMK = 0.0
+ M_ru5p_D_c: - R_DB4PS - R_RPE + R_RPI + R_GND = 0.0
+ M_s17bp_c: + R_PFK_3 - R_FBA3 = 0.0
+ M_s7p_c: + R_TKT1 - R_PFK_3 - R_TALA = 0.0
+ M_s_c: - R_BTSr = 0.0
+ M_saccrp_L_c: - R_SACCD2 + R_SACCD1 = 0.0
+ M_sbt_D_c: + R_MELTGH - R_SBTD_D2 + R_SBTR + R_SBT_Dt = 0.0
+ M_sbt_D_e: - R_EX_sbt_D_e_ - R_SBT_Dt = 0.0
+ M_sbt_L_c: + R_SBT_Lt - R_SBTD_L = 0.0
+ M_sbt_L_e: - R_SBT_Lt - R_EX_sbt_L_e_ = 0.0
+ M_scl_c: + R_SHCHD - R_SHCHF = 0.0
+ M_sdhlam_m: + R_AKGDam - R_AKGDbm = 0.0
+ M_ser_L_c: - R_SERTRS - R_TRPS1 - R_PSERS_SC - R_GHMT2r - R_SERt2m + R_SERt2r - R_SERD_L - R_SERPT - R_CYSTS - R_LSERDHr - R_SERATi + R_PSP_L = 0.0
+ M_ser_L_e: - R_EX_ser_L_e_ - R_SERt2r = 0.0
+ M_ser_L_m: + R_SERt2m - R_GHMT2rm - R_PSERSm_SC = 0.0
+ M_sertrna_c: + R_SERTRS -0.18540000000000000924 R_biomass_core -0.18540000000000000924 R_biomass_wildType = 0.0
+ M_sheme_c: + R_SHCHF = 0.0
  M_skm5p_c: + R_SHKK - R_PSCVTi = 0.0
  M_skm_c: - R_SHKK + R_SHK3D = 0.0
- M_sl26da_c: - R_SDPDS - R_SDPTA = 0.0
- M_sl2a6o_c: + R_THDPS + R_SDPTA = 0.0
- M_so3_c: + R_PAPSR - R_SULR_syn - R_SQD1 = 0.0
- M_so4_c: + R_SULabcpp -0.01627124300000000121 R_BiomassIon - R_SADT = 0.0
- M_so4_e: - R_EX_so4_e - R_SO4tex = 0.0
- M_so4_p: - R_SULabcpp + R_SO4tex = 0.0
- M_spmd_c: + R_SPMS + R_SPMDt2pp -0.09855741969999999574 R_BiomassSolubleP + R_SPMDabcpp = 0.0
- M_spmd_e: - R_EX_spmd_e - R_SPMDtex = 0.0
- M_spmd_p: - R_SPMDt2pp + R_SPMDtex - R_SPMDabcpp = 0.0
- M_sqdg160_c: -0.15195800000000000973 R_BiomassLipid + R_SQD2_160 = 0.0
- M_sqdg161_c: -0.01755500000000000116 R_BiomassLipid + R_SQD2_161 = 0.0
- M_sqdg180_c: -0.00333599999999999999 R_BiomassLipid + R_SQD2_180 = 0.0
- M_sqdg181_9_c: -0.01951999999999999916 R_BiomassLipid + R_SQD2_181_9 = 0.0
- M_sqdg181_c: -0.01951999999999999916 R_BiomassLipid + R_SQD2_181 = 0.0
- M_sqdg182_9_12_c: + R_SQD2_182_9_12 -0.05188700000000000256 R_BiomassLipid = 0.0
- M_sqdg183_6_9_12_c: -0.00160600000000000001 R_BiomassLipid + R_SQD2_183_6_9_12 = 0.0
- M_sqdg183_9_12_15_c: -0.00222399999999999985 R_BiomassLipid + R_SQD2_183_9_12_15 = 0.0
- M_sqdg184_6_9_12_15_c: -0.00000600000000000000 R_BiomassLipid + R_SQD2_184_6_9_12_15 = 0.0
- M_sql_c: - R_SQLC + R_SQLS - R_SQLC2 = 0.0
- M_ssaltpp_c: + R_OXGDC2 - R_SHCHCS2 = 0.0
- M_suc6p_c: - R_SPP + R_SPS = 0.0
- M_sucbz_c: + R_SUCBZS - R_SUCBZL = 0.0
- M_succ_c: + R_SSALyr + R_SDPDS + R_SUCCtpp - R_SUCD1 + R_PROAKGOX1r - R_SUCOAS = 0.0
- M_succ_e: - R_EX_succ_e - R_SUCCtex = 0.0
- M_succ_p: - R_SUCCtpp + R_SUCCtex = 0.0
- M_succoa_c: - R_THDPS -0.00143601889999999993 R_BiomassSolubleP + R_SUCOAS = 0.0
- M_sucr_c: + R_SUCRabcpp_syn + R_SPP = 0.0
- M_sucr_e: - R_SUCRtex - R_EX_sucr_e = 0.0
- M_sucr_p: - R_SUCRabcpp_syn + R_SUCRtex = 0.0
- M_sucsal_c: - R_SSALyr + R_ABTA + R_OXGDC = 0.0
- M_t3c11vaceACP_c: - R_EAR181y + R_3HAD181 = 0.0
- M_t3c5ddeceACP_c: - R_EAR121y + R_3HAD121 = 0.0
- M_t3c7mrseACP_c: - R_EAR141y + R_3HAD141 = 0.0
- M_t3c9palmeACP_c: - R_EAR161y + R_3HAD161 = 0.0
+ M_so3_c: + R_TAUDO - R_SO3ti + R_PAPSR + R_SULR = 0.0
+ M_so3_e: + R_SO3ti - R_EX_so3_e_ = 0.0
+ M_so4_c: -0.02000000000000000042 R_biomass_core + R_SO4ti - R_SLFAT -0.02000000000000000042 R_biomass_wildType - R_SADT = 0.0
+ M_so4_e: - R_EX_so4_e_ - R_SO4ti = 0.0
+ M_sph1p_c: - R_SPH1Pter - R_SPHPL + R_SLCBK1 = 0.0
+ M_sph1p_r: + R_SPH1Pter - R_SBPP1er = 0.0
+ M_sphgn_c: - R_CERS126 - R_CERS124 + R_3DSPHR - R_PSPHS - R_SLCBK1 = 0.0
+ M_sphgn_r: - R_CERS124er + R_CERASE126er - R_CERS126er + R_CERASE124er + R_SBPP1er = 0.0
+ M_spmd_c: - R_SPRMS + R_SPMS + R_SPMDt3i + R_POLYAO3 - R_DXHPScm - R_SPMDtex2 - R_SPMDAT1 = 0.0
+ M_spmd_e: - R_SPMDt3i - R_EX_spmd_e_ + R_SPMDtex2 = 0.0
+ M_sprm_c: + R_SPRMS + R_SPRMt2i - R_DIAT - R_POLYAO3 = 0.0
+ M_sprm_e: - R_SPRMt2i - R_EX_sprm_e_ = 0.0
+ M_sql_c: - R_SQLter + R_SQLS = 0.0
+ M_sql_r: + R_SQLter - R_SQLEr - R_SQLErx = 0.0
+ M_srb_L_c: + R_SBTD_L + R_SRB_Lt = 0.0
+ M_srb_L_e: - R_EX_srb_L_e_ - R_SRB_Lt = 0.0
+ M_stcoa_c: -0.02999999999999999889 R_ZYMSTAT_SC - R_DESAT18 -0.05000000000000000278 R_AGAT_SC + R_FAS180COA -0.02999999999999999889 R_FECOSTAT_SC -0.02999999999999999889 R_ERGSTAT_SC -0.02999999999999999889 R_LANOSTAT_SC -0.05000000000000000278 R_GAT2_SC -0.05000000000000000278 R_GAT1_SC -0.05000000000000000278 R_TRIGS_SC - R_FA180COAabcp -0.02999999999999999889 R_EPISTAT_SC -0.05000000000000000278 R_LPCAT_SC + R_FACOAL180 = 0.0
+ M_stcoa_x: + R_FAO240p - R_PTE8x - R_ACOAO8p + R_FA180COAabcp = 0.0
+ M_sterol_c: -0.00069999999999999999 R_biomass_core -0.00069999999999999999 R_biomass_wildType + R_STEROLS2 + R_STEROLS1 = 0.0
+ M_succ_c: - R_SUCFUMtm + R_FRDcm + R_ICL + R_TAUDO + R_SHSL4r + R_DHORDfum - R_SUCCtm + R_SSALy + R_SUCCt2r + R_SHSL1 = 0.0
+ M_succ_e: - R_EX_succ_e_ - R_SUCCt2r = 0.0
+ M_succ_m: - R_SUCOASm + R_SUCFUMtm + R_SUCCtm + R_MCITL2m + R_FRDm - R_SUCD1m - R_SUCD2_u6m = 0.0
+ M_succoa_m: - R_ALASm + R_SUCOASm + R_AKGDbm = 0.0
+ M_suchms_c: - R_SHSL4r - R_SHSL1 = 0.0
+ M_sucr_c: + R_SUCRt2 + R_RAFGH = 0.0
+ M_sucr_e: - R_SUCRe - R_SUCRt2 - R_EX_sucr_e_ = 0.0
+ M_sucsal_c: + R_ABTA - R_SSALy = 0.0
  M_tag6p_D_c: - R_PFK_2 = 0.0
  M_tagdp_D_c: + R_PFK_2 = 0.0
- M_tddec2eACP_c: - R_EAR120y + R_3HAD120 = 0.0
- M_tdeACP_c: + R_EAR141y - R_3OAS161 = 0.0
- M_tdec2eACP_c: - R_EAR100y + R_3HAD100 - R_T2DECAI = 0.0
- M_thdp_c: + R_DHDPRy - R_THDPS - R_MNXR33992 = 0.0
- M_thex2eACP_c: + R_3HAD60 - R_EAR60y = 0.0
- M_thf_c: - R_GLYCL + R_FMETTRS - R_THFGLUS -0.00326361939999999986 R_BiomassSolubleP + R_MOHMT + R_AICART + R_MNXR15637 + R_DHFR + R_FTHFD + R_METS - R_GHMT2r - R_FTHFLi + R_GLYCL_2 + R_GARFT = 0.0
+ M_taur_c: - R_TAUDO - R_TAURt = 0.0
+ M_taur_e: - R_EX_taur_e_ + R_TAURt = 0.0
+ M_tchola_c: - R_TCHOLAabcv = 0.0
+ M_tchola_v: + R_TCHOLAabcv = 0.0
+ M_td2coa_x: + R_ECOAH6p + R_ACOAO6p = 0.0
+ M_tdcoa_c: -0.01499999999999999944 R_ZYMSTAT_SC - R_DESAT14 + R_FACOAL140 -0.10000000000000000555 R_AGAT_SC -0.01499999999999999944 R_FECOSTAT_SC -0.01499999999999999944 R_ERGSTAT_SC - R_FA140COAabcp -0.01499999999999999944 R_LANOSTAT_SC + R_FAS140COA -0.10000000000000000555 R_GAT2_SC -0.10000000000000000555 R_GAT1_SC - R_FAS160COA -0.10000000000000000555 R_TRIGS_SC - R_GLPT -0.01499999999999999944 R_EPISTAT_SC -0.10000000000000000555 R_LPCAT_SC = 0.0
+ M_tdcoa_x: + R_ACACT7p + R_FACOAL140p + R_FA140COAabcp - R_ACOAO6p - R_PTE7x = 0.0
+ M_tdeACP_c: - R_FA141ACPH + R_FA141ACPtm = 0.0
+ M_tdeACP_m: + R_FAS141ACPm - R_FA141ACPtm = 0.0
+ M_tdecoa_c: + R_FACOAL141 + R_DESAT14 - R_FA141COAabcp = 0.0
+ M_tdecoa_x: - R_FAO141p_even + R_FACOAL141p + R_FA141COAabcp - R_FAO141p_odd = 0.0
+ M_tglp_c: + R_GLPT = 0.0
+ M_thf_c: - R_GHMT2r - R_FTHFLi + R_DHFRi - R_THFGLUS + R_TYRNFT + R_GARFTi + R_MOHMT + R_AICART + R_METS - R_THFOXR = 0.0
+ M_thf_m: + R_DHFRim - R_GLYCLm - R_GHMT2rm + R_FMETTRSm - R_GCCbim - R_GCC2bim - R_FTHFLmi = 0.0
  M_thfglu_c: + R_THFGLUS = 0.0
- M_thm_c: - R_TMK = 0.0
- M_thmmp_c: + R_TMK - R_TMPKr + R_TMPPP = 0.0
- M_thmpp_c: + R_TMPKr - R_OXGDC2 + R_SHCHCS2 = 0.0
- M_thr_L_c: - R_THRTRS -0.05495123019999999942 R_BiomassProtein + R_THRS - R_THRPS - R_THRD_L = 0.0
- M_thrp_c: + R_THRPS - R_THRPD = 0.0
- M_thrtrna_c: + R_THRTRS = 0.0
- M_thymd_c: - R_TMDK1 = 0.0
- M_tmrs2eACP_c: - R_EAR140y + R_3HAD140 = 0.0
- M_toct2eACP_c: + R_3HAD80 - R_EAR80y = 0.0
- M_toctd2eACP_c: - R_EAR180y + R_3HAD180 = 0.0
- M_tpalm2eACP_c: - R_EAR160y + R_3HAD160 = 0.0
- M_trdox_c: + R_PAPSR - R_TRDR + R_RNDR2 + R_RNDR3 + R_RNDR1 - R_FTR + R_RNDR4 = 0.0
- M_trdrd_c: - R_PAPSR + R_TRDR - R_RNDR2 - R_RNDR3 - R_RNDR1 + R_FTR - R_RNDR4 = 0.0
- M_trnaala_c: - R_ALATRS = 0.0
- M_trnaarg_c: - R_ARGTRS = 0.0
- M_trnaasn_c: - R_ASNTRS = 0.0
- M_trnaasp_c: - R_ASPTRS = 0.0
- M_trnacys_c: - R_CYSTRS = 0.0
- M_trnaglu_c: - R_GLUTRS + R_GLUTRR = 0.0
- M_trnagly_c: - R_GLYTRS = 0.0
- M_trnahis_c: - R_HISTRS = 0.0
- M_trnaile_c: - R_ILETRS = 0.0
- M_trnaleu_c: - R_LEUTRS = 0.0
- M_trnalys_c: - R_LYSTRS = 0.0
- M_trnamet_c: - R_METTRS = 0.0
- M_trnaphe_c: - R_PHETRS = 0.0
- M_trnapro_c: - R_PROTRS = 0.0
- M_trnaser_c: - R_SERTRS = 0.0
- M_trnathr_c: - R_THRTRS = 0.0
- M_trnatrp_c: - R_TRPTRS = 0.0
- M_trnatyr_c: - R_TYRTRS = 0.0
- M_trnaval_c: - R_VALTRS = 0.0
- M_trp_L_c: + R_TRPS2 + R_TRPS1 -0.01549908160000000069 R_BiomassProtein - R_TRPTRS = 0.0
- M_trptrna_c: + R_TRPTRS = 0.0
- M_tyr_L_c: - R_TYRTA - R_TYRTRS - R_THZPSN -0.02918645530000000057 R_BiomassProtein - R_THZSN = 0.0
- M_tyrtrna_c: + R_TYRTRS = 0.0
- M_u23ga_c: + R_U23GAAT - R_USHD - R_LPADSS = 0.0
- M_u3aga_c: - R_UHGADA + R_UAGAAT = 0.0
- M_u3hga_c: + R_UHGADA - R_U23GAAT = 0.0
- M_uGgl_c: - R_UGLDDS2 = 0.0
- M_uGgla_c: + R_UGLDDS2 = 0.0
- M_uaagmda_c: - R_PPTGS_Syn + R_UAGPT3 = 0.0
- M_uaccg_c: + R_UAGCVT - R_UAPGR = 0.0
- M_uacgam_c: - R_UAGCVT - R_UAGPT3 + R_UAGDP - R_UAGAAT - R_UAG2EMA = 0.0
- M_uagmda_c: - R_UAGPT3 + R_PAPPT3 = 0.0
- M_uama_c: + R_UAMAS - R_UAMAGS = 0.0
- M_uamag_c: + R_UAMAGS - R_UAAGDS = 0.0
- M_uamr_c: - R_UAMAS + R_UAPGR = 0.0
- M_udcpdp_c: + R_PPTGS_Syn -0.00078225739999999999 R_BiomassSolubleP - R_UDCPDP + R_UDPDPS = 0.0
- M_udcpp_c: - R_PAPPT3 + R_UDCPDP = 0.0
- M_udp_c: + R_MGDG182_9_12 + R_SQD2_182_9_12 + R_DGDG183_6_9_12 + R_DGDG181_9 + R_UMPK + R_MGDG181 - R_NDPK2 + R_SQD2_184_6_9_12_15 + R_MGDG181_9 + R_UAGPT3 + R_DGDG182_9_12 + R_MGDG183_6_9_12 + R_SQD2_160 - R_PYK2 + R_MGDG183_9_12_15 + R_MGDG160 + R_MGDG161 + R_SPS + R_MGDG180 + R_DGDG161 + R_DGDG160 + R_SQD2_180 + R_SQD2_181_9 + R_LPADSS + R_SQD2_183_9_12_15 + R_SQD2_161 - R_RNDR4 + R_SQD2_181 + R_DGDG183_9_12_15 + R_MGDG184_6_9_12_15 + R_DGDG184_6_9_12_15 + R_UAG2EMA + R_DGDG181 + R_DGDG180 + R_SQD2_183_6_9_12 = 0.0
- M_udpg_c: - R_UGLT - R_UDPG4E - R_SPS - R_SQD1 + R_GALU = 0.0
- M_udpgal_c: + R_UGLT - R_MGDG182_9_12 - R_DGDG183_6_9_12 - R_DGDG181_9 + R_UDPG4E - R_MGDG181 - R_MGDG181_9 - R_DGDG182_9_12 - R_MGDG183_6_9_12 - R_MGDG183_9_12_15 - R_MGDG160 - R_MGDG161 - R_MGDG180 - R_DGDG161 - R_DGDG160 - R_DGDG183_9_12_15 - R_MGDG184_6_9_12_15 - R_DGDG184_6_9_12_15 - R_DGDG181 - R_DGDG180 = 0.0
- M_udpsq_c: - R_SQD2_182_9_12 - R_SQD2_184_6_9_12_15 - R_SQD2_160 + R_SQD1 - R_SQD2_180 - R_SQD2_181_9 - R_SQD2_183_9_12_15 - R_SQD2_161 - R_SQD2_181 - R_SQD2_183_6_9_12 = 0.0
- M_ugmd_c: + R_UAAGDS - R_UGMDDS = 0.0
- M_ugmda_c: - R_PAPPT3 + R_UGMDDS = 0.0
- M_ump_c: - R_UMPK + R_USHD + R_UPPRT + R_NTPP8 + R_PAPPT3 + R_OMPDC = 0.0
- M_uppg1_c: - R_UPPDC2 = 0.0
- M_uppg3_c: - R_UPP3MT + R_UPP3S - R_UPPDC1 = 0.0
- M_ura_c: - R_UPPRT + R_CSND = 0.0
- M_urea_c: + R_AGMT + R_ARGN + R_UREAabcpp + R_GUDBUTNAH - R_UREA = 0.0
- M_urea_e: - R_UREAtex - R_EX_urea_e = 0.0
- M_urea_p: + R_UREAtex - R_UREAabcpp = 0.0
- M_utp_c: - R_CTPS2 - R_CTPS1 + R_NDPK2 + R_PYK2 + R_DCTPD2 - R_NTPP8 - R_GALU - R_UAGDP -0.25903462220000000871 R_BiomassRNA = 0.0
- M_val_L_c: - R_VALTA -0.06743145059999999802 R_BiomassProtein - R_VALTRS = 0.0
- M_valtrna_c: + R_VALTRS = 0.0
- M_xmp_c: - R_GMPS + R_IMPD - R_GMPS2 = 0.0
- M_xu5p_D_c: - R_TKT1 - R_TKT2 + R_RPE = 0.0
- M_zcarote_c: + R_PHYTFDH2 + R_PHYTFDH1 - R_ZCAROTDH1 = 0.0
- M_zeax_c: + R_BCAROHX2 -0.26541946799999999174 R_BiomassPigment = 0.0
- M_zn2_c: - R_ZN2abcpp -0.01292418770000000085 R_BiomassIon + R_ZNabcpp = 0.0
- M_zn2_e: - R_EX_zn2_e - R_Zn2tex = 0.0
- M_zn2_p: + R_ZN2abcpp - R_ZNabcpp + R_Zn2tex = 0.0
+ M_thm_c: - R_TMDPK + R_THMP + R_THMt2 - R_TMN = 0.0
+ M_thm_e: + R_THMDPe - R_EX_thm_e_ - R_THMt2 + R_THMPe = 0.0
+ M_thmmp_c: + R_TMPPP - R_THMP - R_TMPKr = 0.0
+ M_thmmp_e: - R_THMPe - R_EX_thmmp_e_ = 0.0
+ M_thmpp_c: + R_TMDPK - R_THMPPt2m - R_TMDPPK + R_TMPKr = 0.0
+ M_thmpp_e: - R_THMDPe - R_EX_thmpp_e_ = 0.0
+ M_thmpp_m: + R_THMPPt2m = 0.0
+ M_thmtp_c: + R_TMDPPK = 0.0
+ M_thr_L_c: - R_THRt2m + R_THRt2r + R_THRS - R_THRTRS - R_THRD_L - R_THRAi = 0.0
+ M_thr_L_e: - R_THRt2r - R_EX_thr_L_e_ = 0.0
+ M_thr_L_m: + R_THRt2m - R_THRD_Lm - R_THRTRSm = 0.0
+ M_thrtrna_c: -0.19139999999999998681 R_biomass_core + R_THRTRS -0.19139999999999998681 R_biomass_wildType = 0.0
+ M_thrtrna_m: + R_THRTRSm = 0.0
+ M_thym_c: - R_THYMt3r + R_TMDPP = 0.0
+ M_thym_e: + R_THYMt3r - R_EX_thym_e_ = 0.0
+ M_thymd_c: + R_THMDt2 + R_NTD5 - R_TMDPP - R_TMDK1 = 0.0
+ M_thymd_e: - R_EX_thymd_e_ - R_THMDt2 = 0.0
+ M_trdox_c: + R_RNTR2 + R_RNTR3 + R_RNTR1 + R_RNDR4 + R_RNDR2 + R_RNDR3 + R_RNDR1 + R_PAPSR - R_TRDR + R_THIORDXi + R_RNTR4 - R_TRDOXtp = 0.0
+ M_trdox_m: - R_TRDRm + R_THIORDXm = 0.0
+ M_trdox_n: + R_RNDR1n + R_RNDR4n + R_THIORDXni + R_RNDR2n + R_RNDR3n = 0.0
+ M_trdox_x: + R_THIORDXp + R_TRDOXtp = 0.0
+ M_trdrd_c: - R_RNTR2 - R_RNTR3 - R_RNTR1 - R_RNDR4 - R_RNDR2 - R_RNDR3 - R_RNDR1 - R_PAPSR - R_TRDRDtp + R_TRDR - R_THIORDXi - R_RNTR4 = 0.0
+ M_trdrd_m: + R_TRDRm - R_THIORDXm = 0.0
+ M_trdrd_n: - R_RNDR1n - R_RNDR4n - R_THIORDXni - R_RNDR2n - R_RNDR3n = 0.0
+ M_trdrd_x: + R_TRDRDtp - R_THIORDXp = 0.0
+ M_tre6p_c: + R_TRE6PS - R_TRE6PP = 0.0
+ M_tre_c: - R_TREH -0.02340000000000000066 R_biomass_wildType + R_TRE6PP - R_TREt2v + R_TREt2 = 0.0
+ M_tre_e: - R_EX_tre_e_ - R_TREt2 = 0.0
+ M_tre_v: - R_TREHv + R_TREt2v = 0.0
+ M_triglyc_SC_c: -0.00006600000000000001 R_biomass_core -0.01000000000000000021 R_TAGL_SC + R_PCDAGAT -0.00006600000000000001 R_biomass_wildType +0.01000000000000000021 R_TRIGS_SC = 0.0
+ M_trnaala_c: +0.45879999999999998561 R_biomass_core +0.45879999999999998561 R_biomass_wildType - R_ALATRS = 0.0
+ M_trnaarg_c: +0.16070000000000000950 R_biomass_core - R_ARGTRS +0.16070000000000000950 R_biomass_wildType = 0.0
+ M_trnaarg_m: - R_ARGTRSm = 0.0
+ M_trnaasn_c: +0.10169999999999999873 R_biomass_core +0.10169999999999999873 R_biomass_wildType - R_ASNTRS = 0.0
+ M_trnaasn_m: - R_ASNTRSm = 0.0
+ M_trnaasp_c: +0.29749999999999998668 R_biomass_core - R_ASPTRS +0.29749999999999998668 R_biomass_wildType = 0.0
+ M_trnaasp_m: - R_ASPTRSm = 0.0
+ M_trnacys_c: +0.00659999999999999996 R_biomass_core +0.00659999999999999996 R_biomass_wildType - R_CYSTRS = 0.0
+ M_trnagln_c: +0.10539999999999999369 R_biomass_core +0.10539999999999999369 R_biomass_wildType - R_GLNTRS = 0.0
+ M_trnaglu_c: +0.30180000000000001270 R_biomass_core - R_GLUTRS +0.30180000000000001270 R_biomass_wildType = 0.0
+ M_trnaglu_m: - R_GLUTRSm = 0.0
+ M_trnagly_c: +0.29039999999999999147 R_biomass_core - R_GLYTRS +0.29039999999999999147 R_biomass_wildType = 0.0
+ M_trnahis_c: +0.06629999999999999782 R_biomass_core +0.06629999999999999782 R_biomass_wildType - R_HISTRS = 0.0
+ M_trnahis_m: - R_HISTRSm = 0.0
+ M_trnaile_c: +0.19270000000000001017 R_biomass_core +0.19270000000000001017 R_biomass_wildType - R_ILETRS = 0.0
+ M_trnaile_m: - R_ILETRSm = 0.0
+ M_trnaleu_c: +0.29639999999999999680 R_biomass_core - R_LEUTRS +0.29639999999999999680 R_biomass_wildType = 0.0
+ M_trnaleu_m: - R_LEUTRSm = 0.0
+ M_trnalys_c: +0.28620000000000000995 R_biomass_core - R_LYSTRS +0.28620000000000000995 R_biomass_wildType = 0.0
+ M_trnalys_m: - R_LYSTRSm = 0.0
+ M_trnamet_c: +0.05070000000000000201 R_biomass_core +0.05070000000000000201 R_biomass_wildType - R_METTRS = 0.0
+ M_trnamet_m: - R_METTRSm = 0.0
+ M_trnaphe_c: +0.13389999999999999125 R_biomass_core - R_PHETRS +0.13389999999999999125 R_biomass_wildType = 0.0
+ M_trnaphe_m: - R_PHETRSm = 0.0
+ M_trnapro_c: +0.16470000000000001306 R_biomass_core - R_PROTRS +0.16470000000000001306 R_biomass_wildType = 0.0
+ M_trnaser_c: - R_SERTRS +0.18540000000000000924 R_biomass_core +0.18540000000000000924 R_biomass_wildType = 0.0
+ M_trnathr_c: +0.19139999999999998681 R_biomass_core - R_THRTRS +0.19139999999999998681 R_biomass_wildType = 0.0
+ M_trnathr_m: - R_THRTRSm = 0.0
+ M_trnatrp_c: +0.02840000000000000163 R_biomass_core - R_TRPTRS +0.02840000000000000163 R_biomass_wildType = 0.0
+ M_trnatrp_m: - R_TRPTRSm = 0.0
+ M_trnatyr_c: +0.10199999999999999345 R_biomass_core - R_TYRTRS +0.10199999999999999345 R_biomass_wildType = 0.0
+ M_trnatyr_m: - R_TYRTRSm = 0.0
+ M_trnaval_c: +0.26460000000000000187 R_biomass_core +0.26460000000000000187 R_biomass_wildType - R_VALTRS = 0.0
+ M_trnaval_m: - R_VALTRSm = 0.0
+ M_trp_L_c: - R_TRPTA - R_TRPt2m + R_TRPt2r + R_TRPS1 - R_TRPTRS - R_TRPO2 = 0.0
+ M_trp_L_e: - R_TRPt2r - R_EX_trp_L_e_ = 0.0
+ M_trp_L_m: + R_TRPt2m - R_TRPTRSm = 0.0
+ M_trptrna_c: -0.02840000000000000163 R_biomass_core + R_TRPTRS -0.02840000000000000163 R_biomass_wildType = 0.0
+ M_trptrna_m: + R_TRPTRSm = 0.0
+ M_ttc_c: + R_FAS240_L - R_FAS260 - R_FA240tp = 0.0
+ M_ttc_x: - R_FACOAL240p + R_PTE12x + R_FA240tp = 0.0
+ M_ttccoa_c: - R_CERS124 - R_CERS224 - R_TTCCOAtx = 0.0
+ M_ttccoa_r: - R_CERS124er + R_CERASE224er - R_CERS224er + R_CERASE124er = 0.0
+ M_ttccoa_x: + R_FACOAL240p - R_FAO240p - R_PTE12x + R_ACACT9p + R_TTCCOAtx = 0.0
+ M_ttdca_c: +0.01499999999999999944 R_FECOSTESTH_SC - R_FACOAL140 - R_FAS160 +0.10000000000000000555 R_TAGL_SC +0.01499999999999999944 R_LANOSTESTH_SC - R_FA140tp + R_FA140ACPH + R_FAS140 +0.01499999999999999944 R_EPISTESTH_SC - R_FAS161 +0.10000000000000000555 R_PLBPC_SC + R_TTDCAtr +0.01499999999999999944 R_ZYMSTESTH_SC +0.01499999999999999944 R_ERGSTESTH_SC = 0.0
+ M_ttdca_e: - R_EX_ttdca_e_ +0.01499999999999999944 R_EPISTESTH_SCe +0.10000000000000000555 R_PLBPC_SCe +0.01499999999999999944 R_ZYMSTESTH_SCe +0.01499999999999999944 R_FECOSTESTH_SCe +0.10000000000000000555 R_PLBP1I_SCe +0.01499999999999999944 R_LANOSTESTH_SCe +0.01499999999999999944 R_ERGSTESTH_SCe - R_TTDCAtr = 0.0
+ M_ttdca_x: - R_FACOAL140p + R_FA140tp + R_PTE7x = 0.0
+ M_ttdcea_c: - R_FACOAL141 + R_FA141ACPH + R_FAS141 - R_FA141tp = 0.0
+ M_ttdcea_x: - R_FACOAL141p + R_FA141tp = 0.0
+ M_tyr_L_c: + R_TYRTAi - R_TYRTRS + R_TYRt7 - R_TYRt6 - R_TYRNFT - R_TYRt2p + R_TYRt2r - R_TYRt2m = 0.0
+ M_tyr_L_e: - R_EX_tyr_L_e_ - R_TYRt2r = 0.0
+ M_tyr_L_m: + R_TYRTAim - R_TYRTRSm + R_TYRt2m = 0.0
+ M_tyr_L_v: - R_TYRt7 + R_TYRt6 = 0.0
+ M_tyr_L_x: + R_TYRTAip + R_TYRt2p = 0.0
+ M_tyrtrna_c: -0.10199999999999999345 R_biomass_core + R_TYRTRS -0.10199999999999999345 R_biomass_wildType = 0.0
+ M_tyrtrna_m: + R_TYRTRSm = 0.0
+ M_udp_c: + R_MEVK4 + R_UMPK - R_NDP7 + R_16GS + R_CHTNSrg - R_RNDR4 + R_ERGSTGLCT + R_13GS + R_GLYGS - R_NDPK2 + R_CHTNSbs + R_CHTNSsp + R_TRE6PS + R_GLCS2 = 0.0
+ M_udp_n: - R_RNDR4n + R_UMPKn = 0.0
+ M_udpacgal_c: + R_UDPACGLP - R_CHTNSrg - R_CHTNSbs - R_CHTNSsp = 0.0
+ M_udpg_c: - R_UGLT - R_UDPG4E - R_16GS + R_GALU - R_ERGSTGLCT - R_13GS - R_GLYGS - R_TRE6PS - R_GLCS2 = 0.0
+ M_udpgal_c: + R_UGLT + R_UDPG4E - R_UDPGALt2g + R_GALT = 0.0
+ M_udpgal_g: + R_UDPGALt2g = 0.0
+ M_ump_c: -0.05990000000000000185 R_biomass_core + R_UTPtm - R_UMPK + R_NDP7 + R_UPPRT + R_OMPDC + R_URIK2 + R_URIK1 - R_NTD2 - R_UMPtn -0.05990000000000000185 R_biomass_wildType + R_UTPH1 = 0.0
+ M_ump_m: - R_UTPtm = 0.0
+ M_ump_n: + R_UMPtn - R_UMPKn = 0.0
+ M_uppg3_c: - R_UPPDC1 - R_UPP3MT + R_UPP3S = 0.0
+ M_ura_c: - R_UPPRT + R_URAt2 + R_PYNP2r + R_DURIPP - R_YUMPS + R_CSND = 0.0
+ M_ura_e: - R_URAt2 - R_EX_ura_e_ = 0.0
+ M_urdglyc_c: + R_ALLTAHr - R_UGLYCHr = 0.0
+ M_urea_c: + R_ARGN + R_UREA2t2 + R_ALLTAHr - R_UREASE = 0.0
+ M_urea_e: - R_UREA2t2 - R_EX_urea_e_ = 0.0
+ M_uri_c: + R_URIt2 - R_URIK2 - R_URIK1 + R_NTD2 - R_PYNP2r + R_CYTD = 0.0
+ M_uri_e: - R_URIt2 - R_EX_uri_e_ = 0.0
+ M_utp_c: - R_CTPS2 - R_CTPS1 - R_UTPtm - R_UDPACGLP - R_MEVK4 - R_GALU - R_GALT + R_NDPK2 - R_RNTR4 - R_UTPH1 = 0.0
+ M_utp_m: + R_UTPtm = 0.0
+ M_val_L_c: - R_VALt2m + R_VALt2r - R_VALTA - R_VALTRS = 0.0
+ M_val_L_e: - R_VALt2r - R_EX_val_L_e_ = 0.0
+ M_val_L_m: - R_VALTAim + R_VALt2m - R_VALTRSm = 0.0
+ M_valtrna_c: -0.26460000000000000187 R_biomass_core -0.26460000000000000187 R_biomass_wildType + R_VALTRS = 0.0
+ M_valtrna_m: + R_VALTRSm = 0.0
+ M_xan_c: + R_GUAD + R_PUNP7 + R_XANt - R_XPPT = 0.0
+ M_xan_e: - R_EX_xan_e_ - R_XANt = 0.0
+ M_xmp_c: + R_IMPD - R_NTD10 - R_GMPS2 + R_XPPT = 0.0
+ M_xtsn_c: - R_PUNP7 + R_XTSNt2 + R_NTD10 = 0.0
+ M_xtsn_e: - R_EX_xtsn_e_ - R_XTSNt2 = 0.0
+ M_xu5p_D_c: - R_TKT1 - R_TKT2 + R_RPE - R_THZPSN1_SC + R_XYLK = 0.0
+ M_xyl_D_c: - R_XYLR + R_XYLt = 0.0
+ M_xyl_D_e: - R_EX_xyl_D_e_ - R_XYLt = 0.0
+ M_xylt_c: + R_XYLTt + R_XYLR - R_XYLTD_D = 0.0
+ M_xylt_e: - R_EX_xylt_e_ - R_XYLTt = 0.0
+ M_xylu_D_c: - R_XYLK + R_XYLTD_D = 0.0
+ M_zym_int1_c: + R_C4STMO2 - R_C3STDH2 = 0.0
+ M_zym_int2_c: - R_C3STKR2 + R_C3STDH2 = 0.0
+ M_zymst_c: -0.01000000000000000021 R_ZYMSTAT_SC -0.00150000000000000003 R_biomass_core - R_CHLSTI + R_C3STKR2 - R_SAM24MT -0.00150000000000000003 R_biomass_wildType + R_ZYMSTt +0.01000000000000000021 R_ZYMSTESTH_SC = 0.0
+ M_zymst_e: - R_EX_zymst_e_ +0.01000000000000000021 R_ZYMSTESTH_SCe - R_ZYMSTt = 0.0
+ M_zymstest_SC_c: +0.01000000000000000021 R_ZYMSTAT_SC -0.01000000000000000021 R_ZYMSTESTH_SC = 0.0
+ M_zymstest_SC_e: -0.01000000000000000021 R_ZYMSTESTH_SCe - R_EX_zymstest_SC_e_ = 0.0
 
 Bounds
--9999990.0 <= R_23BDD <= 9999990.0
--9999990.0 <= R_23DBtex <= 9999990.0
--9999990.0 <= R_23DBtpp <= 9999990.0
--9999990.0 <= R_34DHOXPEGOX <= 9999990.0
-0.0 <= R_34HPPOR <= 9999990.0
-0.0 <= R_3HAD100 <= 9999990.0
-0.0 <= R_3HAD120 <= 9999990.0
-0.0 <= R_3HAD121 <= 9999990.0
-0.0 <= R_3HAD140 <= 9999990.0
-0.0 <= R_3HAD141 <= 9999990.0
-0.0 <= R_3HAD160 <= 9999990.0
-0.0 <= R_3HAD161 <= 9999990.0
-0.0 <= R_3HAD180 <= 9999990.0
-0.0 <= R_3HAD181 <= 9999990.0
-0.0 <= R_3HAD40 <= 9999990.0
-0.0 <= R_3HAD60 <= 9999990.0
-0.0 <= R_3HAD80 <= 9999990.0
--9999990.0 <= R_3OAR100 <= 9999990.0
--9999990.0 <= R_3OAR120 <= 9999990.0
-0.0 <= R_3OAR121 <= 9999990.0
-0.0 <= R_3OAR140 <= 9999990.0
-0.0 <= R_3OAR141 <= 9999990.0
--9999990.0 <= R_3OAR160 <= 9999990.0
-0.0 <= R_3OAR161 <= 9999990.0
-0.0 <= R_3OAR180 <= 9999990.0
-0.0 <= R_3OAR181 <= 9999990.0
--9999990.0 <= R_3OAR40 <= 9999990.0
--9999990.0 <= R_3OAR60 <= 9999990.0
--9999990.0 <= R_3OAR80 <= 9999990.0
-0.0 <= R_3OAS100 <= 9999990.0
-0.0 <= R_3OAS120 <= 9999990.0
-0.0 <= R_3OAS121 <= 9999990.0
-0.0 <= R_3OAS140 <= 9999990.0
-0.0 <= R_3OAS141 <= 9999990.0
-0.0 <= R_3OAS160 <= 9999990.0
-0.0 <= R_3OAS161 <= 9999990.0
-0.0 <= R_3OAS180 <= 9999990.0
-0.0 <= R_3OAS181 <= 9999990.0
-0.0 <= R_3OAS60 <= 9999990.0
-0.0 <= R_3OAS80 <= 9999990.0
-0.0 <= R_AACOAR_syn <= 9999990.0
-0.0 <= R_ABTA <= 9999990.0
-0.0 <= R_ABUTD <= 9999990.0
-0.0 <= R_ACBIPGT <= 9999990.0
--9999990.0 <= R_ACCOACr <= 9999990.0
-0.0 <= R_ACGK <= 9999990.0
-0.0 <= R_ACGS <= 9999990.0
-0.0 <= R_ACHBS <= 9999990.0
--9999990.0 <= R_ACKr <= 9999990.0
--9999990.0 <= R_ACLDC <= 9999990.0
-0.0 <= R_ACLS <= 9999990.0
--9999990.0 <= R_ACOATA_syn <= 9999990.0
--9999990.0 <= R_ACONT1 <= 9999990.0
--9999990.0 <= R_ACONT2 <= 9999990.0
--9999990.0 <= R_ACOTA <= 9999990.0
-0.0 <= R_ACP1_FMN <= 9999990.0
-0.0 <= R_ACS <= 9999990.0
--9999990.0 <= R_ACt2rpp <= 9999990.0
--9999990.0 <= R_ACtex <= 9999990.0
-0.0 <= R_ADCL <= 9999990.0
-0.0 <= R_ADCPS1 <= 9999990.0
-0.0 <= R_ADCPS2 <= 9999990.0
-0.0 <= R_ADCS <= 9999990.0
-0.0 <= R_ADCYRS <= 9999990.0
--9999990.0 <= R_ADK1 <= 9999990.0
--9999990.0 <= R_ADK_syn <= 9999990.0
-0.0 <= R_ADMDC <= 9999990.0
-0.0 <= R_ADNCYC <= 9999990.0
-0.0 <= R_ADOCBLS <= 9999990.0
-0.0 <= R_ADPRDP <= 9999990.0
--9999990.0 <= R_ADPT2 <= 9999990.0
-0.0 <= R_ADPT <= 9999990.0
-0.0 <= R_ADSK <= 9999990.0
--9999990.0 <= R_ADSL1r <= 9999990.0
--9999990.0 <= R_ADSL2r <= 9999990.0
-0.0 <= R_ADSS <= 9999990.0
-0.0 <= R_AGMT <= 9999990.0
-0.0 <= R_AGPAT160 <= 9999990.0
-0.0 <= R_AGPAT161 <= 9999990.0
-0.0 <= R_AGPAT180 <= 9999990.0
-0.0 <= R_AGPAT181_9 <= 9999990.0
-0.0 <= R_AGPAT181 <= 9999990.0
-0.0 <= R_AGPAT182_9_12 <= 9999990.0
-0.0 <= R_AGPAT183_6_9_12 <= 9999990.0
-0.0 <= R_AGPAT183_9_12_15 <= 9999990.0
-0.0 <= R_AGPAT184_6_9_12_15 <= 9999990.0
--9999990.0 <= R_AGPR <= 9999990.0
-0.0 <= R_AHCi <= 9999990.0
-0.0 <= R_AHMMPS <= 9999990.0
--9999990.0 <= R_AICART <= 9999990.0
--9999990.0 <= R_AIRCr <= 9999990.0
--9999990.0 <= R_AKGtex <= 9999990.0
--9999990.0 <= R_AKGtpp <= 9999990.0
--9999990.0 <= R_ALAALAr <= 9999990.0
-0.0 <= R_ALAD_syn <= 9999990.0
--9999990.0 <= R_ALAR <= 9999990.0
-0.0 <= R_ALATRS <= 9999990.0
-0.0 <= R_ALAabcpp <= 9999990.0
--9999990.0 <= R_ALAtex <= 9999990.0
--9999990.0 <= R_ALCD19 <= 9999990.0
--9999990.0 <= R_ALCD2y <= 9999990.0
-0.0 <= R_ALDD20x <= 9999990.0
--9999990.0 <= R_ALDD2xr <= 9999990.0
-0.0 <= R_AMID2 <= 9999990.0
-0.0 <= R_AMID3 <= 9999990.0
-0.0 <= R_AMID <= 9999990.0
-0.0 <= R_AMPN <= 9999990.0
-0.0 <= R_AMPTASECG <= 9999990.0
-0.0 <= R_ANPRT <= 9999990.0
-0.0 <= R_ANS2 <= 9999990.0
-0.0 <= R_ANS <= 9999990.0
--9999990.0 <= R_AOXSr <= 9999990.0
-0.0 <= R_APRAUR <= 9999990.0
-0.0 <= R_ARGDC <= 9999990.0
-0.0 <= R_ARGDH <= 9999990.0
-0.0 <= R_ARGD <= 9999990.0
-0.0 <= R_ARGN <= 9999990.0
--9999990.0 <= R_ARGSL <= 9999990.0
-0.0 <= R_ARGSS <= 9999990.0
-0.0 <= R_ARGTRS <= 9999990.0
-0.0 <= R_ARGabcpp <= 9999990.0
--9999990.0 <= R_ARGtex <= 9999990.0
-0.0 <= R_ASADi <= 9999990.0
-0.0 <= R_ASNN <= 9999990.0
-0.0 <= R_ASNS1 <= 9999990.0
-0.0 <= R_ASNTRS <= 9999990.0
-0.0 <= R_ASP1DC <= 9999990.0
-0.0 <= R_ASPCT <= 9999990.0
-0.0 <= R_ASPKi <= 9999990.0
-0.0 <= R_ASPO1 <= 9999990.0
-0.0 <= R_ASPO6 <= 9999990.0
--9999990.0 <= R_ASPTA <= 9999990.0
-0.0 <= R_ASPTRS <= 9999990.0
-0.0 <= R_ATPPRT <= 9999990.0
-0.0 <= R_ATPS4rpp <= 9999990.0
-0.0 <= R_ATPSu <= 9999990.0
-0.0 <= R_BAMPPALDOX <= 9999990.0
-0.0 <= R_BCAROHX2 <= 9999990.0
-0.0 <= R_BCAROHX <= 9999990.0
-0.0 <= R_BCAROKE <= 9999990.0
-0.0 <= R_BCT1_syn <= 9999990.0
-0.0 <= R_BILIRED <= 9999990.0
-0.0 <= R_BKTIO_syn <= 9999990.0
-0.0 <= R_BPNT <= 9999990.0
-0.0 <= R_BTS4 <= 9999990.0
-0.0 <= R_BiomassAuto <= 9999990.0
-0.0 <= R_BiomassDNA <= 9999990.0
-0.0 <= R_BiomassGlycogen <= 9999990.0
-0.0 <= R_BiomassHetero <= 9999990.0
-0.0 <= R_BiomassIon <= 9999990.0
-0.0 <= R_BiomassLPS <= 9999990.0
-0.0 <= R_BiomassLipid <= 9999990.0
-0.0 <= R_BiomassMixo <= 9999990.0
-0.0 <= R_BiomassPept <= 9999990.0
-0.0 <= R_BiomassPigment <= 9999990.0
-0.0 <= R_BiomassProtein <= 9999990.0
-0.0 <= R_BiomassRNA <= 9999990.0
-0.0 <= R_BiomassSolubleP <= 9999990.0
-0.0 <= R_CA2abcpp <= 9999990.0
-0.0 <= R_CA2t3pp <= 9999990.0
--9999990.0 <= R_CA2tex <= 9999990.0
-0.0 <= R_CAT <= 9999990.0
-0.0 <= R_CBFC2 <= 9999990.0
-0.0 <= R_CBFC2pp <= 9999990.0
-0.0 <= R_CBFCpp <= 9999990.0
-0.0 <= R_CBFCu <= 9999990.0
-0.0 <= R_CBMK <= 9999990.0
-0.0 <= R_CBPS <= 9999990.0
-0.0 <= R_CDPMEK <= 9999990.0
-0.0 <= R_CHORM <= 9999990.0
-0.0 <= R_CHORS <= 9999990.0
-0.0 <= R_CHPHYS <= 9999990.0
--9999990.0 <= R_CITtex <= 9999990.0
--9999990.0 <= R_CITtpp <= 9999990.0
--9999990.0 <= R_CO2tex <= 9999990.0
-0.0 <= R_CO2tpp <= 9999990.0
-0.0 <= R_COBALT2abcpp_syn <= 9999990.0
-0.0 <= R_COBALT2abcpp <= 9999990.0
--9999990.0 <= R_COBALT2tex <= 9999990.0
-0.0 <= R_COCHL <= 9999990.0
--9999990.0 <= R_COt <= 9999990.0
-0.0 <= R_CPPPGO2 <= 9999990.0
-0.0 <= R_CPPPGO <= 9999990.0
-0.0 <= R_CSND <= 9999990.0
-0.0 <= R_CS <= 9999990.0
-0.0 <= R_CTPS1 <= 9999990.0
-0.0 <= R_CTPS2 <= 9999990.0
-0.0 <= R_CU2abcpp_syn <= 9999990.0
-0.0 <= R_CU2abcu_syn <= 9999990.0
--9999990.0 <= R_CU2tex <= 9999990.0
-0.0 <= R_CYNTAH <= 9999990.0
-0.0 <= R_CYNTt2pp <= 9999990.0
--9999990.0 <= R_CYNTtex <= 9999990.0
-0.0 <= R_CYO1b2_syn <= 9999990.0
-0.0 <= R_CYO1b2pp_syn <= 9999990.0
-0.0 <= R_CYO1b_syn <= 9999990.0
-0.0 <= R_CYO1bpp_syn <= 9999990.0
-0.0 <= R_CYPHYC <= 9999990.0
-0.0 <= R_CYPHYS <= 9999990.0
-0.0 <= R_CYRDAAT <= 9999990.0
-0.0 <= R_CYRDAR <= 9999990.0
-0.0 <= R_CYSS <= 9999990.0
--9999990.0 <= R_CYSTA <= 9999990.0
-0.0 <= R_CYSTL <= 9999990.0
-0.0 <= R_CYSTRS <= 9999990.0
-0.0 <= R_CYTBDpp <= 9999990.0
-0.0 <= R_CYTBDu <= 9999990.0
-0.0 <= R_CYTDH <= 9999990.0
--9999990.0 <= R_CYTK1 <= 9999990.0
--9999990.0 <= R_Cotpp <= 9999990.0
-0.0 <= R_DAPDC <= 9999990.0
--9999990.0 <= R_DAPE <= 9999990.0
-0.0 <= R_DASYN160 <= 9999990.0
-0.0 <= R_DASYN161 <= 9999990.0
-0.0 <= R_DASYN180 <= 9999990.0
-0.0 <= R_DASYN181_9 <= 9999990.0
-0.0 <= R_DASYN181 <= 9999990.0
-0.0 <= R_DASYN182_9_12 <= 9999990.0
-0.0 <= R_DASYN183_6_9_12 <= 9999990.0
-0.0 <= R_DASYN183_9_12_15 <= 9999990.0
-0.0 <= R_DASYN184_6_9_12_15 <= 9999990.0
-0.0 <= R_DB4PS <= 9999990.0
--9999990.0 <= R_DBTSr <= 9999990.0
-0.0 <= R_DCTPD2 <= 9999990.0
-0.0 <= R_DCTPD <= 9999990.0
-0.0 <= R_DDPA <= 9999990.0
--9999990.0 <= R_DDPGA <= 9999990.0
-0.0 <= R_DES_12 <= 9999990.0
-0.0 <= R_DES_15 <= 9999990.0
-0.0 <= R_DES_6B <= 9999990.0
-0.0 <= R_DES_6 <= 9999990.0
-0.0 <= R_DES_9 <= 9999990.0
-0.0 <= R_DGDG160 <= 9999990.0
-0.0 <= R_DGDG161 <= 9999990.0
-0.0 <= R_DGDG180 <= 9999990.0
-0.0 <= R_DGDG181_9 <= 9999990.0
-0.0 <= R_DGDG181 <= 9999990.0
-0.0 <= R_DGDG182_9_12 <= 9999990.0
-0.0 <= R_DGDG183_6_9_12 <= 9999990.0
-0.0 <= R_DGDG183_9_12_15 <= 9999990.0
-0.0 <= R_DGDG184_6_9_12_15 <= 9999990.0
-0.0 <= R_DHAD1 <= 9999990.0
-0.0 <= R_DHAD2 <= 9999990.0
-0.0 <= R_DHDPRy <= 9999990.0
-0.0 <= R_DHDPS <= 9999990.0
--9999990.0 <= R_DHFR <= 9999990.0
-0.0 <= R_DHFS <= 9999990.0
-0.0 <= R_DHNAPHT <= 9999990.0
-0.0 <= R_DHNPA <= 9999990.0
--9999990.0 <= R_DHORD <= 9999990.0
--9999990.0 <= R_DHORTS <= 9999990.0
-0.0 <= R_DHPPDA <= 9999990.0
-0.0 <= R_DHPS <= 9999990.0
-0.0 <= R_DHQS <= 9999990.0
-0.0 <= R_DHQTi <= 9999990.0
-0.0 <= R_DMATT <= 9999990.0
-0.0 <= R_DMPPS_syn <= 9999990.0
-0.0 <= R_DMTPHT <= 9999990.0
-0.0 <= R_DM_5mdru1p <= 9999990.0
-0.0 <= R_DM_PHB <= 9999990.0
-0.0 <= R_DM_cyanphy <= 9999990.0
-0.0 <= R_DM_dna5mtc <= 9999990.0
-0.0 <= R_DNAMT_syn <= 9999990.0
-0.0 <= R_DNMPPA <= 9999990.0
-0.0 <= R_DNTPPA <= 9999990.0
-0.0 <= R_DPCOAK <= 9999990.0
--9999990.0 <= R_DPGM <= 9999990.0
-0.0 <= R_DPPS <= 9999990.0
-0.0 <= R_DPR <= 9999990.0
-0.0 <= R_DRBK <= 9999990.0
-0.0 <= R_DRPA <= 9999990.0
--9999990.0 <= R_DTMPK <= 9999990.0
-0.0 <= R_DVOCHR <= 9999990.0
-0.0 <= R_DXPRIi <= 9999990.0
-0.0 <= R_DXPS <= 9999990.0
-0.0 <= R_EAR100y <= 9999990.0
-0.0 <= R_EAR120y <= 9999990.0
-0.0 <= R_EAR121y <= 9999990.0
-0.0 <= R_EAR140y <= 9999990.0
-0.0 <= R_EAR141y <= 9999990.0
-0.0 <= R_EAR160y <= 9999990.0
-0.0 <= R_EAR161y <= 9999990.0
-0.0 <= R_EAR180y <= 9999990.0
-0.0 <= R_EAR181y <= 9999990.0
-0.0 <= R_EAR40y <= 9999990.0
-0.0 <= R_EAR60y <= 9999990.0
-0.0 <= R_EAR80y <= 9999990.0
-0.0 <= R_EHGLAT <= 9999990.0
--9999990.0 <= R_ENO <= 9999990.0
--9999990.0 <= R_ETOHtex <= 9999990.0
--9999990.0 <= R_ETOHtpp <= 9999990.0
-0.0 <= R_EX_23DB_e <= 9999990.0
-0.0 <= R_EX_ac_e <= 9999990.0
-0.0 <= R_EX_akg_e <= 9999990.0
-0.0 <= R_EX_ala_L_e <= 9999990.0
-0.0 <= R_EX_arg_L_e <= 9999990.0
--9999990.0 <= R_EX_ca2_e <= 9999990.0
-0.0 <= R_EX_cit_e <= 9999990.0
-0.0 <= R_EX_co2_e <= 9999990.0
-0.0 <= R_EX_co_e <= 9999990.0
--9999990.0 <= R_EX_cobalt2_e <= 9999990.0
--9999990.0 <= R_EX_cu2_e <= 9999990.0
-0.0 <= R_EX_cynt_e <= 9999990.0
-0.0 <= R_EX_etoh_e <= 9999990.0
--9999990.0 <= R_EX_fe2_e <= 9999990.0
--9999990.0 <= R_EX_fe3_e <= 9999990.0
-0.0 <= R_EX_fru_e <= 9999990.0
-0.0 <= R_EX_fum_e <= 9999990.0
-0.0 <= R_EX_glc_e <= 9999990.0
-0.0 <= R_EX_glcglyc_e <= 9999990.0
-0.0 <= R_EX_gln_L_e <= 9999990.0
-0.0 <= R_EX_glu_L_e <= 9999990.0
-0.0 <= R_EX_gly_e <= 9999990.0
-0.0 <= R_EX_h2_e <= 9999990.0
--9999990.0 <= R_EX_h2o_e <= 9999990.0
--9999990.0 <= R_EX_h_e <= 9999990.0
--37.0 <= R_EX_hco3_e <= 9999990.0
-0.0 <= R_EX_his_L_e <= 9999990.0
--9999990.0 <= R_EX_k_e <= 9999990.0
-0.0 <= R_EX_leu_L_e <= 9999990.0
-0.0 <= R_EX_lys_L_e <= 9999990.0
-0.0 <= R_EX_mal_L_e <= 9999990.0
--9999990.0 <= R_EX_mg2_e <= 9999990.0
--9999990.0 <= R_EX_mn2_e <= 9999990.0
--9999990.0 <= R_EX_mobd_e <= 9999990.0
--9999990.0 <= R_EX_na1_e <= 9999990.0
-0.0 <= R_EX_nh4_e <= 9999990.0
--9999990.0 <= R_EX_ni2_e <= 9999990.0
--9999990.0 <= R_EX_no3_e <= 9999990.0
--9999990.0 <= R_EX_o2_e <= 9999990.0
--300.0 <= R_EX_photon_e <= 0.0
--9999990.0 <= R_EX_pi_e <= 9999990.0
-0.0 <= R_EX_pro_L_e <= 9999990.0
-0.0 <= R_EX_ptrc_e <= 9999990.0
-0.0 <= R_EX_pyr_e <= 9999990.0
-0.0 <= R_EX_ser_L_e <= 9999990.0
--9999990.0 <= R_EX_so4_e <= 9999990.0
-0.0 <= R_EX_spmd_e <= 9999990.0
-0.0 <= R_EX_succ_e <= 9999990.0
-0.0 <= R_EX_sucr_e <= 9999990.0
-0.0 <= R_EX_urea_e <= 9999990.0
--9999990.0 <= R_EX_zn2_e <= 9999990.0
--9999990.0 <= R_FBA2 <= 9999990.0
--9999990.0 <= R_FBA3 <= 9999990.0
--9999990.0 <= R_FBA <= 9999990.0
-0.0 <= R_FBP <= 9999990.0
-0.0 <= R_FCLT <= 9999990.0
-0.0 <= R_FDH6pp <= 9999990.0
-0.0 <= R_FE2abcpp <= 9999990.0
--9999990.0 <= R_FE2tex <= 9999990.0
-0.0 <= R_FE3abc <= 9999990.0
--9999990.0 <= R_FE3tex <= 9999990.0
-0.0 <= R_FMETTRS <= 9999990.0
-0.0 <= R_FMNAT <= 9999990.0
--9999990.0 <= R_FNOR <= 9999990.0
-0.0 <= R_FOLD3 <= 9999990.0
--9999990.0 <= R_FOMETR <= 9999990.0
-0.0 <= R_FQR <= 9999990.0
-0.0 <= R_FRTT <= 9999990.0
-0.0 <= R_FRUt3 <= 9999990.0
--9999990.0 <= R_FRUtex <= 9999990.0
-0.0 <= R_FTHFD <= 9999990.0
-0.0 <= R_FTHFLi <= 9999990.0
-0.0 <= R_FTR <= 9999990.0
--9999990.0 <= R_FUM <= 9999990.0
--9999990.0 <= R_FUMtex <= 9999990.0
--9999990.0 <= R_FUMtpp <= 9999990.0
-0.0 <= R_G1PACT <= 9999990.0
-0.0 <= R_G1PTT <= 9999990.0
-0.0 <= R_G1SATi <= 9999990.0
-0.0 <= R_G3PAT160 <= 9999990.0
-0.0 <= R_G3PAT161 <= 9999990.0
-0.0 <= R_G3PAT180 <= 9999990.0
-0.0 <= R_G3PAT181_9 <= 9999990.0
-0.0 <= R_G3PAT181 <= 9999990.0
-0.0 <= R_G3PAT182_9_12 <= 9999990.0
-0.0 <= R_G3PAT183_6_9_12 <= 9999990.0
-0.0 <= R_G3PAT183_9_12_15 <= 9999990.0
-0.0 <= R_G3PAT184_6_9_12_15 <= 9999990.0
--9999990.0 <= R_G3PD2 <= 9999990.0
-0.0 <= R_G3PD <= 9999990.0
-0.0 <= R_G5SADs <= 9999990.0
-0.0 <= R_G5SD <= 9999990.0
-0.0 <= R_G6PBDH <= 9999990.0
-0.0 <= R_G6PDH2 <= 9999990.0
-0.0 <= R_GALK <= 9999990.0
--9999990.0 <= R_GALU <= 9999990.0
-0.0 <= R_GAPDi_nadp <= 9999990.0
-0.0 <= R_GAPDi <= 9999990.0
--9999990.0 <= R_GARFT <= 9999990.0
-0.0 <= R_GCALDD <= 9999990.0
-0.0 <= R_GCATENEC <= 9999990.0
--9999990.0 <= R_GDBTALDH <= 9999990.0
-0.0 <= R_GF6PTA <= 9999990.0
-0.0 <= R_GFUCS <= 9999990.0
-0.0 <= R_GGDPR <= 9999990.0
-0.0 <= R_GGPP <= 9999990.0
-0.0 <= R_GGPS <= 9999990.0
--9999990.0 <= R_GHMT2r <= 9999990.0
--9999990.0 <= R_GK1 <= 9999990.0
-0.0 <= R_GLBRAN2 <= 9999990.0
-0.0 <= R_GLCGLYCabcpp_syn <= 9999990.0
--9999990.0 <= R_GLCGLYCtex <= 9999990.0
-0.0 <= R_GLCP2 <= 9999990.0
-0.0 <= R_GLCP <= 9999990.0
-0.0 <= R_GLCS1 <= 9999990.0
--9999990.0 <= R_GLCt2pp <= 9999990.0
--9999990.0 <= R_GLCtex <= 9999990.0
-0.0 <= R_GLGC <= 9999990.0
-0.0 <= R_GLMS_syn <= 9999990.0
-0.0 <= R_GLNS <= 9999990.0
-0.0 <= R_GLNTRAT <= 9999990.0
-0.0 <= R_GLNabcpp <= 9999990.0
--9999990.0 <= R_GLNtex <= 9999990.0
-0.0 <= R_GLU5K <= 9999990.0
-0.0 <= R_GLUCYS <= 9999990.0
-0.0 <= R_GLUDC <= 9999990.0
--9999990.0 <= R_GLUDy <= 9999990.0
-0.0 <= R_GLUK_syn <= 9999990.0
-0.0 <= R_GLUN <= 9999990.0
-0.0 <= R_GLUPRT <= 9999990.0
--9999990.0 <= R_GLUR <= 9999990.0
-0.0 <= R_GLUSx <= 9999990.0
-0.0 <= R_GLUTRR <= 9999990.0
-0.0 <= R_GLUTRS <= 9999990.0
-0.0 <= R_GLUt4pp <= 9999990.0
--9999990.0 <= R_GLUtex <= 9999990.0
-0.0 <= R_GLUttrappp <= 9999990.0
-0.0 <= R_GLXCL <= 9999990.0
--9999990.0 <= R_GLXO3r <= 9999990.0
--9999990.0 <= R_GLYALDDr <= 9999990.0
-0.0 <= R_GLYCDx <= 9999990.0
-0.0 <= R_GLYCK <= 9999990.0
-0.0 <= R_GLYCL_2 <= 9999990.0
-0.0 <= R_GLYCL <= 9999990.0
-0.0 <= R_GLYCTO1 <= 9999990.0
-0.0 <= R_GLYCTO_syn <= 9999990.0
-0.0 <= R_GLYK <= 9999990.0
-0.0 <= R_GLYOX <= 9999990.0
-0.0 <= R_GLYTRS <= 9999990.0
-0.0 <= R_GLYabcpp <= 9999990.0
--9999990.0 <= R_GLYtex <= 9999990.0
-0.0 <= R_GMAND <= 9999990.0
-0.0 <= R_GMPS2 <= 9999990.0
-0.0 <= R_GMPS <= 9999990.0
-0.0 <= R_GND <= 9999990.0
-0.0 <= R_GRTT <= 9999990.0
--9999990.0 <= R_GTHP <= 9999990.0
-0.0 <= R_GTHRDH_syn <= 9999990.0
-0.0 <= R_GTHS <= 9999990.0
-0.0 <= R_GTPCII <= 9999990.0
-0.0 <= R_GTPCI <= 9999990.0
-0.0 <= R_GUACYC <= 9999990.0
-0.0 <= R_GUDBUTNAH <= 9999990.0
--9999990.0 <= R_H2ASE_syn <= 9999990.0
-0.0 <= R_H2CO3_NAt_syn <= 9999990.0
--9999990.0 <= R_H2Otex <= 9999990.0
--9999990.0 <= R_H2Otpp <= 9999990.0
--9999990.0 <= R_H2Otu_syn <= 9999990.0
--9999990.0 <= R_H2tex <= 9999990.0
--9999990.0 <= R_H2tpp <= 9999990.0
--9999990.0 <= R_HCO3E <= 9999990.0
--9999990.0 <= R_HCO3tex <= 9999990.0
-0.0 <= R_HEMEAS <= 9999990.0
-0.0 <= R_HEMEOS <= 9999990.0
-0.0 <= R_HEX1 <= 9999990.0
-0.0 <= R_HEX7 <= 9999990.0
-0.0 <= R_HGPHT <= 9999990.0
-0.0 <= R_HIBD_syn <= 9999990.0
-0.0 <= R_HISTD <= 9999990.0
-0.0 <= R_HISTP <= 9999990.0
-0.0 <= R_HISTRS <= 9999990.0
-0.0 <= R_HISabcpp <= 9999990.0
--9999990.0 <= R_HIStex <= 9999990.0
-0.0 <= R_HMBS <= 9999990.0
-0.0 <= R_HOXG <= 9999990.0
-0.0 <= R_HPPK <= 9999990.0
--9999990.0 <= R_HPROa <= 9999990.0
--9999990.0 <= R_HPROb <= 9999990.0
-0.0 <= R_HPYRR2_syn <= 9999990.0
--9999990.0 <= R_HSDx <= 9999990.0
-0.0 <= R_HSERTA <= 9999990.0
-0.0 <= R_HSK <= 9999990.0
-0.0 <= R_HSTPT <= 9999990.0
--9999990.0 <= R_Htex <= 9999990.0
-0.0 <= R_ICDHy <= 9999990.0
--9999990.0 <= R_ICHORS <= 9999990.0
-0.0 <= R_IG3PS <= 9999990.0
-0.0 <= R_IGPDH <= 9999990.0
-0.0 <= R_IGPS <= 9999990.0
--9999990.0 <= R_ILETA <= 9999990.0
-0.0 <= R_ILETRS <= 9999990.0
-0.0 <= R_IMACTD <= 9999990.0
--9999990.0 <= R_IMPC <= 9999990.0
-0.0 <= R_IMPD <= 9999990.0
--9999990.0 <= R_IPDDI <= 9999990.0
-0.0 <= R_IPDPS_syn <= 9999990.0
-0.0 <= R_IPMD <= 9999990.0
--9999990.0 <= R_IPPMIa <= 9999990.0
--9999990.0 <= R_IPPMIb <= 9999990.0
-0.0 <= R_IPPS <= 9999990.0
-0.0 <= R_KARA1i <= 9999990.0
-0.0 <= R_KARA2i <= 9999990.0
-0.0 <= R_KAS14 <= 9999990.0
-0.0 <= R_KAS15 <= 9999990.0
--9999990.0 <= R_Kex <= 9999990.0
-0.0 <= R_Ktpp <= 9999990.0
--9999990.0 <= R_LALDO <= 9999990.0
--9999990.0 <= R_LCARS <= 9999990.0
--9999990.0 <= R_LDH_D <= 9999990.0
-0.0 <= R_LEUTAi <= 9999990.0
--9999990.0 <= R_LEUTA <= 9999990.0
-0.0 <= R_LEUTRS <= 9999990.0
-0.0 <= R_LEUabcpp <= 9999990.0
--9999990.0 <= R_LEUtex <= 9999990.0
--9999990.0 <= R_LGTHL <= 9999990.0
-0.0 <= R_LPADSS <= 9999990.0
-0.0 <= R_LYCOPC <= 9999990.0
-0.0 <= R_LYSDC <= 9999990.0
-0.0 <= R_LYSTRS <= 9999990.0
-0.0 <= R_LYSabcpp <= 9999990.0
--9999990.0 <= R_LYStex <= 9999990.0
-0.0 <= R_MALT <= 9999990.0
--9999990.0 <= R_MALtex <= 9999990.0
--9999990.0 <= R_MALtpp <= 9999990.0
-0.0 <= R_MAN1PT2 <= 9999990.0
-0.0 <= R_MAN1PT <= 9999990.0
--9999990.0 <= R_MAN6PI <= 9999990.0
--9999990.0 <= R_MCOATA <= 9999990.0
--9999990.0 <= R_MDH <= 9999990.0
-0.0 <= R_ME1 <= 9999990.0
-0.0 <= R_MECDPDH_syn <= 9999990.0
-0.0 <= R_MECDPS <= 9999990.0
-0.0 <= R_MEHLER <= 9999990.0
-0.0 <= R_MEPCT <= 9999990.0
-0.0 <= R_METACH <= 9999990.0
-0.0 <= R_METAT <= 9999990.0
-0.0 <= R_METS <= 9999990.0
-0.0 <= R_METTRS <= 9999990.0
--9999990.0 <= R_MG2tex <= 9999990.0
-0.0 <= R_MG2tpp <= 9999990.0
-0.0 <= R_MGDG160 <= 9999990.0
-0.0 <= R_MGDG161 <= 9999990.0
-0.0 <= R_MGDG180 <= 9999990.0
-0.0 <= R_MGDG181_9 <= 9999990.0
-0.0 <= R_MGDG181 <= 9999990.0
-0.0 <= R_MGDG182_9_12 <= 9999990.0
-0.0 <= R_MGDG183_6_9_12 <= 9999990.0
-0.0 <= R_MGDG183_9_12_15 <= 9999990.0
-0.0 <= R_MGDG184_6_9_12_15 <= 9999990.0
-0.0 <= R_MGSA <= 9999990.0
-0.0 <= R_MI1PP <= 9999990.0
-0.0 <= R_MI1PS <= 9999990.0
-0.0 <= R_MNXR15637 <= 9999990.0
-0.0 <= R_MNXR33817 <= 9999990.0
-0.0 <= R_MNXR33992 <= 9999990.0
--9999990.0 <= R_MNXR6118 <= 9999990.0
-0.0 <= R_MNXR7081 <= 9999990.0
-0.0 <= R_MNt2pp <= 9999990.0
--9999990.0 <= R_MNtex <= 9999990.0
-0.0 <= R_MOBDabcpp <= 9999990.0
--9999990.0 <= R_MOBDtex <= 9999990.0
-0.0 <= R_MOHMT <= 9999990.0
--9999990.0 <= R_MPBQ <= 9999990.0
--9999990.0 <= R_MPML <= 9999990.0
-0.0 <= R_MPOMC1 <= 9999990.0
-0.0 <= R_MPOMC2 <= 9999990.0
-0.0 <= R_MPOMMM2 <= 9999990.0
-0.0 <= R_MPOMMM <= 9999990.0
-0.0 <= R_MPOMOR2 <= 9999990.0
-0.0 <= R_MPOMOR <= 9999990.0
-0.0 <= R_MPOMT <= 9999990.0
-0.0 <= R_MTAP <= 9999990.0
--9999990.0 <= R_MTHFC <= 9999990.0
-0.0 <= R_MTHFD2i <= 9999990.0
-0.0 <= R_MTHFD <= 9999990.0
-0.0 <= R_MTHFR2 <= 9999990.0
-0.0 <= R_MTRI <= 9999990.0
-0.0 <= R_NABTNO <= 9999990.0
-0.0 <= R_NADH5 <= 9999990.0
-0.0 <= R_NADK <= 9999990.0
-0.0 <= R_NADN <= 9999990.0
-0.0 <= R_NADS2 <= 9999990.0
-0.0 <= R_NADTRHD <= 9999990.0
-0.0 <= R_NAR_syn <= 9999990.0
--9999990.0 <= R_NAt3pp <= 9999990.0
--9999990.0 <= R_NAtex <= 9999990.0
-0.0 <= R_NDH1_1p <= 9999990.0
-0.0 <= R_NDH1_1u <= 9999990.0
-0.0 <= R_NDH1_2p <= 9999990.0
-0.0 <= R_NDH1_2u <= 9999990.0
-0.0 <= R_NDH1_3u <= 9999990.0
-0.0 <= R_NDH1_4pp <= 9999990.0
-0.0 <= R_NDH2_pp <= 9999990.0
-0.0 <= R_NDH2_syn <= 9999990.0
--9999990.0 <= R_NDPK10 <= 9999990.0
--9999990.0 <= R_NDPK1 <= 9999990.0
--9999990.0 <= R_NDPK2 <= 9999990.0
--9999990.0 <= R_NDPK3 <= 9999990.0
--9999990.0 <= R_NDPK4 <= 9999990.0
--9999990.0 <= R_NDPK5 <= 9999990.0
--9999990.0 <= R_NDPK6 <= 9999990.0
--9999990.0 <= R_NDPK7 <= 9999990.0
--9999990.0 <= R_NDPK8 <= 9999990.0
--9999990.0 <= R_NDPK9 <= 9999990.0
--9999990.0 <= R_NH4tex <= 9999990.0
-0.0 <= R_NH4tpp <= 9999990.0
-0.0 <= R_NI2abcpp_syn <= 9999990.0
-0.0 <= R_NMNAT <= 9999990.0
-0.0 <= R_NMNS <= 9999990.0
--9999990.0 <= R_NNATr <= 9999990.0
-0.0 <= R_NNDPR <= 9999990.0
-0.0 <= R_NO3abcpp <= 9999990.0
--9999990.0 <= R_NO3tex <= 9999990.0
-0.0 <= R_NOR_syn <= 9999990.0
-0.0 <= R_NPHS <= 9999990.0
-0.0 <= R_NTD4 <= 9999990.0
-0.0 <= R_NTD7 <= 9999990.0
-0.0 <= R_NTP1 <= 9999990.0
-0.0 <= R_NTPP2 <= 9999990.0
-0.0 <= R_NTPP4 <= 9999990.0
-0.0 <= R_NTPP8 <= 9999990.0
-0.0 <= R_NTPP9 <= 9999990.0
-0.0 <= R_NTPTP1 <= 9999990.0
--9999990.0 <= R_Ni2tex <= 9999990.0
--9999990.0 <= R_O2tc <= 9999990.0
--9999990.0 <= R_O2tex <= 9999990.0
--9999990.0 <= R_O2tu <= 9999990.0
--9999990.0 <= R_OCBT <= 9999990.0
-0.0 <= R_OMCDC <= 9999990.0
-0.0 <= R_OMPDC <= 9999990.0
-0.0 <= R_OPHBDC <= 9999990.0
--9999990.0 <= R_ORNTACr <= 9999990.0
-0.0 <= R_ORNTA <= 9999990.0
--9999990.0 <= R_ORPT <= 9999990.0
-0.0 <= R_OXADC <= 9999990.0
-0.0 <= R_OXGDC2 <= 9999990.0
-0.0 <= R_OXGDC <= 9999990.0
-0.0 <= R_P5CD <= 9999990.0
-0.0 <= R_P5CR <= 9999990.0
-0.0 <= R_P5CRx <= 9999990.0
-0.0 <= R_PANTS <= 9999990.0
-0.0 <= R_PAPA160 <= 9999990.0
-0.0 <= R_PAPA161 <= 9999990.0
-0.0 <= R_PAPA180 <= 9999990.0
-0.0 <= R_PAPA181_9 <= 9999990.0
-0.0 <= R_PAPA181 <= 9999990.0
-0.0 <= R_PAPA182_9_12 <= 9999990.0
-0.0 <= R_PAPA183_6_9_12 <= 9999990.0
-0.0 <= R_PAPA183_9_12_15 <= 9999990.0
-0.0 <= R_PAPA184_6_9_12_15 <= 9999990.0
-0.0 <= R_PAPPT3 <= 9999990.0
-0.0 <= R_PAPSR <= 9999990.0
-0.0 <= R_PC11M <= 9999990.0
-0.0 <= R_PC17M <= 9999990.0
-0.0 <= R_PC20M <= 9999990.0
-0.0 <= R_PC6AR <= 9999990.0
-0.0 <= R_PC6YM <= 9999990.0
-0.0 <= R_PC8XM <= 9999990.0
-0.0 <= R_PDHa <= 9999990.0
--9999990.0 <= R_PDHbr <= 9999990.0
--9999990.0 <= R_PDHcr <= 9999990.0
-0.0 <= R_PDH <= 9999990.0
--9999990.0 <= R_PDX5PO <= 9999990.0
-0.0 <= R_PDX5PS <= 9999990.0
-0.0 <= R_PFK_2 <= 9999990.0
-0.0 <= R_PFK_3 <= 9999990.0
-0.0 <= R_PFK <= 9999990.0
--9999990.0 <= R_PGAMT <= 9999990.0
-0.0 <= R_PGCD <= 9999990.0
--9999990.0 <= R_PGI2 <= 9999990.0
--9999990.0 <= R_PGI <= 9999990.0
--9999990.0 <= R_PGK <= 9999990.0
-0.0 <= R_PGLYCP <= 9999990.0
-0.0 <= R_PGL <= 9999990.0
--9999990.0 <= R_PGMT <= 9999990.0
--9999990.0 <= R_PGM <= 9999990.0
-0.0 <= R_PGPP160 <= 9999990.0
-0.0 <= R_PGPP161 <= 9999990.0
-0.0 <= R_PGPP180 <= 9999990.0
-0.0 <= R_PGPP181_9 <= 9999990.0
-0.0 <= R_PGPP181 <= 9999990.0
-0.0 <= R_PGPP182_9_12 <= 9999990.0
-0.0 <= R_PGPP183_6_9_12 <= 9999990.0
-0.0 <= R_PGPP183_9_12_15 <= 9999990.0
-0.0 <= R_PGPP184_6_9_12_15 <= 9999990.0
-0.0 <= R_PGSA160 <= 9999990.0
-0.0 <= R_PGSA161 <= 9999990.0
-0.0 <= R_PGSA180 <= 9999990.0
-0.0 <= R_PGSA181_9 <= 9999990.0
-0.0 <= R_PGSA181 <= 9999990.0
-0.0 <= R_PGSA182_9_12 <= 9999990.0
-0.0 <= R_PGSA183_6_9_12 <= 9999990.0
-0.0 <= R_PGSA183_9_12_15 <= 9999990.0
-0.0 <= R_PGSA184_6_9_12_15 <= 9999990.0
-0.0 <= R_PHBS_syn <= 9999990.0
-0.0 <= R_PHCD <= 9999990.0
--9999990.0 <= R_PHETA1 <= 9999990.0
--9999990.0 <= R_PHETRS <= 9999990.0
--9999990.0 <= R_PHOtex <= 9999990.0
--9999990.0 <= R_PHOtpp <= 9999990.0
-0.0 <= R_PHYTEDH1 <= 9999990.0
-0.0 <= R_PHYTEDH2 <= 9999990.0
-0.0 <= R_PHYTES2 <= 9999990.0
-0.0 <= R_PHYTES <= 9999990.0
-0.0 <= R_PHYTFDH1 <= 9999990.0
-0.0 <= R_PHYTFDH2 <= 9999990.0
--9999990.0 <= R_PItex <= 9999990.0
-0.0 <= R_PIuabcpp <= 9999990.0
--9999990.0 <= R_PMANM <= 9999990.0
-0.0 <= R_PMDPHT <= 9999990.0
-0.0 <= R_PNTK <= 9999990.0
-0.0 <= R_POR_syn <= 9999990.0
-0.0 <= R_POR <= 9999990.0
-0.0 <= R_PPA <= 9999990.0
-0.0 <= R_PPBNGS <= 9999990.0
-0.0 <= R_PPCDC <= 9999990.0
-0.0 <= R_PPC <= 9999990.0
--9999990.0 <= R_PPK2r <= 9999990.0
--9999990.0 <= R_PPM <= 9999990.0
-0.0 <= R_PPNCL3 <= 9999990.0
-0.0 <= R_PPNCL <= 9999990.0
-0.0 <= R_PPNDH <= 9999990.0
-0.0 <= R_PPND <= 9999990.0
-0.0 <= R_PPOR <= 9999990.0
-0.0 <= R_PPPGO <= 9999990.0
-0.0 <= R_PPS <= 9999990.0
-0.0 <= R_PPTGF_Syn <= 9999990.0
-0.0 <= R_PPTGS_Syn <= 9999990.0
-0.0 <= R_PRAGS <= 9999990.0
-0.0 <= R_PRAIS <= 9999990.0
-0.0 <= R_PRAIi <= 9999990.0
-0.0 <= R_PRAMPC <= 9999990.0
--9999990.0 <= R_PRASCS <= 9999990.0
-0.0 <= R_PRATPP <= 9999990.0
-0.0 <= R_PRFGS <= 9999990.0
-0.0 <= R_PRMICIi <= 9999990.0
--9999990.0 <= R_PROAKGOX1r <= 9999990.0
-0.0 <= R_PROD2 <= 9999990.0
-0.0 <= R_PROTRS <= 9999990.0
-0.0 <= R_PROabcpp <= 9999990.0
--9999990.0 <= R_PROtex <= 9999990.0
--9999990.0 <= R_PRPPS <= 9999990.0
-0.0 <= R_PRUK <= 9999990.0
-0.0 <= R_PSCVTi <= 9999990.0
-0.0 <= R_PSII <= 9999990.0
-0.0 <= R_PSI_2 <= 9999990.0
-0.0 <= R_PSI <= 9999990.0
--9999990.0 <= R_PTAr <= 9999990.0
-0.0 <= R_PTHPS <= 9999990.0
--9999990.0 <= R_PTPAT <= 9999990.0
-0.0 <= R_PTRCabcpp <= 9999990.0
-0.0 <= R_PTRCt2pp <= 9999990.0
--9999990.0 <= R_PTRCtex <= 9999990.0
--9999990.0 <= R_PUNP1 <= 9999990.0
-0.0 <= R_PUTA3 <= 9999990.0
-0.0 <= R_PYAM5PO <= 9999990.0
--9999990.0 <= R_PYDXNO <= 9999990.0
--9999990.0 <= R_PYDXO <= 9999990.0
-0.0 <= R_PYK2 <= 9999990.0
-0.0 <= R_PYK3 <= 9999990.0
-0.0 <= R_PYK4 <= 9999990.0
-0.0 <= R_PYK5 <= 9999990.0
-0.0 <= R_PYK <= 9999990.0
--9999990.0 <= R_PYRtex <= 9999990.0
--9999990.0 <= R_PYRtpp <= 9999990.0
-0.0 <= R_QULNS <= 9999990.0
-0.0 <= R_R05217 <= 9999990.0
-0.0 <= R_R05219 <= 9999990.0
-0.0 <= R_R05224 <= 9999990.0
-0.0 <= R_RBCh <= 9999990.0
-0.0 <= R_RBFK <= 9999990.0
-0.0 <= R_RBFSa <= 9999990.0
-0.0 <= R_RBFSb <= 9999990.0
-0.0 <= R_RBK <= 9999990.0
-0.0 <= R_RBPC <= 9999990.0
-0.0 <= R_RNDR1 <= 9999990.0
-0.0 <= R_RNDR2 <= 9999990.0
-0.0 <= R_RNDR3 <= 9999990.0
-0.0 <= R_RNDR4 <= 9999990.0
--9999990.0 <= R_RPE <= 9999990.0
--9999990.0 <= R_RPI <= 9999990.0
-0.0 <= R_SADT <= 9999990.0
-0.0 <= R_SBP <= 9999990.0
-0.0 <= R_SDPDS <= 9999990.0
--9999990.0 <= R_SDPTA <= 9999990.0
-0.0 <= R_SERATi <= 9999990.0
-0.0 <= R_SERTRS <= 9999990.0
-0.0 <= R_SER_AL <= 9999990.0
-0.0 <= R_SERabcpp <= 9999990.0
--9999990.0 <= R_SERtex <= 9999990.0
-0.0 <= R_SHCHCS2 <= 9999990.0
-0.0 <= R_SHK3D <= 9999990.0
-0.0 <= R_SHKK <= 9999990.0
--9999990.0 <= R_SO4tex <= 9999990.0
-0.0 <= R_SPMDabcpp <= 9999990.0
-0.0 <= R_SPMDt2pp <= 9999990.0
--9999990.0 <= R_SPMDtex <= 9999990.0
-0.0 <= R_SPMS <= 9999990.0
-0.0 <= R_SPP <= 9999990.0
-0.0 <= R_SPS <= 9999990.0
--9999990.0 <= R_SPT_syn2 <= 9999990.0
--9999990.0 <= R_SPT_syn <= 9999990.0
-0.0 <= R_SQD1 <= 9999990.0
-0.0 <= R_SQD2_160 <= 9999990.0
-0.0 <= R_SQD2_161 <= 9999990.0
-0.0 <= R_SQD2_180 <= 9999990.0
-0.0 <= R_SQD2_181_9 <= 9999990.0
-0.0 <= R_SQD2_181 <= 9999990.0
-0.0 <= R_SQD2_182_9_12 <= 9999990.0
-0.0 <= R_SQD2_183_6_9_12 <= 9999990.0
-0.0 <= R_SQD2_183_9_12_15 <= 9999990.0
-0.0 <= R_SQD2_184_6_9_12_15 <= 9999990.0
-0.0 <= R_SQLC2 <= 9999990.0
-0.0 <= R_SQLC <= 9999990.0
-0.0 <= R_SQLS <= 9999990.0
--9999990.0 <= R_SSALyr <= 9999990.0
-0.0 <= R_SUCBZL <= 9999990.0
-0.0 <= R_SUCBZS <= 9999990.0
--9999990.0 <= R_SUCCtex <= 9999990.0
--9999990.0 <= R_SUCCtpp <= 9999990.0
--9999990.0 <= R_SUCD1 <= 9999990.0
-0.0 <= R_SUCD2pp <= 9999990.0
-0.0 <= R_SUCD2u <= 9999990.0
--9999990.0 <= R_SUCD4 <= 9999990.0
--9999990.0 <= R_SUCOAS <= 9999990.0
-0.0 <= R_SUCRabcpp_syn <= 9999990.0
--9999990.0 <= R_SUCRtex <= 9999990.0
-0.0 <= R_SULR_syn <= 9999990.0
-0.0 <= R_SULabcpp <= 9999990.0
--9999990.0 <= R_Sink_dna <= 9999990.0
-0.0 <= R_Sink_glycogen <= 9999990.0
--9999990.0 <= R_Sink_phbg <= 9999990.0
--9999990.0 <= R_Sink_precyanphy <= 9999990.0
--9999990.0 <= R_Sink_rdmbzi <= 9999990.0
--9999990.0 <= R_T2DECAI <= 9999990.0
--9999990.0 <= R_TALA <= 9999990.0
-0.0 <= R_TDPDRE <= 9999990.0
-0.0 <= R_TDPDRR <= 9999990.0
-0.0 <= R_TDPGDH <= 9999990.0
-0.0 <= R_THDPS <= 9999990.0
--9999990.0 <= R_THFGLUS <= 9999990.0
-0.0 <= R_THRD_L <= 9999990.0
-0.0 <= R_THRPD <= 9999990.0
-0.0 <= R_THRPS <= 9999990.0
-0.0 <= R_THRS <= 9999990.0
-0.0 <= R_THRTRS <= 9999990.0
-0.0 <= R_THZPSN <= 9999990.0
-0.0 <= R_THZSN <= 9999990.0
--9999990.0 <= R_TKT1 <= 9999990.0
--9999990.0 <= R_TKT2 <= 9999990.0
-0.0 <= R_TMDK1 <= 9999990.0
-0.0 <= R_TMDS <= 9999990.0
-0.0 <= R_TMK <= 9999990.0
--9999990.0 <= R_TMPKr <= 9999990.0
-0.0 <= R_TMPPP <= 9999990.0
--9999990.0 <= R_TOCOPHOM1 <= 9999990.0
--9999990.0 <= R_TOCOPHOM2 <= 9999990.0
--9999990.0 <= R_TOCOPHS1 <= 9999990.0
-0.0 <= R_TOCOPHS2 <= 9999990.0
--9999990.0 <= R_TPI <= 9999990.0
-0.0 <= R_TRDR <= 9999990.0
-0.0 <= R_TRPS1 <= 9999990.0
--9999990.0 <= R_TRPS2 <= 9999990.0
-0.0 <= R_TRPS3 <= 9999990.0
-0.0 <= R_TRPTRS <= 9999990.0
--9999990.0 <= R_TRSARr <= 9999990.0
--9999990.0 <= R_TYRTA <= 9999990.0
-0.0 <= R_TYRTRS <= 9999990.0
-0.0 <= R_U23GAAT <= 9999990.0
-0.0 <= R_UAAGDS <= 9999990.0
--9999990.0 <= R_UAG2EMA <= 9999990.0
--9999990.0 <= R_UAGAAT <= 9999990.0
-0.0 <= R_UAGCVT <= 9999990.0
-0.0 <= R_UAGDP <= 9999990.0
-0.0 <= R_UAGPT3 <= 9999990.0
-0.0 <= R_UAMAGS <= 9999990.0
-0.0 <= R_UAMAS <= 9999990.0
-0.0 <= R_UAPGR <= 9999990.0
-0.0 <= R_UDCPDP <= 9999990.0
-0.0 <= R_UDPDPS <= 9999990.0
--9999990.0 <= R_UDPG4E <= 9999990.0
-0.0 <= R_UGLDDS2 <= 9999990.0
--9999990.0 <= R_UGLT <= 9999990.0
-0.0 <= R_UGMDDS <= 9999990.0
-0.0 <= R_UHGADA <= 9999990.0
--9999990.0 <= R_UMPK <= 9999990.0
-0.0 <= R_UPP3MT <= 9999990.0
-0.0 <= R_UPP3S <= 9999990.0
-0.0 <= R_UPPDC1 <= 9999990.0
-0.0 <= R_UPPDC2 <= 9999990.0
-0.0 <= R_UPPRT <= 9999990.0
-0.0 <= R_UREAabcpp <= 9999990.0
-0.0 <= R_UREA <= 9999990.0
--9999990.0 <= R_UREAtex <= 9999990.0
--9999990.0 <= R_URIDK2r <= 9999990.0
-0.0 <= R_USHD <= 9999990.0
--9999990.0 <= R_VALTA <= 9999990.0
-0.0 <= R_VALTRS <= 9999990.0
-0.0 <= R_ZCAROTDH1 <= 9999990.0
-0.0 <= R_ZCAROTDH2 <= 9999990.0
-0.0 <= R_ZN2abcpp <= 9999990.0
-0.0 <= R_ZNabcpp <= 9999990.0
--9999990.0 <= R_Zn2tex <= 9999990.0
+0.0 <= R_13BGHe <= 10000.0
+0.0 <= R_13BGH <= 10000.0
+0.0 <= R_13GS <= 10000.0
+0.0 <= R_16GS <= 10000.0
+0.0 <= R_23CAPPD <= 10000.0
+-10000.0 <= R_2DDA7Ptm <= 10000.0
+-10000.0 <= R_2DHPtm <= 10000.0
+0.0 <= R_2DOXG6PP <= 10000.0
+-10000.0 <= R_2HBO <= 10000.0
+-10000.0 <= R_2HBt2 <= 10000.0
+0.0 <= R_2HMHMBQMTm <= 10000.0
+0.0 <= R_2HP6MPMOm <= 10000.0
+0.0 <= R_2HPMBQMTm <= 10000.0
+0.0 <= R_2HPMMBQMOm <= 10000.0
+0.0 <= R_2MBACt <= 10000.0
+-10000.0 <= R_2MBALDt <= 10000.0
+-10000.0 <= R_2MBALDtm <= 10000.0
+-10000.0 <= R_2MBTOHt <= 10000.0
+-10000.0 <= R_2MBTOHtm <= 10000.0
+-10000.0 <= R_2MPPALt <= 10000.0
+-10000.0 <= R_2MPPALtm <= 10000.0
+-10000.0 <= R_2OBUTtm <= 10000.0
+0.0 <= R_2OXOADPtim <= 10000.0
+-10000.0 <= R_2PHETOHt <= 10000.0
+-10000.0 <= R_2PHETOHtm <= 10000.0
+0.0 <= R_34HPLFM <= 10000.0
+0.0 <= R_34HPPOR <= 10000.0
+-10000.0 <= R_34HPPt2m <= 10000.0
+-10000.0 <= R_34HPPt2p <= 10000.0
+-10000.0 <= R_3C3HMPt <= 10000.0
+-10000.0 <= R_3C3HMPtm <= 10000.0
+-10000.0 <= R_3C4MOPtm <= 10000.0
+0.0 <= R_3DH5HPBMTm <= 10000.0
+-10000.0 <= R_3DH5HPBtm <= 10000.0
+0.0 <= R_3DSPHR <= 10000.0
+0.0 <= R_3HAO <= 10000.0
+0.0 <= R_3HPH5MBDCm <= 10000.0
+0.0 <= R_3IPM3MT <= 10000.0
+-10000.0 <= R_3MBALDt <= 10000.0
+-10000.0 <= R_3MBALDtm <= 10000.0
+0.0 <= R_3MOBDC <= 10000.0
+-10000.0 <= R_3MOBtm <= 10000.0
+0.0 <= R_3MOPDC <= 10000.0
+-10000.0 <= R_3MOPt <= 10000.0
+-10000.0 <= R_3MOPtm <= 10000.0
+0.0 <= R_3OPHB5Hm <= 10000.0
+-10000.0 <= R_3OPHB_5tm <= 10000.0
+-10000.0 <= R_4ABUTNtm <= 10000.0
+-10000.0 <= R_4ABUTtm <= 10000.0
+-10000.0 <= R_4ABZt <= 10000.0
+-10000.0 <= R_4ABZtm <= 10000.0
+-10000.0 <= R_4H2OGLTtm <= 10000.0
+-10000.0 <= R_4H2OGLTtp <= 10000.0
+0.0 <= R_4HBZCOAFm <= 10000.0
+0.0 <= R_4HBZFm <= 10000.0
+-10000.0 <= R_4HBZtm <= 10000.0
+-10000.0 <= R_4HGLSDm <= 10000.0
+-10000.0 <= R_4HPRO_LTtm <= 10000.0
+0.0 <= R_4HTHRS <= 10000.0
+0.0 <= R_4MOPDC <= 10000.0
+0.0 <= R_5AOPt2 <= 10000.0
+-10000.0 <= R_5AOPtm <= 10000.0
+-10000.0 <= R_5FTHFt <= 10000.0
+-10000.0 <= R_6PGLter <= 10000.0
+-10000.0 <= R_8AONNt2 <= 10000.0
+0.0 <= R_AABTN <= 10000.0
+0.0 <= R_AACTOOR <= 10000.0
+0.0 <= R_AASAD1 <= 10000.0
+0.0 <= R_AASAD2 <= 10000.0
+-10000.0 <= R_AATA <= 10000.0
+0.0 <= R_ABTA <= 10000.0
+-10000.0 <= R_ABTt <= 10000.0
+0.0 <= R_ABUTDm <= 10000.0
+-10000.0 <= R_ABUTt2r <= 10000.0
+0.0 <= R_ACACT1 <= 10000.0
+0.0 <= R_ACACT1m <= 10000.0
+0.0 <= R_ACACT4p <= 10000.0
+0.0 <= R_ACACT5p <= 10000.0
+0.0 <= R_ACACT6p <= 10000.0
+0.0 <= R_ACACT7p <= 10000.0
+0.0 <= R_ACACT8p <= 10000.0
+0.0 <= R_ACACT9p <= 10000.0
+0.0 <= R_ACALDCD <= 10000.0
+-10000.0 <= R_ACALDt <= 10000.0
+-10000.0 <= R_ACALDtm <= 10000.0
+-10000.0 <= R_ACCOACr <= 10000.0
+-10000.0 <= R_ACCOACrm <= 10000.0
+-10000.0 <= R_ACCOAtn <= 10000.0
+0.0 <= R_ACESt <= 10000.0
+-10000.0 <= R_ACGAM6PS <= 10000.0
+-10000.0 <= R_ACGAMPM <= 10000.0
+0.0 <= R_ACGKm <= 10000.0
+0.0 <= R_ACGSm <= 10000.0
+0.0 <= R_ACHBSm <= 10000.0
+0.0 <= R_ACHLE1 <= 10000.0
+0.0 <= R_ACHLE2 <= 10000.0
+0.0 <= R_ACHLE3 <= 10000.0
+0.0 <= R_ACLSm <= 10000.0
+0.0 <= R_ACOAHim <= 10000.0
+0.0 <= R_ACOAO4p <= 10000.0
+0.0 <= R_ACOAO5p <= 10000.0
+0.0 <= R_ACOAO6p <= 10000.0
+0.0 <= R_ACOAO7p <= 10000.0
+0.0 <= R_ACOAO8p <= 10000.0
+0.0 <= R_ACOAO9p <= 10000.0
+-10000.0 <= R_ACOATA <= 10000.0
+-10000.0 <= R_ACOATAm <= 10000.0
+0.0 <= R_ACON3MT <= 10000.0
+-10000.0 <= R_ACONT3m <= 10000.0
+-10000.0 <= R_ACONT <= 10000.0
+-10000.0 <= R_ACONTm <= 10000.0
+0.0 <= R_ACOTAim <= 10000.0
+0.0 <= R_ACP1e <= 10000.0
+0.0 <= R_ACPSm <= 10000.0
+0.0 <= R_ACRNtm <= 10000.0
+0.0 <= R_ACRNtp <= 10000.0
+0.0 <= R_ACS <= 10000.0
+0.0 <= R_ACSm <= 10000.0
+0.0 <= R_ACSp <= 10000.0
+-10000.0 <= R_ACt2r <= 10000.0
+-10000.0 <= R_ACtm <= 10000.0
+-10000.0 <= R_ACtp <= 10000.0
+-10000.0 <= R_ACtr <= 10000.0
+0.0 <= R_ADA <= 10000.0
+0.0 <= R_ADCL <= 10000.0
+0.0 <= R_ADCS <= 10000.0
+0.0 <= R_ADD <= 10000.0
+0.0 <= R_ADEt2 <= 10000.0
+-10000.0 <= R_ADEtm <= 10000.0
+0.0 <= R_ADHAPR_SC <= 10000.0
+-10000.0 <= R_ADK1 <= 10000.0
+-10000.0 <= R_ADK1m <= 10000.0
+0.0 <= R_ADK3 <= 0.0
+-10000.0 <= R_ADK3m <= 10000.0
+0.0 <= R_ADK4 <= 0.0
+-10000.0 <= R_ADK4m <= 10000.0
+0.0 <= R_ADMDC <= 10000.0
+0.0 <= R_ADNCYC <= 10000.0
+0.0 <= R_ADNK1 <= 10000.0
+0.0 <= R_ADNUC <= 10000.0
+0.0 <= R_ADNt2 <= 10000.0
+-10000.0 <= R_ADPT <= 10000.0
+0.0 <= R_ADSK <= 10000.0
+-10000.0 <= R_ADSL1r <= 10000.0
+-10000.0 <= R_ADSL2r <= 10000.0
+0.0 <= R_ADSS <= 10000.0
+0.0 <= R_AGAT_SC <= 10000.0
+0.0 <= R_AGPRim <= 10000.0
+0.0 <= R_AGTi <= 10000.0
+-10000.0 <= R_AHCYStm <= 10000.0
+0.0 <= R_AHCi <= 10000.0
+0.0 <= R_AHMMPS <= 10000.0
+0.0 <= R_AHSERL2 <= 10000.0
+0.0 <= R_AHSERL <= 10000.0
+-10000.0 <= R_AICART <= 10000.0
+-10000.0 <= R_AIRCr <= 10000.0
+-10000.0 <= R_AKGDam <= 10000.0
+0.0 <= R_AKGDbm <= 10000.0
+0.0 <= R_AKGMAL <= 0.0
+-10000.0 <= R_AKGt2n <= 10000.0
+-10000.0 <= R_AKGt2r <= 10000.0
+0.0 <= R_AKGtm <= 10000.0
+-10000.0 <= R_AKGtp <= 10000.0
+0.0 <= R_AKP1 <= 10000.0
+0.0 <= R_ALASm <= 10000.0
+-10000.0 <= R_ALATA_L <= 10000.0
+-10000.0 <= R_ALATA_Lm <= 10000.0
+0.0 <= R_ALATRS <= 10000.0
+-10000.0 <= R_ALAt2r <= 10000.0
+0.0 <= R_ALAtmi <= 10000.0
+0.0 <= R_ALCD19y <= 10000.0
+0.0 <= R_ALCD22xi <= 10000.0
+0.0 <= R_ALCD22xim <= 10000.0
+0.0 <= R_ALCD22yi <= 10000.0
+0.0 <= R_ALCD23xi <= 10000.0
+0.0 <= R_ALCD23xim <= 10000.0
+0.0 <= R_ALCD23yi <= 10000.0
+0.0 <= R_ALCD24xi <= 10000.0
+0.0 <= R_ALCD24xim <= 10000.0
+0.0 <= R_ALCD24yi <= 10000.0
+0.0 <= R_ALCD25xi <= 10000.0
+0.0 <= R_ALCD25xim <= 10000.0
+0.0 <= R_ALCD25yi <= 10000.0
+0.0 <= R_ALCD26xi <= 10000.0
+0.0 <= R_ALCD26xim <= 10000.0
+0.0 <= R_ALCD2if <= 0.0
+0.0 <= R_ALCD2ir <= 10000.0
+0.0 <= R_ALCD2irm <= 10000.0
+-10000.0 <= R_ALCD2x <= 10000.0
+0.0 <= R_ALDD19x <= 10000.0
+0.0 <= R_ALDD20xm <= 10000.0
+0.0 <= R_ALDD20y <= 10000.0
+0.0 <= R_ALDD20ym <= 10000.0
+0.0 <= R_ALDD22x <= 10000.0
+0.0 <= R_ALDD2xm <= 10000.0
+0.0 <= R_ALDD2y <= 10000.0
+0.0 <= R_ALDD2ym <= 10000.0
+-10000.0 <= R_ALLTAHr <= 10000.0
+-10000.0 <= R_ALLTNr <= 10000.0
+0.0 <= R_ALLTNti <= 10000.0
+0.0 <= R_ALLTTti <= 10000.0
+0.0 <= R_ALPHNH <= 10000.0
+-10000.0 <= R_AMAOTr <= 10000.0
+0.0 <= R_AMETt2 <= 10000.0
+-10000.0 <= R_AMETtm <= 10000.0
+0.0 <= R_AMID2 <= 10000.0
+0.0 <= R_AMID3 <= 10000.0
+0.0 <= R_AMID <= 10000.0
+0.0 <= R_AMPDA <= 10000.0
+0.0 <= R_AMPN <= 10000.0
+-10000.0 <= R_AMPtn <= 10000.0
+0.0 <= R_ANPRT <= 10000.0
+0.0 <= R_ANS <= 10000.0
+0.0 <= R_AOBUTDs <= 10000.0
+-10000.0 <= R_AP4AHr <= 10000.0
+0.0 <= R_APRTO2 <= 10000.0
+-10000.0 <= R_ARAB14LO <= 10000.0
+0.0 <= R_ARAB1D2 <= 10000.0
+0.0 <= R_ARABR <= 10000.0
+-10000.0 <= R_ARAB_Dt <= 10000.0
+-10000.0 <= R_ARAB_Lt <= 10000.0
+0.0 <= R_ARGN <= 10000.0
+-10000.0 <= R_ARGSL <= 10000.0
+-10000.0 <= R_ARGSSr <= 10000.0
+0.0 <= R_ARGTRS <= 10000.0
+0.0 <= R_ARGTRSm <= 10000.0
+-10000.0 <= R_ARGt2m <= 10000.0
+-10000.0 <= R_ARGt2r <= 10000.0
+0.0 <= R_ARGt6 <= 10000.0
+0.0 <= R_ARMT <= 10000.0
+0.0 <= R_ASADi <= 10000.0
+0.0 <= R_ASNNe <= 10000.0
+0.0 <= R_ASNN <= 10000.0
+0.0 <= R_ASNS1 <= 10000.0
+0.0 <= R_ASNTRS <= 10000.0
+0.0 <= R_ASNTRSm <= 10000.0
+-10000.0 <= R_ASNt2m <= 10000.0
+-10000.0 <= R_ASNt2r <= 10000.0
+0.0 <= R_ASNt6 <= 10000.0
+0.0 <= R_ASNt7 <= 10000.0
+0.0 <= R_ASPCT <= 10000.0
+0.0 <= R_ASPGLU2m <= 10000.0
+-10000.0 <= R_ASPGLUtp <= 10000.0
+0.0 <= R_ASPKi <= 10000.0
+0.0 <= R_ASPOcm <= 10000.0
+-10000.0 <= R_ASPTA <= 10000.0
+0.0 <= R_ASPTAm <= 10000.0
+-10000.0 <= R_ASPTAp <= 10000.0
+0.0 <= R_ASPTRS <= 10000.0
+0.0 <= R_ASPTRSm <= 10000.0
+-10000.0 <= R_ASPt2m <= 10000.0
+-10000.0 <= R_ASPt2n <= 10000.0
+-10000.0 <= R_ASPt2r <= 10000.0
+0.0 <= R_ASPt5n <= 0.0
+0.0 <= R_ASPt7 <= 10000.0
+-10000.0 <= R_ATHRDHr <= 10000.0
+0.0 <= R_ATP2tp_H <= 10000.0
+0.0 <= R_ATPATF1 <= 10000.0
+0.0 <= R_ATPATF2 <= 10000.0
+0.0 <= R_ATPATF3 <= 10000.0
+0.0 <= R_ATPH1 <= 10000.0
+10.0 <= R_ATPM <= 10.0
+0.0 <= R_ATPPRT <= 10000.0
+0.0 <= R_ATPS3g <= 10000.0
+0.0 <= R_ATPS3m <= 10000.0
+0.0 <= R_ATPS3v <= 10000.0
+0.0 <= R_ATPS <= 10000.0
+0.0 <= R_ATPtm_H <= 10000.0
+0.0 <= R_ATPtp_H <= 10000.0
+0.0 <= R_BACCL <= 10000.0
+0.0 <= R_BPNT <= 10000.0
+-10000.0 <= R_BTDD_RR <= 10000.0
+-10000.0 <= R_BTDt_RR <= 10000.0
+0.0 <= R_BTNt2i <= 10000.0
+-10000.0 <= R_BTSr <= 10000.0
+0.0 <= R_C14STR <= 10000.0
+0.0 <= R_C22STDS <= 10000.0
+0.0 <= R_C22STDSx <= 10000.0
+0.0 <= R_C24STRer <= 10000.0
+0.0 <= R_C3STDH1 <= 10000.0
+0.0 <= R_C3STDH2 <= 10000.0
+0.0 <= R_C3STKR1 <= 10000.0
+0.0 <= R_C3STKR2 <= 10000.0
+0.0 <= R_C4STMO1 <= 10000.0
+0.0 <= R_C4STMO2 <= 10000.0
+0.0 <= R_C5STDS <= 10000.0
+0.0 <= R_C8STI <= 10000.0
+0.0 <= R_CAT <= 10000.0
+0.0 <= R_CATp <= 10000.0
+-10000.0 <= R_CBASPtn <= 10000.0
+0.0 <= R_CBPS <= 10000.0
+-10000.0 <= R_CBPtn <= 10000.0
+0.0 <= R_CCP2m <= 10000.0
+-10000.0 <= R_CDPDGPm_SC <= 10000.0
+-10000.0 <= R_CDPtn <= 10000.0
+-10000.0 <= R_CER1_24ter <= 10000.0
+-10000.0 <= R_CER1_26ter <= 10000.0
+-10000.0 <= R_CER2_24ter <= 10000.0
+-10000.0 <= R_CER2_26ter <= 10000.0
+-10000.0 <= R_CERASE124er <= 10000.0
+-10000.0 <= R_CERASE126er <= 10000.0
+-10000.0 <= R_CERASE224er <= 10000.0
+-10000.0 <= R_CERASE226er <= 10000.0
+0.0 <= R_CERH124 <= 10000.0
+0.0 <= R_CERH126 <= 10000.0
+0.0 <= R_CERS124er <= 0.0
+0.0 <= R_CERS124 <= 10000.0
+0.0 <= R_CERS126er <= 0.0
+0.0 <= R_CERS126 <= 10000.0
+0.0 <= R_CERS224er <= 0.0
+0.0 <= R_CERS224 <= 10000.0
+0.0 <= R_CERS226er <= 0.0
+0.0 <= R_CERS226 <= 10000.0
+0.0 <= R_CERS2_24 <= 10000.0
+0.0 <= R_CERS2_26 <= 10000.0
+0.0 <= R_CERS324 <= 10000.0
+0.0 <= R_CERS326 <= 10000.0
+0.0 <= R_CHLPCTD <= 10000.0
+0.0 <= R_CHLSTI <= 10000.0
+0.0 <= R_CHLt2 <= 10000.0
+0.0 <= R_CHOLK <= 10000.0
+0.0 <= R_CHORM <= 10000.0
+0.0 <= R_CHORS <= 10000.0
+0.0 <= R_CHRPL <= 10000.0
+0.0 <= R_CHTNDA <= 10000.0
+0.0 <= R_CHTNSbs <= 10000.0
+0.0 <= R_CHTNS <= 10000.0
+0.0 <= R_CHTNSrg <= 10000.0
+0.0 <= R_CHTNSsp <= 10000.0
+-10000.0 <= R_CITt2r <= 10000.0
+-10000.0 <= R_CITtam <= 10000.0
+-10000.0 <= R_CITtap <= 10000.0
+-10000.0 <= R_CITtbm <= 10000.0
+-10000.0 <= R_CITtcm <= 10000.0
+-10000.0 <= R_CITtcp <= 10000.0
+0.0 <= R_CLPNSm_SC <= 10000.0
+0.0 <= R_CMPN <= 10000.0
+-10000.0 <= R_CO2tg <= 10000.0
+-10000.0 <= R_CO2t <= 10000.0
+-10000.0 <= R_CO2tm <= 10000.0
+-10000.0 <= R_CO2tn <= 10000.0
+-10000.0 <= R_CO2tp <= 10000.0
+-10000.0 <= R_CO2tv <= 10000.0
+0.0 <= R_COAHLp <= 10000.0
+0.0 <= R_COAtim <= 10000.0
+-10000.0 <= R_COAtn <= 10000.0
+0.0 <= R_COUCOAFm <= 10000.0
+0.0 <= R_CPPPGO <= 10000.0
+0.0 <= R_CRNCARtm <= 10000.0
+0.0 <= R_CRNCARtp <= 10000.0
+0.0 <= R_CRNtim <= 10000.0
+-10000.0 <= R_CRNt <= 10000.0
+0.0 <= R_CRNtp <= 10000.0
+-10000.0 <= R_CSNATm <= 10000.0
+-10000.0 <= R_CSNATp <= 10000.0
+-10000.0 <= R_CSNATr <= 10000.0
+0.0 <= R_CSND <= 10000.0
+0.0 <= R_CSNt2 <= 10000.0
+0.0 <= R_CSm <= 10000.0
+0.0 <= R_CSp <= 10000.0
+0.0 <= R_CTPS1 <= 10000.0
+0.0 <= R_CTPS2 <= 10000.0
+0.0 <= R_CTPtm <= 10000.0
+0.0 <= R_CYOOm <= 10000.0
+0.0 <= R_CYOR_u6m <= 10000.0
+0.0 <= R_CYSTGL <= 10000.0
+0.0 <= R_CYSTL <= 10000.0
+0.0 <= R_CYSTLp <= 10000.0
+0.0 <= R_CYSTRS <= 10000.0
+0.0 <= R_CYSTS <= 10000.0
+-10000.0 <= R_CYSTtp <= 10000.0
+-10000.0 <= R_CYSt2r <= 10000.0
+0.0 <= R_CYTDK2 <= 10000.0
+0.0 <= R_CYTD <= 10000.0
+0.0 <= R_CYTDt2 <= 10000.0
+-10000.0 <= R_CYTK1 <= 10000.0
+0.0 <= R_CYTK2 <= 0.0
+0.0 <= R_DADA <= 10000.0
+-10000.0 <= R_DADK <= 10000.0
+0.0 <= R_DADNt2 <= 10000.0
+-10000.0 <= R_DADPtn <= 10000.0
+0.0 <= R_DAGCPT_SC <= 10000.0
+0.0 <= R_DAGPYP_SC <= 10000.0
+-10000.0 <= R_DANNt2 <= 10000.0
+-10000.0 <= R_DASYN_SC <= 10000.0
+-10000.0 <= R_DASYNm_SC <= 10000.0
+0.0 <= R_DB4PS <= 10000.0
+-10000.0 <= R_DBTSr <= 10000.0
+-10000.0 <= R_DCDPtn <= 10000.0
+-10000.0 <= R_DCMPDA <= 10000.0
+0.0 <= R_DCTPD <= 10000.0
+0.0 <= R_DCYTD <= 10000.0
+0.0 <= R_DCYTt2 <= 10000.0
+0.0 <= R_DDPA <= 10000.0
+0.0 <= R_DDPAm <= 10000.0
+0.0 <= R_DESAT14 <= 10000.0
+0.0 <= R_DESAT16 <= 10000.0
+0.0 <= R_DESAT18_2 <= 10000.0
+0.0 <= R_DESAT18 <= 10000.0
+-10000.0 <= R_DGDPtn <= 10000.0
+0.0 <= R_DGGH <= 10000.0
+-10000.0 <= R_DGK1 <= 10000.0
+0.0 <= R_DGSNt2 <= 10000.0
+0.0 <= R_DHAD1m <= 10000.0
+0.0 <= R_DHAD2m <= 10000.0
+0.0 <= R_DHAK <= 10000.0
+0.0 <= R_DHAPtm <= 10000.0
+0.0 <= R_DHFRi <= 10000.0
+0.0 <= R_DHFRim <= 10000.0
+0.0 <= R_DHFS <= 10000.0
+-10000.0 <= R_DHFtm <= 10000.0
+0.0 <= R_DHNPAm <= 10000.0
+-10000.0 <= R_DHNPTtm <= 10000.0
+0.0 <= R_DHORD4i <= 10000.0
+0.0 <= R_DHORDfum <= 10000.0
+0.0 <= R_DHORDi <= 10000.0
+-10000.0 <= R_DHORTS <= 10000.0
+0.0 <= R_DHPSm <= 10000.0
+-10000.0 <= R_DHPTtm <= 10000.0
+0.0 <= R_DHQS <= 10000.0
+0.0 <= R_DHQTi <= 10000.0
+0.0 <= R_DIAT <= 10000.0
+0.0 <= R_DINSt2 <= 10000.0
+0.0 <= R_DIPS <= 10000.0
+0.0 <= R_DKMPPD2 <= 10000.0
+0.0 <= R_DMATT <= 10000.0
+0.0 <= R_DNMPPA <= 10000.0
+0.0 <= R_DNTPPA <= 10000.0
+0.0 <= R_DOLK <= 10000.0
+0.0 <= R_DOLPMMer <= 10000.0
+0.0 <= R_DOLPMTcer <= 10000.0
+-10000.0 <= R_DOLPt2er <= 10000.0
+0.0 <= R_DPCOAK <= 10000.0
+0.0 <= R_DPCOAKm <= 10000.0
+-10000.0 <= R_DPGM <= 10000.0
+0.0 <= R_DPMVD <= 10000.0
+0.0 <= R_DPR <= 10000.0
+0.0 <= R_DPRm <= 10000.0
+0.0 <= R_DRBK <= 10000.0
+0.0 <= R_DROPPRy <= 10000.0
+0.0 <= R_DRTPPD <= 10000.0
+-10000.0 <= R_DTMPK <= 10000.0
+-10000.0 <= R_DTTPt <= 10000.0
+-10000.0 <= R_DUMPtn <= 10000.0
+0.0 <= R_DURIK1 <= 10000.0
+-10000.0 <= R_DURIPP <= 10000.0
+0.0 <= R_DURIt2 <= 10000.0
+0.0 <= R_DUTPDP <= 10000.0
+0.0 <= R_DXHPScm <= 10000.0
+0.0 <= R_D_LACDcm <= 10000.0
+0.0 <= R_D_LACDm <= 10000.0
+-10000.0 <= R_D_LACt2 <= 10000.0
+0.0 <= R_D_LACt2m <= 0.0
+-10000.0 <= R_D_LACtm <= 10000.0
+-10000.0 <= R_E4HGLUtm <= 10000.0
+-10000.0 <= R_E4HGLUtp <= 10000.0
+-10000.0 <= R_E4Ptm <= 10000.0
+-10000.0 <= R_ECOAH11p <= 10000.0
+-10000.0 <= R_ECOAH4p <= 10000.0
+-10000.0 <= R_ECOAH5p <= 10000.0
+-10000.0 <= R_ECOAH6p <= 10000.0
+-10000.0 <= R_ECOAH7p <= 10000.0
+-10000.0 <= R_ECOAH8p <= 10000.0
+0.0 <= R_EHGLAT <= 10000.0
+0.0 <= R_EHGLATm <= 10000.0
+0.0 <= R_EHGLATp <= 10000.0
+-10000.0 <= R_ENO <= 10000.0
+0.0 <= R_EPGALURSe <= 10000.0
+0.0 <= R_EPISTAT_SC <= 10000.0
+0.0 <= R_EPISTESTH_SCe <= 10000.0
+0.0 <= R_EPISTESTH_SC <= 10000.0
+-10000.0 <= R_EPISTt <= 10000.0
+-10000.0 <= R_EPMGH <= 10000.0
+0.0 <= R_ERGSTAT_SC <= 10000.0
+0.0 <= R_ERGSTESTH_SCe <= 10000.0
+0.0 <= R_ERGSTESTH_SC <= 10000.0
+0.0 <= R_ERGSTGLCT <= 10000.0
+-10000.0 <= R_ERGSTter <= 10000.0
+-10000.0 <= R_ERGSTt <= 10000.0
+-10000.0 <= R_ERGTETROLter <= 10000.0
+0.0 <= R_ETHAK <= 10000.0
+-10000.0 <= R_ETHAPT_SC <= 10000.0
+-10000.0 <= R_ETHAt <= 10000.0
+-10000.0 <= R_ETOHt <= 10000.0
+-10000.0 <= R_ETOHtm <= 10000.0
+0.0 <= R_EX_13BDglcn_e_ <= 10000.0
+0.0 <= R_EX_2hb_e_ <= 10000.0
+0.0 <= R_EX_2mbac_e_ <= 10000.0
+0.0 <= R_EX_2mbald_e_ <= 10000.0
+0.0 <= R_EX_2mbtoh_e_ <= 10000.0
+0.0 <= R_EX_2mppal_e_ <= 10000.0
+0.0 <= R_EX_2phetoh_e_ <= 10000.0
+0.0 <= R_EX_3c3hmp_e_ <= 10000.0
+0.0 <= R_EX_3mbald_e_ <= 10000.0
+0.0 <= R_EX_3mop_e_ <= 10000.0
+0.0 <= R_EX_4abut_e_ <= 10000.0
+0.0 <= R_EX_4abz_e_ <= 10000.0
+0.0 <= R_EX_5aop_e_ <= 10000.0
+0.0 <= R_EX_5fthf_e_ <= 10000.0
+0.0 <= R_EX_8aonn_e_ <= 10000.0
+0.0 <= R_EX_Nbfortyr_e_ <= 10000.0
+0.0 <= R_EX_abt_e_ <= 10000.0
+0.0 <= R_EX_ac_e_ <= 10000.0
+0.0 <= R_EX_acald_e_ <= 10000.0
+0.0 <= R_EX_aces_e_ <= 10000.0
+0.0 <= R_EX_ade_e_ <= 10000.0
+0.0 <= R_EX_adn_e_ <= 10000.0
+0.0 <= R_EX_akg_e_ <= 10000.0
+0.0 <= R_EX_ala_L_e_ <= 10000.0
+0.0 <= R_EX_alltn_e_ <= 10000.0
+0.0 <= R_EX_alltt_e_ <= 10000.0
+0.0 <= R_EX_amet_e_ <= 10000.0
+0.0 <= R_EX_arab_D_e_ <= 10000.0
+0.0 <= R_EX_arab_L_e_ <= 10000.0
+0.0 <= R_EX_arg_L_e_ <= 10000.0
+0.0 <= R_EX_asn_L_e_ <= 10000.0
+0.0 <= R_EX_asp_L_e_ <= 10000.0
+0.0 <= R_EX_btd_RR_e_ <= 10000.0
+0.0 <= R_EX_btn_e_ <= 10000.0
+0.0 <= R_EX_chol_e_ <= 10000.0
+0.0 <= R_EX_cit_e_ <= 10000.0
+0.0 <= R_EX_co2_e_ <= 10000.0
+0.0 <= R_EX_crn_e_ <= 10000.0
+0.0 <= R_EX_csn_e_ <= 10000.0
+0.0 <= R_EX_cys_L_e_ <= 10000.0
+0.0 <= R_EX_cytd_e_ <= 10000.0
+0.0 <= R_EX_dad_2_e_ <= 10000.0
+0.0 <= R_EX_dann_e_ <= 10000.0
+0.0 <= R_EX_dca_e_ <= 10000.0
+0.0 <= R_EX_dcyt_e_ <= 10000.0
+0.0 <= R_EX_ddca_e_ <= 10000.0
+0.0 <= R_EX_dgsn_e_ <= 10000.0
+0.0 <= R_EX_din_e_ <= 10000.0
+0.0 <= R_EX_dttp_e_ <= 10000.0
+0.0 <= R_EX_duri_e_ <= 10000.0
+0.0 <= R_EX_epist_e_ <= 10000.0
+0.0 <= R_EX_epistest_SC_e_ <= 10000.0
+0.0 <= R_EX_ergst_e_ <= 10000.0
+0.0 <= R_EX_ergstest_SC_e_ <= 10000.0
+0.0 <= R_EX_etha_e_ <= 10000.0
+0.0 <= R_EX_etoh_e_ <= 10000.0
+-10000.0 <= R_EX_fe2_e_ <= 10000.0
+0.0 <= R_EX_fecost_e_ <= 10000.0
+0.0 <= R_EX_fecostest_SC_e_ <= 10000.0
+0.0 <= R_EX_fmn_e_ <= 10000.0
+0.0 <= R_EX_fola_e_ <= 10000.0
+0.0 <= R_EX_for_e_ <= 10000.0
+0.0 <= R_EX_fru_e_ <= 10000.0
+0.0 <= R_EX_fum_e_ <= 10000.0
+0.0 <= R_EX_g3pc_e_ <= 10000.0
+0.0 <= R_EX_g3pi_e_ <= 10000.0
+0.0 <= R_EX_gal_e_ <= 10000.0
+0.0 <= R_EX_galur_e_ <= 10000.0
+0.0 <= R_EX_gam6p_e_ <= 10000.0
+0.0 <= R_EX_gcald_e_ <= 10000.0
+-10.0 <= R_EX_glc_e_ <= 10000.0
+0.0 <= R_EX_gln_L_e_ <= 10000.0
+0.0 <= R_EX_glu_L_e_ <= 10000.0
+0.0 <= R_EX_glx_e_ <= 10000.0
+0.0 <= R_EX_gly_e_ <= 10000.0
+0.0 <= R_EX_glyc_e_ <= 10000.0
+0.0 <= R_EX_gsn_e_ <= 10000.0
+0.0 <= R_EX_gthox_e_ <= 10000.0
+0.0 <= R_EX_gthrd_e_ <= 10000.0
+0.0 <= R_EX_gua_e_ <= 10000.0
+-10000.0 <= R_EX_h2o_e_ <= 10000.0
+-10000.0 <= R_EX_h_e_ <= 10000.0
+0.0 <= R_EX_hdca_e_ <= 10000.0
+0.0 <= R_EX_hdcea_e_ <= 10000.0
+0.0 <= R_EX_hexc_e_ <= 10000.0
+0.0 <= R_EX_his_L_e_ <= 10000.0
+0.0 <= R_EX_hxan_e_ <= 10000.0
+0.0 <= R_EX_iamac_e_ <= 10000.0
+0.0 <= R_EX_iamoh_e_ <= 10000.0
+0.0 <= R_EX_ibutac_e_ <= 10000.0
+0.0 <= R_EX_ibutoh_e_ <= 10000.0
+0.0 <= R_EX_id3acald_e_ <= 10000.0
+0.0 <= R_EX_ile_L_e_ <= 10000.0
+0.0 <= R_EX_ind3eth_e_ <= 10000.0
+0.0 <= R_EX_inost_e_ <= 10000.0
+0.0 <= R_EX_ins_e_ <= 10000.0
+-10000.0 <= R_EX_k_e_ <= 10000.0
+0.0 <= R_EX_lac_D_e_ <= 10000.0
+0.0 <= R_EX_lac_L_e_ <= 10000.0
+0.0 <= R_EX_lanost_e_ <= 10000.0
+0.0 <= R_EX_lanostest_SC_e_ <= 10000.0
+0.0 <= R_EX_leu_L_e_ <= 10000.0
+0.0 <= R_EX_lys_L_e_ <= 10000.0
+0.0 <= R_EX_mal_L_e_ <= 10000.0
+0.0 <= R_EX_malt_e_ <= 10000.0
+0.0 <= R_EX_man_e_ <= 10000.0
+0.0 <= R_EX_melib_e_ <= 10000.0
+0.0 <= R_EX_met_L_e_ <= 10000.0
+0.0 <= R_EX_mev_R_e_ <= 10000.0
+0.0 <= R_EX_mmet_e_ <= 10000.0
+-10000.0 <= R_EX_na1_e_ <= 10000.0
+0.0 <= R_EX_nac_e_ <= 10000.0
+0.0 <= R_EX_nadp_e_ <= 10000.0
+-10000.0 <= R_EX_nh4_e_ <= 10000.0
+0.0 <= R_EX_nmn_e_ <= 10000.0
+-10000.0 <= R_EX_o2_e_ <= 10000.0
+0.0 <= R_EX_oaa_e_ <= 10000.0
+0.0 <= R_EX_ocdca_e_ <= 10000.0
+0.0 <= R_EX_ocdcea_e_ <= 10000.0
+0.0 <= R_EX_ocdcya_e_ <= 10000.0
+0.0 <= R_EX_orn_e_ <= 10000.0
+0.0 <= R_EX_pacald_e_ <= 10000.0
+0.0 <= R_EX_pap_e_ <= 10000.0
+0.0 <= R_EX_pc_SC_e_ <= 10000.0
+0.0 <= R_EX_pectin_e_ <= 10000.0
+0.0 <= R_EX_pepd_e_ <= 10000.0
+0.0 <= R_EX_phe_L_e_ <= 10000.0
+0.0 <= R_EX_pheac_e_ <= 10000.0
+-10000.0 <= R_EX_pi_e_ <= 10000.0
+0.0 <= R_EX_pnto_R_e_ <= 10000.0
+0.0 <= R_EX_pro_L_e_ <= 10000.0
+0.0 <= R_EX_ptd1ino_SC_e_ <= 10000.0
+0.0 <= R_EX_ptrc_e_ <= 10000.0
+0.0 <= R_EX_pyr_e_ <= 10000.0
+0.0 <= R_EX_rib_D_e_ <= 10000.0
+0.0 <= R_EX_ribflv_e_ <= 10000.0
+0.0 <= R_EX_sbt_D_e_ <= 10000.0
+0.0 <= R_EX_sbt_L_e_ <= 10000.0
+0.0 <= R_EX_ser_L_e_ <= 10000.0
+0.0 <= R_EX_so3_e_ <= 10000.0
+-10000.0 <= R_EX_so4_e_ <= 10000.0
+0.0 <= R_EX_spmd_e_ <= 10000.0
+0.0 <= R_EX_sprm_e_ <= 10000.0
+0.0 <= R_EX_srb_L_e_ <= 10000.0
+0.0 <= R_EX_succ_e_ <= 10000.0
+0.0 <= R_EX_sucr_e_ <= 10000.0
+0.0 <= R_EX_taur_e_ <= 10000.0
+0.0 <= R_EX_thm_e_ <= 10000.0
+0.0 <= R_EX_thmmp_e_ <= 10000.0
+0.0 <= R_EX_thmpp_e_ <= 10000.0
+0.0 <= R_EX_thr_L_e_ <= 10000.0
+0.0 <= R_EX_thym_e_ <= 10000.0
+0.0 <= R_EX_thymd_e_ <= 10000.0
+0.0 <= R_EX_tre_e_ <= 10000.0
+0.0 <= R_EX_trp_L_e_ <= 10000.0
+0.0 <= R_EX_ttdca_e_ <= 10000.0
+0.0 <= R_EX_tyr_L_e_ <= 10000.0
+0.0 <= R_EX_ura_e_ <= 10000.0
+0.0 <= R_EX_urea_e_ <= 10000.0
+0.0 <= R_EX_uri_e_ <= 10000.0
+0.0 <= R_EX_val_L_e_ <= 10000.0
+0.0 <= R_EX_xan_e_ <= 10000.0
+0.0 <= R_EX_xtsn_e_ <= 10000.0
+0.0 <= R_EX_xyl_D_e_ <= 10000.0
+0.0 <= R_EX_xylt_e_ <= 10000.0
+0.0 <= R_EX_zymst_e_ <= 10000.0
+0.0 <= R_EX_zymstest_SC_e_ <= 10000.0
+0.0 <= R_FA100tp <= 10000.0
+-10000.0 <= R_FA120ACPH <= 10000.0
+0.0 <= R_FA120ACPtm <= 10000.0
+0.0 <= R_FA120tp <= 10000.0
+-10000.0 <= R_FA140ACPH <= 10000.0
+0.0 <= R_FA140ACPtm <= 10000.0
+0.0 <= R_FA140COAabcp <= 10000.0
+0.0 <= R_FA140tp <= 10000.0
+-10000.0 <= R_FA141ACPH <= 10000.0
+0.0 <= R_FA141ACPtm <= 10000.0
+0.0 <= R_FA141COAabcp <= 10000.0
+0.0 <= R_FA141tp <= 10000.0
+-10000.0 <= R_FA160ACPH <= 10000.0
+0.0 <= R_FA160ACPtm <= 10000.0
+0.0 <= R_FA160COAabcp <= 10000.0
+0.0 <= R_FA160tp <= 10000.0
+-10000.0 <= R_FA161ACPH <= 10000.0
+0.0 <= R_FA161ACPtm <= 10000.0
+0.0 <= R_FA161COAabcp <= 10000.0
+0.0 <= R_FA161tp <= 10000.0
+-10000.0 <= R_FA180ACPH <= 10000.0
+0.0 <= R_FA180ACPtm <= 10000.0
+0.0 <= R_FA180COAabcp <= 10000.0
+-10000.0 <= R_FA181ACPH <= 10000.0
+0.0 <= R_FA181ACPtm <= 10000.0
+0.0 <= R_FA181COAabcp <= 10000.0
+-10000.0 <= R_FA182ACPH <= 10000.0
+0.0 <= R_FA182ACPtm <= 10000.0
+0.0 <= R_FA182COAabcp <= 10000.0
+0.0 <= R_FA240tp <= 10000.0
+0.0 <= R_FA260tp <= 10000.0
+0.0 <= R_FA80tp <= 10000.0
+-10000.0 <= R_FACOAL100p <= 10000.0
+-10000.0 <= R_FACOAL120p <= 10000.0
+-10000.0 <= R_FACOAL140 <= 10000.0
+-10000.0 <= R_FACOAL140p <= 10000.0
+-10000.0 <= R_FACOAL141 <= 10000.0
+-10000.0 <= R_FACOAL141p <= 10000.0
+-10000.0 <= R_FACOAL160 <= 10000.0
+-10000.0 <= R_FACOAL160p <= 10000.0
+-10000.0 <= R_FACOAL161 <= 10000.0
+-10000.0 <= R_FACOAL161p <= 10000.0
+-10000.0 <= R_FACOAL180 <= 10000.0
+-10000.0 <= R_FACOAL181 <= 10000.0
+-10000.0 <= R_FACOAL182 <= 10000.0
+-10000.0 <= R_FACOAL240p <= 10000.0
+-10000.0 <= R_FACOAL260p <= 10000.0
+-10000.0 <= R_FACOAL80p <= 10000.0
+0.0 <= R_FADFMNtm <= 10000.0
+-10000.0 <= R_FALDH <= 10000.0
+0.0 <= R_FAO141p_even <= 10000.0
+0.0 <= R_FAO141p_odd <= 10000.0
+0.0 <= R_FAO161p_even <= 10000.0
+0.0 <= R_FAO161p_odd <= 10000.0
+0.0 <= R_FAO181p_even <= 10000.0
+0.0 <= R_FAO181p_odd <= 10000.0
+0.0 <= R_FAO182p_eveneven <= 10000.0
+0.0 <= R_FAO182p_evenodd <= 10000.0
+0.0 <= R_FAO182p_oddodd <= 10000.0
+0.0 <= R_FAO240p <= 10000.0
+0.0 <= R_FAO80p <= 10000.0
+0.0 <= R_FAS100ACPm <= 10000.0
+0.0 <= R_FAS100COA <= 10000.0
+0.0 <= R_FAS100 <= 10000.0
+0.0 <= R_FAS120ACPm <= 10000.0
+0.0 <= R_FAS120COA <= 10000.0
+0.0 <= R_FAS120 <= 10000.0
+0.0 <= R_FAS140ACPm <= 10000.0
+0.0 <= R_FAS140COA <= 10000.0
+0.0 <= R_FAS140 <= 10000.0
+0.0 <= R_FAS141ACPm <= 10000.0
+0.0 <= R_FAS141 <= 10000.0
+0.0 <= R_FAS160ACPm <= 10000.0
+0.0 <= R_FAS160COA <= 10000.0
+0.0 <= R_FAS160 <= 10000.0
+0.0 <= R_FAS161ACPm <= 10000.0
+0.0 <= R_FAS161 <= 10000.0
+0.0 <= R_FAS180ACPm <= 10000.0
+0.0 <= R_FAS180COA <= 10000.0
+0.0 <= R_FAS180 <= 10000.0
+0.0 <= R_FAS181ACPm <= 10000.0
+0.0 <= R_FAS181 <= 10000.0
+0.0 <= R_FAS182ACPm <= 10000.0
+0.0 <= R_FAS240_L <= 10000.0
+0.0 <= R_FAS260 <= 10000.0
+0.0 <= R_FAS80ACPm_L <= 10000.0
+0.0 <= R_FAS80COA_L <= 10000.0
+0.0 <= R_FAS80_L <= 10000.0
+-10000.0 <= R_FBA2 <= 10000.0
+-10000.0 <= R_FBA3 <= 10000.0
+-10000.0 <= R_FBA <= 10000.0
+0.0 <= R_FBP26 <= 10000.0
+0.0 <= R_FBP <= 10000.0
+0.0 <= R_FCLTm <= 10000.0
+0.0 <= R_FDH <= 10000.0
+0.0 <= R_FDNG <= 10000.0
+0.0 <= R_FE2t <= 10000.0
+0.0 <= R_FE2utm <= 0.0
+0.0 <= R_FECOSTAT_SC <= 10000.0
+0.0 <= R_FECOSTESTH_SCe <= 10000.0
+0.0 <= R_FECOSTESTH_SC <= 10000.0
+-10000.0 <= R_FECOSTt <= 10000.0
+-10000.0 <= R_FEtm <= 10000.0
+0.0 <= R_FKYNH <= 10000.0
+0.0 <= R_FMETTRSm <= 10000.0
+0.0 <= R_FMNAT <= 10000.0
+0.0 <= R_FMNATm <= 10000.0
+0.0 <= R_FMNRx2 <= 10000.0
+0.0 <= R_FMNRx <= 10000.0
+-10000.0 <= R_FOLAt <= 10000.0
+0.0 <= R_FOLD3m <= 10000.0
+-10000.0 <= R_FORt <= 10000.0
+0.0 <= R_FORtm <= 10000.0
+-10000.0 <= R_FRDPtm <= 10000.0
+0.0 <= R_FRDcm <= 0.0
+0.0 <= R_FRDm <= 0.0
+0.0 <= R_FRTT <= 10000.0
+0.0 <= R_FRUK <= 10000.0
+0.0 <= R_FRUt2 <= 10000.0
+0.0 <= R_FTHFCL <= 10000.0
+0.0 <= R_FTHFCLm <= 10000.0
+0.0 <= R_FTHFI <= 10000.0
+0.0 <= R_FTHFLi <= 10000.0
+0.0 <= R_FTHFLmi <= 10000.0
+0.0 <= R_FUMAC <= 10000.0
+-10000.0 <= R_FUM <= 10000.0
+-10000.0 <= R_FUMm <= 10000.0
+-10000.0 <= R_FUMt2r <= 10000.0
+0.0 <= R_G12MT1g <= 10000.0
+0.0 <= R_G12MT2g <= 10000.0
+0.0 <= R_G13MTg <= 10000.0
+0.0 <= R_G16MTg <= 10000.0
+-10000.0 <= R_G3PCt <= 10000.0
+0.0 <= R_G3PD1ir <= 10000.0
+0.0 <= R_G3PD1irm <= 10000.0
+0.0 <= R_G3PDm <= 10000.0
+-10000.0 <= R_G3PIt <= 10000.0
+0.0 <= R_G3PT <= 10000.0
+-10000.0 <= R_G5SADr <= 10000.0
+-10000.0 <= R_G5SADrm <= 10000.0
+0.0 <= R_G5SD2 <= 10000.0
+0.0 <= R_G5SD <= 10000.0
+0.0 <= R_G6PDA <= 10000.0
+0.0 <= R_G6PDH2er <= 10000.0
+0.0 <= R_G6PDH2 <= 10000.0
+0.0 <= R_G6PI3 <= 0.0
+-10000.0 <= R_G6PI <= 10000.0
+-10000.0 <= R_G6Pter <= 10000.0
+-10000.0 <= R_GALIGH <= 10000.0
+0.0 <= R_GALK <= 10000.0
+0.0 <= R_GALS3 <= 10000.0
+-10000.0 <= R_GALT <= 10000.0
+-10000.0 <= R_GALU <= 10000.0
+0.0 <= R_GALt2 <= 10000.0
+-10000.0 <= R_GAM6Pt <= 10000.0
+-10000.0 <= R_GAPD <= 10000.0
+0.0 <= R_GARFTi <= 10000.0
+0.0 <= R_GAT1_SC <= 10000.0
+0.0 <= R_GAT2_SC <= 10000.0
+0.0 <= R_GBEZ <= 10000.0
+-10000.0 <= R_GCALDt <= 10000.0
+-10000.0 <= R_GCALDtm <= 10000.0
+-10000.0 <= R_GCC2am <= 10000.0
+0.0 <= R_GCC2bim <= 10000.0
+-10000.0 <= R_GCC2cm <= 10000.0
+-10000.0 <= R_GCCam <= 10000.0
+0.0 <= R_GCCbim <= 10000.0
+-10000.0 <= R_GCCcm <= 10000.0
+0.0 <= R_GDPMANNtg <= 10000.0
+-10000.0 <= R_GDPt3g <= 10000.0
+-10000.0 <= R_GDPtn <= 10000.0
+0.0 <= R_GF6PTA <= 10000.0
+-10000.0 <= R_GGLGH <= 10000.0
+0.0 <= R_GGTT <= 10000.0
+-10000.0 <= R_GHMT2r <= 10000.0
+-10000.0 <= R_GHMT2rm <= 10000.0
+-10000.0 <= R_GK1 <= 10000.0
+0.0 <= R_GK2 <= 0.0
+0.0 <= R_GLCGSD <= 10000.0
+0.0 <= R_GLCGSDv <= 10000.0
+0.0 <= R_GLCNtv <= 10000.0
+0.0 <= R_GLCP <= 10000.0
+0.0 <= R_GLCS2 <= 10000.0
+0.0 <= R_GLCt1 <= 10000.0
+-10000.0 <= R_GLCtv <= 10000.0
+0.0 <= R_GLNS <= 10000.0
+0.0 <= R_GLNTRS <= 10000.0
+-10000.0 <= R_GLNt2n <= 10000.0
+-10000.0 <= R_GLNt2r <= 10000.0
+0.0 <= R_GLNt6 <= 10000.0
+0.0 <= R_GLNt7 <= 10000.0
+0.0 <= R_GLPT <= 10000.0
+0.0 <= R_GLU5K <= 10000.0
+0.0 <= R_GLUCYS <= 10000.0
+0.0 <= R_GLUDC <= 10000.0
+0.0 <= R_GLUDxi <= 10000.0
+0.0 <= R_GLUDyi <= 10000.0
+0.0 <= R_GLUK <= 10000.0
+0.0 <= R_GLUN <= 10000.0
+0.0 <= R_GLUPRT <= 10000.0
+0.0 <= R_GLUSx <= 10000.0
+0.0 <= R_GLUTRS <= 10000.0
+0.0 <= R_GLUTRSm <= 10000.0
+-10000.0 <= R_GLUt2n <= 10000.0
+-10000.0 <= R_GLUt2r <= 10000.0
+0.0 <= R_GLUt5m <= 10000.0
+0.0 <= R_GLUt7 <= 10000.0
+0.0 <= R_GLUt7m <= 10000.0
+-10000.0 <= R_GLXt <= 10000.0
+-10000.0 <= R_GLXtp <= 10000.0
+0.0 <= R_GLYATi <= 10000.0
+0.0 <= R_GLYC3Ptm <= 10000.0
+0.0 <= R_GLYCDy <= 10000.0
+0.0 <= R_GLYCLm <= 10000.0
+0.0 <= R_GLYCRT <= 10000.0
+0.0 <= R_GLYCt2 <= 0.0
+-10000.0 <= R_GLYCt <= 10000.0
+0.0 <= R_GLYGS <= 10000.0
+0.0 <= R_GLYK <= 10000.0
+0.0 <= R_GLYOX <= 10000.0
+0.0 <= R_GLYOXm <= 10000.0
+0.0 <= R_GLYTRS <= 10000.0
+-10000.0 <= R_GLYt2m <= 10000.0
+-10000.0 <= R_GLYt2r <= 10000.0
+0.0 <= R_GMPS2 <= 10000.0
+0.0 <= R_GND <= 10000.0
+0.0 <= R_GNNUC <= 10000.0
+0.0 <= R_GPDDA1 <= 10000.0
+0.0 <= R_GRTT <= 10000.0
+0.0 <= R_GSNK <= 10000.0
+0.0 <= R_GSNt2 <= 10000.0
+-10000.0 <= R_GSNt2m <= 10000.0
+0.0 <= R_GTHOXti <= 10000.0
+0.0 <= R_GTHO <= 10000.0
+0.0 <= R_GTHOm <= 10000.0
+-10000.0 <= R_GTHP <= 10000.0
+-10000.0 <= R_GTHPm <= 10000.0
+0.0 <= R_GTHRDabcv <= 10000.0
+0.0 <= R_GTHRDt2 <= 10000.0
+0.0 <= R_GTHS <= 10000.0
+0.0 <= R_GTMLT <= 10000.0
+0.0 <= R_GTPCII <= 10000.0
+0.0 <= R_GTPCI <= 10000.0
+0.0 <= R_GTPH1 <= 10000.0
+0.0 <= R_GTPt2m <= 10000.0
+0.0 <= R_GUAD <= 10000.0
+0.0 <= R_GUAPRT <= 10000.0
+-10000.0 <= R_GUAt2r <= 10000.0
+-10000.0 <= R_GUAtm <= 10000.0
+-10000.0 <= R_H2O2tn <= 10000.0
+-10000.0 <= R_H2Oter <= 10000.0
+-10000.0 <= R_H2Ot <= 10000.0
+-10000.0 <= R_H2Otm <= 10000.0
+-10000.0 <= R_H2Otn <= 10000.0
+-10000.0 <= R_H2Otp <= 10000.0
+-10000.0 <= R_H2Otv <= 10000.0
+-10000.0 <= R_HACD10p <= 10000.0
+-10000.0 <= R_HACD4p <= 10000.0
+-10000.0 <= R_HACD5p <= 10000.0
+-10000.0 <= R_HACD6p <= 10000.0
+-10000.0 <= R_HACD7p <= 10000.0
+-10000.0 <= R_HACD8p <= 10000.0
+-10000.0 <= R_HACNHm <= 10000.0
+0.0 <= R_HBZOPT6m <= 10000.0
+0.0 <= R_HCITSm <= 10000.0
+0.0 <= R_HCITSn <= 10000.0
+-10000.0 <= R_HCO3E <= 10000.0
+-10000.0 <= R_HCO3Em <= 10000.0
+0.0 <= R_HCO3En <= 0.0
+-10000.0 <= R_HCO3tn <= 10000.0
+0.0 <= R_HCYSMT <= 10000.0
+-10000.0 <= R_HCYSt2p <= 10000.0
+0.0 <= R_HDCAt <= 10000.0
+0.0 <= R_HDCEAt <= 10000.0
+0.0 <= R_HEMEOMOm <= 10000.0
+0.0 <= R_HEMEOSm <= 10000.0
+0.0 <= R_HETZK <= 10000.0
+0.0 <= R_HEX1 <= 10000.0
+0.0 <= R_HEX4 <= 10000.0
+0.0 <= R_HEX7 <= 10000.0
+-10000.0 <= R_HEXCCOAtx <= 10000.0
+-10000.0 <= R_HEXDPtm <= 10000.0
+0.0 <= R_HGNTOR <= 10000.0
+-10000.0 <= R_HICITDm <= 10000.0
+0.0 <= R_HISTD <= 10000.0
+0.0 <= R_HISTP <= 10000.0
+0.0 <= R_HISTRS <= 10000.0
+0.0 <= R_HISTRSm <= 10000.0
+-10000.0 <= R_HISt2m <= 10000.0
+-10000.0 <= R_HISt2r <= 10000.0
+0.0 <= R_HISt6 <= 10000.0
+0.0 <= R_HKYNH <= 10000.0
+0.0 <= R_HMBS <= 10000.0
+-10000.0 <= R_HMGCOAR <= 10000.0
+-10000.0 <= R_HMGCOAS <= 10000.0
+-10000.0 <= R_HMGCOASm <= 10000.0
+-10000.0 <= R_HMGCOAtm <= 10000.0
+0.0 <= R_HMPK1 <= 10000.0
+0.0 <= R_HPPKm <= 10000.0
+0.0 <= R_HPROa <= 10000.0
+0.0 <= R_HPROb <= 10000.0
+0.0 <= R_HPROxm <= 10000.0
+0.0 <= R_HPROym <= 10000.0
+0.0 <= R_HSDxi <= 10000.0
+0.0 <= R_HSDyi <= 10000.0
+-10000.0 <= R_HSERTA <= 10000.0
+0.0 <= R_HSK <= 10000.0
+0.0 <= R_HSTPT <= 10000.0
+-10000.0 <= R_HXANt2r <= 10000.0
+0.0 <= R_HXPRT <= 10000.0
+0.0 <= R_HYPOE <= 10000.0
+0.0 <= R_IAMACt <= 10000.0
+-10000.0 <= R_IAMOHt <= 10000.0
+-10000.0 <= R_IAMOHtm <= 10000.0
+0.0 <= R_IBUTACt <= 10000.0
+-10000.0 <= R_IBUTOHt <= 10000.0
+-10000.0 <= R_IBUTOHtm <= 10000.0
+0.0 <= R_ICDHxm <= 10000.0
+0.0 <= R_ICDHy <= 10000.0
+0.0 <= R_ICDHym <= 10000.0
+0.0 <= R_ICDHyp <= 10000.0
+0.0 <= R_ICL <= 10000.0
+-10000.0 <= R_ID3ACALDt <= 10000.0
+-10000.0 <= R_ID3ACALDtm <= 10000.0
+0.0 <= R_IG3PS <= 10000.0
+0.0 <= R_IGPDH <= 10000.0
+0.0 <= R_IGPS <= 10000.0
+-10000.0 <= R_ILETA <= 10000.0
+-10000.0 <= R_ILETAm <= 10000.0
+0.0 <= R_ILETRS <= 10000.0
+0.0 <= R_ILETRSm <= 10000.0
+-10000.0 <= R_ILEt2r <= 10000.0
+0.0 <= R_ILEt6 <= 10000.0
+0.0 <= R_ILEt7 <= 10000.0
+0.0 <= R_ILEtmi <= 10000.0
+-10000.0 <= R_IMPC <= 10000.0
+0.0 <= R_IMPD <= 10000.0
+-10000.0 <= R_IND3ACtm <= 10000.0
+-10000.0 <= R_IND3ETHt <= 10000.0
+-10000.0 <= R_IND3ETHtm <= 10000.0
+-10000.0 <= R_INDPYRD <= 10000.0
+0.0 <= R_INSK <= 10000.0
+0.0 <= R_INSTt2 <= 10000.0
+0.0 <= R_INSt2 <= 10000.0
+0.0 <= R_IPC124PLC_SC <= 10000.0
+0.0 <= R_IPC126PLC_SC <= 10000.0
+0.0 <= R_IPC224PLC_SC <= 10000.0
+0.0 <= R_IPC226PLC_SC <= 10000.0
+0.0 <= R_IPC324PLC_SC <= 10000.0
+0.0 <= R_IPC326PLC_SC <= 10000.0
+0.0 <= R_IPCS124_SC <= 10000.0
+0.0 <= R_IPCS126_SC <= 10000.0
+0.0 <= R_IPCS224_SC <= 10000.0
+0.0 <= R_IPCS226_SC <= 10000.0
+0.0 <= R_IPCS324_SC <= 10000.0
+0.0 <= R_IPCS326_SC <= 10000.0
+-10000.0 <= R_IPDDI <= 10000.0
+-10000.0 <= R_IPDPtm <= 10000.0
+0.0 <= R_IPMD <= 10000.0
+-10000.0 <= R_IPPMIa <= 10000.0
+-10000.0 <= R_IPPMIb <= 10000.0
+0.0 <= R_IPPS <= 10000.0
+0.0 <= R_IPPSm <= 10000.0
+-10000.0 <= R_ITCOALm <= 10000.0
+0.0 <= R_KARA1im <= 10000.0
+0.0 <= R_KARA2im <= 10000.0
+0.0 <= R_KYN3OX <= 10000.0
+0.0 <= R_KYN <= 10000.0
+-10000.0 <= R_Kt2r <= 10000.0
+0.0 <= R_LALDO3 <= 10000.0
+0.0 <= R_LANOSTAT_SC <= 10000.0
+0.0 <= R_LANOSTESTH_SCe <= 10000.0
+0.0 <= R_LANOSTESTH_SC <= 10000.0
+-10000.0 <= R_LANOSTt <= 10000.0
+0.0 <= R_LCADi <= 10000.0
+0.0 <= R_LCYSTintv <= 10000.0
+-10000.0 <= R_LEUTA <= 10000.0
+-10000.0 <= R_LEUTAm <= 10000.0
+0.0 <= R_LEUTRS <= 10000.0
+0.0 <= R_LEUTRSm <= 10000.0
+-10000.0 <= R_LEUt2r <= 10000.0
+0.0 <= R_LEUt6 <= 10000.0
+0.0 <= R_LEUt7 <= 10000.0
+0.0 <= R_LGTHL <= 10000.0
+0.0 <= R_LNS14DM <= 10000.0
+0.0 <= R_LNS14DMx <= 10000.0
+0.0 <= R_LNSTLS <= 10000.0
+0.0 <= R_LPCAT_SC <= 10000.0
+0.0 <= R_LPP_SC <= 10000.0
+-10000.0 <= R_LSERDHr <= 10000.0
+0.0 <= R_LYSTRS <= 10000.0
+0.0 <= R_LYSTRSm <= 10000.0
+-10000.0 <= R_LYSt2m <= 10000.0
+-10000.0 <= R_LYSt2r <= 10000.0
+0.0 <= R_LYSt6 <= 10000.0
+0.0 <= R_L_LACD2cm <= 10000.0
+0.0 <= R_L_LACt2r <= 0.0
+-10000.0 <= R_L_LACtm <= 10000.0
+0.0 <= R_MACACI <= 10000.0
+-10000.0 <= R_MALOAAtp <= 10000.0
+0.0 <= R_MALS <= 10000.0
+0.0 <= R_MALSp <= 10000.0
+0.0 <= R_MALT <= 10000.0
+0.0 <= R_MALTt2 <= 10000.0
+-10000.0 <= R_MALt2r <= 10000.0
+-10000.0 <= R_MALtm <= 10000.0
+0.0 <= R_MAN1PT <= 10000.0
+-10000.0 <= R_MAN6PI <= 10000.0
+-10000.0 <= R_MANNANter <= 10000.0
+0.0 <= R_MANt2 <= 10000.0
+-10000.0 <= R_MCITDm <= 10000.0
+0.0 <= R_MCITL2m <= 10000.0
+0.0 <= R_MCITSm <= 10000.0
+-10000.0 <= R_MCOATA <= 10000.0
+-10000.0 <= R_MCOATAm <= 10000.0
+-10000.0 <= R_MDH <= 10000.0
+-10000.0 <= R_MDHm <= 10000.0
+-10000.0 <= R_MDHp <= 10000.0
+0.0 <= R_MDRPD <= 10000.0
+0.0 <= R_ME1m <= 10000.0
+0.0 <= R_ME2m <= 10000.0
+0.0 <= R_MELIBt2 <= 10000.0
+-10000.0 <= R_MELTGH <= 10000.0
+0.0 <= R_METAT <= 10000.0
+0.0 <= R_METB1 <= 10000.0
+0.0 <= R_METS <= 10000.0
+0.0 <= R_METTRS <= 10000.0
+0.0 <= R_METTRSm <= 10000.0
+-10000.0 <= R_METt2m <= 10000.0
+-10000.0 <= R_METt2r <= 10000.0
+0.0 <= R_MEVK1 <= 10000.0
+0.0 <= R_MEVK2 <= 10000.0
+0.0 <= R_MEVK3 <= 10000.0
+0.0 <= R_MEVK4 <= 10000.0
+-10000.0 <= R_MEVRt <= 10000.0
+0.0 <= R_MFAPS_SC <= 10000.0
+0.0 <= R_MGSA <= 10000.0
+0.0 <= R_MHPGLUT <= 10000.0
+0.0 <= R_MI13456PKn <= 10000.0
+0.0 <= R_MI1345PKn <= 10000.0
+0.0 <= R_MI1456PKn <= 10000.0
+0.0 <= R_MI145P6Kn <= 10000.0
+0.0 <= R_MI145PKn <= 10000.0
+-10000.0 <= R_MI145Ptn <= 10000.0
+0.0 <= R_MI1PP <= 10000.0
+0.0 <= R_MI1PS <= 10000.0
+-10000.0 <= R_MINOHPtn <= 10000.0
+0.0 <= R_MIP2C124PLC_SC <= 10000.0
+0.0 <= R_MIP2C126PLC_SC <= 10000.0
+0.0 <= R_MIP2C224PLC_SC <= 10000.0
+0.0 <= R_MIP2C226PLC_SC <= 10000.0
+0.0 <= R_MIP2C324PLC_SC <= 10000.0
+0.0 <= R_MIP2C326PLC_SC <= 10000.0
+0.0 <= R_MIP2CS124_SC <= 10000.0
+0.0 <= R_MIP2CS126_SC <= 10000.0
+0.0 <= R_MIP2CS224_SC <= 10000.0
+0.0 <= R_MIP2CS226_SC <= 10000.0
+0.0 <= R_MIP2CS324_SC <= 10000.0
+0.0 <= R_MIP2CS326_SC <= 10000.0
+0.0 <= R_MIPC124PLC_SC <= 10000.0
+0.0 <= R_MIPC126PLC_SC <= 10000.0
+0.0 <= R_MIPC224PLC_SC <= 10000.0
+0.0 <= R_MIPC226PLC_SC <= 10000.0
+0.0 <= R_MIPC324PLC_SC <= 10000.0
+0.0 <= R_MIPC326PLC_SC <= 10000.0
+0.0 <= R_MIPCS124_SC <= 10000.0
+0.0 <= R_MIPCS126_SC <= 10000.0
+0.0 <= R_MIPCS224_SC <= 10000.0
+0.0 <= R_MIPCS226_SC <= 10000.0
+0.0 <= R_MIPCS324_SC <= 10000.0
+0.0 <= R_MIPCS326_SC <= 10000.0
+0.0 <= R_MMETt2 <= 10000.0
+0.0 <= R_MOHMT <= 10000.0
+0.0 <= R_MTAP <= 10000.0
+-10000.0 <= R_MTHFC <= 10000.0
+-10000.0 <= R_MTHFCm <= 10000.0
+0.0 <= R_MTHFD2i <= 10000.0
+-10000.0 <= R_MTHFD <= 10000.0
+-10000.0 <= R_MTHFDm <= 10000.0
+0.0 <= R_MTHFR3 <= 10000.0
+-10000.0 <= R_MTRI <= 10000.0
+0.0 <= R_NABTNO <= 10000.0
+-10000.0 <= R_NACt <= 10000.0
+0.0 <= R_NADDPp <= 10000.0
+0.0 <= R_NADH2_u6cm <= 10000.0
+0.0 <= R_NADH2_u6m <= 10000.0
+0.0 <= R_NADK <= 10000.0
+0.0 <= R_NADKm <= 10000.0
+0.0 <= R_NADN <= 10000.0
+0.0 <= R_NADNm <= 10000.0
+0.0 <= R_NADPPPS <= 10000.0
+0.0 <= R_NADPPPSm <= 10000.0
+-10000.0 <= R_NADPt <= 10000.0
+0.0 <= R_NADS1 <= 10000.0
+0.0 <= R_NADS1n <= 10000.0
+-10000.0 <= R_NADtn <= 10000.0
+0.0 <= R_NAPRT <= 10000.0
+0.0 <= R_NAPRTm <= 10000.0
+-10000.0 <= R_NAt3_1 <= 10000.0
+0.0 <= R_NDP1 <= 10000.0
+0.0 <= R_NDP3g <= 10000.0
+0.0 <= R_NDP3 <= 10000.0
+0.0 <= R_NDP4 <= 10000.0
+0.0 <= R_NDP7 <= 10000.0
+-10000.0 <= R_NDPK1 <= 10000.0
+-10000.0 <= R_NDPK2 <= 10000.0
+-10000.0 <= R_NDPK3 <= 10000.0
+-10000.0 <= R_NDPK4 <= 10000.0
+-10000.0 <= R_NDPK5 <= 10000.0
+-10000.0 <= R_NDPK6 <= 10000.0
+-10000.0 <= R_NDPK7 <= 10000.0
+-10000.0 <= R_NDPK8 <= 10000.0
+-10000.0 <= R_NDPK9 <= 10000.0
+0.0 <= R_NFORTYRt <= 10000.0
+0.0 <= R_NFTYROX <= 10000.0
+0.0 <= R_NH4ti <= 10000.0
+-10000.0 <= R_NH4t <= 10000.0
+-10000.0 <= R_NH4tm <= 10000.0
+-10000.0 <= R_NH4tn <= 10000.0
+-10000.0 <= R_NH4tp <= 10000.0
+0.0 <= R_NMNAT <= 10000.0
+0.0 <= R_NMNATm <= 10000.0
+0.0 <= R_NMNTP <= 10000.0
+-10000.0 <= R_NMNt2m <= 10000.0
+-10000.0 <= R_NMNt2p <= 10000.0
+-10000.0 <= R_NNAMr <= 10000.0
+-10000.0 <= R_NNAMrm <= 10000.0
+0.0 <= R_NNAT <= 10000.0
+0.0 <= R_NNATm <= 10000.0
+0.0 <= R_NNDPR <= 10000.0
+0.0 <= R_NNDPRm <= 10000.0
+0.0 <= R_NNMT <= 10000.0
+0.0 <= R_NTD10 <= 10000.0
+0.0 <= R_NTD11 <= 10000.0
+0.0 <= R_NTD1 <= 10000.0
+0.0 <= R_NTD2 <= 10000.0
+0.0 <= R_NTD3 <= 10000.0
+0.0 <= R_NTD4 <= 10000.0
+0.0 <= R_NTD5 <= 10000.0
+0.0 <= R_NTD6 <= 10000.0
+0.0 <= R_NTD7 <= 10000.0
+0.0 <= R_NTD8 <= 10000.0
+0.0 <= R_NTD9 <= 10000.0
+0.0 <= R_NTP3 <= 10000.0
+0.0 <= R_NTP4 <= 10000.0
+0.0 <= R_NTRLASE2 <= 10000.0
+0.0 <= R_NTRLASE3 <= 10000.0
+0.0 <= R_NTRLASE <= 10000.0
+-10000.0 <= R_O2ter <= 10000.0
+-10000.0 <= R_O2t <= 10000.0
+-10000.0 <= R_O2tm <= 10000.0
+-10000.0 <= R_OAAt2m <= 10000.0
+-10000.0 <= R_OAAt <= 10000.0
+0.0 <= R_OBDHm <= 10000.0
+0.0 <= R_OCBTi <= 10000.0
+0.0 <= R_OCDCAt <= 10000.0
+0.0 <= R_OCDCEAt <= 10000.0
+0.0 <= R_OCDCYAt <= 10000.0
+0.0 <= R_OHACT1 <= 10000.0
+0.0 <= R_OHACT2 <= 10000.0
+0.0 <= R_OHACT3 <= 10000.0
+0.0 <= R_OHACT4 <= 10000.0
+0.0 <= R_OHACT5 <= 10000.0
+-10000.0 <= R_OHPBAT <= 10000.0
+0.0 <= R_OMCDC <= 10000.0
+0.0 <= R_OMCDCm <= 10000.0
+0.0 <= R_OMPDC <= 10000.0
+0.0 <= R_ORNDC <= 10000.0
+0.0 <= R_ORNTACim <= 10000.0
+0.0 <= R_ORNTA <= 10000.0
+-10000.0 <= R_ORNt2r <= 10000.0
+-10000.0 <= R_ORNt3m <= 10000.0
+-10000.0 <= R_ORPT <= 10000.0
+-10000.0 <= R_OXAGm <= 10000.0
+-10000.0 <= R_OXO2Ctm <= 10000.0
+0.0 <= R_P5CDm <= 10000.0
+0.0 <= R_P5CR <= 10000.0
+-10000.0 <= R_PACALDt <= 10000.0
+-10000.0 <= R_PACALDtm <= 10000.0
+0.0 <= R_PAK_SC <= 10000.0
+-10000.0 <= R_PALOXR <= 10000.0
+-10000.0 <= R_PAN4Ptm <= 10000.0
+0.0 <= R_PANTS <= 10000.0
+-10000.0 <= R_PANTtm <= 10000.0
+0.0 <= R_PAPSR <= 10000.0
+-10000.0 <= R_PAPt <= 10000.0
+-10000.0 <= R_PAPtm <= 10000.0
+-10000.0 <= R_PAtm_SC <= 10000.0
+0.0 <= R_PCDAGAT <= 10000.0
+0.0 <= R_PC <= 10000.0
+0.0 <= R_PDE1 <= 10000.0
+0.0 <= R_PDE2 <= 10000.0
+0.0 <= R_PDE3 <= 10000.0
+0.0 <= R_PDE4 <= 10000.0
+0.0 <= R_PDE5 <= 10000.0
+0.0 <= R_PDHcm <= 0.0
+0.0 <= R_PDHm <= 10000.0
+-10000.0 <= R_PDX5PO <= 10000.0
+-10000.0 <= R_PENDPtm <= 10000.0
+0.0 <= R_PEPAT <= 10000.0
+0.0 <= R_PEPDt3 <= 10000.0
+0.0 <= R_PETHCT <= 10000.0
+0.0 <= R_PETOHM_SC <= 10000.0
+-10000.0 <= R_PEtg_SC <= 10000.0
+-10000.0 <= R_PEtm_SC <= 10000.0
+-10000.0 <= R_PEtv_SC <= 10000.0
+0.0 <= R_PFK26 <= 10000.0
+0.0 <= R_PFK_2 <= 10000.0
+0.0 <= R_PFK_3 <= 10000.0
+0.0 <= R_PFK <= 10000.0
+-10000.0 <= R_PGAMT <= 10000.0
+0.0 <= R_PGCD <= 10000.0
+-10000.0 <= R_PGI <= 10000.0
+-10000.0 <= R_PGK <= 10000.0
+0.0 <= R_PGL <= 10000.0
+-10000.0 <= R_PGMT <= 10000.0
+-10000.0 <= R_PGM <= 10000.0
+0.0 <= R_PGPPAm_SC <= 10000.0
+0.0 <= R_PHCDm <= 10000.0
+0.0 <= R_PHCHGSm <= 10000.0
+0.0 <= R_PHEACt <= 10000.0
+-10000.0 <= R_PHETA1 <= 10000.0
+0.0 <= R_PHETRS <= 10000.0
+0.0 <= R_PHETRSm <= 10000.0
+-10000.0 <= R_PHEt2m <= 10000.0
+-10000.0 <= R_PHEt2r <= 10000.0
+0.0 <= R_PHLPDS1 <= 10000.0
+0.0 <= R_PHLPDS2 <= 10000.0
+0.0 <= R_PHLPDS3 <= 10000.0
+0.0 <= R_PHLPDS4 <= 10000.0
+0.0 <= R_PI35BP5P_SC <= 10000.0
+0.0 <= R_PI3P4K_SC <= 10000.0
+0.0 <= R_PI3P5K_SC <= 10000.0
+0.0 <= R_PI45BP5P_SC <= 10000.0
+0.0 <= R_PI45BPP_SC <= 10000.0
+0.0 <= R_PI4P5K_SC <= 10000.0
+0.0 <= R_PIN3K_SC <= 10000.0
+0.0 <= R_PIN4K_SC <= 10000.0
+0.0 <= R_PIN4Kn_SC <= 10000.0
+0.0 <= R_PINOS_SC <= 10000.0
+-10000.0 <= R_PIt2m <= 10000.0
+-10000.0 <= R_PIt2n <= 10000.0
+-10000.0 <= R_PIt2p <= 10000.0
+-10000.0 <= R_PIt2r <= 10000.0
+-10000.0 <= R_PIt2v <= 10000.0
+-10000.0 <= R_PIt5m <= 10000.0
+0.0 <= R_PLBP1I_SCe <= 10000.0
+0.0 <= R_PLBPC_SCe <= 10000.0
+0.0 <= R_PLBPC_SC <= 10000.0
+0.0 <= R_PLD_SC <= 10000.0
+-10000.0 <= R_PMANM <= 10000.0
+0.0 <= R_PMDPHT <= 10000.0
+0.0 <= R_PMETM_SC <= 10000.0
+0.0 <= R_PMEVK <= 10000.0
+0.0 <= R_PMI12346PH <= 10000.0
+0.0 <= R_PMI12346PS <= 10000.0
+0.0 <= R_PMI1346PH <= 10000.0
+0.0 <= R_PMI1346PS <= 10000.0
+0.0 <= R_PMPK <= 10000.0
+-10000.0 <= R_PNP <= 10000.0
+0.0 <= R_PNTK <= 10000.0
+-10000.0 <= R_PNTOt2 <= 10000.0
+0.0 <= R_POLYAO2 <= 10000.0
+0.0 <= R_POLYAO3 <= 10000.0
+0.0 <= R_POLYAO <= 10000.0
+0.0 <= R_PPA <= 10000.0
+0.0 <= R_PPAm <= 10000.0
+0.0 <= R_PPBNGS <= 10000.0
+0.0 <= R_PPCDC <= 10000.0
+0.0 <= R_PPCK <= 10000.0
+0.0 <= R_PPItp <= 10000.0
+-10000.0 <= R_PPM <= 10000.0
+0.0 <= R_PPNCL2 <= 10000.0
+0.0 <= R_PPND2 <= 10000.0
+0.0 <= R_PPNDH <= 10000.0
+0.0 <= R_PPND <= 10000.0
+-10000.0 <= R_PPPG9tm <= 10000.0
+0.0 <= R_PPPGOm <= 10000.0
+0.0 <= R_PPTTm <= 10000.0
+0.0 <= R_PPYRDC <= 10000.0
+-10000.0 <= R_PRAGSr <= 10000.0
+0.0 <= R_PRAIS <= 10000.0
+0.0 <= R_PRAIi <= 10000.0
+0.0 <= R_PRAMPC <= 10000.0
+-10000.0 <= R_PRASCS <= 10000.0
+0.0 <= R_PRATPP <= 10000.0
+0.0 <= R_PRFGS <= 10000.0
+0.0 <= R_PRMICIi <= 10000.0
+0.0 <= R_PRO1xm <= 10000.0
+0.0 <= R_PROTRS <= 10000.0
+-10000.0 <= R_PROt2r <= 10000.0
+-10000.0 <= R_PROtm <= 10000.0
+-10000.0 <= R_PRPPS <= 10000.0
+-10000.0 <= R_PRPPtm <= 10000.0
+0.0 <= R_PSCVTi <= 10000.0
+0.0 <= R_PSERDg_SC <= 10000.0
+0.0 <= R_PSERDm_SC <= 10000.0
+0.0 <= R_PSERDv_SC <= 10000.0
+-10000.0 <= R_PSERS_SC <= 10000.0
+-10000.0 <= R_PSERSm_SC <= 10000.0
+0.0 <= R_PSERT <= 10000.0
+0.0 <= R_PSPH1Pter <= 10000.0
+0.0 <= R_PSPHPL <= 10000.0
+0.0 <= R_PSPHS <= 10000.0
+0.0 <= R_PSP_L <= 10000.0
+-10000.0 <= R_PStg_SC <= 10000.0
+-10000.0 <= R_PStm_SC <= 10000.0
+-10000.0 <= R_PStv_SC <= 10000.0
+-10000.0 <= R_PTD1INOtn_SC <= 10000.0
+-10000.0 <= R_PTD4INOtn_SC <= 10000.0
+0.0 <= R_PTE10x <= 10000.0
+0.0 <= R_PTE11x <= 10000.0
+0.0 <= R_PTE12x <= 10000.0
+0.0 <= R_PTE2x <= 10000.0
+0.0 <= R_PTE7x <= 10000.0
+0.0 <= R_PTE8x <= 10000.0
+0.0 <= R_PTE9x <= 10000.0
+0.0 <= R_PTPATi <= 10000.0
+0.0 <= R_PTPATim <= 10000.0
+0.0 <= R_PTRCt3i <= 10000.0
+0.0 <= R_PTRCtex2 <= 10000.0
+-10000.0 <= R_PUNP1 <= 10000.0
+-10000.0 <= R_PUNP1m <= 10000.0
+-10000.0 <= R_PUNP2 <= 10000.0
+-10000.0 <= R_PUNP3 <= 10000.0
+-10000.0 <= R_PUNP3m <= 10000.0
+-10000.0 <= R_PUNP4 <= 10000.0
+-10000.0 <= R_PUNP5 <= 10000.0
+-10000.0 <= R_PUNP6 <= 10000.0
+-10000.0 <= R_PUNP7 <= 10000.0
+0.0 <= R_PYAM5PO <= 10000.0
+0.0 <= R_PYDAMK <= 10000.0
+0.0 <= R_PYDXK <= 10000.0
+0.0 <= R_PYDXNK <= 10000.0
+-10000.0 <= R_PYDXNO <= 10000.0
+-10000.0 <= R_PYDXO <= 10000.0
+0.0 <= R_PYK <= 10000.0
+-10000.0 <= R_PYNP2r <= 10000.0
+0.0 <= R_PYR5CDm <= 10000.0
+0.0 <= R_PYRDC2 <= 10000.0
+0.0 <= R_PYRDC <= 10000.0
+-10000.0 <= R_PYRt2 <= 10000.0
+-10000.0 <= R_PYRt2m <= 10000.0
+-10000.0 <= R_PYRt2p <= 10000.0
+0.0 <= R_PYRt <= 0.0
+0.0 <= R_QUILSYN <= 10000.0
+0.0 <= R_QULNS <= 10000.0
+-10000.0 <= R_QULNtm <= 10000.0
+0.0 <= R_RAFGH <= 10000.0
+0.0 <= R_RBFK <= 10000.0
+0.0 <= R_RBFKm <= 10000.0
+0.0 <= R_RBFSa <= 10000.0
+0.0 <= R_RBFSb <= 10000.0
+0.0 <= R_RBK <= 10000.0
+0.0 <= R_RIBFLVt2 <= 10000.0
+-10000.0 <= R_RIBFLVtm <= 10000.0
+0.0 <= R_RIBt2 <= 10000.0
+0.0 <= R_RNDR1 <= 10000.0
+0.0 <= R_RNDR1n <= 10000.0
+0.0 <= R_RNDR2 <= 10000.0
+0.0 <= R_RNDR2n <= 10000.0
+0.0 <= R_RNDR3 <= 10000.0
+0.0 <= R_RNDR3n <= 10000.0
+0.0 <= R_RNDR4 <= 10000.0
+0.0 <= R_RNDR4n <= 10000.0
+0.0 <= R_RNMK <= 10000.0
+0.0 <= R_RNTR1 <= 10000.0
+0.0 <= R_RNTR2 <= 10000.0
+0.0 <= R_RNTR3 <= 10000.0
+0.0 <= R_RNTR4 <= 10000.0
+-10000.0 <= R_RPE <= 10000.0
+-10000.0 <= R_RPI <= 10000.0
+-10000.0 <= R_SACCD1 <= 10000.0
+-10000.0 <= R_SACCD2 <= 10000.0
+0.0 <= R_SADT <= 10000.0
+0.0 <= R_SAM24MT <= 10000.0
+0.0 <= R_SBPP1er <= 10000.0
+0.0 <= R_SBPP2er <= 10000.0
+0.0 <= R_SBTD_D2 <= 10000.0
+0.0 <= R_SBTD_L <= 10000.0
+0.0 <= R_SBTR <= 10000.0
+-10000.0 <= R_SBT_Dt <= 10000.0
+-10000.0 <= R_SBT_Lt <= 10000.0
+0.0 <= R_SERATi <= 10000.0
+0.0 <= R_SERD_L <= 10000.0
+0.0 <= R_SERPT <= 10000.0
+0.0 <= R_SERTRS <= 10000.0
+-10000.0 <= R_SERt2m <= 10000.0
+-10000.0 <= R_SERt2r <= 10000.0
+-10000.0 <= R_SFGTH <= 10000.0
+0.0 <= R_SHCHD <= 10000.0
+0.0 <= R_SHCHF <= 10000.0
+0.0 <= R_SHK3D <= 10000.0
+0.0 <= R_SHKK <= 10000.0
+0.0 <= R_SHSL1 <= 0.0
+-10000.0 <= R_SHSL4r <= 10000.0
+0.0 <= R_SLCBK1 <= 10000.0
+0.0 <= R_SLCBK2 <= 10000.0
+-10000.0 <= R_SLFAT <= 10000.0
+0.0 <= R_SO3ti <= 10000.0
+0.0 <= R_SO4ti <= 10000.0
+0.0 <= R_SPH1Pter <= 10000.0
+0.0 <= R_SPHPL <= 10000.0
+0.0 <= R_SPMDAT1 <= 10000.0
+0.0 <= R_SPMDt3i <= 10000.0
+0.0 <= R_SPMDtex2 <= 10000.0
+0.0 <= R_SPMS <= 10000.0
+0.0 <= R_SPRMS <= 10000.0
+0.0 <= R_SPRMt2i <= 10000.0
+-10000.0 <= R_SQ23EPXter <= 10000.0
+0.0 <= R_SQLEr <= 10000.0
+0.0 <= R_SQLErx <= 10000.0
+0.0 <= R_SQLS <= 10000.0
+-10000.0 <= R_SQLter <= 10000.0
+-10000.0 <= R_SRB_Lt <= 10000.0
+0.0 <= R_SSALy <= 10000.0
+0.0 <= R_STEROLS1 <= 10000.0
+0.0 <= R_STEROLS2 <= 10000.0
+-10000.0 <= R_SUCCt2r <= 10000.0
+0.0 <= R_SUCCtm <= 10000.0
+-10000.0 <= R_SUCD1m <= 10000.0
+0.0 <= R_SUCD2_u6m <= 0.0
+-10000.0 <= R_SUCD3_u6m <= 10000.0
+0.0 <= R_SUCFUMtm <= 10000.0
+-10000.0 <= R_SUCOASm <= 10000.0
+0.0 <= R_SUCRe <= 10000.0
+0.0 <= R_SUCRt2 <= 10000.0
+-10000.0 <= R_SULR <= 10000.0
+0.0 <= R_T4HCINNMFM <= 10000.0
+0.0 <= R_TAGL_SC <= 10000.0
+-10000.0 <= R_TALA <= 10000.0
+0.0 <= R_TAUDO <= 10000.0
+-10000.0 <= R_TAURt <= 10000.0
+0.0 <= R_TCHOLAabcv <= 10000.0
+0.0 <= R_THFATm <= 10000.0
+-10000.0 <= R_THFGLUS <= 10000.0
+-10000.0 <= R_THFOXR <= 10000.0
+0.0 <= R_THIORDXi <= 10000.0
+-10000.0 <= R_THIORDXm <= 10000.0
+0.0 <= R_THIORDXni <= 10000.0
+-10000.0 <= R_THIORDXp <= 10000.0
+0.0 <= R_THMDPe <= 10000.0
+0.0 <= R_THMDt2 <= 10000.0
+0.0 <= R_THMPPt2m <= 10000.0
+0.0 <= R_THMPe <= 10000.0
+0.0 <= R_THMP <= 10000.0
+0.0 <= R_THMt2 <= 10000.0
+0.0 <= R_THRA2i <= 10000.0
+0.0 <= R_THRAi <= 10000.0
+0.0 <= R_THRD_L <= 10000.0
+0.0 <= R_THRD_Lm <= 10000.0
+0.0 <= R_THRS <= 10000.0
+0.0 <= R_THRTRS <= 10000.0
+0.0 <= R_THRTRSm <= 10000.0
+-10000.0 <= R_THRt2m <= 10000.0
+-10000.0 <= R_THRt2r <= 10000.0
+-10000.0 <= R_THYMt3r <= 10000.0
+0.0 <= R_THZPSN1_SC <= 10000.0
+0.0 <= R_THZPSN2_SC <= 10000.0
+-10000.0 <= R_TKT1 <= 10000.0
+-10000.0 <= R_TKT2 <= 10000.0
+0.0 <= R_TMDK1 <= 10000.0
+0.0 <= R_TMDPK <= 10000.0
+0.0 <= R_TMDPPK <= 10000.0
+-10000.0 <= R_TMDPP <= 10000.0
+0.0 <= R_TMDS <= 10000.0
+0.0 <= R_TMN <= 10000.0
+-10000.0 <= R_TMPKr <= 10000.0
+0.0 <= R_TMPPP <= 10000.0
+-10000.0 <= R_TPI <= 10000.0
+-10000.0 <= R_TRDOXtp <= 10000.0
+-10000.0 <= R_TRDRDtp <= 10000.0
+0.0 <= R_TRDR <= 10000.0
+0.0 <= R_TRDRm <= 10000.0
+0.0 <= R_TRE6PP <= 10000.0
+0.0 <= R_TRE6PS <= 10000.0
+0.0 <= R_TREH <= 10000.0
+0.0 <= R_TREHv <= 10000.0
+0.0 <= R_TREt2 <= 10000.0
+-10000.0 <= R_TREt2v <= 10000.0
+0.0 <= R_TRIGS_SC <= 10000.0
+0.0 <= R_TRPO2 <= 10000.0
+0.0 <= R_TRPS1 <= 10000.0
+-10000.0 <= R_TRPTA <= 10000.0
+0.0 <= R_TRPTRS <= 10000.0
+0.0 <= R_TRPTRSm <= 10000.0
+-10000.0 <= R_TRPt2m <= 10000.0
+-10000.0 <= R_TRPt2r <= 10000.0
+-10000.0 <= R_TTCCOAtx <= 10000.0
+-10000.0 <= R_TTDCAtr <= 10000.0
+0.0 <= R_TYRNFT <= 10000.0
+0.0 <= R_TYRTAi <= 10000.0
+0.0 <= R_TYRTAim <= 10000.0
+0.0 <= R_TYRTAip <= 10000.0
+0.0 <= R_TYRTRS <= 10000.0
+0.0 <= R_TYRTRSm <= 10000.0
+-10000.0 <= R_TYRt2m <= 10000.0
+-10000.0 <= R_TYRt2p <= 10000.0
+-10000.0 <= R_TYRt2r <= 10000.0
+0.0 <= R_TYRt6 <= 10000.0
+0.0 <= R_TYRt7 <= 10000.0
+-10000.0 <= R_UDPACGLP <= 10000.0
+-10000.0 <= R_UDPG4E <= 10000.0
+0.0 <= R_UDPGALt2g <= 10000.0
+-10000.0 <= R_UGLT <= 10000.0
+-10000.0 <= R_UGLYCHr <= 10000.0
+-10000.0 <= R_UMPK <= 10000.0
+-10000.0 <= R_UMPKn <= 10000.0
+-10000.0 <= R_UMPtn <= 10000.0
+0.0 <= R_UNK3 <= 10000.0
+0.0 <= R_UPP3MT <= 10000.0
+0.0 <= R_UPP3S <= 10000.0
+0.0 <= R_UPPDC1 <= 10000.0
+0.0 <= R_UPPRT <= 10000.0
+0.0 <= R_URAt2 <= 10000.0
+-10000.0 <= R_UREA2t2 <= 10000.0
+-10000.0 <= R_UREASE <= 10000.0
+-10000.0 <= R_URIDK2r <= 10000.0
+-10000.0 <= R_URIDK2rn <= 10000.0
+0.0 <= R_URIK1 <= 10000.0
+0.0 <= R_URIK2 <= 10000.0
+0.0 <= R_URIt2 <= 10000.0
+0.0 <= R_UTPH1 <= 10000.0
+0.0 <= R_UTPtm <= 10000.0
+0.0 <= R_VALTAim <= 10000.0
+-10000.0 <= R_VALTA <= 10000.0
+0.0 <= R_VALTRS <= 10000.0
+0.0 <= R_VALTRSm <= 10000.0
+-10000.0 <= R_VALt2m <= 10000.0
+-10000.0 <= R_VALt2r <= 10000.0
+-10000.0 <= R_XANt <= 10000.0
+0.0 <= R_XPPT <= 10000.0
+0.0 <= R_XTSNt2 <= 10000.0
+0.0 <= R_XYLK <= 10000.0
+0.0 <= R_XYLR <= 10000.0
+0.0 <= R_XYLTD_D <= 10000.0
+-10000.0 <= R_XYLTt <= 10000.0
+-10000.0 <= R_XYLt <= 10000.0
+-10000.0 <= R_YUMPS <= 10000.0
+0.0 <= R_ZYMSTAT_SC <= 10000.0
+0.0 <= R_ZYMSTESTH_SCe <= 10000.0
+0.0 <= R_ZYMSTESTH_SC <= 10000.0
+-10000.0 <= R_ZYMSTt <= 10000.0
+0.0 <= R_biomass_core <= 10000.0
+0.0 <= R_biomass_wildType <= 10000.0
 
 END

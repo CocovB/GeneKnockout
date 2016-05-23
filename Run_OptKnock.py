@@ -46,10 +46,10 @@ import pyOpt
 
 ### User input ######
 
-modelFile = 'ModelinRefCondition.xml'
+# modelFile = 'ModelinRefCondition.xml'
 # modelFile = 'iTM686_biofuels.sbml3.xml'
 # modelFile = 'toy_model_biofuel.l3.xml'
-# modelFile = 'iaz_sbml3.xml'
+modelFile = 'iaz_sbml3.xml'
 
 product_dict = {
 'iaz_sbml3.xml':'R_EX_succ_e_',
@@ -71,7 +71,7 @@ print bilevelObjective, bio_reaction
 # percentage of bio_reaction that should be maintained
 objMinFactor = 0.1
 # the minimum number of fluxes that need to be potentially active (total number of fluxes - deletions)
-maxDelete = 2
+maxDelete = 3
     
 # Define value that indicates 'unbounded' in sbml file, to be translated to cplex.inf
 # If boundaries are already defined infinite, make sure this value is high
