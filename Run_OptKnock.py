@@ -46,11 +46,28 @@ import pyOpt
 
 ### User input ######
 
-modelFile = 'ModelinRefCondition.xml'
-    
-bilevelObjective = ('R_EX_ac_e', 1)
-bio_reaction = 'R_BiomassAuto'
+# modelFile = 'ModelinRefCondition.xml'
+# modelFile = 'iTM686_biofuels.sbml3.xml'
+modelFile = 'toy_model_biofuel.l3.xml'
+# modelFile = 'iaz_sbml3.xml'
 
+product_dict = {
+'iaz_sbml3.xml':'R_EX_succ_e_',
+'toy_model_biofuel.l3.xml':'R09',
+'iTM686_biofuels.sbml3.xml':'R_EX_etoh_e',
+'ModelinRefCondition.xml':'R_EX_ac_e'
+}
+bilevelObjective = (product_dict[modelFile], 1)
+
+biomass_dict = {
+'iaz_sbml3.xml':'R_biomass_core',
+'toy_model_biofuel.l3.xml':'R17',
+'iTM686_biofuels.sbml3.xml':'R_BiomassHetero',
+'ModelinRefCondition.xml':'R_BiomassAuto'
+}
+bio_reaction = biomass_dict[modelFile]
+
+print bilevelObjective, bio_reaction    
 # percentage of bio_reaction that should be maintained
 objMinFactor = 0.1
 # the minimum number of fluxes that need to be potentially active (total number of fluxes - deletions)
@@ -63,7 +80,11 @@ infinityValue = 99999
 # Use gene knockouts instead of reaction knockouts
 # Warning, the model needs to have well defined GPR associations; '(G1 and G2 or G3) or (G6)'
 USE_GENE = False
-genePrefix = 's'
+geneprefix_dict = {
+    'toy_model_biofuel.l3.xml':'G',
+    'ModelinRefCondition.xml':'s'
+}
+genePrefix = geneprefix_dict[modelFile]
     
 # Reduce number of knockouts
 # Keep alpha value small enough to avoid potential dilution of the bilevel objective

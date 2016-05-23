@@ -113,8 +113,14 @@ def doGeneMapping(model):
     for r_ in reactions:
             try:
                 ass = model.getReaction(r_).getAnnotations()
-                g_ = ass['GENE ASSOCIATION']
-                print g_
+                if 'GENE ASSOCIATION' in ass:
+                    g_ = ass['GENE ASSOCIATION']
+                elif 'GENE_ASSOCIATION' in ass:
+                    g_ = ass['GENE_ASSOCIATION']
+                elif 'gene_association' in ass:
+                    g_ = ass['gene_association']
+                elif 'gene association' in ass:
+                    g_ = ass['gene association']
                 if g_ != 'None' and g_ != '' :
                     # Enzymes
                     g_ = g_.split(') or (')
@@ -140,7 +146,7 @@ def doGeneMapping(model):
                     print 'No GPR associations for {}'.format(r_)
     print GPRdict
     print SubUdict
-    raw_input()
+    # raw_input()
 
     return GPRdict, SubUdict
 
@@ -735,9 +741,9 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     try:
         MILP.solve()
-        print MILP.solution.get_values('R_BiomassAuto')
+        print MILP.solution.get_values(bio_reaction)
         val1 = MILP.solution.get_objective_value()/Scale
-        val2 = MILP.solution.get_values('R_BiomassAuto')/Scale
+        val2 = MILP.solution.get_values(bio_reaction)/Scale
         sol = printLPsol(MILP)
     except cplex.exceptions.CplexSolverError:
         print('\nFusedsolveFailure\n')
@@ -789,4 +795,4 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
     F.write('\n\n=================\n')
     F.close()
 
-    return NoGene
+    return
