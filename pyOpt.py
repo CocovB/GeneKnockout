@@ -28,6 +28,8 @@ def readModel(file, maxDelete, bio_reaction, infinityValue, USE_GENE):
 
     # Read in model and set growth conditions
     model = cbm.CBRead.readSBML3FBC(file)
+    # remove equiliy bonds
+    model.splitEqualityFluxBounds()
     model.setObjectiveFlux(bio_reaction, osense='maximize')
     lpName = file.replace('.xml', '')
     #model = GrowthCondition.setCondition(model, bio_reaction)
@@ -103,7 +105,12 @@ def doGeneMapping(model):
     - *SubUdict*            dictionary with genes mapped to isoenzymes
     
     """
-
+    import re
+    def unique_list(seq):
+        """Function to remove duplicates"""
+        seen = set()
+        seen_add = seen.add
+        return [x for x in seq if not (x in seen or seen_add(x))]
     # Get GPR associations for reactions (strings) and
     # and split according to keywords 'and', 'or'
     GPRdict = {}
@@ -123,7 +130,8 @@ def doGeneMapping(model):
                     g_ = ass['gene association']
                 if g_ != 'None' and g_ != '' :
                     # Enzymes
-                    g_ = g_.split(') or (')
+                    # g_ = g_.split(') or (')
+                    g_ = re.split(r'\)\s+or\s+\(|\)\s+or\s+|\s+or\s+\(',g_)
                     S_list = []
                     for enzyme in g_:
                         enzyme = enzyme.replace(')','')
@@ -132,6 +140,10 @@ def doGeneMapping(model):
                         enzyme = enzyme.replace(' or ','_or_')
                         # Subunits
                         subunits = enzyme.split(' and ')
+                        # remove extra space
+                        subunits = [s.replace(' ','') for s in subunits]
+                        # replace possible dashes
+                        # subunits = [s.replace('-','_') for s in subunits]
                         S_list.append(subunits)
                 
                     # Dictionary for isoenzymes
@@ -139,13 +151,15 @@ def doGeneMapping(model):
                         for gene in enzymes:
                             gene = gene.replace(' ','')
                             if 'or' in gene:
-                                SubUdict[gene] = gene.split('_or_')
+                                # SubUdict[gene] = gene.split('_or_')
+                                SubUdict[gene] = unique_list(gene.split('_or_'))
         
-                GPRdict[r_] = S_list
+                # GPRdict[r_] = S_list
+                GPRdict[r_] = [unique_list(s) for s in S_list]
             except:
                     print 'No GPR associations for {}'.format(r_)
-    print GPRdict
-    print SubUdict
+    # print GPRdict
+    # print SubUdict
     # raw_input()
 
     return GPRdict, SubUdict
@@ -616,8 +630,11 @@ def andOrGPR(lppd, ReactionMap, EnzymeMap, SubUdict):
 
         coefficients = [1] + [-1]*(len(allVariables)-1)
         rest = geneCount*-1 + 1
-        lppd.linear_constraints.add([cplex.SparsePair(allVariables, coefficients)],
+        try:
+            lppd.linear_constraints.add([cplex.SparsePair(allVariables, coefficients)],
                                                  "G", rhs=[rest], names=[gene + '_E'])
+        except:
+            print allVariables
 
     for subunit in SubUdict:
         allVariables = []
@@ -752,11 +769,12 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     try:
         if USE_GENE:
-            delG = [x for x in sol if x.startswith('bin_S') or x.startswith('bin_s') and sol[x] == 0.0]
+            delG = [x for x in sol if x.startswith('bin_' + genePrefix) and sol[x] == 0.0]
             delG = set(delG) - set(NoGene)
             delGen = []
             for g_ in delG:
-                delGen.append(g_.replace('bin_','')[:-5])
+                # delGen.append(g_.replace('bin_','')[:-5])
+                delGen.append(g_.replace('bin_',''))
         else:
             delReac = [x for x in sol if x.startswith('bin_R') and sol[x] == 0.0]
             delReact = []

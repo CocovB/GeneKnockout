@@ -1,5 +1,5 @@
 \ENCODING=ISO-8859-1
-\Problem name: 1464010148.mip
+\Problem name: 1464012252.mip
 
 Minimize
  rhs: - 10 l1 + 1000 l5 + 1000 l6 + 1000 l11 + 1000 l12 + 1000 l15 + 1000 u1
