@@ -116,6 +116,7 @@ def doGeneMapping(model):
     model.createGeneAssociationsFromAnnotations()
     reactions = model.getReactionIds()
     SubUdict = {}
+    no_associations = 0
     for r_ in reactions:
             try:
                 ass = model.getReaction(r_).getAnnotations()
@@ -162,7 +163,8 @@ def doGeneMapping(model):
                 # GPRdict[r_] = S_list
                 GPRdict[r_] = [unique_list(s) for s in S_list]
             except:
-                    print 'No GPR associations for {}'.format(r_)
+                    no_associations+=1
+    print '{} of {} reactions have no GPR Associations' .format(no_associations,len(reactions))
     # print GPRdict
     # print SubUdict
     # raw_input()
