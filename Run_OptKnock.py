@@ -37,10 +37,8 @@
     
 """
 
-import os, time, numpy, cplex, sys
+import os
 cDir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
-import pyscescbm as cbm; import os
-import GrowthCondition
 import pyOpt
 
 
@@ -48,11 +46,13 @@ import pyOpt
 
 # modelFile = 'ModelinRefCondition.xml'
 # modelFile = 'iTM686_biofuels.sbml3.xml'
-modelFile = 'toy_model_biofuel.l3.xml'
+# modelFile = 'toy_model_biofuel.l3.xml'
 # modelFile = 'iaz_sbml3.xml'
+modelFile = 'imm_sbml3.xml'
 
 product_dict = {
 'iaz_sbml3.xml':'R_EX_succ_e_',
+'imm_sbml3.xml':'R_EX_succ_e_',
 'toy_model_biofuel.l3.xml':'R09',
 'iTM686_biofuels.sbml3.xml':'R_EX_etoh_e',
 'ModelinRefCondition.xml':'R_EX_ac_e'
@@ -61,6 +61,7 @@ bilevelObjective = (product_dict[modelFile], 1)
 
 biomass_dict = {
 'iaz_sbml3.xml':'R_biomass_core',
+'imm_sbml3.xml': 'R_biomass_SC5_notrace',
 'toy_model_biofuel.l3.xml':'R17',
 'iTM686_biofuels.sbml3.xml':'R_BiomassHetero',
 'ModelinRefCondition.xml':'R_BiomassAuto'
@@ -71,7 +72,7 @@ print bilevelObjective, bio_reaction
 # percentage of bio_reaction that should be maintained
 objMinFactor = 0.1
 # the minimum number of fluxes that need to be potentially active (total number of fluxes - deletions)
-maxDelete = 2
+maxDelete = 3
     
 # Define value that indicates 'unbounded' in sbml file, to be translated to cplex.inf
 # If boundaries are already defined infinite, make sure this value is high
@@ -79,12 +80,7 @@ infinityValue = 99999
     
 # Use gene knockouts instead of reaction knockouts
 # Warning, the model needs to have well defined GPR associations; '(G1 and G2 or G3) or (G6)'
-USE_GENE = False
-geneprefix_dict = {
-    'toy_model_biofuel.l3.xml':'G',
-    'ModelinRefCondition.xml':'s'
-}
-genePrefix = geneprefix_dict[modelFile]
+USE_GENE = True
     
 # Reduce number of knockouts
 # Keep alpha value small enough to avoid potential dilution of the bilevel objective
@@ -97,7 +93,7 @@ KNOCKOUT_WEIGHTING_ALPHA = 0.0002
 SOLUTION_FROM_OPTIMUM = 0.05
 #####################
 
-NoGene = pyOpt.runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, genePrefix, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM)
+NoGene = pyOpt.runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM)
 
 
 

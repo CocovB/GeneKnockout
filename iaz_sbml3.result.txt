@@ -1,0 +1,13 @@
+OptKnock Solution
+=================
+
+Bilinear Outer optimum (('R_EX_succ_e_', 1)): 0.24638
+Bilinear Inner optimum (R_biomass_core): 0.0459
+Deleted reactions (3): ['YJR077C', 'YLL041C', 'YKL035W']
+
+Analysis time (minutes): 0.802485
+Maximum deletions: 3
+
+Use knockout weighting (minimization): False
+
+=================

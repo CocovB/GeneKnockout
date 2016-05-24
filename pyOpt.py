@@ -3,7 +3,6 @@
 import os, time, numpy, cplex, sys
 cDir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 import pyscescbm as cbm; import os
-import GrowthCondition
 
 
 
@@ -28,6 +27,8 @@ def readModel(file, maxDelete, bio_reaction, infinityValue, USE_GENE):
 
     # Read in model and set growth conditions
     model = cbm.CBRead.readSBML3FBC(file)
+    # remove equiliy bonds
+    model.splitEqualityFluxBounds()
     model.setObjectiveFlux(bio_reaction, osense='maximize')
     lpName = file.replace('.xml', '')
     #model = GrowthCondition.setCondition(model, bio_reaction)
@@ -103,13 +104,19 @@ def doGeneMapping(model):
     - *SubUdict*            dictionary with genes mapped to isoenzymes
     
     """
-
+    import re
+    def unique_list(seq):
+        """Function to remove duplicates"""
+        seen = set()
+        seen_add = seen.add
+        return [x for x in seq if not (x in seen or seen_add(x))]
     # Get GPR associations for reactions (strings) and
     # and split according to keywords 'and', 'or'
     GPRdict = {}
     model.createGeneAssociationsFromAnnotations()
     reactions = model.getReactionIds()
     SubUdict = {}
+    no_associations = 0
     for r_ in reactions:
             try:
                 ass = model.getReaction(r_).getAnnotations()
@@ -123,7 +130,8 @@ def doGeneMapping(model):
                     g_ = ass['gene association']
                 if g_ != 'None' and g_ != '' :
                     # Enzymes
-                    g_ = g_.split(') or (')
+                    # g_ = g_.split(') or (')
+                    g_ = re.split(r'\)\s+or\s+\(|\)\s+or\s+|\s+or\s+\(',g_)
                     S_list = []
                     for enzyme in g_:
                         enzyme = enzyme.replace(')','')
@@ -132,20 +140,33 @@ def doGeneMapping(model):
                         enzyme = enzyme.replace(' or ','_or_')
                         # Subunits
                         subunits = enzyme.split(' and ')
-                        S_list.append(subunits)
+                        subunits_mod = []
+                        for s in subunits:
+                            # remove extra space
+                            tmp = s.replace(' ','')
+                            # replace possible dashes
+                            tmp = tmp.replace('-','_')
+                            # add gene prefix
+                            tmp = 'GENE_' + tmp
+                            subunits_mod.append(tmp)
+
+                        S_list.append(subunits_mod)
                 
                     # Dictionary for isoenzymes
                     for enzymes in S_list:
                         for gene in enzymes:
                             gene = gene.replace(' ','')
                             if 'or' in gene:
-                                SubUdict[gene] = gene.split('_or_')
+                                # SubUdict[gene] = gene.split('_or_')
+                                SubUdict[gene] = unique_list(gene.split('_or_'))
         
-                GPRdict[r_] = S_list
+                # GPRdict[r_] = S_list
+                GPRdict[r_] = [unique_list(s) for s in S_list]
             except:
-                    print 'No GPR associations for {}'.format(r_)
-    print GPRdict
-    print SubUdict
+                    no_associations+=1
+    print '{} of {} reactions have no GPR Associations' .format(no_associations,len(reactions))
+    # print GPRdict
+    # print SubUdict
     # raw_input()
 
     return GPRdict, SubUdict
@@ -616,8 +637,11 @@ def andOrGPR(lppd, ReactionMap, EnzymeMap, SubUdict):
 
         coefficients = [1] + [-1]*(len(allVariables)-1)
         rest = geneCount*-1 + 1
-        lppd.linear_constraints.add([cplex.SparsePair(allVariables, coefficients)],
+        try:
+            lppd.linear_constraints.add([cplex.SparsePair(allVariables, coefficients)],
                                                  "G", rhs=[rest], names=[gene + '_E'])
+        except:
+            print allVariables
 
     for subunit in SubUdict:
         allVariables = []
@@ -684,7 +708,7 @@ def printLPsol(lp):
     return VariableSol[0]
 
 
-def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, genePrefix, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM):
+def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM):
 
 
     time0 = time.time()
@@ -752,11 +776,11 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     try:
         if USE_GENE:
-            delG = [x for x in sol if x.startswith('bin_S') or x.startswith('bin_s') and sol[x] == 0.0]
+            delG = [x for x in sol if x.startswith('bin_GENE_') and sol[x] == 0.0]
             delG = set(delG) - set(NoGene)
             delGen = []
             for g_ in delG:
-                delGen.append(g_.replace('bin_','')[:-5])
+                delGen.append(g_.replace('bin_GENE_',''))
         else:
             delReac = [x for x in sol if x.startswith('bin_R') and sol[x] == 0.0]
             delReact = []
@@ -767,8 +791,8 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     # Write results
     print('\nOptKnock Solution\n=================')
-    print('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, val1))
-    print('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, val2))
+    print('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, round(val1,5)))
+    print('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, round(val2,5)))
     if USE_GENE:
         print('\nDeleted genes ({}): {}'.format(len(delGen), delGen))
     else:
@@ -781,8 +805,8 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     F = file(lpName+'.result.txt','w')
     F.write('OptKnock Solution\n=================\n')
-    F.write('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, val1))
-    F.write('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, val2))
+    F.write('\nBilinear Outer optimum ({}): {}'.format(bilevelObjective, round(val1,5)))
+    F.write('\nBilinear Inner optimum ({}): {}'.format(bio_reaction, round(val2,5)))
     if USE_GENE:
         F.write('\nDeleted reactions ({}): {}'.format(len(delGen), delGen))
     else:
