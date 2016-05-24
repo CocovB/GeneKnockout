@@ -47,10 +47,12 @@ import pyOpt
 # modelFile = 'ModelinRefCondition.xml'
 # modelFile = 'iTM686_biofuels.sbml3.xml'
 # modelFile = 'toy_model_biofuel.l3.xml'
-modelFile = 'iaz_sbml3.xml'
+# modelFile = 'iaz_sbml3.xml'
+modelFile = 'imm_sbml3.xml'
 
 product_dict = {
 'iaz_sbml3.xml':'R_EX_succ_e_',
+'imm_sbml3.xml':'R_EX_succ_e_',
 'toy_model_biofuel.l3.xml':'R09',
 'iTM686_biofuels.sbml3.xml':'R_EX_etoh_e',
 'ModelinRefCondition.xml':'R_EX_ac_e'
@@ -59,6 +61,7 @@ bilevelObjective = (product_dict[modelFile], 1)
 
 biomass_dict = {
 'iaz_sbml3.xml':'R_biomass_core',
+'imm_sbml3.xml': 'R_biomass_SC5_notrace',
 'toy_model_biofuel.l3.xml':'R17',
 'iTM686_biofuels.sbml3.xml':'R_BiomassHetero',
 'ModelinRefCondition.xml':'R_BiomassAuto'
