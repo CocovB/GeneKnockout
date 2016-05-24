@@ -1,0 +1,6 @@
+# ignore lp files
+*.lp
+# ignore models and textfiles
+*.txt
+*.xml
+*.pyc

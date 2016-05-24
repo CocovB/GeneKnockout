@@ -3,7 +3,6 @@
 import os, time, numpy, cplex, sys
 cDir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 import pyscescbm as cbm; import os
-import GrowthCondition
 
 
 
@@ -140,11 +139,17 @@ def doGeneMapping(model):
                         enzyme = enzyme.replace(' or ','_or_')
                         # Subunits
                         subunits = enzyme.split(' and ')
-                        # remove extra space
-                        subunits = [s.replace(' ','') for s in subunits]
-                        # replace possible dashes
-                        subunits = [s.replace('-','_') for s in subunits]
-                        S_list.append(subunits)
+                        subunits_mod = []
+                        for s in subunits:
+                            # remove extra space
+                            tmp = s.replace(' ','')
+                            # replace possible dashes
+                            tmp = tmp.replace('-','_')
+                            # add gene prefix
+                            tmp = 'GENE_' + tmp
+                            subunits_mod.append(tmp)
+
+                        S_list.append(subunits_mod)
                 
                     # Dictionary for isoenzymes
                     for enzymes in S_list:
@@ -701,7 +706,7 @@ def printLPsol(lp):
     return VariableSol[0]
 
 
-def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, genePrefix, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM):
+def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM):
 
 
     time0 = time.time()
@@ -769,12 +774,11 @@ def runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDele
 
     try:
         if USE_GENE:
-            delG = [x for x in sol if x.startswith('bin_' + genePrefix) and sol[x] == 0.0]
+            delG = [x for x in sol if x.startswith('bin_GENE_') and sol[x] == 0.0]
             delG = set(delG) - set(NoGene)
             delGen = []
             for g_ in delG:
-                # delGen.append(g_.replace('bin_','')[:-5])
-                delGen.append(g_.replace('bin_',''))
+                delGen.append(g_.replace('bin_GENE_',''))
         else:
             delReac = [x for x in sol if x.startswith('bin_R') and sol[x] == 0.0]
             delReact = []

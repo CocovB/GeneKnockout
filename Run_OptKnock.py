@@ -37,10 +37,8 @@
     
 """
 
-import os, time, numpy, cplex, sys
+import os
 cDir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
-import pyscescbm as cbm; import os
-import GrowthCondition
 import pyOpt
 
 
@@ -80,12 +78,6 @@ infinityValue = 99999
 # Use gene knockouts instead of reaction knockouts
 # Warning, the model needs to have well defined GPR associations; '(G1 and G2 or G3) or (G6)'
 USE_GENE = True
-geneprefix_dict = {
-    'toy_model_biofuel.l3.xml':'G',
-    'ModelinRefCondition.xml':'s',
-    'iaz_sbml3.xml':'Y'
-}
-genePrefix = geneprefix_dict[modelFile]
     
 # Reduce number of knockouts
 # Keep alpha value small enough to avoid potential dilution of the bilevel objective
@@ -98,7 +90,7 @@ KNOCKOUT_WEIGHTING_ALPHA = 0.0002
 SOLUTION_FROM_OPTIMUM = 0.05
 #####################
 
-NoGene = pyOpt.runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, genePrefix, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM)
+NoGene = pyOpt.runOptKnock(modelFile, bilevelObjective, bio_reaction, objMinFactor, maxDelete, infinityValue, USE_GENE, USE_KNOCKOUT_WEIGHTING, KNOCKOUT_WEIGHTING_ALPHA, SOLUTION_FROM_OPTIMUM)
 
 
 
